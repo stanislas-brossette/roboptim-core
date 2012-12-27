@@ -367,6 +367,18 @@ namespace roboptim
 			value_type scale = 1.)
       throw (std::runtime_error);
 
+    /// \brief Add a constraint to the problem.
+    ///
+    /// \param constraint the constraint that will be added
+    /// \param interval interval in which the constraint is satisfied
+    /// \param scale constraint scale
+    /// \tparam C constraint type (has to be in CLIST)
+    template <typename C>
+    void addConstraint (boost::shared_ptr<C> constraint,
+      intervals_t interval,
+      value_type scale = 1.)
+      throw (std::runtime_error);
+
     /// \brief Retrieve constraints bounds.
     /// \return constraints bounds
     const intervals_t& bounds () const throw ();

@@ -280,6 +280,36 @@ namespace roboptim
   }
 
   template <typename F, typename CLIST>
+  template <typename C>
+  void
+  Problem<F, CLIST>::addConstraint (boost::shared_ptr<C> x,
+                  intervals_t b,
+                  value_type s)
+  throw (std::runtime_error)
+  {
+  //FIXME: check that C is in CLIST.
+
+    if (x->inputSize () != this->function ().inputSize ())
+      throw std::runtime_error ("Invalid constraint (wrong input size)");
+    if (x->outputSize () != b.size())
+      throw std::runtime_error
+    ("Invalid constraint (output size is not equal to one)");
+
+    // Check that the pointer is not null.
+    assert (!!x.get ());
+    constraints_.push_back (boost::static_pointer_cast<C> (x));
+
+    for(size_t i=0; i< b.size(); ++i)
+      assert (b[i].first <= b[i].second);
+
+    for(size_t i=0; i< b.size(); ++i)
+    {
+      bounds_.push_back (b[i]);
+      scales_.push_back (s);
+    }
+  }
+
+  template <typename F, typename CLIST>
   typename Problem<F, CLIST>::startingPoint_t&
   Problem<F, CLIST>::startingPoint () throw ()
   {
