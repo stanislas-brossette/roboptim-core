@@ -365,41 +365,53 @@ namespace roboptim
     struct printConstraint : public boost::static_visitor<void>
     {
       printConstraint (std::ostream& o,
-		       const P& problem,
-		       Function::size_type i) :
-	problem_ (problem),
-	o_ (o),
-	i_ (i)
+           const P& problem,
+           Function::size_type ci,
+           Function::size_type bi) :
+      problem_ (problem),
+      o_ (o),
+      ci_(ci),
+      bi_(bi)
       {}
 
       template <typename U>
       void operator () (const U& constraint)
       {
-	assert (problem_.constraints ().size () - i_ > 0);
-	using namespace boost;
+        assert (problem_.constraints ().size () - bi_ > 0);
+        using namespace boost;
         o_ << iendl << incindent
-	   << "Constraint " << i_ << incindent << iendl
-	   << *constraint << iendl
-	   << "Bounds: " << problem_.bounds ()[i_] << iendl
-	   << "Scales: " << problem_.scales ()[i_] << iendl;
+           << "Constraint " << ci_ << incindent << iendl
+           << *constraint << iendl;
+        o_ << "Bounds: ";
+        for(unsigned j=0; j<(*constraint).outputSize(); ++j)
+          o_ << problem_.bounds ()[bi_+j];
+        o_ << iendl;
+        o_ << "Scales: ";
+        for(unsigned j=0; j<(*constraint).outputSize(); ++j)
+          o_ << problem_.scales ()[bi_+j] << "  ";
+        o_ << iendl;
 
-	if (problem_.startingPoint ())
-	  {
-	    U g = get<U> (problem_.constraints ()[i_]);
-	    Function::vector_t x = (*g) (*problem_.startingPoint ());
-	    o_ << "Initial value: "
-	       << x;
-	    if (x[0] < Function::getLowerBound (problem_.bounds ()[i_])
-		|| x[0] > Function::getUpperBound (problem_.bounds ()[i_]))
-	      o_ << " (constraint not satisfied)";
-	    o_ << iendl;
-	  }
-	o_ << decindent << decindent;
+        if (problem_.startingPoint ())
+        {
+          U g = get<U> (problem_.constraints ()[ci_]);
+          Function::vector_t x = (*g) (*problem_.startingPoint ());
+          o_ << "Initial value: "
+             << x;
+          for(unsigned j=0; j<x.size(); ++j)
+          {
+            if (x[j] < Function::getLowerBound (problem_.bounds ()[bi_])
+               || x[j] > Function::getUpperBound (problem_.bounds ()[bi_]))
+              o_ << " (constraint not satisfied)";
+          }
+          o_ << iendl;
+        }
+        o_ << decindent << decindent;
       }
     private:
       const P& problem_;
       std::ostream& o_;
-      Function::size_type i_;
+      Function::size_type ci_; //constraint index
+      Function::size_type bi_; //bound index
     };
   } // end of namespace detail.
 
@@ -422,13 +434,29 @@ namespace roboptim
     if (this->constraints ().empty ())
       o << "No constraints.";
     else
-      o << "Number of constraints: " << this->constraints ().size ();
-
-    for (unsigned i = 0; i < this->constraints ().size (); ++i)
+    {
+      int numConstraints=0;
+      for (unsigned ci = 0; ci < this->constraints ().size (); ++ci)
       {
-	detail::printConstraint<Problem<F, CLIST> > pc (o, *this, i);
-	boost::apply_visitor (pc, this->constraints ()[i]);
+        const constraint_t & c = (this->constraints())[ci];
+        boost::shared_ptr<F> g = get< boost::shared_ptr<F> > (c);
+        numConstraints += g->outputSize();
       }
+      o << "Number of constraints: " << numConstraints << iendl;
+    }
+
+    //ci is the index of the current constraint
+    //bi is the index of the current bound
+    //(the bi-th bound can correspond to the k-th value of the ci-th constraint)
+    Function::size_type bi = 0;
+    for (unsigned ci = 0; ci < this->constraints ().size (); ++ci)
+    {
+      detail::printConstraint<Problem<F, CLIST> > pc (o, *this, ci, bi);
+      boost::apply_visitor (pc, this->constraints ()[ci]);
+      const constraint_t & c = (this->constraints())[ci];
+      boost::shared_ptr<F> g = get< boost::shared_ptr<F> > (c);
+      bi += g->outputSize();
+    }
 
     // Starting point.
     if (startingPoint_)
