@@ -357,6 +357,7 @@ namespace roboptim
     /// \brief Add a constraint to the problem.
     ///
     /// \param constraint the constraint that will be added
+    ///         its outputSize must be one
     /// \param interval interval in which the constraint is satisfied
     /// \param scale constraint scale
     /// \tparam C constraint type (has to be in CLIST)
