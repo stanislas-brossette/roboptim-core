@@ -19,6 +19,7 @@ var searchData=
   ['resultwithwarnings',['ResultWithWarnings',['../a00051.html',1,'roboptim']]],
   ['roboptim',['roboptim',['../a00136.html',1,'']]],
   ['roboptim_5fcore_5finternal',['ROBOPTIM_CORE_INTERNAL',['../a00067.html#a38f25a92212e070233383b18faab82f0',1,'debug.hh']]],
+  ['roboptim_5fdebug_5fonly',['ROBOPTIM_DEBUG_ONLY',['../a00066.html#a63c786a95b42777d0562bfacd96e5bfd',1,'debug.hh']]],
   ['roboptim_5fdllapi',['ROBOPTIM_DLLAPI',['../a00105.html#a4ef4ec4762b429080f60bc09c9a9079e',1,'portability.hh']]],
   ['roboptim_5fdllexport',['ROBOPTIM_DLLEXPORT',['../a00105.html#a123c5e8741ec2f621543a4fc2edec484',1,'portability.hh']]],
   ['roboptim_5fdllimport',['ROBOPTIM_DLLIMPORT',['../a00105.html#af1b366e891fac3c4c41f87b7cb59dd04',1,'portability.hh']]],

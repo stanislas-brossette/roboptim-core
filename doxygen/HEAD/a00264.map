@@ -1,13 +1,13 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$a00067.html" title="debug.hh" alt="" coords="235,86,312,117"/>
-<area shape="rect" id="node25" href="$a00132.html" title="roboptim/core/util.hh" alt="" coords="960,86,1101,117"/>
+<area shape="rect" id="node27" href="$a00132.html" title="roboptim/core/util.hh" alt="" coords="1117,86,1259,117"/>
 <area shape="rect" id="node5" href="$a00127.html" title="roboptim/core/sys.hh" alt="" coords="299,326,445,357"/>
 <area shape="rect" id="node13" href="$a00066.html" title="roboptim/core/debug.hh" alt="" coords="192,166,355,197"/>
 <area shape="rect" id="node7" href="$a00105.html" title="roboptim/core/portability.hh" alt="" coords="251,406,432,437"/>
 <area shape="rect" id="node17" href="$a00093.html" title="roboptim/core/indent.hh" alt="" coords="193,246,353,277"/>
-<area shape="rect" id="node27" href="$a00081.html" title="roboptim/core/fwd.hh" alt="" coords="1293,406,1440,437"/>
-<area shape="rect" id="node30" href="$a00130.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="1009,166,1292,197"/>
-<area shape="rect" id="node69" href="$a00133.html" title="roboptim/core/util.hxx" alt="" coords="839,166,985,197"/>
-<area shape="rect" id="node40" href="$a00072.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="828,246,1076,277"/>
-<area shape="rect" id="node47" href="$a00080.html" title="roboptim/core/function.hh" alt="" coords="804,326,975,357"/>
+<area shape="rect" id="node29" href="$a00081.html" title="roboptim/core/fwd.hh" alt="" coords="1293,406,1440,437"/>
+<area shape="rect" id="node32" href="$a00130.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="1047,166,1329,197"/>
+<area shape="rect" id="node71" href="$a00133.html" title="roboptim/core/util.hxx" alt="" coords="876,166,1023,197"/>
+<area shape="rect" id="node42" href="$a00072.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="828,246,1076,277"/>
+<area shape="rect" id="node49" href="$a00080.html" title="roboptim/core/function.hh" alt="" coords="804,326,975,357"/>
 </map>
