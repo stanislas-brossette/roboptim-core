@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>solver-warning.hh File Reference</title>
+<title>solver-factory.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -59,34 +59,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">solver-warning.hh File Reference</div>  </div>
+<div class="title">solver-factory.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00127.html">roboptim/core/sys.hh</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="a00130.html">roboptim/core/sys.hh</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="a00066.html">roboptim/core/debug.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00115.html">roboptim/core/solver-error.hh</a>&gt;</code><br/>
+<code>#include &lt;stdexcept&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;ltdl.h&gt;</code><br/>
+<code>#include &lt;boost/static_assert.hpp&gt;</code><br/>
+<code>#include &lt;boost/type_traits/is_base_of.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00083.html">roboptim/core/fwd.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00124.html">roboptim/core/solver.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00118.html">roboptim/core/solver-error.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00120.html">roboptim/core/solver-factory.hxx</a>&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for solver-warning.hh:</div>
+Include dependency graph for solver-factory.hh:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00244.png" border="0" usemap="#solver-warning_8hh" alt=""/></div>
-<map name="solver-warning_8hh" id="solver-warning_8hh">
-<area shape="rect" id="node3" href="a00127.html" title="roboptim/core/sys.hh" alt="" coords="281,326,428,357"/><area shape="rect" id="node7" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="151,166,313,197"/><area shape="rect" id="node17" href="a00115.html" title="roboptim/core/solver&#45;error.hh" alt="" coords="300,86,495,117"/><area shape="rect" id="node5" href="a00105.html" title="roboptim/core/portability.hh" alt="" coords="264,406,445,437"/><area shape="rect" id="node11" href="a00093.html" title="roboptim/core/indent.hh" alt="" coords="152,246,312,277"/></map>
+<div class="center"><img src="a00251.png" border="0" usemap="#solver-factory_8hh" alt=""/></div>
+<map name="solver-factory_8hh" id="solver-factory_8hh">
+<area shape="rect" id="node3" href="a00130.html" title="roboptim/core/sys.hh" alt="" coords="2888,726,3035,757"/><area shape="rect" id="node7" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="2467,566,2629,597"/><area shape="rect" id="node27" href="a00083.html" title="roboptim/core/fwd.hh" alt="" coords="1296,646,1443,677"/><area shape="rect" id="node29" href="a00124.html" title="roboptim/core/solver.hh" alt="" coords="1656,86,1819,117"/><area shape="rect" id="node135" href="a00118.html" title="roboptim/core/solver&#45;error.hh" alt="" coords="2256,406,2451,437"/><area shape="rect" id="node154" href="a00120.html" title="roboptim/core/solver&#45;factory.hxx" alt="" coords="3183,166,3393,197"/><area shape="rect" id="node5" href="a00108.html" title="roboptim/core/portability.hh" alt="" coords="67,806,248,837"/><area shape="rect" id="node11" href="a00096.html" title="roboptim/core/indent.hh" alt="" coords="2152,646,2312,677"/><area shape="rect" id="node46" href="a00082.html" title="roboptim/core/function.hh" alt="" coords="387,566,557,597"/><area shape="rect" id="node77" href="a00109.html" title="roboptim/core/problem.hh" alt="" coords="1129,246,1303,277"/><area shape="rect" id="node105" href="a00086.html" title="roboptim/core/generic&#45;solver.hh" alt="" coords="2139,166,2349,197"/><area shape="rect" id="node145" href="a00125.html" title="roboptim/core/solver.hxx" alt="" coords="2947,406,3115,437"/><area shape="rect" id="node97" href="a00110.html" title="roboptim/core/problem.hxx" alt="" coords="1309,326,1488,357"/><area shape="rect" id="node117" href="a00116.html" title="roboptim/core/result.hh" alt="" coords="2259,486,2416,517"/><area shape="rect" id="node124" href="a00114.html" title="roboptim/core/result&#45;with&#45;warnings.hh" alt="" coords="2480,246,2720,277"/><area shape="rect" id="node131" href="a00122.html" title="roboptim/core/solver&#45;warning.hh" alt="" coords="2357,326,2568,357"/><area shape="rect" id="node149" href="a00097.html" title="roboptim/core/io.hh" alt="" coords="2947,486,3083,517"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00245.png" border="0" usemap="#solver-warning_8hhdep" alt=""/></div>
-<map name="solver-warning_8hhdep" id="solver-warning_8hhdep">
-<area shape="rect" id="node3" href="a00111.html" title="result&#45;with&#45;warnings.hh" alt="" coords="544,86,699,117"/><area shape="rect" id="node5" href="a00084.html" title="generic&#45;solver.hh" alt="" coords="445,166,568,197"/><area shape="rect" id="node15" href="a00064.html" title="core.hh" alt="" coords="383,406,449,437"/><area shape="rect" id="node24" href="a00110.html" title="result&#45;with&#45;warnings.cc" alt="" coords="651,166,805,197"/><area shape="rect" id="node29" href="a00118.html" title="solver&#45;warning.cc" alt="" coords="880,86,1005,117"/><area shape="rect" id="node7" href="a00121.html" title="solver.hh" alt="" coords="229,246,304,277"/><area shape="rect" id="node21" href="a00083.html" title="generic&#45;solver.cc" alt="" coords="453,246,576,277"/><area shape="rect" id="node9" href="a00075.html" title="dummy.hh" alt="" coords="5,326,88,357"/><area shape="rect" id="node13" href="a00116.html" title="solver&#45;factory.hh" alt="" coords="112,326,229,357"/><area shape="rect" id="node18" href="a00120.html" title="solver.cc" alt="" coords="304,326,379,357"/><area shape="rect" id="node11" href="a00074.html" title="dummy.cc" alt="" coords="5,406,88,437"/></map>
+<div class="center"><img src="a00252.png" border="0" usemap="#solver-factory_8hhdep" alt=""/></div>
+<map name="solver-factory_8hhdep" id="solver-factory_8hhdep">
+<area shape="rect" id="node3" href="a00065.html" title="core.hh" alt="" coords="31,86,97,117"/></map>
 </div>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html">roboptim::SolverWarning</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception used for non-critical errors during optimization.  <a href="a00056.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00057.html">roboptim::SolverFactory&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a solver factory that instanciate the plug-ins.  <a href="a00057.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00136.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
 </table>
@@ -108,6 +116,6 @@ Namespaces</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00119.html">solver-warning.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00119.html">solver-factory.hh</a>      </li>
 </body>
 </html>

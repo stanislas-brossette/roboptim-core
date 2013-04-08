@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Mathematical functions</title>
+<title>roboptim::finiteDifferenceGradientPolicies Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -12,7 +12,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -34,6 +34,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="namespaces.html"><span>Namespace&#160;List</span></a></li>
+      <li><a href="namespacemembers.html"><span>Namespace&#160;Members</span></a></li>
+    </ul>
+  </div>
 </div>
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -50,135 +56,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Mathematical functions</div>  </div>
+<div class="title">roboptim::finiteDifferenceGradientPolicies Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains finite difference gradients policies.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html">roboptim::ConstantFunction</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant function.  <a href="a00018.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00028.html">roboptim::FiniteDifferenceGradient&lt; FdgPolicy &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute automatically a gradient with finite differences.  <a href="a00028.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00036.html">roboptim::IdentityFunction</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity function.  <a href="a00036.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html">roboptim::NTimesDerivableFunction&lt; 2 &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit specialization for the stop case of NTimesDerivable class.  <a href="a00041.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00040.html">roboptim::NTimesDerivableFunction&lt; DerivabilityOrder &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a <img class="formulaInl" alt="$\mathbb{R} \rightarrow \mathbb{R}^m$" src="form_24.png"/> function, derivable n times ( <img class="formulaInl" alt="$n \geq 2$" src="form_25.png"/>).  <a href="a00040.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00042.html">roboptim::NumericLinearFunction</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a linear function from a vector and a matrix.  <a href="a00042.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00043.html">roboptim::NumericQuadraticFunction</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a quadratic function from a matrix and a vector.  <a href="a00043.html#details">More...</a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00105.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#ga33e74e4ed929600eba075ac876fccfc6">roboptim::checkGradient</a> (const DifferentiableFunction &amp;function, Function::size_type functionId, const Function::vector_t &amp;x, Function::value_type threshold=finiteDifferenceThreshold)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a gradient is valid.  <a href="#ga33e74e4ed929600eba075ac876fccfc6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00105.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00145.html#gaff1b2876e3d26fb56d2e2a1388956f34">roboptim::checkGradientAndThrow</a> (const DifferentiableFunction &amp;function, Function::size_type functionId, const Function::vector_t &amp;x, Function::value_type threshold=finiteDifferenceThreshold)  throw (BadGradient)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html">Simple</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast finite difference gradient computation.  <a href="a00054.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00028.html">FivePointsRule</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Precise finite difference gradient computation.  <a href="a00028.html#details">More...</a><br/></td></tr>
 </table>
-<hr/><h2>Function Documentation</h2>
-<a class="anchor" id="ga33e74e4ed929600eba075ac876fccfc6"></a><!-- doxytag: member="roboptim::checkGradient" ref="ga33e74e4ed929600eba075ac876fccfc6" args="(const DifferentiableFunction &amp;function, Function::size_type functionId, const Function::vector_t &amp;x, Function::value_type threshold=finiteDifferenceThreshold)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="a00145.html#ga33e74e4ed929600eba075ac876fccfc6">roboptim::checkGradient</a> </td>
-          <td>(</td>
-          <td class="paramtype">const DifferentiableFunction &amp;&#160;</td>
-          <td class="paramname"><em>function</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Function::size_type&#160;</td>
-          <td class="paramname"><em>functionId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Function::vector_t &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Function::value_type&#160;</td>
-          <td class="paramname"><em>threshold</em> = <code>finiteDifferenceThreshold</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw ()</td>
-        </tr>
-      </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Contains finite difference gradients policies. </p>
+<p>Each class of this algorithm implements a finite difference gradient computation algorithm. </p>
+</div></div><!-- contents -->
 </div>
-<div class="memdoc">
-
-<p>Check if a gradient is valid. </p>
-<p>Check if a gradient is valid by comparing the distance between its gradient and an automatically computed finite differences gradient. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">function</td><td>function that will be checked </td></tr>
-    <tr><td class="paramname">functionId</td><td>function id in split representation </td></tr>
-    <tr><td class="paramname">x</td><td>point where the gradient will be evaluated </td></tr>
-    <tr><td class="paramname">threshold</td><td>maximum tolerated error </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if valid, false if not </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00002.html#a2">finite-difference-gradient.cc</a>.</dd>
-</dl>
-<p>References <a class="el" href="a00024.html#a3d26bf6d658c4991d1b35dc8fa2b914a">roboptim::DifferentiableFunction::gradient()</a>.</p>
-
-<p>Referenced by <a class="el" href="a00145.html#gaff1b2876e3d26fb56d2e2a1388956f34">roboptim::checkGradientAndThrow()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gaff1b2876e3d26fb56d2e2a1388956f34"></a><!-- doxytag: member="roboptim::checkGradientAndThrow" ref="gaff1b2876e3d26fb56d2e2a1388956f34" args="(const DifferentiableFunction &amp;function, Function::size_type functionId, const Function::vector_t &amp;x, Function::value_type threshold=finiteDifferenceThreshold)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00145.html#gaff1b2876e3d26fb56d2e2a1388956f34">roboptim::checkGradientAndThrow</a> </td>
-          <td>(</td>
-          <td class="paramtype">const DifferentiableFunction &amp;&#160;</td>
-          <td class="paramname"><em>function</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Function::size_type&#160;</td>
-          <td class="paramname"><em>functionId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Function::vector_t &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Function::value_type&#160;</td>
-          <td class="paramname"><em>threshold</em> = <code>finiteDifferenceThreshold</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw (BadGradient)</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>References <a class="el" href="a00145.html#ga33e74e4ed929600eba075ac876fccfc6">roboptim::checkGradient()</a>, and <a class="el" href="a00024.html#a3d26bf6d658c4991d1b35dc8fa2b914a">roboptim::DifferentiableFunction::gradient()</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -193,8 +91,9 @@ Functions</h2></td></tr>
 </iframe>
 </div>
 
-</div>
   <div id="nav-path" class="navpath">
     <ul>
+      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00145.html">finiteDifferenceGradientPolicies</a>      </li>
 </body>
 </html>

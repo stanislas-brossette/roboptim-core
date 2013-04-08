@@ -1,6 +1,7 @@
 var a00080 =
 [
-    [ "EIGEN_RUNTIME_NO_MALLOC", "a00080.html#a90bf84d3e5deeec00de77460ca485842", null ],
-    [ "EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET", "a00080.html#aa93624b0b2836d2510e8c92ae951d817", null ],
-    [ "operator<<", "a00144.html#gac1811528dd1c9cc4c233c14bf5ed6e81", null ]
+    [ "checkGradient", "a00150.html#ga7b974ed3d440aab33b573448ff332552", null ],
+    [ "checkGradientAndThrow", "a00150.html#gae0a448fba694779126c4406d23f02bf1", null ],
+    [ "compute_deriv", "a00143.html#ad5051acf65733ac44ce83be80b7b54c2", null ],
+    [ "operator<<", "a00140.html#ae6e53e4f7183cc2816db6aa8ea7cab6e", null ]
 ];

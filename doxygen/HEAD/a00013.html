@@ -74,8 +74,7 @@ Modifying the package.</h3>
 <p>Basically, adding a new solver means adding a new leaf in the solver hierarchy.</p>
 <p>The new header and source files should be added in the <code>src</code> directory.</p>
 <p>The naming convention is CamlCase, the name should be the solver's name suffixed by <code>Solver</code>.</p>
-<p>It also should be pre-declared in the <code>fwd.hh</code> header.</p>
-<p>A m4 macro should then be written to add a soft dependency against the library (ie: the bridge is built if the solver is available, if not the bridge is skipped). Please consult the Autoconf manual and the <code>build-aux/cfsqp.m4</code> and <code>build-aux/ipopt.m4</code> for more information.</p>
+<p>This plug-in must be provided as a separate package to avoid cluttering RobOptim Core with useless dependencies.</p>
 <h3><a class="anchor" id="impl"></a>
 Implementing the bridge.</h3>
 <p>The first step is choosing from which <code>Solver</code> you want to inherit from. The <code>F</code> parameters should be straight-forward: it is the kind of objective function you expect. For the constraints, there is two cases: </p>
@@ -100,12 +99,8 @@ The solver should not display anything by default. If possible, use the <code>pr
 <h3><a class="anchor" id="ccl"></a>
 Conclusion</h3>
 <p>The dummy solver can be a good starting point for anyone who wants to add a new solver as the code can be considered as the minimum stub to get a compilable bridge. It should also be quite easy to understand.</p>
-<p>To submit a new bridge, please post a patch on the project's mailing-list. To generate a patch with Git:</p>
-<div class="fragment"><pre class="fragment">   $ git diff HEAD &gt; add_support_for_BRIDGENAME.patch
-</pre></div><p>(replace BRIDGENAME by the name of the solver you are integrating). Then, post a message to the mailing-list. Please, prefix the object by the following tag: </p>
-<pre>
-   [PATCH] Add support for BRIDGENAME.
-   </pre> </div></div><!-- contents -->
+<p>If you write a new bridge, please post an annoucement to the RobOptim Google group. </p>
+</div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"

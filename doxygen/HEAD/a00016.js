@@ -1,10 +1,10 @@
 var a00016 =
 [
     [ "argument_t", "a00016.html#a417d2fba0962c0cb70b90bbceabd0852", null ],
-    [ "functionCache_t", "a00016.html#a50e467cba82d800e2937310253b66b86", null ],
+    [ "functionCache_t", "a00016.html#ab1a03792fbd75b808916dce7a82f923b", null ],
     [ "gradient_t", "a00016.html#a749877f2dad41778872205accdab1fd0", null ],
     [ "hessian_t", "a00016.html#a92111ffc596f5ca1044c09783a6de009", null ],
-    [ "hessianCache_t", "a00016.html#ab093b3cb867531230ce8ad6bd5a3118c", null ],
+    [ "hessianCache_t", "a00016.html#a1cdf5110e1396a37cbe8dc4a3405e503", null ],
     [ "interval_t", "a00016.html#a98ae23ea06919421d27ac8ddd9d2f497", null ],
     [ "jacobian_t", "a00016.html#ad0a078cc7d57b7e64295cdc6a5f9a2fa", null ],
     [ "result_t", "a00016.html#aa64d3a41682e16e567256eb34e850c3e", null ],

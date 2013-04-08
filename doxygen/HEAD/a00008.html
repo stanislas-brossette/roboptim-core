@@ -71,18 +71,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <span class="comment">// You should have received a copy of the GNU Lesser General Public License</span>
 <span class="comment">// along with roboptim.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
 
-<span class="preprocessor">#include &quot;shared-tests/common.hh&quot;</span>
+<span class="preprocessor">#include &quot;shared-tests/fixture.hh&quot;</span>
 
 <span class="preprocessor">#include &lt;iostream&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00094.html">roboptim/core/io.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00097.html">roboptim/core/io.hh</a>&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00089.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00086.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00092.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00088.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</span>
 
 <span class="keyword">using namespace </span>roboptim;
 <span class="keyword">using namespace </span>roboptim::visualization;
 
+BOOST_FIXTURE_TEST_SUITE (core, TestSuiteConfiguration)
 
 BOOST_AUTO_TEST_CASE (visualization_gnuplot_simple)
 {
@@ -90,20 +91,22 @@ BOOST_AUTO_TEST_CASE (visualization_gnuplot_simple)
     output = retrievePattern (<span class="stringliteral">&quot;visualization-gnuplot-simple&quot;</span>);
 
   <span class="keyword">using namespace </span>roboptim::visualization::gnuplot;
-  <a name="_a0"></a><a class="code" href="a00035.html" title="Gnuplot script.">Gnuplot</a> gnuplot = Gnuplot::make_gnuplot ();
+  <a name="_a0"></a><a class="code" href="a00040.html" title="Gnuplot script.">Gnuplot</a> gnuplot = Gnuplot::make_gnuplot ();
 
   <span class="comment">// Display nothing, generate just some valid Gnuplot commands.</span>
   (*output)
     &lt;&lt; (gnuplot
   &lt;&lt; <span class="keyword">set</span> (<span class="stringliteral">&quot;term&quot;</span>, <span class="stringliteral">&quot;x11 enhanced persist&quot;</span>)
-  &lt;&lt; <a name="a1"></a><a class="code" href="a00149.html#ga108c0cb6161fb8813817a7b7a1ac980d" title="Make a Gnuplot comment.">comment</a> (<span class="stringliteral">&quot;Hello, world!&quot;</span>)
-  &lt;&lt; <a name="a2"></a><a class="code" href="a00149.html#ga195d042fd97469e044b37abc0faf1e0f" title="Make a Gnuplot cd command.">cd</a> (<span class="stringliteral">&quot;/tmp&quot;</span>)
-  &lt;&lt; <a name="a3"></a><a class="code" href="a00149.html#ga73987a2ddca2e5fc23ff8bbdf703842d" title="Make a Gnuplot reset command.">reset</a>
+  &lt;&lt; <a name="a1"></a><a class="code" href="a00154.html#ga108c0cb6161fb8813817a7b7a1ac980d" title="Make a Gnuplot comment.">comment</a> (<span class="stringliteral">&quot;Hello, world!&quot;</span>)
+  &lt;&lt; <a name="a2"></a><a class="code" href="a00154.html#ga195d042fd97469e044b37abc0faf1e0f" title="Make a Gnuplot cd command.">cd</a> (<span class="stringliteral">&quot;/tmp&quot;</span>)
+  &lt;&lt; <a name="a3"></a><a class="code" href="a00144.html#ac20a553dc2fb3400a4e1a2a639c3ab34">reset</a>
   );
 
   std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;
   BOOST_CHECK (output-&gt;match_pattern ());
 }
+
+BOOST_AUTO_TEST_SUITE_END ()
 </pre></div> </div><!-- contents -->
 </div><!-- contents -->
 <!-- window showing the filter options -->

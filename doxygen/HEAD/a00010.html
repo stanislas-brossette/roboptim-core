@@ -63,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>The following example defines a cost function F and two constraints G0 and G1.</p>
 <h2><a class="anchor" id="problem"></a>
 Problem definition</h2>
-<p>The problem that will be solved is:</p>
+<p>The problem that will be solved in this tutorial is the 71th problem of Hock-Schittkowski:</p>
 <p><img class="formulaInl" alt="$min_{x \in \mathbb{R}^4} x_1 x_4 (x_1 + x_2 + x_3) + x_3$" src="form_39.png"/></p>
 <p>with the following constraints:</p>
 <ul>
@@ -75,12 +75,13 @@ Problem definition</h2>
 Defining the cost function.</h2>
 <p>The library contains the following hierarchy of functions:</p>
 <ul>
-<li>optimization::Function</li>
-<li>optimization::DerivableFunction</li>
-<li>optimization::TwiceDerivableFunction</li>
-<li>optimization::QuadraticFunction</li>
-<li>optimization::LinearFunction</li>
+<li><a class="el" href="a00140.html#a1864afd8c0c95cea8029da9b52352736" title="Dense function.">roboptim::Function</a></li>
+<li><a class="el" href="a00140.html#a3b8400e3e4a5bc0372d283a4db8eb0de" title="Legacy name of TwiceDifferentiableFunction.">roboptim::DerivableFunction</a></li>
+<li><a class="el" href="a00140.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">roboptim::TwiceDerivableFunction</a></li>
+<li><a class="el" href="a00140.html#ab03c6ad564de263af42983892cab684a">roboptim::QuadraticFunction</a></li>
+<li><a class="el" href="a00140.html#abbf3e635a932ae99934936a092aec72c">roboptim::LinearFunction</a></li>
 </ul>
+<p>These types correspond to dense vectors and matrices relying on Eigen. RobOptim also support dense matrices and you can even extend the framework to support your own types.</p>
 <p>When defining a new function, you have to derive your new function from one of those classes. Depending on the class you derive from, you will be have to implement one or several methods:</p>
 <ul>
 <li>impl_compute that returns the function's result has to be defined for all functions.</li>
@@ -90,37 +91,31 @@ Defining the cost function.</h2>
 <p>It is usually recommended to derive from the deepest possible class of the hierarchy (deriving from TwiceDerivableFunction is better than DerivableFunction).</p>
 <p>Keep in mind that the type of the function represents the amount of information the solver will get, not the real nature of a function (it is possible to avoid defining a hessian by deriving from DerivableFunction, even if you function can be derived twice).</p>
 <p>In the following sample, a TwiceDerivableFunction will be defined.</p>
-<div class="fragment"><pre class="fragment"><span class="keyword">struct </span>F : <span class="keyword">public</span> <a class="code" href="a00136.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
+<div class="fragment"><pre class="fragment"><span class="keyword">struct </span>F : <span class="keyword">public</span> <a class="code" href="a00140.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
 {
-  F () : <a class="code" href="a00136.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
+  F () : <a class="code" href="a00140.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
   {
   }
 
   <span class="keywordtype">void</span>
-  impl_compute (result_t&amp; result, <span class="keyword">const</span> argument_t&amp; x) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
+  impl_compute (result_t&amp; result, <span class="keyword">const</span> <a class="code" href="a00154.html#ga35de8a579b650a9e3bb0cd4cf98aa179" title="Import discrete interval type from function.">argument_t</a>&amp; x) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
   {
-    vector_t res (m);
-    res (0) = x[0] * x[3] * (x[0] + x[1] + x[2]) + x[3];
-    <span class="keywordflow">return</span> res;
+    result (0) = x[0] * x[3] * (x[0] + x[1] + x[2]) + x[3];
   }
 
   <span class="keywordtype">void</span>
-  impl_gradient (gradient_t&amp; grad, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+  impl_gradient (gradient_t&amp; grad, <span class="keyword">const</span> <a class="code" href="a00154.html#ga35de8a579b650a9e3bb0cd4cf98aa179" title="Import discrete interval type from function.">argument_t</a>&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
   {
-    gradient_t grad (n);
-
     grad[0] = x[0] * x[3] + x[3] * (x[0] + x[1] + x[2]);
     grad[1] = x[0] * x[3];
     grad[2] = x[0] * x[3] + 1;
     grad[3] = x[0] * (x[0] + x[1] + x[2]);
-    <span class="keywordflow">return</span> grad;
   }
 
   <span class="keywordtype">void</span>
-  impl_hessian (hessian_t&amp; h, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+  impl_hessian (hessian_t&amp; h, <span class="keyword">const</span> <a class="code" href="a00154.html#ga35de8a579b650a9e3bb0cd4cf98aa179" title="Import discrete interval type from function.">argument_t</a>&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
 
   {
-    matrix_t h (n, n);
     h (0, 0) = 2 * x[3];
     h (0, 1) = x[3];
     h (0, 2) = x[3];
@@ -145,39 +140,33 @@ Defining the cost function.</h2>
 };
 </pre></div><h2><a class="anchor" id="constraints"></a>
 Defining the constraints.</h2>
-<p>A constraints is no different from a cost function and can be defined in the same way than a cost function.</p>
+<p>A constraint is no different from a cost function and can be defined in the same way than a cost function.</p>
 <p>The following sample defines two constraints which are twice derivable functions.</p>
-<div class="fragment"><pre class="fragment"><span class="keyword">struct </span>G0 : <span class="keyword">public</span> <a class="code" href="a00136.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
+<div class="fragment"><pre class="fragment"><span class="keyword">struct </span>G0 : <span class="keyword">public</span> <a class="code" href="a00140.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
 {
   G0 ()
-    : <a class="code" href="a00136.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
+    : <a class="code" href="a00140.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
   {
   }
 
   <span class="keywordtype">void</span>
-  impl_compute (result_t&amp; result, <span class="keyword">const</span> argument_t&amp; x) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
+  impl_compute (result_t&amp; result, <span class="keyword">const</span> <a class="code" href="a00154.html#ga35de8a579b650a9e3bb0cd4cf98aa179" title="Import discrete interval type from function.">argument_t</a>&amp; x) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
   {
-    vector_t res (m);
-    res (0) = x[0] * x[1] * x[2] * x[3];
-    <span class="keywordflow">return</span> res;
+    result (0) = x[0] * x[1] * x[2] * x[3];
   }
 
   <span class="keywordtype">void</span>
-  impl_gradient (gradient_t&amp; grad, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+  impl_gradient (gradient_t&amp; grad, <span class="keyword">const</span> <a class="code" href="a00154.html#ga35de8a579b650a9e3bb0cd4cf98aa179" title="Import discrete interval type from function.">argument_t</a>&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
   {
-    gradient_t grad (n);
-
     grad[0] = x[1] * x[2] * x[3];
     grad[1] = x[0] * x[2] * x[3];
     grad[2] = x[0] * x[1] * x[3];
     grad[3] = x[0] * x[1] * x[2];
-    <span class="keywordflow">return</span> grad;
   }
 
   <span class="keywordtype">void</span>
-  impl_hessian (hessian_t&amp; h, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+  impl_hessian (hessian_t&amp; h, <span class="keyword">const</span> <a class="code" href="a00154.html#ga35de8a579b650a9e3bb0cd4cf98aa179" title="Import discrete interval type from function.">argument_t</a>&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
   {
-    matrix_t h (n, n);
     h (0, 0) = 0.;
     h (0, 1) = x[2] * x[3];
     h (0, 2) = x[1] * x[3];
@@ -197,41 +186,34 @@ Defining the constraints.</h2>
     h (3, 1) = x[0] * x[2];
     h (3, 2) = x[0] * x[1];
     h (3, 3) = 0.;
-    <span class="keywordflow">return</span> h;
   }
 };
 
-<span class="keyword">struct </span>G1 : <span class="keyword">public</span> <a class="code" href="a00136.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
+<span class="keyword">struct </span>G1 : <span class="keyword">public</span> <a class="code" href="a00140.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
 {
   G1 ()
-    : <a class="code" href="a00136.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
+    : <a class="code" href="a00140.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
   {
   }
 
   <span class="keywordtype">void</span>
-  impl_compute (result_t&amp; result, <span class="keyword">const</span> argument_t&amp; x) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
+  impl_compute (result_t&amp; result, <span class="keyword">const</span> <a class="code" href="a00154.html#ga35de8a579b650a9e3bb0cd4cf98aa179" title="Import discrete interval type from function.">argument_t</a>&amp; x) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
   {
-    vector_t res (m);
-    res (0) = x[0]*x[0] + x[1]*x[1] + x[2]*x[2] + x[3]*x[3];
-    <span class="keywordflow">return</span> res;
+    result (0) = x[0]*x[0] + x[1]*x[1] + x[2]*x[2] + x[3]*x[3];
   }
 
   <span class="keywordtype">void</span>
-  impl_gradient (gradient_t&amp; grad, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+  impl_gradient (gradient_t&amp; grad, <span class="keyword">const</span> <a class="code" href="a00154.html#ga35de8a579b650a9e3bb0cd4cf98aa179" title="Import discrete interval type from function.">argument_t</a>&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
   {
-    gradient_t grad (n);
-
     grad[0] = 2 * x[0];
     grad[1] = 2 * x[1];
     grad[2] = 2 * x[2];
     grad[3] = 2 * x[3];
-    <span class="keywordflow">return</span> grad;
   }
 
   <span class="keywordtype">void</span>
-  impl_hessian (hessian_t&amp; h, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+  impl_hessian (hessian_t&amp; h, <span class="keyword">const</span> <a class="code" href="a00154.html#ga35de8a579b650a9e3bb0cd4cf98aa179" title="Import discrete interval type from function.">argument_t</a>&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
   {
-    matrix_t h (n, n);
     h (0, 0) = 2.;
     h (0, 1) = 0.;
     h (0, 2) = 0.;
@@ -251,7 +233,6 @@ Defining the constraints.</h2>
     h (3, 1) = 0.;
     h (3, 2) = 0.;
     h (3, 3) = 2.;
-    <span class="keywordflow">return</span> h;
   }
 };
 </pre></div><h2><a class="anchor" id="problem"></a>
@@ -270,7 +251,7 @@ Problem definition</h2>
   G0 g0;
   G1 g1;
 
-  CFSQPSolver::problem_t pb (f);
+  <a class="code" href="a00050.html">solver_t::problem_t</a> pb (f);
 
   <span class="comment">// Set bound for all variables.</span>
   <span class="comment">// 1. &lt; x_i &lt; 5. (x_i in [1.;5.])</span>
@@ -287,30 +268,34 @@ Problem definition</h2>
 
   initialize_problem (pb, g0, g1);
 
-  <span class="comment">// Initialize solver</span>
-  CFSQPSolver solver (pb);
+  <span class="comment">// Initialize solver.</span>
+
+  <span class="comment">// Here we are relying on the Ipopt solver (available separately).</span>
+  <span class="comment">// You may change this string to load the solver you wish to use.</span>
+  SolverFactory&lt;solver_t&gt; factory (<span class="stringliteral">&quot;ipopt-td&quot;</span>, problem);
+  <a class="code" href="a00055.html">solver_t</a>&amp; solver = factory ();
 
   <span class="comment">// Compute the minimum and retrieve the result.</span>
-  CFSQPSolver::result_t res = solver.minimum ();
+  <a class="code" href="a00038.html#acd6988bec0b7bda9b8565232d32d1bae" title="Result type.">solver_t::result_t</a> res = solver.<a class="code" href="a00038.html#aef2460331a80efc404356e9b68269b8c" title="Returns the function minimum This solves the problem automatically, if it has not yet been solved...">minimum</a> ();
 
   <span class="comment">// Display solver information.</span>
   std::cout &lt;&lt; solver &lt;&lt; std::endl;
 
   <span class="comment">// Check if the minimization has succeed.</span>
-  <span class="keywordflow">switch</span> (solver.minimumType ())
+  <span class="keywordflow">switch</span> (solver.<a class="code" href="a00038.html#a2426a7c827ce0c46c77ac29ad1d7f846" title="Determine real minimum type.">minimumType</a> ())
     {
     <span class="keywordflow">case</span> SOLVER_NO_SOLUTION:
       std::cerr &lt;&lt; <span class="stringliteral">&quot;No solution.&quot;</span> &lt;&lt; std::endl;
       <span class="keywordflow">return</span> 1;
     <span class="keywordflow">case</span> SOLVER_ERROR:
       std::cerr &lt;&lt; <span class="stringliteral">&quot;An error happened: &quot;</span>
-    &lt;&lt; solver.getMinimum&lt;SolverError&gt; ().what () &lt;&lt; std::endl;
+    &lt;&lt; solver.<a class="code" href="a00038.html#a3f01ea84c377efc66cd55bc38f8676ad" title="Get real result.">getMinimum</a>&lt;SolverError&gt; ().what () &lt;&lt; std::endl;
       <span class="keywordflow">return</span> 2;
 
     <span class="keywordflow">case</span> SOLVER_VALUE_WARNINGS:
       {
   <span class="comment">// Get the ``real&#39;&#39; result.</span>
-  Result&amp; result = solver.getMinimum&lt;ResultWithWarnings&gt; ();
+  Result&amp; result = solver.<a class="code" href="a00038.html#a3f01ea84c377efc66cd55bc38f8676ad" title="Get real result.">getMinimum</a>&lt;ResultWithWarnings&gt; ();
   <span class="comment">// Display the result.</span>
   std::cout &lt;&lt; <span class="stringliteral">&quot;A solution has been found (minor problems occurred): &quot;</span>
       &lt;&lt; std::endl
@@ -320,7 +305,7 @@ Problem definition</h2>
     <span class="keywordflow">case</span> SOLVER_VALUE:
       {
   <span class="comment">// Get the ``real&#39;&#39; result.</span>
-  Result&amp; result = solver.getMinimum&lt;Result&gt; ();
+  Result&amp; result = solver.<a class="code" href="a00038.html#a3f01ea84c377efc66cd55bc38f8676ad" title="Get real result.">getMinimum</a>&lt;Result&gt; ();
   <span class="comment">// Display the result.</span>
   std::cout &lt;&lt; <span class="stringliteral">&quot;A solution has been found: &quot;</span> &lt;&lt; std::endl;
   std::cout &lt;&lt; result &lt;&lt; std::endl;

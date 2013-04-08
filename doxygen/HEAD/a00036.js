@@ -1,9 +1,12 @@
 var a00036 =
 [
-    [ "IdentityFunction", "a00036.html#aecc6292a36a1915a34113187cf178291", null ],
-    [ "~IdentityFunction", "a00036.html#af2524305859cf6db91c11c00588a1022", null ],
-    [ "impl_compute", "a00036.html#a089962d67a04f038154c67e20fd86227", null ],
-    [ "impl_gradient", "a00036.html#af8657afa33f35b347baffa6bd0e4653d", null ],
-    [ "impl_jacobian", "a00036.html#a88d4fe6ccb20d6126fe65d8581228072", null ],
-    [ "print", "a00036.html#ad2cdd0e9d4f2b77e428a32cb544ba4a7", null ]
+    [ "GenericNumericLinearFunction", "a00036.html#a61e801b2acf4e5c5046218a19610c4ce", null ],
+    [ "~GenericNumericLinearFunction", "a00036.html#a6a95597cdbbdd850a36aed9ba5e03e91", null ],
+    [ "A", "a00036.html#a0bdfbba11cd50682046bbbf6cdf4a932", null ],
+    [ "b", "a00036.html#a5f335d97438f278d3a12651bdf88748d", null ],
+    [ "impl_compute", "a00036.html#ad080464edcfb155365710ed7e90bf3bb", null ],
+    [ "impl_gradient", "a00036.html#a0562c56998fdb5e21648a132bd84e0ab", null ],
+    [ "impl_jacobian", "a00036.html#a787347a6b4444a8173c14f6a301022d1", null ],
+    [ "print", "a00036.html#ae57fb039df18b98b7ab403b73c277632", null ],
+    [ "ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00036.html#acf53d892384fd4691f6c4829e92772f5", null ]
 ];

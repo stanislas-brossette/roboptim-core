@@ -1,7 +1,5 @@
 var a00133 =
 [
-    [ "jacobian_from_gradients", "a00139.html#a81de9d321de7e4aaccd11060a2d61643", null ],
-    [ "operator<<", "a00136.html#a6950b140fa3344f40395d549821d738c", null ],
-    [ "operator<<", "a00136.html#a60f421259ace431168bc735b2e0ba023", null ],
-    [ "operator<<", "a00136.html#a77056f38462908511453bafb27f9cb76", null ]
+    [ "ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS", "a00133.html#a2def6adcd8c6b13fe8be72ba4a6b41bf", null ],
+    [ "ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00133.html#a4e569ff9277e3bd7fc49eadf52fcc2f3", null ]
 ];

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>util.hxx File Reference</title>
+<title>twice-differentiable-function.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,48 +56,91 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Defines</a>  </div>
   <div class="headertitle">
-<div class="title">util.hxx File Reference</div>  </div>
+<div class="title">twice-differentiable-function.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00072.html">roboptim/core/differentiable-function.hh</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;cstring&gt;</code><br/>
+<code>#include &lt;limits&gt;</code><br/>
+<code>#include &lt;utility&gt;</code><br/>
+<code>#include &lt;log4cxx/logger.h&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00083.html">roboptim/core/fwd.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00108.html">roboptim/core/portability.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00071.html">roboptim/core/differentiable-function.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00134.html">roboptim/core/twice-differentiable-function.hxx</a>&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for util.hxx:</div>
+Include dependency graph for twice-differentiable-function.hh:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00267.png" border="0" usemap="#util_8hxx" alt=""/></div>
-<map name="util_8hxx" id="util_8hxx">
-<area shape="rect" id="node3" href="a00072.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="177,86,425,117"/><area shape="rect" id="node13" href="a00081.html" title="roboptim/core/fwd.hh" alt="" coords="387,246,533,277"/><area shape="rect" id="node15" href="a00080.html" title="roboptim/core/function.hh" alt="" coords="576,166,747,197"/><area shape="rect" id="node36" href="a00105.html" title="roboptim/core/portability.hh" alt="" coords="1344,246,1525,277"/></map>
+<div class="center"><img src="a00275.png" border="0" usemap="#twice-differentiable-function_8hh" alt=""/></div>
+<map name="twice-differentiable-function_8hh" id="twice-differentiable-function_8hh">
+<area shape="rect" id="node11" href="a00083.html" title="roboptim/core/fwd.hh" alt="" coords="191,326,337,357"/><area shape="rect" id="node13" href="a00108.html" title="roboptim/core/portability.hh" alt="" coords="1879,406,2060,437"/><area shape="rect" id="node15" href="a00071.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="713,86,961,117"/><area shape="rect" id="node74" href="a00134.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="1624,166,1915,197"/><area shape="rect" id="node22" href="a00082.html" title="roboptim/core/function.hh" alt="" coords="752,166,923,197"/><area shape="rect" id="node62" href="a00072.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="1344,166,1600,197"/><area shape="rect" id="node49" href="a00096.html" title="roboptim/core/indent.hh" alt="" coords="1469,246,1629,277"/><area shape="rect" id="node51" href="a00130.html" title="roboptim/core/sys.hh" alt="" coords="1656,326,1803,357"/><area shape="rect" id="node54" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="1469,326,1632,357"/><area shape="rect" id="node66" href="a00136.html" title="roboptim/core/util.hh" alt="" coords="1899,246,2040,277"/><area shape="rect" id="node71" href="a00137.html" title="roboptim/core/util.hxx" alt="" coords="2019,326,2165,357"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00268.png" border="0" usemap="#util_8hxxdep" alt=""/></div>
-<map name="util_8hxxdep" id="util_8hxxdep">
-<area shape="rect" id="node3" href="a00132.html" title="util.hh" alt="" coords="1490,86,1543,117"/><area shape="rect" id="node5" href="a00107.html" title="problem.hxx" alt="" coords="338,166,431,197"/><area shape="rect" id="node19" href="a00064.html" title="core.hh" alt="" coords="383,566,450,597"/><area shape="rect" id="node31" href="a00062.html" title="constant&#45;function.cc" alt="" coords="646,166,782,197"/><area shape="rect" id="node33" href="a00071.html" title="differentiable&#45;function.cc" alt="" coords="806,166,968,197"/><area shape="rect" id="node35" href="a00076.html" title="finite&#45;difference&#45;gradient.cc" alt="" coords="992,166,1174,197"/><area shape="rect" id="node37" href="a00079.html" title="function.cc" alt="" coords="1198,166,1280,197"/><area shape="rect" id="node39" href="a00090.html" title="identity&#45;function.cc" alt="" coords="1304,166,1432,197"/><area shape="rect" id="node41" href="a00095.html" title="linear&#45;function.cc" alt="" coords="1456,166,1576,197"/><area shape="rect" id="node43" href="a00099.html" title="numeric&#45;linear&#45;function.cc" alt="" coords="1600,166,1771,197"/><area shape="rect" id="node45" href="a00101.html" title="numeric&#45;quadratic&#45;function.cc" alt="" coords="1795,166,1990,197"/><area shape="rect" id="node47" href="a00108.html" title="quadratic&#45;function.cc" alt="" coords="2014,166,2155,197"/><area shape="rect" id="node49" href="a00110.html" title="result&#45;with&#45;warnings.cc" alt="" coords="2179,166,2334,197"/><area shape="rect" id="node51" href="a00112.html" title="result.cc" alt="" coords="2358,166,2427,197"/><area shape="rect" id="node53" href="a00129.html" title="twice&#45;differentiable&#45;function.cc" alt="" coords="2451,166,2648,197"/><area shape="rect" id="node55" href="a00131.html" title="util.cc" alt="" coords="2672,166,2726,197"/><area shape="rect" id="node7" href="a00106.html" title="problem.hh" alt="" coords="200,246,286,277"/><area shape="rect" id="node9" href="a00084.html" title="generic&#45;solver.hh" alt="" coords="182,326,304,357"/><area shape="rect" id="node11" href="a00121.html" title="solver.hh" alt="" coords="304,406,379,437"/><area shape="rect" id="node15" href="a00074.html" title="dummy.cc" alt="" coords="82,566,164,597"/><area shape="rect" id="node25" href="a00083.html" title="generic&#45;solver.cc" alt="" coords="95,406,218,437"/><area shape="rect" id="node13" href="a00075.html" title="dummy.hh" alt="" coords="198,486,280,517"/><area shape="rect" id="node17" href="a00116.html" title="solver&#45;factory.hh" alt="" coords="454,486,571,517"/><area shape="rect" id="node22" href="a00120.html" title="solver.cc" alt="" coords="304,486,379,517"/></map>
+<div class="center"><img src="a00276.png" border="0" usemap="#twice-differentiable-function_8hhdep" alt=""/></div>
+<map name="twice-differentiable-function_8hhdep" id="twice-differentiable-function_8hhdep">
+<area shape="rect" id="node3" href="a00111.html" title="quadratic&#45;function.hh" alt="" coords="885,246,1027,277"/><area shape="rect" id="node31" href="a00136.html" title="util.hh" alt="" coords="1340,86,1393,117"/><area shape="rect" id="node102" href="a00100.html" title="n&#45;times&#45;derivable&#45;function.hh" alt="" coords="2461,406,2651,437"/><area shape="rect" id="node110" href="a00132.html" title="twice&#45;derivable&#45;function.hh" alt="" coords="2293,86,2472,117"/><area shape="rect" id="node5" href="a00098.html" title="linear&#45;function.hh" alt="" coords="1107,326,1227,357"/><area shape="rect" id="node9" href="a00065.html" title="core.hh" alt="" coords="1279,566,1345,597"/><area shape="rect" id="node25" href="a00105.html" title="numeric&#45;quadratic&#45;function.hh" alt="" coords="859,326,1053,357"/><area shape="rect" id="node7" href="a00064.html" title="constant&#45;function.hh" alt="" coords="1599,406,1735,437"/><area shape="rect" id="node13" href="a00094.html" title="identity&#45;function.hh" alt="" coords="1151,406,1279,437"/><area shape="rect" id="node18" href="a00102.html" title="numeric&#45;linear&#45;function.hh" alt="" coords="1353,406,1524,437"/><area shape="rect" id="node11" href="a00063.html" title="constant&#45;function.cc" alt="" coords="1704,486,1840,517"/><area shape="rect" id="node16" href="a00093.html" title="identity&#45;function.cc" alt="" coords="1248,486,1376,517"/><area shape="rect" id="node20" href="a00103.html" title="numeric&#45;linear&#45;function.hxx" alt="" coords="1451,486,1629,517"/><area shape="rect" id="node28" href="a00104.html" title="numeric&#45;quadratic&#45;function.cc" alt="" coords="932,406,1127,437"/><area shape="rect" id="node33" href="a00072.html" title="differentiable&#45;function.hxx" alt="" coords="1709,166,1880,197"/><area shape="rect" id="node53" href="a00134.html" title="twice&#45;differentiable&#45;function.hxx" alt="" coords="2013,166,2219,197"/><area shape="rect" id="node56" href="a00112.html" title="quadratic&#45;function.hxx" alt="" coords="1028,166,1177,197"/><area shape="rect" id="node59" href="a00099.html" title="linear&#45;function.hxx" alt="" coords="1103,246,1228,277"/><area shape="rect" id="node62" href="a00110.html" title="problem.hxx" alt="" coords="740,166,833,197"/><area shape="rect" id="node96" href="a00113.html" title="result&#45;with&#45;warnings.cc" alt="" coords="1455,166,1609,197"/><area shape="rect" id="node98" href="a00115.html" title="result.cc" alt="" coords="857,166,927,197"/><area shape="rect" id="node100" href="a00135.html" title="util.cc" alt="" coords="951,166,1004,197"/><area shape="rect" id="node35" href="a00071.html" title="differentiable&#45;function.hh" alt="" coords="1737,246,1900,277"/><area shape="rect" id="node38" href="a00137.html" title="util.hxx" alt="" coords="1455,326,1516,357"/><area shape="rect" id="node41" href="a00068.html" title="derivable&#45;function.hh" alt="" coords="2153,326,2295,357"/><area shape="rect" id="node44" href="a00079.html" title="finite&#45;difference&#45;gradient.hh" alt="" coords="1948,326,2129,357"/><area shape="rect" id="node47" href="a00129.html" title="sum&#45;of&#45;c1&#45;squares.hh" alt="" coords="1540,326,1689,357"/><area shape="rect" id="node51" href="a00089.html" title="gnuplot&#45;differentiable&#45;function.hh" alt="" coords="1713,326,1924,357"/><area shape="rect" id="node49" href="a00128.html" title="sum&#45;of&#45;c1&#45;squares.cc" alt="" coords="1809,406,1959,437"/><area shape="rect" id="node64" href="a00109.html" title="problem.hh" alt="" coords="460,246,545,277"/><area shape="rect" id="node66" href="a00086.html" title="generic&#45;solver.hh" alt="" coords="503,326,625,357"/><area shape="rect" id="node68" href="a00124.html" title="solver.hh" alt="" coords="411,406,485,437"/><area shape="rect" id="node72" href="a00074.html" title="dummy&#45;laststate.cc" alt="" coords="5,566,141,597"/><area shape="rect" id="node76" href="a00076.html" title="dummy.cc" alt="" coords="204,566,287,597"/><area shape="rect" id="node85" href="a00085.html" title="generic&#45;solver.cc" alt="" coords="509,406,632,437"/><area shape="rect" id="node70" href="a00075.html" title="dummy&#45;laststate.hh" alt="" coords="121,486,257,517"/><area shape="rect" id="node74" href="a00077.html" title="dummy.hh" alt="" coords="281,486,364,517"/><area shape="rect" id="node78" href="a00119.html" title="solver&#45;factory.hh" alt="" coords="487,486,604,517"/><area shape="rect" id="node82" href="a00123.html" title="solver.cc" alt="" coords="388,486,463,517"/><area shape="rect" id="node104" href="a00061.html" title="cached&#45;function.hh" alt="" coords="2505,486,2636,517"/><area shape="rect" id="node107" href="a00126.html" title="split.hh" alt="" coords="2420,486,2481,517"/></map>
 </div>
 </div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00039.html">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define an abstract function which is derivable twice ( <img class="formulaInl" alt="$C^2$" src="form_38.png"/>).  <a href="a00039.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00136.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00139.html">roboptim::detail</a></td></tr>
-<tr><td colspan="2"><h2><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00139.html#a81de9d321de7e4aaccd11060a2d61643">roboptim::detail::jacobian_from_gradients</a> (typename DifferentiableFunction::matrix_t &amp;jac, const std::vector&lt; const T * &gt; &amp;c, const DifferentiableFunction::vector_t &amp;x)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00136.html#a6950b140fa3344f40395d549821d738c">roboptim::operator&lt;&lt;</a> (std::ostream &amp;, const std::vector&lt; T &gt; &amp;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a vector.  <a href="#a6950b140fa3344f40395d549821d738c"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00136.html#a60f421259ace431168bc735b2e0ba023">roboptim::operator&lt;&lt;</a> (std::ostream &amp;, const std::pair&lt; T1, T2 &gt; &amp;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a pair.  <a href="#a60f421259ace431168bc735b2e0ba023"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00136.html#a77056f38462908511453bafb27f9cb76">roboptim::operator&lt;&lt;</a> (std::ostream &amp;, const Eigen::MatrixBase&lt; T &gt; &amp;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display an Eigen object with the appropriate IOFormat.  <a href="#a77056f38462908511453bafb27f9cb76"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="define-members"></a>
+Defines</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#a2def6adcd8c6b13fe8be72ba4a6b41bf">ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS</a>(PARENT)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00133.html#a4e569ff9277e3bd7fc49eadf52fcc2f3">ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>(PARENT)</td></tr>
 </table>
+<hr/><h2>Define Documentation</h2>
+<a class="anchor" id="a2def6adcd8c6b13fe8be72ba4a6b41bf"></a><!-- doxytag: member="twice&#45;differentiable&#45;function.hh::ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS" ref="a2def6adcd8c6b13fe8be72ba4a6b41bf" args="(PARENT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00133.html#a2def6adcd8c6b13fe8be72ba4a6b41bf">ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PARENT</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Value:</b><div class="fragment"><pre class="fragment"><a class="code" href="a00071.html#acb0d62d89669ee019cf7dfc94b3e8189">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS</a>(PARENT);    \
+  typedef parent_t::hessian_t hessian_t;        \
+  struct e_n_d__w_i_t_h__s_e_m_i_c_o_l_o_n
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a4e569ff9277e3bd7fc49eadf52fcc2f3"></a><!-- doxytag: member="twice&#45;differentiable&#45;function.hh::ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="a4e569ff9277e3bd7fc49eadf52fcc2f3" args="(PARENT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00133.html#a4e569ff9277e3bd7fc49eadf52fcc2f3">ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">PARENT</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Value:</b><div class="fragment"><pre class="fragment"><a class="code" href="a00071.html#afa0830bb1d13a88e3228fe29833b6164">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>(PARENT);   \
+  typedef <span class="keyword">typename</span> parent_t::hessian_t hessian_t;     \
+  struct e_n_d__w_i_t_h__s_e_m_i_c_o_l_o_n
+</pre></div>
+</div>
+</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -116,6 +159,6 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00133.html">util.hxx</a>      </li>
+      <li class="navelem"><a class="el" href="a00133.html">twice-differentiable-function.hh</a>      </li>
 </body>
 </html>

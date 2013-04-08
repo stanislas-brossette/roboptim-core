@@ -71,25 +71,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <span class="comment">// You should have received a copy of the GNU Lesser General Public License</span>
 <span class="comment">// along with roboptim.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
 
-<span class="preprocessor">#include &quot;shared-tests/common.hh&quot;</span>
+<span class="preprocessor">#include &quot;shared-tests/fixture.hh&quot;</span>
 
 <span class="preprocessor">#include &lt;iostream&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00094.html">roboptim/core/io.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00100.html">roboptim/core/numeric-linear-function.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00097.html">roboptim/core/io.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00102.html">roboptim/core/numeric-linear-function.hh</a>&gt;</span>
 
 <span class="keyword">using namespace </span>roboptim;
 
-<span class="keyword">typedef</span> <a name="_a0"></a><a class="code" href="a00025.html" title="Dummy solver which always fails.">DummySolver</a> <a name="a1"></a><a class="code" href="a00074.html#a926347d1adaf0ea2a6a2a50bc50a209e">solver_t</a>;
+<span class="keyword">typedef</span> <a name="_a0"></a><a class="code" href="a00024.html" title="Dummy solver which always fails.">DummySolver</a> <a name="a1"></a><a class="code" href="a00074.html#a5aafe251d5465495fdbaff79da9e5a7d">solver_t</a>;
+
+BOOST_FIXTURE_TEST_SUITE (core, TestSuiteConfiguration)
 
 BOOST_AUTO_TEST_CASE (numeric_linear_function)
 {
   boost::shared_ptr&lt;boost::test_tools::output_test_stream&gt;
     output = retrievePattern (<span class="stringliteral">&quot;numeric-linear-function&quot;</span>);
 
-  <a name="a2"></a><a class="code" href="a00024.html#a5487b040f57560eb1e003387c8001a5f" title="Basic matrix type.">NumericLinearFunction::matrix_t</a> a (1, 5);
-  <a name="a3"></a><a class="code" href="a00024.html#ae33eaa2d6b3264ece833eecff9a65432" title="Basic vector type.">NumericLinearFunction::vector_t</a> b (1);
-  <a class="code" href="a00024.html#ae33eaa2d6b3264ece833eecff9a65432" title="Basic vector type.">NumericLinearFunction::vector_t</a> x (5);
+  <a class="code" href="a00031.html#a97054924c0f87acb1713be64782a6aab" title="Basic matrix type.">NumericLinearFunction::matrix_t</a> a (1, 5);
+  <a class="code" href="a00031.html#a76763e91e51e9cddf579d52091dce746" title="Basic vector type.">NumericLinearFunction::vector_t</a> b (1);
+  <a class="code" href="a00031.html#a76763e91e51e9cddf579d52091dce746" title="Basic vector type.">NumericLinearFunction::vector_t</a> x (5);
 
   a.setZero ();
   b.setZero ();
@@ -102,7 +104,7 @@ BOOST_AUTO_TEST_CASE (numeric_linear_function)
 
   b[0] = 1.;
 
-  <a name="_a4"></a><a class="code" href="a00042.html" title="Build a linear function from a vector and a matrix.">NumericLinearFunction</a> f (a, b);
+  <a name="_a2"></a><a class="code" href="a00036.html" title="Build a linear function from a vector and a matrix.">NumericLinearFunction</a> f (a, b);
 
   (*output) &lt;&lt; f &lt;&lt; std::endl;
 
@@ -113,11 +115,13 @@ BOOST_AUTO_TEST_CASE (numeric_linear_function)
   x[4] = 4.5;
 
   (*output) &lt;&lt; <span class="stringliteral">&quot;f(x) = &quot;</span> &lt;&lt; f (x) &lt;&lt; std::endl;
-  (*output) &lt;&lt; <span class="stringliteral">&quot;J(x) = &quot;</span> &lt;&lt; f.<a name="a5"></a><a class="code" href="a00024.html#ac7db53250c56f0eb7d5836d6043cb20f" title="Computes the jacobian.">jacobian</a> (x) &lt;&lt; std::endl;
+  (*output) &lt;&lt; <span class="stringliteral">&quot;J(x) = &quot;</span> &lt;&lt; f.<a name="a3"></a><a class="code" href="a00029.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> (x) &lt;&lt; std::endl;
 
   std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;
   BOOST_CHECK (output-&gt;match_pattern ());
 }
+
+BOOST_AUTO_TEST_SUITE_END ()
 </pre></div> </div><!-- contents -->
 </div><!-- contents -->
 <!-- window showing the filter options -->

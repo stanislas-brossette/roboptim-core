@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::SolverError Class Reference</title>
+<title>roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -60,95 +60,158 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::SolverError Class Reference<div class="ingroups"><a class="el" href="a00147.html">Optimization problems</a></div></div>  </div>
+<div class="title">roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::SolverError" --><!-- doxytag: inherits="std::runtime_error" -->
-<p>Base exception class for solving errors.  
+<!-- doxytag: class="roboptim::finiteDifferenceGradientPolicies::Simple" -->
+<p>Fast finite difference gradient computation.  
  <a href="a00054.html#details">More...</a></p>
 
-<p><code>#include &lt;roboptim/core/solver-error.hh&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for roboptim::SolverError:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00333.png" border="0" usemap="#roboptim_1_1_solver_error_inherit__map" alt="Inheritance graph"/></div>
-<map name="roboptim_1_1_solver_error_inherit__map" id="roboptim_1_1_solver_error_inherit__map">
-<area shape="rect" id="node7" href="a00056.html" title="Exception used for non&#45;critical errors during optimization." alt="" coords="5,246,173,277"/><area shape="rect" id="node2" title="STL class." alt="" coords="27,86,152,117"/><area shape="rect" id="node4" title="STL class." alt="" coords="36,6,143,37"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for roboptim::SolverError:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00334.png" border="0" usemap="#roboptim_1_1_solver_error_coll__map" alt="Collaboration graph"/></div>
-<map name="roboptim_1_1_solver_error_coll__map" id="roboptim_1_1_solver_error_coll__map">
-<area shape="rect" id="node2" title="STL class." alt="" coords="16,86,141,117"/><area shape="rect" id="node4" title="STL class." alt="" coords="25,6,132,37"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;roboptim/core/finite-difference-gradient.hh&gt;</code></p>
 
-<p><a href="a00335.html">List of all members.</a></p>
+<p><a href="a00371.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#aa8893a6fd45b24fcd4f9a21dc33a5516">SolverError</a> (const std::string &amp;arg)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate an error from an error message.  <a href="#aa8893a6fd45b24fcd4f9a21dc33a5516"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#a8bffd424a6556c49b69aa8cefc0f9b64">print</a> (std::ostream &amp;) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the error on the specified output stream.  <a href="#a8bffd424a6556c49b69aa8cefc0f9b64"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#a589c0a7f4d846453adf91866789ebd7d">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00029.html">GenericDifferentiableFunction</a>&lt; T &gt;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#ac177c36cf832e17f3104c7db9288e8cb">computeGradient</a> (const <a class="el" href="a00031.html">GenericFunction</a>&lt; T &gt; &amp;adaptee, value_type epsilon, gradient_t &amp;gradient, const argument_t &amp;argument, size_type idFunction, argument_t &amp;xEps) const   throw ()</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00054.html#af6fb145667fec7f294b3c3314bda209e">computeGradient</a> (const <a class="el" href="a00031.html">GenericFunction</a>&lt; <a class="el" href="a00027.html">EigenMatrixSparse</a> &gt; &amp;adaptee, value_type epsilon, gradient_t &amp;gradient, const argument_t &amp;argument, size_type idFunction, argument_t &amp;xEps) const  throw()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Base exception class for solving errors. </p>
-<p>All other exceptions classes concerning the optimization process should inherits this class. </p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa8893a6fd45b24fcd4f9a21dc33a5516"></a><!-- doxytag: member="roboptim::SolverError::SolverError" ref="aa8893a6fd45b24fcd4f9a21dc33a5516" args="(const std::string &amp;arg)" -->
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+class roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt;</h3>
+
+<p>Fast finite difference gradient computation. </p>
+<p>Finite difference is computed using forward difference. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00002.html#_a8">finite-difference-gradient.cc</a>.</dd>
+</dl></div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ac177c36cf832e17f3104c7db9288e8cb"></a><!-- doxytag: member="roboptim::finiteDifferenceGradientPolicies::Simple::computeGradient" ref="ac177c36cf832e17f3104c7db9288e8cb" args="(const GenericFunction&lt; T &gt; &amp;adaptee, value_type epsilon, gradient_t &amp;gradient, const argument_t &amp;argument, size_type idFunction, argument_t &amp;xEps) const " -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00054.html#aa8893a6fd45b24fcd4f9a21dc33a5516">roboptim::SolverError::SolverError</a> </td>
+          <td class="memname">void <a class="el" href="a00054.html">roboptim::finiteDifferenceGradientPolicies::Simple</a>&lt; T &gt;::<a class="el" href="a00054.html#ac177c36cf832e17f3104c7db9288e8cb">computeGradient</a> </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>arg</em></td><td>)</td>
-          <td>  throw ()<code> [explicit]</code></td>
+          <td class="paramtype">const <a class="el" href="a00031.html">GenericFunction</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>adaptee</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">value_type&#160;</td>
+          <td class="paramname"><em>epsilon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gradient_t &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const argument_t &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_type&#160;</td>
+          <td class="paramname"><em>idFunction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">argument_t &amp;&#160;</td>
+          <td class="paramname"><em>xEps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Instantiate an error from an error message. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">arg</td><td>error message. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>References <a class="el" href="a00031.html#ac56c279d34f3c4047c0f66b738a1bd7f">roboptim::GenericFunction&lt; T &gt;::inputSize()</a>, and <a class="el" href="a00031.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">roboptim::GenericFunction&lt; T &gt;::outputSize()</a>.</p>
 
 </div>
 </div>
-<hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a8bffd424a6556c49b69aa8cefc0f9b64"></a><!-- doxytag: member="roboptim::SolverError::print" ref="a8bffd424a6556c49b69aa8cefc0f9b64" args="(std::ostream &amp;) const " -->
+<a class="anchor" id="af6fb145667fec7f294b3c3314bda209e"></a><!-- doxytag: member="roboptim::finiteDifferenceGradientPolicies::Simple::computeGradient" ref="af6fb145667fec7f294b3c3314bda209e" args="(const GenericFunction&lt; EigenMatrixSparse &gt; &amp;adaptee, value_type epsilon, gradient_t &amp;gradient, const argument_t &amp;argument, size_type idFunction, argument_t &amp;xEps) const " -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream &amp; <a class="el" href="a00054.html#a8bffd424a6556c49b69aa8cefc0f9b64">roboptim::SolverError::print</a> </td>
+          <td class="memname">void <a class="el" href="a00054.html">roboptim::finiteDifferenceGradientPolicies::Simple</a>&lt; <a class="el" href="a00027.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00054.html#ac177c36cf832e17f3104c7db9288e8cb">computeGradient</a> </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>o</em></td><td>)</td>
-          <td> const  throw ()<code> [virtual]</code></td>
+          <td class="paramtype">const <a class="el" href="a00031.html">GenericFunction</a>&lt; <a class="el" href="a00027.html">EigenMatrixSparse</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>adaptee</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">value_type&#160;</td>
+          <td class="paramname"><em>epsilon</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gradient_t &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const argument_t &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_type&#160;</td>
+          <td class="paramname"><em>idFunction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">argument_t &amp;&#160;</td>
+          <td class="paramname"><em>xEps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const throw()<code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Display the error on the specified output stream. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
+<p>References <a class="el" href="a00031.html#ac56c279d34f3c4047c0f66b738a1bd7f">roboptim::GenericFunction&lt; T &gt;::inputSize()</a>, and <a class="el" href="a00031.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">roboptim::GenericFunction&lt; T &gt;::outputSize()</a>.</p>
 
-<p>Reimplemented in <a class="el" href="a00056.html#a1b851aa758c3cccd4594ff817fb10190">roboptim::SolverWarning</a>.</p>
-
-<p>Referenced by <a class="el" href="a00136.html#ae6c649aa8d935cb8c8fbe8307cfa2b1f">roboptim::operator&lt;&lt;()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a589c0a7f4d846453adf91866789ebd7d"></a><!-- doxytag: member="roboptim::finiteDifferenceGradientPolicies::Simple::ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="a589c0a7f4d846453adf91866789ebd7d" args="(GenericDifferentiableFunction&lt; T &gt;)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00054.html">roboptim::finiteDifferenceGradientPolicies::Simple</a>&lt; T &gt;::<a class="el" href="a00054.html#a589c0a7f4d846453adf91866789ebd7d">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00029.html">GenericDifferentiableFunction</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -170,7 +233,8 @@ Public Member Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00136.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00054.html">SolverError</a>      </li>
+      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00145.html">finiteDifferenceGradientPolicies</a>      </li>
+      <li class="navelem"><a class="el" href="a00054.html">Simple</a>      </li>
 </body>
 </html>

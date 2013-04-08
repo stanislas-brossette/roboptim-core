@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['x',['x',['../a00050.html#a31284faee67e87284026280767720008',1,'roboptim::Result']]],
-  ['x_5f',['x_',['../a00015.html#a79b4b583622ea8bd52111c30344633c7',1,'roboptim::BadGradient']]],
-  ['xeps_5f',['xEps_',['../a00028.html#a2035a7c188063fcfcda2580b3f9999d3',1,'roboptim::FiniteDifferenceGradient']]]
+  ['x',['x',['../a00052.html#a31284faee67e87284026280767720008',1,'roboptim::Result']]],
+  ['x_5f',['x_',['../a00015.html#a37ed84edbe133fcba39b7a57e14b52c0',1,'roboptim::BadGradient']]],
+  ['xeps_5f',['xEps_',['../a00030.html#a5c3139b3bfa459c225a2e77058259cb1',1,'roboptim::GenericFiniteDifferenceGradient']]]
 ];

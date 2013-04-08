@@ -1,10 +1,9 @@
 var a00092 =
 [
-    [ "decendl", "a00136.html#a40c2b30f2b9839b3f1f16f3e1bcf8769", null ],
-    [ "decindent", "a00136.html#a5a9d36182ac616874a038fd4217f0a9c", null ],
-    [ "iendl", "a00136.html#a27b6e86639bb04ec042979cdaad0a851", null ],
-    [ "incendl", "a00136.html#a522f7549c2f312397403265b950a9144", null ],
-    [ "incindent", "a00136.html#a053552edbb5c42ac287c22175ea43e69", null ],
-    [ "indent", "a00136.html#a2b00a3916f44e9f9d69e4fc157a0da79", null ],
-    [ "resetindent", "a00136.html#a3f228456aacf0bc862482828cbde643b", null ]
+    [ "EIGEN_YES_I_KNOW_SPARE_MODULE_IS_NOT_STABLE_YET", "a00092.html#a77e6db63e071b40535df9ee30f2acfd7", null ],
+    [ "normalize", "a00154.html#ga03109edccbaa5f071371ee52c447ee70", null ],
+    [ "normalize", "a00154.html#gaf0f79518896936efeba27dabdce72963", null ],
+    [ "normalize", "a00154.html#ga823decd192bfbc6405e61c28947ddc4d", null ],
+    [ "operator<<", "a00154.html#ga22576c0708e8fe4af42060ff87bfad20", null ],
+    [ "operator<<", "a00146.html#a45951c8d967c172f9f8213900b3d7884", null ]
 ];

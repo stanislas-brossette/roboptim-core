@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::ResultWithWarnings Class Reference</title>
+<title>roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,151 +58,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#friends">Friends</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::ResultWithWarnings Class Reference<div class="ingroups"><a class="el" href="a00147.html">Optimization problems</a></div></div>  </div>
+<div class="title">roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt; Class Template Reference<div class="ingroups"><a class="el" href="a00152.html">Optimization problems</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::ResultWithWarnings" --><!-- doxytag: inherits="roboptim::Result" -->
-<p>Represents the solution of an optimization problem when errors occurred during the solving process.  
- <a href="a00051.html#details">More...</a></p>
+<!-- doxytag: class="roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt;" -->
+<p><code>#include &lt;roboptim/core/problem.hh&gt;</code></p>
 
-<p><code>#include &lt;roboptim/core/result-with-warnings.hh&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for roboptim::ResultWithWarnings:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00328.png" border="0" usemap="#roboptim_1_1_result_with_warnings_inherit__map" alt="Inheritance graph"/></div>
-<map name="roboptim_1_1_result_with_warnings_inherit__map" id="roboptim_1_1_result_with_warnings_inherit__map">
-<area shape="rect" id="node2" href="a00050.html" title="Represents the solution of an optimization problem." alt="" coords="47,6,164,37"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for roboptim::ResultWithWarnings:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00329.png" border="0" usemap="#roboptim_1_1_result_with_warnings_coll__map" alt="Collaboration graph"/></div>
-<map name="roboptim_1_1_result_with_warnings_coll__map" id="roboptim_1_1_result_with_warnings_coll__map">
-<area shape="rect" id="node2" href="a00050.html" title="Represents the solution of an optimization problem." alt="" coords="5,353,123,383"/><area shape="rect" id="node6" href="a00056.html" title="Exception used for non&#45;critical errors during optimization." alt="" coords="161,254,329,285"/><area shape="rect" id="node8" href="a00054.html" title="Base exception class for solving errors." alt="" coords="172,171,319,202"/><area shape="rect" id="node10" title="STL class." alt="" coords="183,89,308,119"/><area shape="rect" id="node12" title="STL class." alt="" coords="192,6,299,37"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-
-<p><a href="a00330.html">List of all members.</a></p>
+<p><a href="a00340.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef F&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga7aea22d30d62c71d6e97078a45cfcb79">function_t</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function type.  <a href="a00152.html#ga7aea22d30d62c71d6e97078a45cfcb79"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef function_t::value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga39720e9fd5bb9e9e9978625388a87203">value_type</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef boost::optional<br class="typebreak"/>
+&lt; <a class="el" href="a00031.html#a76763e91e51e9cddf579d52091dce746">Function::vector_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga73bcf2b80c951811c681788fce7e396e">startingPoint_t</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional vector defines a starting point.  <a href="a00152.html#ga73bcf2b80c951811c681788fce7e396e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00031.html#ac34c3e5a5464b789ba16d2e6773455cf">Function::interval_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gae8b3c65ad10a5a1d9ce7d36a4a8edc91">interval_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00031.html#a4adad3122f872279c13a49e4d9025b01">Function::intervals_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gab10340f4facc8ba67d60806d7222f332">intervals_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="a00152.html#ga39720e9fd5bb9e9e9978625388a87203">value_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gae99cdf43b9e6e469068890e150f2af81">scales_t</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale vector.  <a href="a00152.html#gae99cdf43b9e6e469068890e150f2af81"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#a2e3e3d6637bb1968eef831d451079124">ResultWithWarnings</a> (const <a class="el" href="a00030.html#ad3d5888dc78d2ca132d807abfd8e94f2">Function::size_type</a> <a class="el" href="a00050.html#af32478031f205ae7a8fd3676fc02f67d">inputSize</a>, const <a class="el" href="a00030.html#ad3d5888dc78d2ca132d807abfd8e94f2">Function::size_type</a> <a class="el" href="a00050.html#a562f3e5a026d2b9c6a008be5bc6c2ec7">outputSize</a>=1)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate the class from an input/output size.  <a href="#a2e3e3d6637bb1968eef831d451079124"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#aa3c7d443e5144fb8dea37bb88b50b387">~ResultWithWarnings</a> ()  throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#a555b074ff9d1e8ecacc2c2665f9a5eec">print</a> (std::ostream &amp;o) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the result on the specified output stream.  <a href="#a555b074ff9d1e8ecacc2c2665f9a5eec"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="a00056.html">SolverWarning</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#a644b84239da645b252e1d9cb1b0b49c8">warnings</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of warnings.  <a href="#a644b84239da645b252e1d9cb1b0b49c8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gab8e4c8c63039bd83b2537cd4a139a0cc">print</a> (std::ostream &amp;o) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the problem on the specified output stream.  <a href="a00152.html#gab8e4c8c63039bd83b2537cd4a139a0cc"></a><br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Constructors and destructors.</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gadcca92e64b652ed01d3b277105e9a503">Problem</a> (const <a class="el" href="a00152.html#ga7aea22d30d62c71d6e97078a45cfcb79">function_t</a> &amp;)  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga58de36c497db8306e8648cd7f23b401f">Problem</a> (const <a class="el" href="a00050.html">Problem</a>&lt; F, boost::mpl::vector&lt;&gt; &gt; &amp;)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="a00152.html#ga58de36c497db8306e8648cd7f23b401f"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename F_ &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00152.html#gafc8876f9b6f551a7f410c7839768cee9">Problem</a> (const <a class="el" href="a00050.html">Problem</a>&lt; F_, boost::mpl::vector&lt;&gt; &gt; &amp;)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor (convert from another class of problem).  <a href="a00152.html#gafc8876f9b6f551a7f410c7839768cee9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga18c4d0e5a905e7154a5109aa03e47561">~Problem</a> ()  throw ()</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Cost function.</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00152.html#ga7aea22d30d62c71d6e97078a45cfcb79">function_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga228e69db29968ff3fd6721672be5193e">function</a> () const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve cost function.  <a href="a00152.html#ga228e69db29968ff3fd6721672be5193e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00152.html#gab10340f4facc8ba67d60806d7222f332">intervals_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga7c0c46e2510ad60fb66212e6b568318b">argumentBounds</a> ()  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve arguments bounds.  <a href="a00152.html#ga7c0c46e2510ad60fb66212e6b568318b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00152.html#gab10340f4facc8ba67d60806d7222f332">intervals_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga5fa1e1daba19616a2a5026104e036ca9">argumentBounds</a> () const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve arguments bounds.  <a href="a00152.html#ga5fa1e1daba19616a2a5026104e036ca9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00152.html#gae99cdf43b9e6e469068890e150f2af81">scales_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga0613681457a770b22dea21d02a17600d">argumentScales</a> ()  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve arguments scales.  <a href="a00152.html#ga0613681457a770b22dea21d02a17600d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00152.html#gae99cdf43b9e6e469068890e150f2af81">scales_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gac4e8cb9b614553863159bce28b41a7c0">argumentScales</a> () const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve arguments scales.  <a href="a00152.html#gac4e8cb9b614553863159bce28b41a7c0"></a><br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Starting point (initial guess).</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00152.html#ga73bcf2b80c951811c681788fce7e396e">startingPoint_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga8f6ac3f234d690a1a51760665b13ec6b">startingPoint</a> ()  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the initial guess.  <a href="a00152.html#ga8f6ac3f234d690a1a51760665b13ec6b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00152.html#ga73bcf2b80c951811c681788fce7e396e">startingPoint_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga266d759261ed5ecfe1525b7faeeafd2d">startingPoint</a> () const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial guess.  <a href="a00152.html#ga266d759261ed5ecfe1525b7faeeafd2d"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="friends"></a>
+Friends</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gacc081cc87e465ee811f25f9676550d09">Problem</a></td></tr>
 </table>
-<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Represents the solution of an optimization problem when errors occurred during the solving process. </p>
-<p>This class is returned by a solver if a result has been found, but some problems happened.</p>
-<p>A vector or warnings is provided in this result, otherwise the class behaves like <a class="el" href="a00050.html" title="Represents the solution of an optimization problem.">Result</a>. </p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2e3e3d6637bb1968eef831d451079124"></a><!-- doxytag: member="roboptim::ResultWithWarnings::ResultWithWarnings" ref="a2e3e3d6637bb1968eef831d451079124" args="(const Function::size_type inputSize, const Function::size_type outputSize=1)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00051.html#a2e3e3d6637bb1968eef831d451079124">roboptim::ResultWithWarnings::ResultWithWarnings</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00030.html#ad3d5888dc78d2ca132d807abfd8e94f2">Function::size_type</a>&#160;</td>
-          <td class="paramname"><em>inputSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00030.html#ad3d5888dc78d2ca132d807abfd8e94f2">Function::size_type</a>&#160;</td>
-          <td class="paramname"><em>outputSize</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw ()<code> [explicit]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<h3>template&lt;typename F&gt;<br/>
+ class roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt;</h3>
 
-<p>Instantiate the class from an input/output size. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">inputSize</td><td>input size </td></tr>
-    <tr><td class="paramname">outputSize</td><td>output size </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="aa3c7d443e5144fb8dea37bb88b50b387"></a><!-- doxytag: member="roboptim::ResultWithWarnings::~ResultWithWarnings" ref="aa3c7d443e5144fb8dea37bb88b50b387" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00051.html#aa3c7d443e5144fb8dea37bb88b50b387">roboptim::ResultWithWarnings::~ResultWithWarnings</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a555b074ff9d1e8ecacc2c2665f9a5eec"></a><!-- doxytag: member="roboptim::ResultWithWarnings::print" ref="a555b074ff9d1e8ecacc2c2665f9a5eec" args="(std::ostream &amp;o) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; <a class="el" href="a00051.html#a555b074ff9d1e8ecacc2c2665f9a5eec">roboptim::ResultWithWarnings::print</a> </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>o</em></td><td>)</td>
-          <td> const  throw ()<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Display the result on the specified output stream. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
-
-<p>Reimplemented from <a class="el" href="a00050.html#af065a63ebc7497011f49be220857b0f0">roboptim::Result</a>.</p>
-
-<p>References <a class="el" href="a00136.html#a5a9d36182ac616874a038fd4217f0a9c">roboptim::decindent()</a>, <a class="el" href="a00136.html#a27b6e86639bb04ec042979cdaad0a851">roboptim::iendl()</a>, <a class="el" href="a00136.html#a053552edbb5c42ac287c22175ea43e69">roboptim::incindent()</a>, and <a class="el" href="a00050.html#af065a63ebc7497011f49be220857b0f0">roboptim::Result::print()</a>.</p>
-
-</div>
-</div>
-<hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a644b84239da645b252e1d9cb1b0b49c8"></a><!-- doxytag: member="roboptim::ResultWithWarnings::warnings" ref="a644b84239da645b252e1d9cb1b0b49c8" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="a00056.html">SolverWarning</a>&gt; <a class="el" href="a00051.html#a644b84239da645b252e1d9cb1b0b49c8">roboptim::ResultWithWarnings::warnings</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Vector of warnings. </p>
-<p>Each element of this vector is a potential problem that occurred during the optimization. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -221,7 +135,7 @@ Public Attributes</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00136.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00051.html">ResultWithWarnings</a>      </li>
+      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00051.html">Problem&lt; F, boost::mpl::vector&lt;&gt; &gt;</a>      </li>
 </body>
 </html>

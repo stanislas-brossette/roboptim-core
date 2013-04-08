@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p><a href="inherits.html">Go to the graphical class hierarchy</a></p>
 This inheritance list is sorted roughly, but not completely, alphabetically:</div><ul>
 <li><a class="el" href="a00014.html">roboptim::detail::add_shared_ptr&lt; CLIST &gt;</a></li>
-<li><a class="el" href="a00015.html">roboptim::BadGradient</a></li>
+<li><a class="el" href="a00015.html">roboptim::BadGradient&lt; T &gt;</a></li>
 <li><a class="el" href="a00016.html">roboptim::CachedFunction&lt; T &gt;</a></li>
 <li><a class="el" href="a00017.html">roboptim::visualization::gnuplot::Command</a></li>
 <li><a class="el" href="a00020.html">roboptim::derivativeSize&lt; DifferentiableFunction &gt;</a></li>
@@ -74,63 +74,64 @@ This inheritance list is sorted roughly, but not completely, alphabetically:</di
 <li><a class="el" href="a00023.html">roboptim::derivativeSize&lt; TwiceDifferentiableFunction &gt;</a></li>
 <li><a class="el" href="a00026.html">roboptim::EigenMatrixDense</a></li>
 <li><a class="el" href="a00027.html">roboptim::EigenMatrixSparse</a></li>
-<li><a class="el" href="a00029.html">roboptim::finiteDifferenceGradientPolicies::FivePointsRule</a></li>
-<li><a class="el" href="a00030.html">roboptim::GenericFunction&lt; T &gt;</a><ul>
-<li><a class="el" href="a00024.html">roboptim::DifferentiableFunction</a><ul>
-<li><a class="el" href="a00028.html">roboptim::FiniteDifferenceGradient&lt; FdgPolicy &gt;</a></li>
-<li><a class="el" href="a00058.html">roboptim::SumOfC1Squares</a></li>
-<li><a class="el" href="a00059.html">roboptim::TwiceDifferentiableFunction</a><ul>
-<li><a class="el" href="a00041.html">roboptim::NTimesDerivableFunction&lt; 2 &gt;</a></li>
-<li><a class="el" href="a00049.html">roboptim::QuadraticFunction</a><ul>
-<li><a class="el" href="a00037.html">roboptim::LinearFunction</a><ul>
+<li><a class="el" href="a00028.html">roboptim::finiteDifferenceGradientPolicies::FivePointsRule&lt; T &gt;</a></li>
+<li><a class="el" href="a00031.html">roboptim::GenericFunction&lt; T &gt;</a><ul>
+<li><a class="el" href="a00029.html">roboptim::GenericDifferentiableFunction&lt; T &gt;</a><ul>
+<li><a class="el" href="a00030.html">roboptim::GenericFiniteDifferenceGradient&lt; T, FdgPolicy &gt;</a></li>
+<li><a class="el" href="a00039.html">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;</a><ul>
+<li><a class="el" href="a00037.html">roboptim::GenericQuadraticFunction&lt; T &gt;</a><ul>
+<li><a class="el" href="a00035.html">roboptim::GenericLinearFunction&lt; T &gt;</a><ul>
 <li><a class="el" href="a00018.html">roboptim::ConstantFunction</a></li>
-<li><a class="el" href="a00036.html">roboptim::IdentityFunction</a></li>
-<li><a class="el" href="a00042.html">roboptim::NumericLinearFunction</a></li>
+<li><a class="el" href="a00036.html">roboptim::GenericNumericLinearFunction&lt; T &gt;</a></li>
+<li><a class="el" href="a00041.html">roboptim::IdentityFunction</a></li>
 </ul>
 </li>
-<li><a class="el" href="a00043.html">roboptim::NumericQuadraticFunction</a></li>
+<li><a class="el" href="a00046.html">roboptim::NumericQuadraticFunction</a></li>
 </ul>
 </li>
+<li><a class="el" href="a00045.html">roboptim::NTimesDerivableFunction&lt; 2 &gt;</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="el" href="a00031.html">roboptim::GenericFunctionTraits&lt; T &gt;</a></li>
-<li><a class="el" href="a00032.html">roboptim::GenericFunctionTraits&lt; EigenMatrixDense &gt;</a></li>
-<li><a class="el" href="a00033.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a></li>
-<li><a class="el" href="a00034.html">roboptim::GenericSolver</a><ul>
-<li><a class="el" href="a00053.html">roboptim::Solver&lt; F, C &gt;</a></li>
-<li><a class="el" href="a00053.html">roboptim::Solver&lt; Function, boost::mpl::vector&lt; Function &gt; &gt;</a><ul>
-<li><a class="el" href="a00025.html">roboptim::DummySolver</a></li>
+<li><a class="el" href="a00060.html">roboptim::SumOfC1Squares</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="el" href="a00035.html">roboptim::visualization::Gnuplot</a></li>
-<li><a class="el" href="a00038.html">roboptim::ltvector</a></li>
-<li><a class="el" href="a00039.html">roboptim::NoSolution</a></li>
-<li><a class="el" href="a00040.html">roboptim::NTimesDerivableFunction&lt; DerivabilityOrder &gt;</a></li>
-<li><a class="el" href="a00044.html">roboptim::Parameter</a></li>
-<li><a class="el" href="a00045.html">roboptim::ParametrizedFunction&lt; F &gt;</a><ul>
+<li><a class="el" href="a00032.html">roboptim::GenericFunctionTraits&lt; T &gt;</a></li>
+<li><a class="el" href="a00033.html">roboptim::GenericFunctionTraits&lt; EigenMatrixDense &gt;</a></li>
+<li><a class="el" href="a00034.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a></li>
+<li><a class="el" href="a00038.html">roboptim::GenericSolver</a><ul>
+<li><a class="el" href="a00055.html">roboptim::Solver&lt; F, C &gt;</a></li>
+<li><a class="el" href="a00055.html">roboptim::Solver&lt; Function, boost::mpl::vector&lt; Function &gt; &gt;</a><ul>
+<li><a class="el" href="a00024.html">roboptim::DummySolver</a></li>
+<li><a class="el" href="a00025.html">roboptim::DummySolverLastState</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="el" href="a00040.html">roboptim::visualization::Gnuplot</a></li>
+<li><a class="el" href="a00042.html">roboptim::detail::ltvector</a></li>
+<li><a class="el" href="a00043.html">roboptim::NoSolution</a></li>
+<li><a class="el" href="a00044.html">roboptim::NTimesDerivableFunction&lt; DerivabilityOrder &gt;</a></li>
+<li><a class="el" href="a00047.html">roboptim::Parameter</a></li>
+<li><a class="el" href="a00048.html">roboptim::ParametrizedFunction&lt; F &gt;</a><ul>
 <li><a class="el" href="a00019.html">roboptim::DerivableParametrizedFunction&lt; F &gt;</a></li>
 </ul>
 </li>
-<li><a class="el" href="a00046.html">roboptim::detail::printConstraint&lt; P &gt;</a></li>
-<li><a class="el" href="a00047.html">roboptim::Problem&lt; F, CLIST &gt;</a></li>
-<li><a class="el" href="a00048.html">roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt;</a></li>
-<li><a class="el" href="a00050.html">roboptim::Result</a><ul>
-<li><a class="el" href="a00051.html">roboptim::ResultWithWarnings</a></li>
+<li><a class="el" href="a00049.html">roboptim::detail::printConstraint&lt; P &gt;</a></li>
+<li><a class="el" href="a00050.html">roboptim::Problem&lt; F, CLIST &gt;</a></li>
+<li><a class="el" href="a00051.html">roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt;</a></li>
+<li><a class="el" href="a00052.html">roboptim::Result</a><ul>
+<li><a class="el" href="a00053.html">roboptim::ResultWithWarnings</a></li>
 </ul>
 </li>
-<li><a class="el" href="a00052.html">roboptim::finiteDifferenceGradientPolicies::Simple</a></li>
-<li><a class="el" href="a00054.html">roboptim::SolverError</a><ul>
-<li><a class="el" href="a00056.html">roboptim::SolverWarning</a></li>
+<li><a class="el" href="a00054.html">roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt;</a></li>
+<li><a class="el" href="a00056.html">roboptim::SolverError</a><ul>
+<li><a class="el" href="a00058.html">roboptim::SolverWarning</a></li>
 </ul>
 </li>
-<li><a class="el" href="a00055.html">roboptim::SolverFactory&lt; T &gt;</a></li>
-<li><a class="el" href="a00057.html">roboptim::Split&lt; T &gt;</a></li>
+<li><a class="el" href="a00057.html">roboptim::SolverFactory&lt; T &gt;</a></li>
+<li><a class="el" href="a00059.html">roboptim::Split&lt; T &gt;</a></li>
 </ul>
 </div><!-- contents -->
 <!-- window showing the filter options -->

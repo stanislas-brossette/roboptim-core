@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linearfunction',['LinearFunction',['../a00037.html#a245574ecd3956232da14396d6a82cdbb',1,'roboptim::LinearFunction']]]
+  ['laststate',['lastState',['../a00056.html#a902e79a13337accd1abe8a9acd0bbacd',1,'roboptim::SolverError::lastState() const '],['../a00056.html#a242b7cb46fe4e752f4e2077c2879c1a5',1,'roboptim::SolverError::lastState()']]]
 ];

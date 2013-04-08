@@ -71,29 +71,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <span class="comment">// You should have received a copy of the GNU Lesser General Public License</span>
 <span class="comment">// along with roboptim.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
 
-<span class="preprocessor">#include &quot;shared-tests/common.hh&quot;</span>
+<span class="preprocessor">#include &quot;shared-tests/fixture.hh&quot;</span>
 
 <span class="preprocessor">#include &lt;iostream&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00094.html">roboptim/core/io.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00091.html">roboptim/core/identity-function.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00097.html">roboptim/core/io.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00094.html">roboptim/core/identity-function.hh</a>&gt;</span>
 
 <span class="keyword">using namespace </span>roboptim;
+
+BOOST_FIXTURE_TEST_SUITE (core, TestSuiteConfiguration)
 
 BOOST_AUTO_TEST_CASE (identity_function)
 {
   boost::shared_ptr&lt;boost::test_tools::output_test_stream&gt;
     output = retrievePattern (<span class="stringliteral">&quot;identity-function&quot;</span>);
 
-  <a name="a0"></a><a class="code" href="a00024.html#ae33eaa2d6b3264ece833eecff9a65432" title="Basic vector type.">IdentityFunction::vector_t</a> offset (4);
+  <a name="a0"></a><a class="code" href="a00035.html#ab271637f8057c0196d3648aaa773b73c" title="Basic vector type.">IdentityFunction::vector_t</a> offset (4);
   offset[0] = 12.;
   offset[1] = 46.;
   offset[2] = 2.;
   offset[3] = -9.;
 
-  <a name="_a1"></a><a class="code" href="a00036.html" title="Identity function.">IdentityFunction</a> id (offset);
+  <a name="_a1"></a><a class="code" href="a00041.html" title="Identity function.">IdentityFunction</a> id (offset);
 
-  <a class="code" href="a00024.html#ae33eaa2d6b3264ece833eecff9a65432" title="Basic vector type.">IdentityFunction::vector_t</a> x (4);
+  <a class="code" href="a00035.html#ab271637f8057c0196d3648aaa773b73c" title="Basic vector type.">IdentityFunction::vector_t</a> x (4);
   x.setZero ();
 
   (*output)
@@ -101,13 +103,15 @@ BOOST_AUTO_TEST_CASE (identity_function)
     &lt;&lt; <span class="stringliteral">&quot;Evaluate: &quot;</span> &lt;&lt; std::endl
     &lt;&lt; id (x) &lt;&lt; std::endl
     &lt;&lt; <span class="stringliteral">&quot;Gradient: &quot;</span> &lt;&lt; std::endl
-    &lt;&lt; <span class="keywordtype">id</span>.<a name="a2"></a><a class="code" href="a00024.html#a3d26bf6d658c4991d1b35dc8fa2b914a" title="Computes the gradient.">gradient</a> (x) &lt;&lt; std::endl
+    &lt;&lt; <span class="keywordtype">id</span>.<a name="a2"></a><a class="code" href="a00029.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x) &lt;&lt; std::endl
     &lt;&lt; <span class="stringliteral">&quot;Jacobian: &quot;</span> &lt;&lt; std::endl
     &lt;&lt; <span class="keywordtype">id</span>.jacobian (x) &lt;&lt; std::endl;
 
   std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;
   BOOST_CHECK (output-&gt;match_pattern ());
 }
+
+BOOST_AUTO_TEST_SUITE_END ()
 </pre></div> </div><!-- contents -->
 </div><!-- contents -->
 <!-- window showing the filter options -->
