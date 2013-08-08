@@ -1,16 +1,19 @@
 var a00060 =
 [
-    [ "argument_t", "a00060.html#a3f7a09b808c2ef23c40a4514a42ab895", null ],
-    [ "gradient_t", "a00060.html#adc4a248471b293b814af28bd25c32a21", null ],
-    [ "jacobian_t", "a00060.html#acfa2c60df910f755669e8fb4d9ba548c", null ],
-    [ "jacobianSize_t", "a00060.html#ab915dd9b93d5fa252883116d9664ea78", null ],
-    [ "parent_t", "a00060.html#ac8169a737d3f6b14a97ea1e6776e723b", null ],
-    [ "size_t", "a00060.html#a26106b8e1b25b7f93121fe1131513b1e", null ],
-    [ "value_t", "a00060.html#a3800eb14f7c82681bfcdb2482bde8d41", null ],
-    [ "SumOfC1Squares", "a00060.html#af76aa1512b18e03a22c0650ac301a7a0", null ],
-    [ "SumOfC1Squares", "a00060.html#a2a4d4ed6b85b7da5a588bc25a0fdc688", null ],
-    [ "~SumOfC1Squares", "a00060.html#a3bab916cc166845d02003578952fea10", null ],
-    [ "baseFunction", "a00060.html#ab5ba76bee2c2ae6ef0f7468e76c9cdbe", null ],
-    [ "impl_compute", "a00060.html#aacfe9e3375a212e91bc16690ba33e2e8", null ],
-    [ "impl_gradient", "a00060.html#a4e1bf6ef6728774f1359fcc825a0a431", null ]
+    [ "~NTimesDerivableFunction", "a00060.html#aa53731c25ac3d5d1fc7a3ea8150aed11", null ],
+    [ "NTimesDerivableFunction", "a00060.html#aadbad9470dae42b36850ae6335061499", null ],
+    [ "derivabilityOrderMax", "a00060.html#a1a183ff8b5a808c6f7055046d3d92c61", null ],
+    [ "derivative", "a00060.html#a27222186b02455f7011f8596f3a841b4", null ],
+    [ "derivative", "a00060.html#a43fdcf084e530944935aaa081679a538", null ],
+    [ "derivativeSize", "a00060.html#a268b3fd1413566d680615cacd990b16a", null ],
+    [ "impl_compute", "a00060.html#aa3642b26ab32c2931a67a5d93e81bdc0", null ],
+    [ "impl_compute", "a00060.html#a5ef1c91987bfaf3048661f2b6a39a392", null ],
+    [ "impl_derivative", "a00060.html#addc4ddf19a17162ffd584a1dbf7f76a1", null ],
+    [ "impl_gradient", "a00060.html#a93bdb075974b6307a3bda5e66eb84a29", null ],
+    [ "impl_hessian", "a00060.html#a9ac493a2bb083806fa6fa4514dba3681", null ],
+    [ "isValidDerivative", "a00060.html#a7ebb0d5026785b706aa86b3a5669f87a", null ],
+    [ "operator()", "a00060.html#adb44ef477075bd644f04301ef64e1b02", null ],
+    [ "operator()", "a00060.html#aad69c5c0bdf82316ea6d11184d24e515", null ],
+    [ "print", "a00060.html#ae0961c8f2f33ecb177216919420b21cb", null ],
+    [ "derivabilityOrder", "a00060.html#ac4e7bbc8e11d709811e4c748ea7bb067", null ]
 ];

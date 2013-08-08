@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Design choices and libraries&#39; internals</title>
+<title>Quick start</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -50,126 +50,275 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">Design choices and libraries' internals </div>  </div>
+<div class="title">Quick start </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This package is divided in three parts:</p>
+<div class="textblock"><p>Solving a problem is done through several steps:</p>
 <ul>
-<li>
-Functions which represent different kind of mathematical functions and theirs associated features (gradient, hessian...). </li>
-<li>
-A problem class defines a whole optimization problem including some technical details (scales). </li>
-<li>
-Solvers hierarchy defines solvers that are working on a class of optimizations problem (for instance QP solves problems where the objective function is quadratic and the constraints are linear). </li>
+<li>Define your cost function by deriving one kind of function, depending on whether or not you want to provide a jacobian and/or a hessian.</li>
+<li>Define your constraints functions in the same manner.</li>
+<li>Build an instance of problem matching your requirements.</li>
+<li>Use one of the solvers to solve your problem.</li>
 </ul>
-<h2><a class="anchor" id="fct"></a>
-The function hierarchy</h2>
-<p>The function hierarchy is an abstract hierarchy which defines <b>meta-function</b> in the sense that the user has to derive from these classes to define its <b>real</b> function.</p>
-<div class="fragment"><pre class="fragment">   <span class="keyword">struct </span>MyLinearFunction : <span class="keyword">public</span> <a class="code" href="a00140.html#abbf3e635a932ae99934936a092aec72c">LinearFunction</a> {
-   <span class="comment">//FIXME: some code is missing</span>
-   };
+<p>The following example defines a cost function F and two constraints G0 and G1.</p>
+<h2><a class="anchor" id="problem"></a>
+Problem definition</h2>
+<p>The problem that will be solved in this tutorial is the 71th problem of Hock-Schittkowski:</p>
+<p><img class="formulaInl" alt="$min_{x \in \mathbb{R}^4} x_1 x_4 (x_1 + x_2 + x_3) + x_3$" src="form_39.png"/></p>
+<p>with the following constraints:</p>
+<ul>
+<li><img class="formulaInl" alt="$x_1 x_2 x_3 x_4 \geq 25$" src="form_40.png"/></li>
+<li><img class="formulaInl" alt="$x_1^2 + x_2^2 + x_3^2 + x_4^2 = 40$" src="form_41.png"/></li>
+<li><img class="formulaInl" alt="$1 \leq x_1, x_2, x_3, x_4 \leq 5$" src="form_42.png"/></li>
+</ul>
+<h2><a class="anchor" id="cost"></a>
+Defining the cost function.</h2>
+<p>The library contains the following hierarchy of functions:</p>
+<ul>
+<li><a class="el" href="a00188.html#a1864afd8c0c95cea8029da9b52352736" title="Dense function.">roboptim::Function</a></li>
+<li><a class="el" href="a00188.html#a3b8400e3e4a5bc0372d283a4db8eb0de" title="Legacy name of TwiceDifferentiableFunction.">roboptim::DerivableFunction</a></li>
+<li><a class="el" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">roboptim::TwiceDerivableFunction</a></li>
+<li><a class="el" href="a00188.html#ab03c6ad564de263af42983892cab684a">roboptim::QuadraticFunction</a></li>
+<li><a class="el" href="a00188.html#abbf3e635a932ae99934936a092aec72c">roboptim::LinearFunction</a></li>
+</ul>
+<p>These types correspond to dense vectors and matrices relying on Eigen. RobOptim also support dense matrices and you can even extend the framework to support your own types.</p>
+<p>When defining a new function, you have to derive your new function from one of those classes. Depending on the class you derive from, you will be have to implement one or several methods:</p>
+<ul>
+<li>impl_compute that returns the function's result has to be defined for all functions.</li>
+<li>impl_gradient which returns the function's gradient is to be defined for DerivableFunction and its subclasses.</li>
+<li>impl_hessian for TwiceDerivableFunction functions and its subclasses.</li>
+</ul>
+<p>It is usually recommended to derive from the deepest possible class of the hierarchy (deriving from TwiceDerivableFunction is better than DerivableFunction).</p>
+<p>Keep in mind that the type of the function represents the amount of information the solver will get, not the real nature of a function (it is possible to avoid defining a hessian by deriving from DerivableFunction, even if you function can be derived twice).</p>
+<p>In the following sample, a TwiceDerivableFunction will be defined.</p>
+<div class="fragment"><pre class="fragment"><span class="keyword">struct </span>F : <span class="keyword">public</span> <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
+{
+  F () : <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
+  {
+  }
 
-   <span class="keyword">struct </span>MyDerivableFunction : <span class="keyword">public</span> <a class="code" href="a00140.html#a3b8400e3e4a5bc0372d283a4db8eb0de" title="Legacy name of TwiceDifferentiableFunction.">DerivableFunction</a> {
-   <span class="comment">//FIXME: some code is missing</span>
-   };
-   <span class="comment">// etc...</span>
-</pre></div><p>The user can defines as many functions as he wants as long as he respects the constraints defined by the classes he inherits from: </p>
+  <span class="keywordtype">void</span>
+  impl_compute (result_t&amp; result, <span class="keyword">const</span> argument_t&amp; x) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
+  {
+    result (0) = x[0] * x[3] * (x[0] + x[1] + x[2]) + x[3];
+  }
+
+  <span class="keywordtype">void</span>
+  impl_gradient (gradient_t&amp; grad, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+  {
+    grad[0] = x[0] * x[3] + x[3] * (x[0] + x[1] + x[2]);
+    grad[1] = x[0] * x[3];
+    grad[2] = x[0] * x[3] + 1;
+    grad[3] = x[0] * (x[0] + x[1] + x[2]);
+  }
+
+  <span class="keywordtype">void</span>
+  impl_hessian (hessian_t&amp; h, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+
+  {
+    h (0, 0) = 2 * x[3];
+    h (0, 1) = x[3];
+    h (0, 2) = x[3];
+    h (0, 3) = 2 * x[0] + x[1] + x[2];
+
+    h (1, 0) = x[3];
+    h (1, 1) = 0.;
+    h (1, 2) = 0.;
+    h (1, 3) = x[0];
+
+    h (2, 0) = x[3];
+    h (2, 1) = 0.;
+    h (2, 2) = 0.;
+    h (2, 3) = x[1];
+
+    h (3, 0) = 2 * x[0] + x[1] + x[2];
+    h (3, 1) = x[0];
+    h (3, 2) = x[0];
+    h (3, 3) = 0.;
+    <span class="keywordflow">return</span> h;
+  }
+};
+</pre></div><h2><a class="anchor" id="constraints"></a>
+Defining the constraints.</h2>
+<p>A constraint is no different from a cost function and can be defined in the same way than a cost function.</p>
+<p>The following sample defines two constraints which are twice derivable functions.</p>
+<div class="fragment"><pre class="fragment"><span class="keyword">struct </span>G0 : <span class="keyword">public</span> <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
+{
+  G0 ()
+    : <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
+  {
+  }
+
+  <span class="keywordtype">void</span>
+  impl_compute (result_t&amp; result, <span class="keyword">const</span> argument_t&amp; x) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
+  {
+    result (0) = x[0] * x[1] * x[2] * x[3];
+  }
+
+  <span class="keywordtype">void</span>
+  impl_gradient (gradient_t&amp; grad, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+  {
+    grad[0] = x[1] * x[2] * x[3];
+    grad[1] = x[0] * x[2] * x[3];
+    grad[2] = x[0] * x[1] * x[3];
+    grad[3] = x[0] * x[1] * x[2];
+  }
+
+  <span class="keywordtype">void</span>
+  impl_hessian (hessian_t&amp; h, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+  {
+    h (0, 0) = 0.;
+    h (0, 1) = x[2] * x[3];
+    h (0, 2) = x[1] * x[3];
+    h (0, 3) = x[1] * x[2];
+
+    h (1, 0) = x[2] * x[3];
+    h (1, 1) = 0.;
+    h (1, 2) = x[0] * x[3];
+    h (1, 3) = x[0] * x[2];
+
+    h (2, 0) = x[1] * x[3];
+    h (2, 1) = x[0] * x[3];
+    h (2, 2) = 0.;
+    h (2, 3) = x[0] * x[1];
+
+    h (3, 0) = x[1] * x[2];
+    h (3, 1) = x[0] * x[2];
+    h (3, 2) = x[0] * x[1];
+    h (3, 3) = 0.;
+  }
+};
+
+<span class="keyword">struct </span>G1 : <span class="keyword">public</span> <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
+{
+  G1 ()
+    : <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
+  {
+  }
+
+  <span class="keywordtype">void</span>
+  impl_compute (result_t&amp; result, <span class="keyword">const</span> argument_t&amp; x) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
+  {
+    result (0) = x[0]*x[0] + x[1]*x[1] + x[2]*x[2] + x[3]*x[3];
+  }
+
+  <span class="keywordtype">void</span>
+  impl_gradient (gradient_t&amp; grad, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+  {
+    grad[0] = 2 * x[0];
+    grad[1] = 2 * x[1];
+    grad[2] = 2 * x[2];
+    grad[3] = 2 * x[3];
+  }
+
+  <span class="keywordtype">void</span>
+  impl_hessian (hessian_t&amp; h, <span class="keyword">const</span> argument_t&amp; x, <span class="keywordtype">int</span>) <span class="keyword">const</span> throw ()
+  {
+    h (0, 0) = 2.;
+    h (0, 1) = 0.;
+    h (0, 2) = 0.;
+    h (0, 3) = 0.;
+
+    h (1, 0) = 0.;
+    h (1, 1) = 2.;
+    h (1, 2) = 0.;
+    h (1, 3) = 0.;
+
+    h (2, 0) = 0.;
+    h (2, 1) = 0.;
+    h (2, 2) = 2.;
+    h (2, 3) = 0.;
+
+    h (3, 0) = 0.;
+    h (3, 1) = 0.;
+    h (3, 2) = 0.;
+    h (3, 3) = 2.;
+  }
+};
+</pre></div><h2><a class="anchor" id="problem"></a>
+Problem definition</h2>
+<p>The last part of this tutorial covers how to build a problem and solve it. The steps are:</p>
 <ul>
-<li>
-Any function must be able to be evaluated (through operator()). </li>
-<li>
-A derivable function has a gradient/jacobian. </li>
-<li>
-A twice derivable function ( <img class="formulaInl" alt="$C^2$" src="form_38.png"/>) has a hessian. </li>
-<li>
-A quadratic function has the sames constraints than a <img class="formulaInl" alt="$C^2$" src="form_38.png"/> function. </li>
-<li>
-A linear function has the same constraints except its hessian which is null and computed automatically by the abstract class. </li>
+<li>Instanciate your functions (cost functions and constraints).</li>
+<li>Pass them to the problem.</li>
+<li>Optional: set a starting point.</li>
+<li>Instanciate a solver which solves your class of problem.</li>
+<li>Solve the problem by calling minimum.</li>
 </ul>
-<p>It is important to note that all these functions are <img class="formulaInl" alt="$\mathbb{R}^n \rightarrow \mathbb{R}^m$" src="form_8.png"/> functions.</p>
-<p>These functions have to be considered as m functions from to <img class="formulaInl" alt="$\mathbb{R}^n \rightarrow \mathbb{R}$" src="form_11.png"/>. In particular, it means that in the gradient/hessian methods, the second argument (integer) refers to which function you want to get the gradient/hessian.</p>
-<p>It avoids useless computations when the whole Jacobian is not needed. Hence, it also avoid the use of a tensor as this structure is particularly costly and not built-in in Eigen (the matrix library the package rely on).</p>
-<p>This set of meta-functions is completed by two generic implementations of quadratic and linear functions in respectively NumericQuadraticFunction and NumericLinearFunction. Those are real functions as the user is meant to instantiate them, not derive from them.</p>
-<h2><a class="anchor" id="pb"></a>
-The problem class</h2>
-<p>The problem class defines a complete optimization problem. It is composed of: </p>
-<ul>
-<li>
-A <img class="formulaInl" alt="$\mathbb{R}^n \rightarrow \mathbb{R}$" src="form_11.png"/> cost (or objective) function. </li>
-<li>
-A set of functions constraints. </li>
-<li>
-Bounds on the input arguments. </li>
-<li>
-Bounds on the constraints functions output. </li>
-<li>
-Scales on the input arguments. </li>
-<li>
-Scales on the constraints functions output. </li>
-</ul>
-<p>The problem class is templated by two parameters: </p>
-<ul>
-<li>
-The objective's function type (F). </li>
-<li>
-The set of constraint's types (C). </li>
-</ul>
-<p>Those two parameters defines a class of problem. For instance, QP solves problems where the objective function is quadratic and the constraints are linear.</p>
-<p>To a class of problem matches a set of solvers designed to exactly those problems.</p>
-<p>The copy constructor of the Problem class allows to make the problem more generic by replacing F or C by a more general type.</p>
-<p>Examples: </p>
-<ul>
-<li>
-It is valid to convert a linear problem into a non-linear problem and make a QP solve it. </li>
-<li>
-But, the opposite is not valid. </li>
-</ul>
-<p>Ie: you can always go higher in the function hierarchy but you can not go deeper.</p>
-<p>However, this transformation as any dynamic typing makes <b>forget</b> specific information and might slow-down the process. Ie: solving a linear problem as a non-linear one is slower than directly solving it.</p>
-<h2><a class="anchor" id="slv"></a>
-The solver hierarchy</h2>
-<p>The solver hierarchy is divided in three parts: </p>
-<ul>
-<li>
-The generic solver. </li>
-<li>
-The solver for a class of problems. </li>
-<li>
-The bridges (the leafs in the hierarchy's tree). </li>
-</ul>
-<h3><a class="anchor" id="gs"></a>
-Generic solver</h3>
-<p>The generic solver is an abstract class which is the root of the hierarchy. All the solvers have to inherit from this class directly or indirectly.</p>
-<p>It only defines three methods: </p>
-<ul>
-<li>
-<code>solve</code> (virtual pure) </li>
-<li>
-<code>getMinimum</code> </li>
-<li>
-<code>reset</code> </li>
-</ul>
-<p>The method <code>solve</code> has to fill the protected attribute <code>result_</code>. It is implemented by the bridges at the bottom of the hierarchy.</p>
-<p>By default <code>result_</code> contains an instance the <code>No_Solution</code> class. It has to be changed to an instance of <code>Result</code>, <code>ResultWithWarnings</code> or <code>SolverError</code>.</p>
-<ul>
-<li>
-<code>No_Solution</code>: represents the fact that solve has never been called. A user should never retrieve an instance of <code>No_Solution</code>.  </li>
-<li>
-<code>Result</code>, <code>ResultWithWarnings</code>: represents a <b>valid</b> result. If <code>ResultWithWarnings</code> is used, some non-critical problem might have happened and are specified in the object (minor numerical instabilities for instance). </li>
-<li>
-<code>SolverError</code>: indicate that the optimization has <b>failed</b>. </li>
-</ul>
-<p>The <code>solve</code> method should rarely be called by the user. Instead, the user calls <code>getMinimum</code> which calls <code>solve</code> if required. If <code>getMinimum</code> is called several time, the problem is only solved once.</p>
-<p>The <code>reset</code> method should be called when one wants to manually force the recomputation of the solution.</p>
-<h3><a class="anchor" id="solver"></a>
-Solver</h3>
-<p>The <code>Solver</code> class is parametrized by two parameters as the <code>Problem</code> class. It defines an abstract solver for a class of optimization problems.</p>
-<p>For instance, a QP should inherit from <code>Solver&lt;QuadraticFunction, LinearFunction&gt;</code>.</p>
-<p>This level of the hierarchy integrates the notion of <code>Problem</code>, hence the <code>problem</code> method is defined to access the problem. Once a solver is created with a problem, the problem can never be modified again.</p>
-<h3><a class="anchor" id="briges"></a>
-Bridges</h3>
-<p>The leafs of the hierarchy are bridges. The role of a bridge is to convert the generic representation of the problem into the solver's representation. It might also emulate some missing features of the back-end solver.</p>
-<p>A bridge mainly implements the <code>solve</code> method. It may also exposes the underlying solver's internal mechanism for fine tuning. </p>
+<div class="fragment"><pre class="fragment"><span class="keywordtype">int</span> run_test ()
+{
+  F f;
+  G0 g0;
+  G1 g1;
+
+  <a class="code" href="a00067.html">solver_t::problem_t</a> pb (f);
+
+  <span class="comment">// Set bound for all variables.</span>
+  <span class="comment">// 1. &lt; x_i &lt; 5. (x_i in [1.;5.])</span>
+  <span class="keywordflow">for</span> (Function::size_type i = 0; i &lt; pb.function ().n; ++i)
+    pb.argBounds ()[i] = T::makeBound (1., 5.);
+
+  <span class="comment">// Add constraints.</span>
+  pb.addConstraint (&amp;g0, T::makeUpperBound (25.));
+  pb.addConstraint (&amp;g1, T::makeBound (40., 40.));
+
+  <span class="comment">// Set the starting point.</span>
+  Function::vector_t start (pb.function ().n);
+  start[0] = 1., start[1] = 5., start[2] = 5., start[3] = 1.;
+
+  initialize_problem (pb, g0, g1);
+
+  <span class="comment">// Initialize solver.</span>
+
+  <span class="comment">// Here we are relying on the Ipopt solver (available separately).</span>
+  <span class="comment">// You may change this string to load the solver you wish to use.</span>
+  SolverFactory&lt;solver_t&gt; factory (<span class="stringliteral">&quot;ipopt-td&quot;</span>, problem);
+  <a class="code" href="a00079.html">solver_t</a>&amp; solver = factory ();
+
+  <span class="comment">// Compute the minimum and retrieve the result.</span>
+  <a class="code" href="a00052.html#acd6988bec0b7bda9b8565232d32d1bae" title="Result type.">solver_t::result_t</a> res = solver.<a class="code" href="a00052.html#aef2460331a80efc404356e9b68269b8c" title="Returns the function minimum This solves the problem automatically, if it has not yet been solved...">minimum</a> ();
+
+  <span class="comment">// Display solver information.</span>
+  std::cout &lt;&lt; solver &lt;&lt; std::endl;
+
+  <span class="comment">// Check if the minimization has succeed.</span>
+  <span class="keywordflow">switch</span> (solver.<a class="code" href="a00052.html#a2426a7c827ce0c46c77ac29ad1d7f846" title="Determine real minimum type.">minimumType</a> ())
+    {
+    <span class="keywordflow">case</span> SOLVER_NO_SOLUTION:
+      std::cerr &lt;&lt; <span class="stringliteral">&quot;No solution.&quot;</span> &lt;&lt; std::endl;
+      <span class="keywordflow">return</span> 1;
+    <span class="keywordflow">case</span> SOLVER_ERROR:
+      std::cerr &lt;&lt; <span class="stringliteral">&quot;An error happened: &quot;</span>
+    &lt;&lt; solver.<a class="code" href="a00052.html#a3f01ea84c377efc66cd55bc38f8676ad" title="Get real result.">getMinimum</a>&lt;SolverError&gt; ().what () &lt;&lt; std::endl;
+      <span class="keywordflow">return</span> 2;
+
+    <span class="keywordflow">case</span> SOLVER_VALUE_WARNINGS:
+      {
+  <span class="comment">// Get the ``real&#39;&#39; result.</span>
+  Result&amp; result = solver.<a class="code" href="a00052.html#a3f01ea84c377efc66cd55bc38f8676ad" title="Get real result.">getMinimum</a>&lt;ResultWithWarnings&gt; ();
+  <span class="comment">// Display the result.</span>
+  std::cout &lt;&lt; <span class="stringliteral">&quot;A solution has been found (minor problems occurred): &quot;</span>
+      &lt;&lt; std::endl
+      &lt;&lt; result &lt;&lt; std::endl;
+  <span class="keywordflow">return</span> 0;
+      }
+    <span class="keywordflow">case</span> SOLVER_VALUE:
+      {
+  <span class="comment">// Get the ``real&#39;&#39; result.</span>
+  Result&amp; result = solver.<a class="code" href="a00052.html#a3f01ea84c377efc66cd55bc38f8676ad" title="Get real result.">getMinimum</a>&lt;Result&gt; ();
+  <span class="comment">// Display the result.</span>
+  std::cout &lt;&lt; <span class="stringliteral">&quot;A solution has been found: &quot;</span> &lt;&lt; std::endl;
+  std::cout &lt;&lt; result &lt;&lt; std::endl;
+  <span class="keywordflow">return</span> 0;
+      }
+    }
+
+  <span class="comment">// Should never happen.</span>
+  assert (0);
+  <span class="keywordflow">return</span> 42;
+}
+</pre></div><p>This is the last piece of code needed to instantiate and resolve an optimization problem with this package.</p>
+<p>To see more usage examples, consider looking at the test directory of the project which contains the project's test suite. </p>
 </div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->

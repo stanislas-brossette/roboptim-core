@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::GenericFiniteDifferenceGradient&lt; T, FdgPolicy &gt; Class Template Reference</title>
+<title>roboptim::Derivative&lt; U &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,118 +58,116 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::GenericFiniteDifferenceGradient&lt; T, FdgPolicy &gt; Class Template Reference<div class="ingroups"><a class="el" href="a00150.html">Mathematical functions</a></div></div>  </div>
+<div class="title">roboptim::Derivative&lt; U &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::GenericFiniteDifferenceGradient" --><!-- doxytag: inherits="roboptim::GenericDifferentiableFunction" -->
-<p>Compute automatically a gradient with finite differences.  
+<!-- doxytag: class="roboptim::Derivative" --><!-- doxytag: inherits="GenericFunction&lt; U::traits_t &gt;" -->
+<p>Return the derivative of a function.  
  <a href="a00030.html#details">More...</a></p>
 
-<p><code>#include &lt;roboptim/core/finite-difference-gradient.hh&gt;</code></p>
+<p><code>#include &lt;roboptim/core/filter/derivative.hh&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for roboptim::GenericFiniteDifferenceGradient&lt; T, FdgPolicy &gt;:</div>
+Inheritance diagram for roboptim::Derivative&lt; U &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00305.png" border="0" usemap="#roboptim_1_1_generic_finite_difference_gradient_3_01_t_00_01_fdg_policy_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="roboptim_1_1_generic_finite_difference_gradient_3_01_t_00_01_fdg_policy_01_4_inherit__map" id="roboptim_1_1_generic_finite_difference_gradient_3_01_t_00_01_fdg_policy_01_4_inherit__map">
-<area shape="rect" id="node2" href="a00029.html" title="Define an abstract derivable function ( )." alt="" coords="48,86,339,117"/><area shape="rect" id="node4" href="a00031.html" title="Define an abstract mathematical function ( )." alt="" coords="88,6,299,37"/></map>
+<div class="center"><img src="a00384.png" border="0" usemap="#roboptim_1_1_derivative_3_01_u_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="roboptim_1_1_derivative_3_01_u_01_4_inherit__map" id="roboptim_1_1_derivative_3_01_u_01_4_inherit__map">
+<area shape="rect" id="node2" href="a00043.html" title="roboptim::GenericFunction\&lt; U::traits_t \&gt;" alt="" coords="5,6,261,37"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for roboptim::GenericFiniteDifferenceGradient&lt; T, FdgPolicy &gt;:</div>
+Collaboration diagram for roboptim::Derivative&lt; U &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00306.png" border="0" usemap="#roboptim_1_1_generic_finite_difference_gradient_3_01_t_00_01_fdg_policy_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="roboptim_1_1_generic_finite_difference_gradient_3_01_t_00_01_fdg_policy_01_4_coll__map" id="roboptim_1_1_generic_finite_difference_gradient_3_01_t_00_01_fdg_policy_01_4_coll__map">
-<area shape="rect" id="node2" href="a00029.html" title="Define an abstract derivable function ( )." alt="" coords="48,86,339,117"/><area shape="rect" id="node4" href="a00031.html" title="Define an abstract mathematical function ( )." alt="" coords="88,6,299,37"/></map>
+<div class="center"><img src="a00385.png" border="0" usemap="#roboptim_1_1_derivative_3_01_u_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="roboptim_1_1_derivative_3_01_u_01_4_coll__map" id="roboptim_1_1_derivative_3_01_u_01_4_coll__map">
+<area shape="rect" id="node2" href="a00043.html" title="roboptim::GenericFunction\&lt; U::traits_t \&gt;" alt="" coords="5,6,261,37"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
-<p><a href="a00307.html">List of all members.</a></p>
+<p><a href="a00386.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="a00030.html">Derivative</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#ac31bb4fcfc3f627982f26d53329d18e4">DerivativeShPtr_t</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#a583e5aeb130b6c46b7d12fe0f65c717f">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00029.html">GenericDifferentiableFunction</a>&lt; T &gt;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#ade644f357e04020a3fb84207994f745b">GenericFiniteDifferenceGradient</a> (const <a class="el" href="a00031.html">GenericFunction</a>&lt; T &gt; &amp;f, <a class="el" href="a00031.html#a1cfc07bf5c22d02af3dae45364ef1407">value_type</a> e=<a class="el" href="a00140.html#a2b8aa11a97dbc8229249db7357581d83">finiteDifferenceEpsilon</a>)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate a finite differences gradient.  <a href="#ade644f357e04020a3fb84207994f745b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#a52f35b313494e42eba9b96264ac4ab2f">~GenericFiniteDifferenceGradient</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#af5aa6c2ecd1b2052a0b6ad75ae681f35">ROBOPTIM_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00043.html">GenericFunction</a>&lt; typename U::traits_t &gt;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#a8c77526d5667849224840b254fd9a2f9">Derivative</a> (boost::shared_ptr&lt; U &gt; <a class="el" href="a00030.html#a2d8a0a49a99ccd4a4140b96e12195d9c">origin</a>, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> variableId)  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#ae9bbb544ebacd592160d3753e4dde603">~Derivative</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#a2d8a0a49a99ccd4a4140b96e12195d9c">origin</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#aaf51f143b5c6881e69b99fb9e481b63c">origin</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#a231a563eba65eb75c9695ccc337860c5">impl_compute</a> (<a class="el" href="a00031.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;, const <a class="el" href="a00031.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function evaluation.  <a href="#a231a563eba65eb75c9695ccc337860c5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#ac9607a594f0a17201fe7149c28185a1c">impl_gradient</a> (<a class="el" href="a00029.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;, const <a class="el" href="a00031.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;argument, <a class="el" href="a00031.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>=0) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient evaluation.  <a href="#ac9607a594f0a17201fe7149c28185a1c"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00031.html">GenericFunction</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#aad6048bf897c560c6a0e03ce355413d1">adaptee_</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the wrapped function.  <a href="#aad6048bf897c560c6a0e03ce355413d1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00031.html#a1cfc07bf5c22d02af3dae45364ef1407">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#a351983c229ac4c9cd42cdeb7ad0aebda">epsilon_</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00031.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#a5c3139b3bfa459c225a2e77058259cb1">xEps_</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html#a188587d64e1b4761f7bcc50d8152ae1d">impl_compute</a> (<a class="el" href="a00043.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;result, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;x) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function evaluation.  <a href="#a188587d64e1b4761f7bcc50d8152ae1d"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, typename FdgPolicy&gt;<br/>
-class roboptim::GenericFiniteDifferenceGradient&lt; T, FdgPolicy &gt;</h3>
+<div class="textblock"><h3>template&lt;typename U&gt;<br/>
+class roboptim::Derivative&lt; U &gt;</h3>
 
-<p>Compute automatically a gradient with finite differences. </p>
-<p>Finite difference gradient is a method to approximate a function's gradient. It is particularly useful in RobOptim to avoid the need to compute the analytical gradient manually.</p>
-<p>This class takes a Function as its input and wraps it into a derivable function.</p>
-<p>The one dimensional formula is: </p>
-<p class="formulaDsp">
-<img class="formulaDsp" alt="\[f'(x)\approx {f(x+\epsilon)-f(x)\over \epsilon}\]" src="form_13.png"/>
-</p>
-<p> where <img class="formulaInl" alt="$\epsilon$" src="form_14.png"/> is a constant given when calling the class constructor. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00002.html#_a3">finite-difference-gradient.cc</a>.</dd>
-</dl></div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ade644f357e04020a3fb84207994f745b"></a><!-- doxytag: member="roboptim::GenericFiniteDifferenceGradient::GenericFiniteDifferenceGradient" ref="ade644f357e04020a3fb84207994f745b" args="(const GenericFunction&lt; T &gt; &amp;f, value_type e=finiteDifferenceEpsilon)" -->
+<p>Return the derivative of a function. </p>
+<p>Know issue: for now it returns a non-differentiable function. </p>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="ac31bb4fcfc3f627982f26d53329d18e4"></a><!-- doxytag: member="roboptim::Derivative::DerivativeShPtr_t" ref="ac31bb4fcfc3f627982f26d53329d18e4" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, typename FdgPolicy&gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00030.html">roboptim::GenericFiniteDifferenceGradient</a>&lt; T, FdgPolicy &gt;::<a class="el" href="a00030.html">GenericFiniteDifferenceGradient</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">GenericFunction</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>f</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00031.html#a1cfc07bf5c22d02af3dae45364ef1407">value_type</a>&#160;</td>
-          <td class="paramname"><em>e</em> = <code><a class="el" href="a00140.html#a2b8aa11a97dbc8229249db7357581d83">finiteDifferenceEpsilon</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw ()</td>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="a00030.html">Derivative</a>&gt; <a class="el" href="a00030.html">roboptim::Derivative</a>&lt; U &gt;::<a class="el" href="a00030.html#ac31bb4fcfc3f627982f26d53329d18e4">DerivativeShPtr_t</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Instantiate a finite differences gradient. </p>
-<p>Instantiate a derivable function that will wraps a non derivable function and compute automatically its gradient using finite differences. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">f</td><td>function that will e wrapped </td></tr>
-    <tr><td class="paramname">e</td><td>epsilon used in finite difference computation </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a class="anchor" id="a52f35b313494e42eba9b96264ac4ab2f"></a><!-- doxytag: member="roboptim::GenericFiniteDifferenceGradient::~GenericFiniteDifferenceGradient" ref="a52f35b313494e42eba9b96264ac4ab2f" args="()" -->
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a8c77526d5667849224840b254fd9a2f9"></a><!-- doxytag: member="roboptim::Derivative::Derivative" ref="a8c77526d5667849224840b254fd9a2f9" args="(boost::shared_ptr&lt; U &gt; origin, size_type variableId)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename FdgPolicy &gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00030.html">roboptim::GenericFiniteDifferenceGradient</a>&lt; T, FdgPolicy &gt;::~<a class="el" href="a00030.html">GenericFiniteDifferenceGradient</a> </td>
+          <td class="memname"><a class="el" href="a00030.html">roboptim::Derivative</a>&lt; U &gt;::<a class="el" href="a00030.html">Derivative</a> </td>
+          <td>(</td>
+          <td class="paramtype">boost::shared_ptr&lt; U &gt;&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>variableId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw ()<code> [inline, explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>References <a class="el" href="a00043.html#ac56c279d34f3c4047c0f66b738a1bd7f">roboptim::GenericFunction&lt; U::traits_t &gt;::inputSize()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9bbb544ebacd592160d3753e4dde603"></a><!-- doxytag: member="roboptim::Derivative::~Derivative" ref="ae9bbb544ebacd592160d3753e4dde603" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00030.html">roboptim::Derivative</a>&lt; U &gt;::~<a class="el" href="a00030.html">Derivative</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>  throw ()</td>
+          <td>  throw ()<code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -178,28 +176,28 @@ template&lt;typename T , typename FdgPolicy &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a231a563eba65eb75c9695ccc337860c5"></a><!-- doxytag: member="roboptim::GenericFiniteDifferenceGradient::impl_compute" ref="a231a563eba65eb75c9695ccc337860c5" args="(result_t &amp;, const argument_t &amp;) const " -->
+<a class="anchor" id="a188587d64e1b4761f7bcc50d8152ae1d"></a><!-- doxytag: member="roboptim::Derivative::impl_compute" ref="a188587d64e1b4761f7bcc50d8152ae1d" args="(result_t &amp;result, const argument_t &amp;x) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename FdgPolicy &gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00030.html">roboptim::GenericFiniteDifferenceGradient</a>&lt; T, FdgPolicy &gt;::<a class="el" href="a00030.html#a231a563eba65eb75c9695ccc337860c5">impl_compute</a> </td>
+          <td class="memname">void <a class="el" href="a00030.html">roboptim::Derivative</a>&lt; U &gt;::<a class="el" href="a00030.html#a188587d64e1b4761f7bcc50d8152ae1d">impl_compute</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00031.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="a00043.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a00031.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
           <td class="paramname"><em>argument</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
+          <td></td><td> const  throw ()<code> [inline, protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -207,7 +205,7 @@ template&lt;typename T , typename FdgPolicy &gt; </div>
 
 <p>Function evaluation. </p>
 <p>Evaluate the function, has to be implemented in concrete classes. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00031.html#a58f0bde147e54bbeb8df944ef194f9ae" title="Evaluate the function at a specified point.">operator()(result_t&amp;, const argument_t&amp;) const </a>throw () instead. </dd></dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a58f0bde147e54bbeb8df944ef194f9ae" title="Evaluate the function at a specified point.">operator()(result_t&amp;, const argument_t&amp;) const </a>throw () instead. </dd></dl>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">result</td><td>result will be stored in this vector </td></tr>
@@ -216,120 +214,58 @@ template&lt;typename T , typename FdgPolicy &gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="a00031.html#a19fb6005aabfae3862429de2c736ab6e">roboptim::GenericFunction&lt; T &gt;</a>.</p>
+<p>Implements <a class="el" href="a00043.html#a19fb6005aabfae3862429de2c736ab6e">roboptim::GenericFunction&lt; U::traits_t &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac9607a594f0a17201fe7149c28185a1c"></a><!-- doxytag: member="roboptim::GenericFiniteDifferenceGradient::impl_gradient" ref="ac9607a594f0a17201fe7149c28185a1c" args="(gradient_t &amp;, const argument_t &amp;argument, size_type=0) const " -->
+<a class="anchor" id="a2d8a0a49a99ccd4a4140b96e12195d9c"></a><!-- doxytag: member="roboptim::Derivative::origin" ref="a2d8a0a49a99ccd4a4140b96e12195d9c" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename FdgPolicy &gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00030.html">roboptim::GenericFiniteDifferenceGradient</a>&lt; T, FdgPolicy &gt;::<a class="el" href="a00030.html#ac9607a594f0a17201fe7149c28185a1c">impl_gradient</a> </td>
+          <td class="memname">const boost::shared_ptr&lt;U&gt;&amp; <a class="el" href="a00030.html">roboptim::Derivative</a>&lt; U &gt;::<a class="el" href="a00030.html#a2d8a0a49a99ccd4a4140b96e12195d9c">origin</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00029.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00031.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00031.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
-          <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Gradient evaluation. </p>
-<p>Compute the gradient, has to be implemented in concrete classes. The gradient is computed for a specific sub-function which id is passed through the functionId argument. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00029.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> instead. </dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gradient</td><td>gradient will be store in this argument </td></tr>
-    <tr><td class="paramname">argument</td><td>point where the gradient will be computed </td></tr>
-    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
-  </table>
-  </dd>
-</dl>
-<p>ROBOPTIM_DO_NOT_CHECK_ALLOCATION </p>
-
-<p>Implements <a class="el" href="a00029.html#a84657c4eb2f67ea3bbaf49462f54fb68">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a583e5aeb130b6c46b7d12fe0f65c717f"></a><!-- doxytag: member="roboptim::GenericFiniteDifferenceGradient::ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="a583e5aeb130b6c46b7d12fe0f65c717f" args="(GenericDifferentiableFunction&lt; T &gt;)" -->
+<a class="anchor" id="aaf51f143b5c6881e69b99fb9e481b63c"></a><!-- doxytag: member="roboptim::Derivative::origin" ref="aaf51f143b5c6881e69b99fb9e481b63c" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, typename FdgPolicy&gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00030.html">roboptim::GenericFiniteDifferenceGradient</a>&lt; T, FdgPolicy &gt;::<a class="el" href="a00030.html#a583e5aeb130b6c46b7d12fe0f65c717f">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
+          <td class="memname">boost::shared_ptr&lt;U&gt;&amp; <a class="el" href="a00030.html">roboptim::Derivative</a>&lt; U &gt;::<a class="el" href="a00030.html#a2d8a0a49a99ccd4a4140b96e12195d9c">origin</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00029.html">GenericDifferentiableFunction</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af5aa6c2ecd1b2052a0b6ad75ae681f35"></a><!-- doxytag: member="roboptim::Derivative::ROBOPTIM_FUNCTION_FWD_TYPEDEFS_" ref="af5aa6c2ecd1b2052a0b6ad75ae681f35" args="(GenericFunction&lt; typename U::traits_t &gt;)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00030.html">roboptim::Derivative</a>&lt; U &gt;::<a class="el" href="a00030.html#af5aa6c2ecd1b2052a0b6ad75ae681f35">ROBOPTIM_FUNCTION_FWD_TYPEDEFS_</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00043.html">GenericFunction</a>&lt; typename U::traits_t &gt;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="aad6048bf897c560c6a0e03ce355413d1"></a><!-- doxytag: member="roboptim::GenericFiniteDifferenceGradient::adaptee_" ref="aad6048bf897c560c6a0e03ce355413d1" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename FdgPolicy&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html">GenericFunction</a>&lt;T&gt;&amp; <a class="el" href="a00030.html">roboptim::GenericFiniteDifferenceGradient</a>&lt; T, FdgPolicy &gt;::<a class="el" href="a00030.html#aad6048bf897c560c6a0e03ce355413d1">adaptee_</a><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reference to the wrapped function. </p>
-
-</div>
-</div>
-<a class="anchor" id="a351983c229ac4c9cd42cdeb7ad0aebda"></a><!-- doxytag: member="roboptim::GenericFiniteDifferenceGradient::epsilon_" ref="a351983c229ac4c9cd42cdeb7ad0aebda" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename FdgPolicy&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html#a1cfc07bf5c22d02af3dae45364ef1407">value_type</a> <a class="el" href="a00030.html">roboptim::GenericFiniteDifferenceGradient</a>&lt; T, FdgPolicy &gt;::<a class="el" href="a00030.html#a351983c229ac4c9cd42cdeb7ad0aebda">epsilon_</a><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a5c3139b3bfa459c225a2e77058259cb1"></a><!-- doxytag: member="roboptim::GenericFiniteDifferenceGradient::xEps_" ref="a5c3139b3bfa459c225a2e77058259cb1" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename FdgPolicy&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00031.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> <a class="el" href="a00030.html">roboptim::GenericFiniteDifferenceGradient</a>&lt; T, FdgPolicy &gt;::<a class="el" href="a00030.html#a5c3139b3bfa459c225a2e77058259cb1">xEps_</a><code> [mutable, protected]</code></td>
         </tr>
       </table>
 </div>
@@ -355,7 +291,7 @@ template&lt;typename T, typename FdgPolicy&gt; </div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00030.html">GenericFiniteDifferenceGradient</a>      </li>
+      <li class="navelem"><a class="el" href="a00188.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00030.html">Derivative</a>      </li>
 </body>
 </html>

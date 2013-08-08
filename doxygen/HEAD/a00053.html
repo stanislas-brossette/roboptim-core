@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::ResultWithWarnings Class Reference</title>
+<title>roboptim::GenericTwiceDifferentiableFunction&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,110 +58,370 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::ResultWithWarnings Class Reference<div class="ingroups"><a class="el" href="a00152.html">Optimization problems</a></div></div>  </div>
+<div class="title">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="a00198.html">Mathematical abstract functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::ResultWithWarnings" --><!-- doxytag: inherits="roboptim::Result" -->
-<p>Represents the solution of an optimization problem when errors occurred during the solving process.  
+<!-- doxytag: class="roboptim::GenericTwiceDifferentiableFunction" --><!-- doxytag: inherits="roboptim::GenericDifferentiableFunction" -->
+<p>Define an abstract function which is derivable twice ( <img class="formulaInl" alt="$C^2$" src="form_38.png"/>).  
  <a href="a00053.html#details">More...</a></p>
 
-<p><code>#include &lt;roboptim/core/result-with-warnings.hh&gt;</code></p>
+<p><code>#include &lt;roboptim/core/twice-differentiable-function.hh&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for roboptim::ResultWithWarnings:</div>
+Inheritance diagram for roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00345.png" border="0" usemap="#roboptim_1_1_result_with_warnings_inherit__map" alt="Inheritance graph"/></div>
-<map name="roboptim_1_1_result_with_warnings_inherit__map" id="roboptim_1_1_result_with_warnings_inherit__map">
-<area shape="rect" id="node2" href="a00052.html" title="Represents the solution of an optimization problem." alt="" coords="47,6,164,37"/></map>
+<div class="center"><img src="a00474.png" border="0" usemap="#roboptim_1_1_generic_twice_differentiable_function_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="roboptim_1_1_generic_twice_differentiable_function_3_01_t_01_4_inherit__map" id="roboptim_1_1_generic_twice_differentiable_function_3_01_t_01_4_inherit__map">
+<area shape="rect" id="node7" href="a00028.html" title="Cos function." alt="" coords="1048,31,1187,62"/><area shape="rect" id="node9" href="a00051.html" title="Define an abstract quadratic function." alt="" coords="983,85,1252,115"/><area shape="rect" id="node21" href="a00060.html" title="Explicit specialization for the stop case of NTimesDerivable class." alt="" coords="984,138,1251,169"/><area shape="rect" id="node23" href="a00078.html" title="Sin function." alt="" coords="1051,191,1184,222"/><area shape="rect" id="node2" href="a00041.html" title="Define an abstract derivable function ( )." alt="" coords="267,111,557,142"/><area shape="rect" id="node4" href="a00043.html" title="Define an abstract mathematical function ( )." alt="" coords="7,111,217,142"/><area shape="rect" id="node11" href="a00048.html" title="Define an abstract linear function." alt="" coords="1337,58,1585,89"/><area shape="rect" id="node19" href="a00050.html" title="Build a quadratic function from a matrix and a vector." alt="" coords="1303,111,1620,142"/><area shape="rect" id="node13" href="a00040.html" title="Constant function." alt="" coords="1687,5,1951,35"/><area shape="rect" id="node15" href="a00047.html" title="Identity function." alt="" coords="1692,58,1945,89"/><area shape="rect" id="node17" href="a00049.html" title="Build a linear function from a vector and a matrix." alt="" coords="1669,111,1968,142"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for roboptim::ResultWithWarnings:</div>
+Collaboration diagram for roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00346.png" border="0" usemap="#roboptim_1_1_result_with_warnings_coll__map" alt="Collaboration graph"/></div>
-<map name="roboptim_1_1_result_with_warnings_coll__map" id="roboptim_1_1_result_with_warnings_coll__map">
-<area shape="rect" id="node2" href="a00052.html" title="Represents the solution of an optimization problem." alt="" coords="5,353,123,383"/><area shape="rect" id="node6" href="a00058.html" title="Exception used for non&#45;critical errors during optimization." alt="" coords="161,254,329,285"/><area shape="rect" id="node8" href="a00056.html" title="Base exception class for solving errors." alt="" coords="172,171,319,202"/><area shape="rect" id="node10" title="STL class." alt="" coords="183,89,308,119"/><area shape="rect" id="node12" title="STL class." alt="" coords="192,6,299,37"/></map>
+<div class="center"><img src="a00475.png" border="0" usemap="#roboptim_1_1_generic_twice_differentiable_function_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="roboptim_1_1_generic_twice_differentiable_function_3_01_t_01_4_coll__map" id="roboptim_1_1_generic_twice_differentiable_function_3_01_t_01_4_coll__map">
+<area shape="rect" id="node2" href="a00041.html" title="Define an abstract derivable function ( )." alt="" coords="24,86,315,117"/><area shape="rect" id="node4" href="a00043.html" title="Define an abstract mathematical function ( )." alt="" coords="64,6,275,37"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
-<p><a href="a00347.html">List of all members.</a></p>
+<p><a href="a00476.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00043.html#a97054924c0f87acb1713be64782a6aab">matrix_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Hessian type.  <a href="#a88566ea169ba77a2c2b9caf939c12cd1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>, <br class="typebreak"/>
+<a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#a8eb36050555e77e94717556bc0bf8d20">hessianSize_t</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Hessian size type represented as a pair of values.  <a href="#a8eb36050555e77e94717556bc0bf8d20"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#a2e3e3d6637bb1968eef831d451079124">ResultWithWarnings</a> (const <a class="el" href="a00031.html#ad3d5888dc78d2ca132d807abfd8e94f2">Function::size_type</a> <a class="el" href="a00052.html#af32478031f205ae7a8fd3676fc02f67d">inputSize</a>, const <a class="el" href="a00031.html#ad3d5888dc78d2ca132d807abfd8e94f2">Function::size_type</a> <a class="el" href="a00052.html#a562f3e5a026d2b9c6a008be5bc6c2ec7">outputSize</a>=1)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate the class from an input/output size.  <a href="#a2e3e3d6637bb1968eef831d451079124"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#aa3c7d443e5144fb8dea37bb88b50b387">~ResultWithWarnings</a> ()  throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#a555b074ff9d1e8ecacc2c2665f9a5eec">print</a> (std::ostream &amp;o) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the result on the specified output stream.  <a href="#a555b074ff9d1e8ecacc2c2665f9a5eec"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="a00058.html">SolverWarning</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#a644b84239da645b252e1d9cb1b0b49c8">warnings</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of warnings.  <a href="#a644b84239da645b252e1d9cb1b0b49c8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#ae1dfb2289bce927983df0ba0ecd3bf6f">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00041.html">GenericDifferentiableFunction</a>&lt; T &gt;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00053.html#a8eb36050555e77e94717556bc0bf8d20">hessianSize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#ab88c89f971c0354c165165849b03c1f0">hessianSize</a> () const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of a hessian.  <a href="#ab88c89f971c0354c165165849b03c1f0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#a1817e181cfbd18d6ffd6002c98763e6a">isValidHessian</a> (const <a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;<a class="el" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2">hessian</a>) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the hessian is valid (check sizes).  <a href="#a1817e181cfbd18d6ffd6002c98763e6a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2">hessian</a> (const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;argument, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> functionId=0) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the hessian at a given point.  <a href="#a7ab6bda5039008fb215ab24ecacd85a2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#a62c40461536ac03d4c457f8681f8c2b3">hessian</a> (<a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;<a class="el" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2">hessian</a>, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;argument, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> functionId=0) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the hessian at a given point.  <a href="#a62c40461536ac03d4c457f8681f8c2b3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#a78bf9018548e92c38803bbd0b39ef29a">print</a> (std::ostream &amp;) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the function on the specified output stream.  <a href="#a78bf9018548e92c38803bbd0b39ef29a"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#af01b4e2ebb1119493337e12c105128c2">GenericTwiceDifferentiableFunction</a> (<a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#ac56c279d34f3c4047c0f66b738a1bd7f">inputSize</a>, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">outputSize</a>=1, std::string name=std::string())  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete class constructor should call this constructor.  <a href="#af01b4e2ebb1119493337e12c105128c2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#ac5b5430ab527d7de393f876f4db314c2">impl_hessian</a> (<a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;<a class="el" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2">hessian</a>, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;argument, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> functionId=0) const =0  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Hessian evaluation.  <a href="#ac5b5430ab527d7de393f876f4db314c2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#a042286a811a4ec9b79c9d2c34f8e63c0">setZero</a> (<a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;symmetric) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a symmetric matrix to zero.  <a href="#a042286a811a4ec9b79c9d2c34f8e63c0"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Represents the solution of an optimization problem when errors occurred during the solving process. </p>
-<p>This class is returned by a solver if a result has been found, but some problems happened.</p>
-<p>A vector or warnings is provided in this result, otherwise the class behaves like <a class="el" href="a00052.html" title="Represents the solution of an optimization problem.">Result</a>. </p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2e3e3d6637bb1968eef831d451079124"></a><!-- doxytag: member="roboptim::ResultWithWarnings::ResultWithWarnings" ref="a2e3e3d6637bb1968eef831d451079124" args="(const Function::size_type inputSize, const Function::size_type outputSize=1)" -->
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+class roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;</h3>
+
+<p>Define an abstract function which is derivable twice ( <img class="formulaInl" alt="$C^2$" src="form_38.png"/>). </p>
+<p>A twice derivable function is a derivable function which provides a way to compute its hessian.</p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[ f : x \rightarrow f(x) \]" src="form_1.png"/>
+</p>
+<p> <img class="formulaInl" alt="$x \in \mathbb{R}^n$" src="form_2.png"/>, <img class="formulaInl" alt="$f(x) \in \mathbb{R}^m$" src="form_3.png"/> where <img class="formulaInl" alt="$n$" src="form_4.png"/> is the input size and <img class="formulaInl" alt="$m$" src="form_5.png"/> is the output size.</p>
+<p>Hessian computation is done through the <a class="el" href="a00053.html#ac5b5430ab527d7de393f876f4db314c2" title="Hessian evaluation.">impl_hessian</a> method that has to implemented by the concrete class inheriting this class.</p>
+<p>The hessian of a <img class="formulaInl" alt="$\mathbb{R}^n \rightarrow \mathbb{R}^m$" src="form_6.png"/> function where <img class="formulaInl" alt="$n > 1$" src="form_7.png"/> and <img class="formulaInl" alt="$m > 1$" src="form_8.png"/> is a tensor. To avoid this costly representation, the function is split into <img class="formulaInl" alt="$m$" src="form_5.png"/> <img class="formulaInl" alt="$\mathbb{R}^n \rightarrow \mathbb{R}$" src="form_9.png"/> functions. See #DifferentialeFunction documentation for more information. </p>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="a88566ea169ba77a2c2b9caf939c12cd1"></a><!-- doxytag: member="roboptim::GenericTwiceDifferentiableFunction::hessian_t" ref="a88566ea169ba77a2c2b9caf939c12cd1" args="" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00053.html#a2e3e3d6637bb1968eef831d451079124">roboptim::ResultWithWarnings::ResultWithWarnings</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html#ad3d5888dc78d2ca132d807abfd8e94f2">Function::size_type</a>&#160;</td>
-          <td class="paramname"><em>inputSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00031.html#ad3d5888dc78d2ca132d807abfd8e94f2">Function::size_type</a>&#160;</td>
-          <td class="paramname"><em>outputSize</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw ()<code> [explicit]</code></td>
+          <td class="memname">typedef <a class="el" href="a00043.html#a97054924c0f87acb1713be64782a6aab">matrix_t</a> <a class="el" href="a00053.html">roboptim::GenericTwiceDifferentiableFunction</a>&lt; T &gt;::<a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Instantiate the class from an input/output size. </p>
+<p>Hessian type. </p>
+<p>Hessians are symmetric matrices. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8eb36050555e77e94717556bc0bf8d20"></a><!-- doxytag: member="roboptim::GenericTwiceDifferentiableFunction::hessianSize_t" ref="a8eb36050555e77e94717556bc0bf8d20" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::pair&lt;<a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&gt; <a class="el" href="a00053.html">roboptim::GenericTwiceDifferentiableFunction</a>&lt; T &gt;::<a class="el" href="a00053.html#a8eb36050555e77e94717556bc0bf8d20">hessianSize_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Hessian size type represented as a pair of values. </p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="af01b4e2ebb1119493337e12c105128c2"></a><!-- doxytag: member="roboptim::GenericTwiceDifferentiableFunction::GenericTwiceDifferentiableFunction" ref="af01b4e2ebb1119493337e12c105128c2" args="(size_type inputSize, size_type outputSize=1, std::string name=std::string())" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00053.html">roboptim::GenericTwiceDifferentiableFunction</a>&lt; T &gt;::<a class="el" href="a00053.html">GenericTwiceDifferentiableFunction</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>inputSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>outputSize</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>std::string&#160;()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw ()<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Concrete class constructor should call this constructor. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">inputSize</td><td>input size </td></tr>
-    <tr><td class="paramname">outputSize</td><td>output size </td></tr>
+    <tr><td class="paramname">inputSize</td><td>input size (argument size) </td></tr>
+    <tr><td class="paramname">outputSize</td><td>output size (result size) </td></tr>
+    <tr><td class="paramname">name</td><td>function's name </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="aa3c7d443e5144fb8dea37bb88b50b387"></a><!-- doxytag: member="roboptim::ResultWithWarnings::~ResultWithWarnings" ref="aa3c7d443e5144fb8dea37bb88b50b387" args="()" -->
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a7ab6bda5039008fb215ab24ecacd85a2"></a><!-- doxytag: member="roboptim::GenericTwiceDifferentiableFunction::hessian" ref="a7ab6bda5039008fb215ab24ecacd85a2" args="(const argument_t &amp;argument, size_type functionId=0) const " -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00053.html#aa3c7d443e5144fb8dea37bb88b50b387">roboptim::ResultWithWarnings::~ResultWithWarnings</a> </td>
+          <td class="memname"><a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> <a class="el" href="a00053.html">roboptim::GenericTwiceDifferentiableFunction</a>&lt; T &gt;::<a class="el" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2">hessian</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>  throw ()</td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()<code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
+<p>Compute the hessian at a given point. </p>
+<p>Program will abort if the argument size is wrong. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argument</td><td>point where the hessian will be computed </td></tr>
+    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>computed hessian </dd></dl>
+
+<p>References <a class="el" href="a00053.html#ab88c89f971c0354c165165849b03c1f0">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::hessianSize()</a>, and <a class="el" href="a00053.html#a042286a811a4ec9b79c9d2c34f8e63c0">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::setZero()</a>.</p>
+
+<p>Referenced by <a class="el" href="a00199.html#gaa595d09dcc1e99f7cc2cb217be1918cc">roboptim::Cos&lt; T &gt;::impl_hessian()</a>, <a class="el" href="a00199.html#gac58e0e8ecf213c0790fc16479a3d0f47">roboptim::Sin&lt; T &gt;::impl_hessian()</a>, and <a class="el" href="a00053.html#a1817e181cfbd18d6ffd6002c98763e6a">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::isValidHessian()</a>.</p>
+
 </div>
 </div>
-<hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a555b074ff9d1e8ecacc2c2665f9a5eec"></a><!-- doxytag: member="roboptim::ResultWithWarnings::print" ref="a555b074ff9d1e8ecacc2c2665f9a5eec" args="(std::ostream &amp;o) const " -->
+<a class="anchor" id="a62c40461536ac03d4c457f8681f8c2b3"></a><!-- doxytag: member="roboptim::GenericTwiceDifferentiableFunction::hessian" ref="a62c40461536ac03d4c457f8681f8c2b3" args="(hessian_t &amp;hessian, const argument_t &amp;argument, size_type functionId=0) const " -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream &amp; <a class="el" href="a00053.html#a555b074ff9d1e8ecacc2c2665f9a5eec">roboptim::ResultWithWarnings::print</a> </td>
+          <td class="memname">void <a class="el" href="a00053.html">roboptim::GenericTwiceDifferentiableFunction</a>&lt; T &gt;::<a class="el" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2">hessian</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>hessian</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Compute the hessian at a given point. </p>
+<p>Program will abort if the argument size is wrong. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hessian</td><td>hessian will be stored here </td></tr>
+    <tr><td class="paramname">argument</td><td>point where the hessian will be computed </td></tr>
+    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ROBOPTIM_DO_NOT_CHECK_ALLOCATION</p>
+<p>ROBOPTIM_DO_NOT_CHECK_ALLOCATION </p>
+
+<p>References <a class="el" href="a00053.html#ac5b5430ab527d7de393f876f4db314c2">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::impl_hessian()</a>, <a class="el" href="a00053.html#a1817e181cfbd18d6ffd6002c98763e6a">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::isValidHessian()</a>, and <a class="el" href="a00198.html#gac33ccf681554a2bad6663a107f436be8">roboptim::GenericFunction&lt; T &gt;::logger</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab88c89f971c0354c165165849b03c1f0"></a><!-- doxytag: member="roboptim::GenericTwiceDifferentiableFunction::hessianSize" ref="ab88c89f971c0354c165165849b03c1f0" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00053.html#a8eb36050555e77e94717556bc0bf8d20">hessianSize_t</a> <a class="el" href="a00053.html">roboptim::GenericTwiceDifferentiableFunction</a>&lt; T &gt;::<a class="el" href="a00053.html#ab88c89f971c0354c165165849b03c1f0">hessianSize</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const  throw ()<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return the size of a hessian. </p>
+<p>Hessian size is equales to (input size, input size). </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>hessian's size as a pair </dd></dl>
+
+<p>References <a class="el" href="a00043.html#ac56c279d34f3c4047c0f66b738a1bd7f">roboptim::GenericFunction&lt; T &gt;::inputSize()</a>.</p>
+
+<p>Referenced by <a class="el" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::hessian()</a>, and <a class="el" href="a00053.html#a1817e181cfbd18d6ffd6002c98763e6a">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::isValidHessian()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5b5430ab527d7de393f876f4db314c2"></a><!-- doxytag: member="roboptim::GenericTwiceDifferentiableFunction::impl_hessian" ref="ac5b5430ab527d7de393f876f4db314c2" args="(hessian_t &amp;hessian, const argument_t &amp;argument, size_type functionId=0) const =0" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="a00053.html">roboptim::GenericTwiceDifferentiableFunction</a>&lt; T &gt;::<a class="el" href="a00053.html#ac5b5430ab527d7de393f876f4db314c2">impl_hessian</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>hessian</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()<code> [protected, pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Hessian evaluation. </p>
+<p>Compute the hessian, has to be implemented in concrete classes. The hessian is computed for a specific sub-function which id is passed through the functionId argument. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2" title="Compute the hessian at a given point.">hessian</a> instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hessian</td><td>hessian will be stored here </td></tr>
+    <tr><td class="paramname">argument</td><td>point where the hessian will be computed </td></tr>
+    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="a00060.html#a9ac493a2bb083806fa6fa4514dba3681">roboptim::NTimesDerivableFunction&lt; 2 &gt;</a>, <a class="el" href="a00028.html#aac17494106aad96041bf5b667556d800">roboptim::Cos&lt; T &gt;</a>, <a class="el" href="a00078.html#a27af1aaacf2ae1b3715389e0431df133">roboptim::Sin&lt; T &gt;</a>, <a class="el" href="a00050.html#a340331172ce7188996110d02a976d006">roboptim::GenericNumericQuadraticFunction&lt; T &gt;</a>, <a class="el" href="a00199.html#gaa595d09dcc1e99f7cc2cb217be1918cc">roboptim::Cos&lt; T &gt;</a>, <a class="el" href="a00199.html#gac58e0e8ecf213c0790fc16479a3d0f47">roboptim::Sin&lt; T &gt;</a>, and <a class="el" href="a00048.html#a9749a34f22d1c9471b078449090309a6">roboptim::GenericLinearFunction&lt; T &gt;</a>.</p>
+
+<p>Referenced by <a class="el" href="a00053.html#a62c40461536ac03d4c457f8681f8c2b3">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::hessian()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1817e181cfbd18d6ffd6002c98763e6a"></a><!-- doxytag: member="roboptim::GenericTwiceDifferentiableFunction::isValidHessian" ref="a1817e181cfbd18d6ffd6002c98763e6a" args="(const hessian_t &amp;hessian) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a00053.html">roboptim::GenericTwiceDifferentiableFunction</a>&lt; T &gt;::<a class="el" href="a00053.html#a1817e181cfbd18d6ffd6002c98763e6a">isValidHessian</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>hessian</em></td><td>)</td>
+          <td> const  throw ()<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if the hessian is valid (check sizes). </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hessian</td><td>hessian that will be checked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if valid, false if not </dd></dl>
+
+<p>References <a class="el" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::hessian()</a>, and <a class="el" href="a00053.html#ab88c89f971c0354c165165849b03c1f0">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::hessianSize()</a>.</p>
+
+<p>Referenced by <a class="el" href="a00053.html#a62c40461536ac03d4c457f8681f8c2b3">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::hessian()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78bf9018548e92c38803bbd0b39ef29a"></a><!-- doxytag: member="roboptim::GenericTwiceDifferentiableFunction::print" ref="a78bf9018548e92c38803bbd0b39ef29a" args="(std::ostream &amp;) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; <a class="el" href="a00053.html">roboptim::GenericTwiceDifferentiableFunction</a>&lt; T &gt;::<a class="el" href="a00053.html#a78bf9018548e92c38803bbd0b39ef29a">print</a> </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>o</em></td><td>)</td>
@@ -171,7 +431,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Display the result on the specified output stream. </p>
+<p>Display the function on the specified output stream. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
@@ -180,26 +440,54 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
 
-<p>Reimplemented from <a class="el" href="a00052.html#af065a63ebc7497011f49be220857b0f0">roboptim::Result</a>.</p>
+<p>Reimplemented from <a class="el" href="a00041.html#a9c50e545609bd7ace4f2dad69029fac3">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
 
-<p>References <a class="el" href="a00140.html#a5a9d36182ac616874a038fd4217f0a9c">roboptim::decindent()</a>, <a class="el" href="a00140.html#a27b6e86639bb04ec042979cdaad0a851">roboptim::iendl()</a>, <a class="el" href="a00140.html#a053552edbb5c42ac287c22175ea43e69">roboptim::incindent()</a>, and <a class="el" href="a00052.html#af065a63ebc7497011f49be220857b0f0">roboptim::Result::print()</a>.</p>
+<p>Reimplemented in <a class="el" href="a00060.html#ae0961c8f2f33ecb177216919420b21cb">roboptim::NTimesDerivableFunction&lt; 2 &gt;</a>, <a class="el" href="a00050.html#ab43858fd0eb1c257664a80004111c8ab">roboptim::GenericNumericQuadraticFunction&lt; T &gt;</a>, <a class="el" href="a00040.html#ac98c86704dc8443933a50ad664cca533">roboptim::GenericConstantFunction&lt; T &gt;</a>, <a class="el" href="a00047.html#adc5eff6387532970e7b1e14daeb2d8af">roboptim::GenericIdentityFunction&lt; T &gt;</a>, <a class="el" href="a00049.html#ae57fb039df18b98b7ab403b73c277632">roboptim::GenericNumericLinearFunction&lt; T &gt;</a>, <a class="el" href="a00048.html#a00e124bc18548130332a1f5ceacf70c5">roboptim::GenericLinearFunction&lt; T &gt;</a>, <a class="el" href="a00051.html#a38f3f609626f43393e854351555459ee">roboptim::GenericQuadraticFunction&lt; T &gt;</a>, <a class="el" href="a00028.html#a39db9ef66cdb3605a811b232fcfaad13">roboptim::Cos&lt; T &gt;</a>, and <a class="el" href="a00078.html#ad1127d5c57e79dd7c1a4dc20398e1086">roboptim::Sin&lt; T &gt;</a>.</p>
+
+<p>References <a class="el" href="a00188.html#a2b00a3916f44e9f9d69e4fc157a0da79">roboptim::indent()</a>.</p>
 
 </div>
 </div>
-<hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a644b84239da645b252e1d9cb1b0b49c8"></a><!-- doxytag: member="roboptim::ResultWithWarnings::warnings" ref="a644b84239da645b252e1d9cb1b0b49c8" args="" -->
+<a class="anchor" id="ae1dfb2289bce927983df0ba0ecd3bf6f"></a><!-- doxytag: member="roboptim::GenericTwiceDifferentiableFunction::ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="ae1dfb2289bce927983df0ba0ecd3bf6f" args="(GenericDifferentiableFunction&lt; T &gt;)" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="a00058.html">SolverWarning</a>&gt; <a class="el" href="a00053.html#a644b84239da645b252e1d9cb1b0b49c8">roboptim::ResultWithWarnings::warnings</a></td>
+          <td class="memname"><a class="el" href="a00053.html">roboptim::GenericTwiceDifferentiableFunction</a>&lt; T &gt;::<a class="el" href="a00053.html#ae1dfb2289bce927983df0ba0ecd3bf6f">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00041.html">GenericDifferentiableFunction</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Vector of warnings. </p>
-<p>Each element of this vector is a potential problem that occurred during the optimization. </p>
+</div>
+</div>
+<a class="anchor" id="a042286a811a4ec9b79c9d2c34f8e63c0"></a><!-- doxytag: member="roboptim::GenericTwiceDifferentiableFunction::setZero" ref="a042286a811a4ec9b79c9d2c34f8e63c0" args="(hessian_t &amp;symmetric) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00053.html">roboptim::GenericTwiceDifferentiableFunction</a>&lt; T &gt;::<a class="el" href="a00053.html#a042286a811a4ec9b79c9d2c34f8e63c0">setZero</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>symmetric</em></td><td>)</td>
+          <td> const<code> [inline, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set a symmetric matrix to zero. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>there might be an eigen function to do that. </dd></dl>
+
+<p>Referenced by <a class="el" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::hessian()</a>.</p>
 
 </div>
 </div>
@@ -221,7 +509,7 @@ Public Attributes</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00053.html">ResultWithWarnings</a>      </li>
+      <li class="navelem"><a class="el" href="a00188.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00053.html">GenericTwiceDifferentiableFunction</a>      </li>
 </body>
 </html>

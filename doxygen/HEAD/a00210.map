@@ -1,4 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$a00065.html" title="core.hh" alt="" coords="5,86,72,117"/>
-<area shape="rect" id="node5" href="$a00093.html" title="identity&#45;function.cc" alt="" coords="96,86,224,117"/>
+<area shape="rect" id="node3" href="$a00089.html" title="chain.hh" alt="" coords="5,86,75,117"/>
+<area shape="rect" id="node5" href="$a00091.html" title="concatenate.hh" alt="" coords="99,86,211,117"/>
+<area shape="rect" id="node7" href="$a00101.html" title="derivative.hh" alt="" coords="235,86,333,117"/>
+<area shape="rect" id="node9" href="$a00133.html" title="map.hh" alt="" coords="357,86,421,117"/>
+<area shape="rect" id="node11" href="$a00135.html" title="minus.hh" alt="" coords="445,86,520,117"/>
+<area shape="rect" id="node13" href="$a00145.html" title="plus.hh" alt="" coords="544,86,605,117"/>
+<area shape="rect" id="node15" href="$a00150.html" title="product.hh" alt="" coords="629,86,712,117"/>
+<area shape="rect" id="node17" href="$a00158.html" title="scalar.hh" alt="" coords="736,86,811,117"/>
+<area shape="rect" id="node19" href="$a00160.html" title="selection.hh" alt="" coords="835,86,928,117"/>
+<area shape="rect" id="node21" href="$a00184.html" title="vector&#45;interpolation.hh" alt="" coords="952,86,1104,117"/>
 </map>

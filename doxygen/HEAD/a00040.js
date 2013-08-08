@@ -1,10 +1,10 @@
 var a00040 =
 [
-    [ "~Gnuplot", "a00040.html#ab2620f9d29a97757d0acbfe68e6a2c79", null ],
-    [ "Gnuplot", "a00040.html#a21a6176556b86a8d05911fb62dfdc696", null ],
-    [ "make_gnuplot", "a00040.html#a0ff7eb8372a65d32c9db345f2af7e444", null ],
-    [ "make_interactive_gnuplot", "a00040.html#a12abb9e3f5e10420dd481b19c78ea55c", null ],
-    [ "operator<<", "a00040.html#af7addb186708c556e603c3fd8e7768a6", null ],
-    [ "print", "a00040.html#ad4b42f563ebbdb501d397a42a4420525", null ],
-    [ "push_command", "a00040.html#aaa242efdd1e20124d0698793b4fd4bdd", null ]
+    [ "GenericConstantFunction", "a00040.html#a9f9dae33c9657528e0a82410cb161817", null ],
+    [ "~GenericConstantFunction", "a00040.html#aab88e6da3308d2ca7b8b58ac6bd87504", null ],
+    [ "impl_compute", "a00040.html#afa384a6db99a3d7c8c5fddb3e8cb92c3", null ],
+    [ "impl_gradient", "a00040.html#a6d30bac1095a5fa14db29ab113dc4502", null ],
+    [ "impl_jacobian", "a00040.html#af3c5004a7d90783c0ff2548e63be9d32", null ],
+    [ "print", "a00040.html#ac98c86704dc8443933a50ad664cca533", null ],
+    [ "ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00040.html#addaf70df2c7d3dbf77ef6e53658d656d", null ]
 ];

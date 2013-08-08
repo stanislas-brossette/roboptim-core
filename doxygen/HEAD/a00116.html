@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>result.hh File Reference</title>
+<title>generic-solver.cc File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,46 +56,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">result.hh File Reference</div>  </div>
+<div class="title">generic-solver.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00130.html">roboptim/core/sys.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00066.html">roboptim/core/debug.hh</a>&gt;</code><br/>
-<code>#include &lt;iostream&gt;</code><br/>
-<code>#include &lt;vector&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00082.html">roboptim/core/function.hh</a>&gt;</code><br/>
+<div class="textblock"><code>#include &quot;debug.hh&quot;</code><br/>
+<code>#include &lt;cassert&gt;</code><br/>
+<code>#include &lt;log4cxx/logger.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="a00117.html">roboptim/core/generic-solver.hh</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for result.hh:</div>
+Include dependency graph for generic-solver.cc:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00246.png" border="0" usemap="#result_8hh" alt=""/></div>
-<map name="result_8hh" id="result_8hh">
-<area shape="rect" id="node3" href="a00130.html" title="roboptim/core/sys.hh" alt="" coords="5,246,152,277"/><area shape="rect" id="node7" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="140,86,303,117"/><area shape="rect" id="node21" href="a00082.html" title="roboptim/core/function.hh" alt="" coords="949,86,1120,117"/><area shape="rect" id="node5" href="a00108.html" title="roboptim/core/portability.hh" alt="" coords="449,326,631,357"/><area shape="rect" id="node11" href="a00096.html" title="roboptim/core/indent.hh" alt="" coords="57,166,217,197"/><area shape="rect" id="node48" href="a00083.html" title="roboptim/core/fwd.hh" alt="" coords="817,166,964,197"/></map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00247.png" border="0" usemap="#result_8hhdep" alt=""/></div>
-<map name="result_8hhdep" id="result_8hhdep">
-<area shape="rect" id="node3" href="a00086.html" title="generic&#45;solver.hh" alt="" coords="277,326,400,357"/><area shape="rect" id="node17" href="a00065.html" title="core.hh" alt="" coords="607,566,673,597"/><area shape="rect" id="node25" href="a00114.html" title="result&#45;with&#45;warnings.hh" alt="" coords="728,246,883,277"/><area shape="rect" id="node31" href="a00118.html" title="solver&#45;error.hh" alt="" coords="655,86,761,117"/><area shape="rect" id="node47" href="a00115.html" title="result.cc" alt="" coords="1008,86,1077,117"/><area shape="rect" id="node5" href="a00124.html" title="solver.hh" alt="" coords="217,406,292,437"/><area shape="rect" id="node23" href="a00085.html" title="generic&#45;solver.cc" alt="" coords="316,406,439,437"/><area shape="rect" id="node7" href="a00075.html" title="dummy&#45;laststate.hh" alt="" coords="5,486,141,517"/><area shape="rect" id="node11" href="a00077.html" title="dummy.hh" alt="" coords="216,486,299,517"/><area shape="rect" id="node15" href="a00119.html" title="solver&#45;factory.hh" alt="" coords="472,486,589,517"/><area shape="rect" id="node20" href="a00123.html" title="solver.cc" alt="" coords="323,486,397,517"/><area shape="rect" id="node9" href="a00074.html" title="dummy&#45;laststate.cc" alt="" coords="5,566,141,597"/><area shape="rect" id="node13" href="a00076.html" title="dummy.cc" alt="" coords="216,566,299,597"/><area shape="rect" id="node29" href="a00113.html" title="result&#45;with&#45;warnings.cc" alt="" coords="677,326,832,357"/><area shape="rect" id="node33" href="a00122.html" title="solver&#45;warning.hh" alt="" coords="576,166,701,197"/><area shape="rect" id="node44" href="a00117.html" title="solver&#45;error.cc" alt="" coords="725,166,832,197"/><area shape="rect" id="node39" href="a00121.html" title="solver&#45;warning.cc" alt="" coords="477,246,603,277"/></map>
+<div class="center"><img src="a00254.png" border="0" usemap="#generic-solver_8cc" alt=""/></div>
+<map name="generic-solver_8cc" id="generic-solver_8cc">
+<area shape="rect" id="node9" href="a00117.html" title="roboptim/core/generic&#45;solver.hh" alt="" coords="2421,86,2632,117"/><area shape="rect" id="node11" href="a00176.html" title="roboptim/core/sys.hh" alt="" coords="2693,646,2840,677"/><area shape="rect" id="node15" href="a00096.html" title="roboptim/core/debug.hh" alt="" coords="2549,486,2712,517"/><area shape="rect" id="node33" href="a00114.html" title="roboptim/core/fwd.hh" alt="" coords="93,566,240,597"/><area shape="rect" id="node35" href="a00148.html" title="roboptim/core/problem.hh" alt="" coords="1373,246,1547,277"/><area shape="rect" id="node111" href="a00157.html" title="roboptim/core/result.hh" alt="" coords="2433,406,2591,437"/><area shape="rect" id="node118" href="a00155.html" title="roboptim/core/result&#45;with&#45;warnings.hh" alt="" coords="2611,166,2851,197"/><area shape="rect" id="node125" href="a00168.html" title="roboptim/core/solver&#45;warning.hh" alt="" coords="2767,246,2977,277"/><area shape="rect" id="node129" href="a00164.html" title="roboptim/core/solver&#45;error.hh" alt="" coords="2341,326,2536,357"/><area shape="rect" id="node13" href="a00147.html" title="roboptim/core/portability.hh" alt="" coords="2252,726,2433,757"/><area shape="rect" id="node18" href="a00129.html" title="roboptim/core/indent.hh" alt="" coords="2380,566,2540,597"/><area shape="rect" id="node62" href="a00113.html" title="roboptim/core/function.hh" alt="" coords="1752,486,1923,517"/><area shape="rect" id="node93" href="a00149.html" title="roboptim/core/problem.hxx" alt="" coords="365,326,544,357"/><area shape="rect" id="node107" href="a00177.html" title="roboptim/core/terminal&#45;color.hh" alt="" coords="1596,406,1801,437"/></map>
 </div>
 </div><table class="memberdecls">
-<tr><td colspan="2"><h2><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html">roboptim::Result</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the solution of an optimization problem.  <a href="a00052.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00108.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html#a0d11c06d8ac34af3a7f0a803ab8d10f8">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const Result &amp;r)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle result display.  <a href="#a0d11c06d8ac34af3a7f0a803ab8d10f8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html#af9168236068ddff8b8df413c430212e8">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const GenericSolver &amp;gs)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle solver display.  <a href="#af9168236068ddff8b8df413c430212e8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html#a41ae14a82f5a36b0a5d17c3b4455a922">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const NoSolution &amp;ns)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to display ``no solution'' objects.  <a href="#a41ae14a82f5a36b0a5d17c3b4455a922"></a><br/></td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -115,6 +104,6 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00116.html">result.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00116.html">generic-solver.cc</a>      </li>
 </body>
 </html>

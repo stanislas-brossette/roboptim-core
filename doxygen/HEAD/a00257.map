@@ -1,15 +1,15 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$a00114.html" title="result&#45;with&#45;warnings.hh" alt="" coords="704,86,859,117"/>
-<area shape="rect" id="node5" href="$a00086.html" title="generic&#45;solver.hh" alt="" coords="605,166,728,197"/>
-<area shape="rect" id="node19" href="$a00065.html" title="core.hh" alt="" coords="543,406,609,437"/>
-<area shape="rect" id="node28" href="$a00113.html" title="result&#45;with&#45;warnings.cc" alt="" coords="811,166,965,197"/>
-<area shape="rect" id="node33" href="$a00121.html" title="solver&#45;warning.cc" alt="" coords="1040,86,1165,117"/>
-<area shape="rect" id="node7" href="$a00124.html" title="solver.hh" alt="" coords="341,246,416,277"/>
-<area shape="rect" id="node25" href="$a00085.html" title="generic&#45;solver.cc" alt="" coords="613,246,736,277"/>
-<area shape="rect" id="node9" href="$a00075.html" title="dummy&#45;laststate.hh" alt="" coords="5,326,141,357"/>
-<area shape="rect" id="node13" href="$a00077.html" title="dummy.hh" alt="" coords="165,326,248,357"/>
-<area shape="rect" id="node17" href="$a00119.html" title="solver&#45;factory.hh" alt="" coords="272,326,389,357"/>
-<area shape="rect" id="node22" href="$a00123.html" title="solver.cc" alt="" coords="464,326,539,357"/>
-<area shape="rect" id="node11" href="$a00074.html" title="dummy&#45;laststate.cc" alt="" coords="5,406,141,437"/>
-<area shape="rect" id="node15" href="$a00076.html" title="dummy.cc" alt="" coords="165,406,248,437"/>
+<area shape="rect" id="node7" href="$a00119.html" title="roboptim/core/visualization/gnuplot&#45;commands.hh" alt="" coords="1355,86,1672,117"/>
+<area shape="rect" id="node9" href="$a00176.html" title="roboptim/core/sys.hh" alt="" coords="5,566,152,597"/>
+<area shape="rect" id="node13" href="$a00096.html" title="roboptim/core/debug.hh" alt="" coords="216,406,379,437"/>
+<area shape="rect" id="node23" href="$a00182.html" title="roboptim/core/util.hh" alt="" coords="1443,166,1584,197"/>
+<area shape="rect" id="node11" href="$a00147.html" title="roboptim/core/portability.hh" alt="" coords="1479,646,1660,677"/>
+<area shape="rect" id="node17" href="$a00129.html" title="roboptim/core/indent.hh" alt="" coords="57,486,217,517"/>
+<area shape="rect" id="node25" href="$a00114.html" title="roboptim/core/fwd.hh" alt="" coords="1767,486,1913,517"/>
+<area shape="rect" id="node28" href="$a00179.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="1491,246,1773,277"/>
+<area shape="rect" id="node86" href="$a00183.html" title="roboptim/core/util.hxx" alt="" coords="1320,246,1467,277"/>
+<area shape="rect" id="node39" href="$a00102.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="1308,326,1556,357"/>
+<area shape="rect" id="node81" href="$a00180.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="608,326,899,357"/>
+<area shape="rect" id="node46" href="$a00113.html" title="roboptim/core/function.hh" alt="" coords="1148,406,1319,437"/>
+<area shape="rect" id="node76" href="$a00103.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="405,406,661,437"/>
 </map>

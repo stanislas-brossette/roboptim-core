@@ -1,6 +1,11 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$a00036.html" title="Define an abstract quadratic function." alt="" coords="105,246,233,277"/>
-<area shape="rect" id="node4" href="$a00038.html" title="Define an abstract function which is derivable twice ( )." alt="" coords="5,166,333,197"/>
-<area shape="rect" id="node6" href="$a00030.html" title="Define an abstract derivable function ( )." alt="" coords="24,86,315,117"/>
-<area shape="rect" id="node8" href="$a00031.html" title="Define an abstract mathematical function ( )." alt="" coords="64,6,275,37"/>
+<area shape="rect" id="node5" href="$a00164.html" title="roboptim/core/solver&#45;error.hh" alt="" coords="1685,86,1880,117"/>
+<area shape="rect" id="node65" href="$a00177.html" title="roboptim/core/terminal&#45;color.hh" alt="" coords="2079,166,2284,197"/>
+<area shape="rect" id="node7" href="$a00176.html" title="roboptim/core/sys.hh" alt="" coords="5,406,152,437"/>
+<area shape="rect" id="node11" href="$a00096.html" title="roboptim/core/debug.hh" alt="" coords="1651,246,1813,277"/>
+<area shape="rect" id="node27" href="$a00157.html" title="roboptim/core/result.hh" alt="" coords="1237,166,1395,197"/>
+<area shape="rect" id="node9" href="$a00147.html" title="roboptim/core/portability.hh" alt="" coords="55,486,236,517"/>
+<area shape="rect" id="node15" href="$a00129.html" title="roboptim/core/indent.hh" alt="" coords="1828,326,1988,357"/>
+<area shape="rect" id="node34" href="$a00113.html" title="roboptim/core/function.hh" alt="" coords="932,246,1103,277"/>
+<area shape="rect" id="node61" href="$a00114.html" title="roboptim/core/fwd.hh" alt="" coords="601,326,748,357"/>
 </map>

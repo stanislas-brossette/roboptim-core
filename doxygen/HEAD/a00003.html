@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>identity-function.cc</title>
+<title>cos.cc</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -50,69 +50,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">identity-function.cc</div>  </div>
+<div class="title">cos.cc</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Example shows identity function use.</p>
-<div class="fragment"><pre class="fragment"><span class="comment">// Copyright (C) 2009 by Thomas Moulard, AIST, CNRS, INRIA.</span>
-<span class="comment">//</span>
-<span class="comment">// This file is part of the roboptim.</span>
-<span class="comment">//</span>
-<span class="comment">// roboptim is free software: you can redistribute it and/or modify</span>
-<span class="comment">// it under the terms of the GNU Lesser General Public License as published by</span>
-<span class="comment">// the Free Software Foundation, either version 3 of the License, or</span>
-<span class="comment">// (at your option) any later version.</span>
-<span class="comment">//</span>
-<span class="comment">// roboptim is distributed in the hope that it will be useful,</span>
-<span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
-<span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
-<span class="comment">// GNU Lesser General Public License for more details.</span>
-<span class="comment">//</span>
-<span class="comment">// You should have received a copy of the GNU Lesser General Public License</span>
-<span class="comment">// along with roboptim.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
-
-<span class="preprocessor">#include &quot;shared-tests/fixture.hh&quot;</span>
-
-<span class="preprocessor">#include &lt;iostream&gt;</span>
-
-<span class="preprocessor">#include &lt;<a class="code" href="a00097.html">roboptim/core/io.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00094.html">roboptim/core/identity-function.hh</a>&gt;</span>
-
-<span class="keyword">using namespace </span>roboptim;
-
-BOOST_FIXTURE_TEST_SUITE (core, TestSuiteConfiguration)
-
-BOOST_AUTO_TEST_CASE (identity_function)
-{
-  boost::shared_ptr&lt;boost::test_tools::output_test_stream&gt;
-    output = retrievePattern (<span class="stringliteral">&quot;identity-function&quot;</span>);
-
-  <a name="a0"></a><a class="code" href="a00035.html#ab271637f8057c0196d3648aaa773b73c" title="Basic vector type.">IdentityFunction::vector_t</a> offset (4);
-  offset[0] = 12.;
-  offset[1] = 46.;
-  offset[2] = 2.;
-  offset[3] = -9.;
-
-  <a name="_a1"></a><a class="code" href="a00041.html" title="Identity function.">IdentityFunction</a> id (offset);
-
-  <a class="code" href="a00035.html#ab271637f8057c0196d3648aaa773b73c" title="Basic vector type.">IdentityFunction::vector_t</a> x (4);
-  x.setZero ();
-
-  (*output)
-    &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; std::endl
-    &lt;&lt; <span class="stringliteral">&quot;Evaluate: &quot;</span> &lt;&lt; std::endl
-    &lt;&lt; id (x) &lt;&lt; std::endl
-    &lt;&lt; <span class="stringliteral">&quot;Gradient: &quot;</span> &lt;&lt; std::endl
-    &lt;&lt; <span class="keywordtype">id</span>.<a name="a2"></a><a class="code" href="a00029.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x) &lt;&lt; std::endl
-    &lt;&lt; <span class="stringliteral">&quot;Jacobian: &quot;</span> &lt;&lt; std::endl
-    &lt;&lt; <span class="keywordtype">id</span>.jacobian (x) &lt;&lt; std::endl;
-
-  std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;
-  BOOST_CHECK (output-&gt;match_pattern ());
-}
-
-BOOST_AUTO_TEST_SUITE_END ()
-</pre></div> </div><!-- contents -->
+<p>Example shows constant function use.</p>
+<div class="fragment"><pre class="fragment"></pre></div> </div><!-- contents -->
 </div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"

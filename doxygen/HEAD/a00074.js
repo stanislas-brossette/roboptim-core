@@ -1,7 +1,7 @@
 var a00074 =
 [
-    [ "solver_t", "a00074.html#a5aafe251d5465495fdbaff79da9e5a7d", null ],
-    [ "create", "a00074.html#a169ce847a46be8172611912ce302ac30", null ],
-    [ "destroy", "a00074.html#af992438f02837bfe836ba0a937747829", null ],
-    [ "getSizeOfProblem", "a00074.html#a4ddee346c9488925f266b831b229d18a", null ]
+    [ "ResultWithWarnings", "a00074.html#a2e3e3d6637bb1968eef831d451079124", null ],
+    [ "~ResultWithWarnings", "a00074.html#aa3c7d443e5144fb8dea37bb88b50b387", null ],
+    [ "print", "a00074.html#a555b074ff9d1e8ecacc2c2665f9a5eec", null ],
+    [ "warnings", "a00074.html#a644b84239da645b252e1d9cb1b0b49c8", null ]
 ];

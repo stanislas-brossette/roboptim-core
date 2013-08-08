@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::detail::printConstraint&lt; P &gt; Struct Template Reference</title>
+<title>roboptim::GenericNumericLinearFunction&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -60,52 +60,115 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::detail::printConstraint&lt; P &gt; Struct Template Reference</div>  </div>
+<div class="title">roboptim::GenericNumericLinearFunction&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="a00199.html">Mathematical functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::detail::printConstraint" -->
-<p><code>#include &lt;roboptim/core/problem.hxx&gt;</code></p>
+<!-- doxytag: class="roboptim::GenericNumericLinearFunction" --><!-- doxytag: inherits="roboptim::GenericLinearFunction" -->
+<p>Build a linear function from a vector and a matrix.  
+ <a href="a00049.html#details">More...</a></p>
 
-<p><a href="a00370.html">List of all members.</a></p>
+<p><code>#include &lt;roboptim/core/numeric-linear-function.hh&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for roboptim::GenericNumericLinearFunction&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00433.png" border="0" usemap="#roboptim_1_1_generic_numeric_linear_function_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="roboptim_1_1_generic_numeric_linear_function_3_01_t_01_4_inherit__map" id="roboptim_1_1_generic_numeric_linear_function_3_01_t_01_4_inherit__map">
+<area shape="rect" id="node2" href="a00048.html" title="Define an abstract linear function." alt="" coords="45,326,293,357"/><area shape="rect" id="node4" href="a00051.html" title="Define an abstract quadratic function." alt="" coords="35,246,304,277"/><area shape="rect" id="node6" href="a00053.html" title="Define an abstract function which is derivable twice ( )." alt="" coords="5,166,333,197"/><area shape="rect" id="node8" href="a00041.html" title="Define an abstract derivable function ( )." alt="" coords="24,86,315,117"/><area shape="rect" id="node10" href="a00043.html" title="Define an abstract mathematical function ( )." alt="" coords="64,6,275,37"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for roboptim::GenericNumericLinearFunction&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00434.png" border="0" usemap="#roboptim_1_1_generic_numeric_linear_function_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="roboptim_1_1_generic_numeric_linear_function_3_01_t_01_4_coll__map" id="roboptim_1_1_generic_numeric_linear_function_3_01_t_01_4_coll__map">
+<area shape="rect" id="node2" href="a00048.html" title="Define an abstract linear function." alt="" coords="45,326,293,357"/><area shape="rect" id="node4" href="a00051.html" title="Define an abstract quadratic function." alt="" coords="35,246,304,277"/><area shape="rect" id="node6" href="a00053.html" title="Define an abstract function which is derivable twice ( )." alt="" coords="5,166,333,197"/><area shape="rect" id="node8" href="a00041.html" title="Define an abstract derivable function ( )." alt="" coords="24,86,315,117"/><area shape="rect" id="node10" href="a00043.html" title="Define an abstract mathematical function ( )." alt="" coords="64,6,275,37"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+
+<p><a href="a00435.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a35564e35bcf0ad780f30fa11d401513c">printConstraint</a> (std::ostream &amp;o, const P &amp;problem, std::size_t i)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00049.html#abfdcb4e8f58d49dd2e48869dfdf58348">operator()</a> (const U &amp;constraint)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#acf53d892384fd4691f6c4829e92772f5">ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00048.html">GenericLinearFunction</a>&lt; T &gt;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a61e801b2acf4e5c5046218a19610c4ce">GenericNumericLinearFunction</a> (const <a class="el" href="a00043.html#a97054924c0f87acb1713be64782a6aab">matrix_t</a> &amp;<a class="el" href="a00049.html#a0bdfbba11cd50682046bbbf6cdf4a932">A</a>, const <a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">vector_t</a> &amp;<a class="el" href="a00049.html#a5f335d97438f278d3a12651bdf88748d">b</a>)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a linear function from a matrix and a vector.  <a href="#a61e801b2acf4e5c5046218a19610c4ce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a6a95597cdbbdd850a36aed9ba5e03e91">~GenericNumericLinearFunction</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#ae57fb039df18b98b7ab403b73c277632">print</a> (std::ostream &amp;) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the function on the specified output stream.  <a href="#ae57fb039df18b98b7ab403b73c277632"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00043.html#a97054924c0f87acb1713be64782a6aab">matrix_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a0bdfbba11cd50682046bbbf6cdf4a932">A</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">vector_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a5f335d97438f278d3a12651bdf88748d">b</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00043.html#a97054924c0f87acb1713be64782a6aab">matrix_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a38bf72a5ee70689652d8b6b142e2e0c4">A</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">vector_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a897938ac5cbf6700118e3e9c75ae2abc">b</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#ad080464edcfb155365710ed7e90bf3bb">impl_compute</a> (<a class="el" href="a00043.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function evaluation.  <a href="#ad080464edcfb155365710ed7e90bf3bb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a0562c56998fdb5e21648a132bd84e0ab">impl_gradient</a> (<a class="el" href="a00041.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>=0) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient evaluation.  <a href="#a0562c56998fdb5e21648a132bd84e0ab"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a787347a6b4444a8173c14f6a301022d1">impl_jacobian</a> (<a class="el" href="a00041.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Jacobian evaluation.  <a href="#a787347a6b4444a8173c14f6a301022d1"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00049.html#aeda9046fc6c7e56fcd48fa70bbf62fe7">impl_gradient</a> (<a class="el" href="a00041.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;<a class="el" href="a00041.html#a0d0772c3e1ea6ff70c2909ceaf776169">gradient</a>, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> idFunction) const  throw()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient evaluation.  <a href="#aeda9046fc6c7e56fcd48fa70bbf62fe7"></a><br/></td></tr>
 </table>
-<h3>template&lt;typename P&gt;<br/>
- struct roboptim::detail::printConstraint&lt; P &gt;</h3>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+class roboptim::GenericNumericLinearFunction&lt; T &gt;</h3>
 
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a35564e35bcf0ad780f30fa11d401513c"></a><!-- doxytag: member="roboptim::detail::printConstraint::printConstraint" ref="a35564e35bcf0ad780f30fa11d401513c" args="(std::ostream &amp;o, const P &amp;problem, std::size_t i)" -->
+<p>Build a linear function from a vector and a matrix. </p>
+<p>Implement a linear function using the general formula: </p>
+<p class="formulaDsp">
+<img class="formulaDsp" alt="\[f(x) = A x + b\]" src="form_26.png"/>
+</p>
+<p> where <img class="formulaInl" alt="$A$" src="form_17.png"/> and <img class="formulaInl" alt="$b$" src="form_18.png"/> are set when the class is instantiated. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00006.html#_a4">numeric-linear-function.cc</a>.</dd>
+</dl></div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a61e801b2acf4e5c5046218a19610c4ce"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::GenericNumericLinearFunction" ref="a61e801b2acf4e5c5046218a19610c4ce" args="(const matrix_t &amp;A, const vector_t &amp;b)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename P&gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00049.html">roboptim::detail::printConstraint</a>&lt; P &gt;::<a class="el" href="a00049.html">printConstraint</a> </td>
+          <td class="memname"><a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::<a class="el" href="a00049.html">GenericNumericLinearFunction</a> </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>o</em>, </td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a97054924c0f87acb1713be64782a6aab">matrix_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const P &amp;&#160;</td>
-          <td class="paramname"><em>problem</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>i</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">vector_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td><code> [inline]</code></td>
+          <td></td><td>  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Build a linear function from a matrix and a vector. </p>
+<p>See class documentation for A and b definition. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>A matrix </td></tr>
+    <tr><td class="paramname">b</td><td>b vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6a95597cdbbdd850a36aed9ba5e03e91"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::~GenericNumericLinearFunction" ref="a6a95597cdbbdd850a36aed9ba5e03e91" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::~<a class="el" href="a00049.html">GenericNumericLinearFunction</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>  throw ()</td>
         </tr>
       </table>
 </div>
@@ -114,26 +177,309 @@ template&lt;typename P&gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="abfdcb4e8f58d49dd2e48869dfdf58348"></a><!-- doxytag: member="roboptim::detail::printConstraint::operator()" ref="abfdcb4e8f58d49dd2e48869dfdf58348" args="(const U &amp;constraint)" -->
+<a class="anchor" id="a0bdfbba11cd50682046bbbf6cdf4a932"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::A" ref="a0bdfbba11cd50682046bbbf6cdf4a932" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename P&gt; </div>
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00049.html">roboptim::detail::printConstraint</a>&lt; P &gt;::operator() </td>
+          <td class="memname">const <a class="el" href="a00043.html#a97054924c0f87acb1713be64782a6aab">matrix_t</a>&amp; <a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#a0bdfbba11cd50682046bbbf6cdf4a932">A</a> </td>
           <td>(</td>
-          <td class="paramtype">const U &amp;&#160;</td>
-          <td class="paramname"><em>constraint</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a38bf72a5ee70689652d8b6b142e2e0c4"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::A" ref="a38bf72a5ee70689652d8b6b142e2e0c4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00043.html#a97054924c0f87acb1713be64782a6aab">matrix_t</a>&amp; <a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#a0bdfbba11cd50682046bbbf6cdf4a932">A</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="a00140.html#a5a9d36182ac616874a038fd4217f0a9c">roboptim::decindent()</a>, <a class="el" href="a00144.html#a9fe9bfad8dc3d4d18468fa71a1e924d2">roboptim::fg::fail()</a>, <a class="el" href="a00140.html#a27b6e86639bb04ec042979cdaad0a851">roboptim::iendl()</a>, <a class="el" href="a00140.html#a053552edbb5c42ac287c22175ea43e69">roboptim::incindent()</a>, <a class="el" href="a00144.html#ab9da0ad7b96b5a1222f64f6fbe4d5f83">roboptim::fg::ok()</a>, and <a class="el" href="a00144.html#ac20a553dc2fb3400a4e1a2a639c3ab34">roboptim::fg::reset()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a5f335d97438f278d3a12651bdf88748d"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::b" ref="a5f335d97438f278d3a12651bdf88748d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">vector_t</a>&amp; <a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#a5f335d97438f278d3a12651bdf88748d">b</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a897938ac5cbf6700118e3e9c75ae2abc"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::b" ref="a897938ac5cbf6700118e3e9c75ae2abc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">vector_t</a>&amp; <a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#a5f335d97438f278d3a12651bdf88748d">b</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad080464edcfb155365710ed7e90bf3bb"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::impl_compute" ref="ad080464edcfb155365710ed7e90bf3bb" args="(result_t &amp;, const argument_t &amp;) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#ad080464edcfb155365710ed7e90bf3bb">impl_compute</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00043.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Function evaluation. </p>
+<p>Evaluate the function, has to be implemented in concrete classes. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a58f0bde147e54bbeb8df944ef194f9ae" title="Evaluate the function at a specified point.">operator()(result_t&amp;, const argument_t&amp;) const </a>throw () instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>result will be stored in this vector </td></tr>
+    <tr><td class="paramname">argument</td><td>point at which the function will be evaluated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="a00043.html#a19fb6005aabfae3862429de2c736ab6e">roboptim::GenericFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeda9046fc6c7e56fcd48fa70bbf62fe7"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::impl_gradient" ref="aeda9046fc6c7e56fcd48fa70bbf62fe7" args="(gradient_t &amp;gradient, const argument_t &amp;, size_type idFunction) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; <a class="el" href="a00038.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00049.html#a0562c56998fdb5e21648a132bd84e0ab">impl_gradient</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00041.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>functionId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const throw()<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gradient evaluation. </p>
+<p>Compute the gradient, has to be implemented in concrete classes. The gradient is computed for a specific sub-function which id is passed through the functionId argument. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00041.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gradient</td><td>gradient will be store in this argument </td></tr>
+    <tr><td class="paramname">argument</td><td>point where the gradient will be computed </td></tr>
+    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="a00041.html#a84657c4eb2f67ea3bbaf49462f54fb68">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0562c56998fdb5e21648a132bd84e0ab"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::impl_gradient" ref="a0562c56998fdb5e21648a132bd84e0ab" args="(gradient_t &amp;, const argument_t &amp;, size_type=0) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#a0562c56998fdb5e21648a132bd84e0ab">impl_gradient</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00041.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gradient evaluation. </p>
+<p>Compute the gradient, has to be implemented in concrete classes. The gradient is computed for a specific sub-function which id is passed through the functionId argument. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00041.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gradient</td><td>gradient will be store in this argument </td></tr>
+    <tr><td class="paramname">argument</td><td>point where the gradient will be computed </td></tr>
+    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="a00041.html#a84657c4eb2f67ea3bbaf49462f54fb68">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a787347a6b4444a8173c14f6a301022d1"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::impl_jacobian" ref="a787347a6b4444a8173c14f6a301022d1" args="(jacobian_t &amp;, const argument_t &amp;) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#a787347a6b4444a8173c14f6a301022d1">impl_jacobian</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00041.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>jacobian</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Jacobian evaluation. </p>
+<p>Computes the jacobian, can be overridden by concrete classes. The default behavior is to compute the jacobian from the gradient. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00041.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jacobian</td><td>jacobian will be store in this argument </td></tr>
+    <tr><td class="paramname">arg</td><td>point where the jacobian will be computed </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ROBOPTIM_DO_NOT_CHECK_ALLOCATION </p>
+
+<p>Reimplemented from <a class="el" href="a00041.html#a5aa21359d6844bc4c21280cbd1155d22">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae57fb039df18b98b7ab403b73c277632"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::print" ref="ae57fb039df18b98b7ab403b73c277632" args="(std::ostream &amp;) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; <a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#ae57fb039df18b98b7ab403b73c277632">print</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Display the function on the specified output stream. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
+
+<p>Reimplemented from <a class="el" href="a00048.html#a00e124bc18548130332a1f5ceacf70c5">roboptim::GenericLinearFunction&lt; T &gt;</a>.</p>
+
+<p>References <a class="el" href="a00188.html#a5a9d36182ac616874a038fd4217f0a9c">roboptim::decindent()</a>, <a class="el" href="a00188.html#a27b6e86639bb04ec042979cdaad0a851">roboptim::iendl()</a>, and <a class="el" href="a00188.html#a053552edbb5c42ac287c22175ea43e69">roboptim::incindent()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf53d892384fd4691f6c4829e92772f5"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="acf53d892384fd4691f6c4829e92772f5" args="(GenericLinearFunction&lt; T &gt;)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00049.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#acf53d892384fd4691f6c4829e92772f5">ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00048.html">GenericLinearFunction</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -155,8 +501,7 @@ template&lt;typename U &gt; </div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00143.html">detail</a>      </li>
-      <li class="navelem"><a class="el" href="a00049.html">printConstraint</a>      </li>
+      <li class="navelem"><a class="el" href="a00188.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00049.html">GenericNumericLinearFunction</a>      </li>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>twice-derivable-function.hh File Reference</title>
+<title>linear-function.hxx File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,37 +56,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">twice-derivable-function.hh File Reference</div>  </div>
+<div class="title">linear-function.hxx File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00133.html">roboptim/core/twice-differentiable-function.hh</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="a00129.html">roboptim/core/indent.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00182.html">roboptim/core/util.hh</a>&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for twice-derivable-function.hh:</div>
+Include dependency graph for linear-function.hxx:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00273.png" border="0" usemap="#twice-derivable-function_8hh" alt=""/></div>
-<map name="twice-derivable-function_8hh" id="twice-derivable-function_8hh">
-<area shape="rect" id="node3" href="a00133.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="696,86,979,117"/><area shape="rect" id="node13" href="a00083.html" title="roboptim/core/fwd.hh" alt="" coords="191,406,337,437"/><area shape="rect" id="node15" href="a00108.html" title="roboptim/core/portability.hh" alt="" coords="1879,486,2060,517"/><area shape="rect" id="node17" href="a00071.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="713,166,961,197"/><area shape="rect" id="node76" href="a00134.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="1624,246,1915,277"/><area shape="rect" id="node24" href="a00082.html" title="roboptim/core/function.hh" alt="" coords="752,246,923,277"/><area shape="rect" id="node64" href="a00072.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="1344,246,1600,277"/><area shape="rect" id="node51" href="a00096.html" title="roboptim/core/indent.hh" alt="" coords="1469,326,1629,357"/><area shape="rect" id="node53" href="a00130.html" title="roboptim/core/sys.hh" alt="" coords="1656,406,1803,437"/><area shape="rect" id="node56" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="1469,406,1632,437"/><area shape="rect" id="node68" href="a00136.html" title="roboptim/core/util.hh" alt="" coords="1899,326,2040,357"/><area shape="rect" id="node73" href="a00137.html" title="roboptim/core/util.hxx" alt="" coords="2019,406,2165,437"/></map>
+<div class="center"><img src="a00279.png" border="0" usemap="#linear-function_8hxx" alt=""/></div>
+<map name="linear-function_8hxx" id="linear-function_8hxx">
+<area shape="rect" id="node3" href="a00129.html" title="roboptim/core/indent.hh" alt="" coords="1920,406,2080,437"/><area shape="rect" id="node16" href="a00182.html" title="roboptim/core/util.hh" alt="" coords="1644,86,1785,117"/><area shape="rect" id="node5" href="a00176.html" title="roboptim/core/sys.hh" alt="" coords="1947,486,2093,517"/><area shape="rect" id="node9" href="a00096.html" title="roboptim/core/debug.hh" alt="" coords="1675,486,1837,517"/><area shape="rect" id="node7" href="a00147.html" title="roboptim/core/portability.hh" alt="" coords="1547,566,1728,597"/><area shape="rect" id="node18" href="a00114.html" title="roboptim/core/fwd.hh" alt="" coords="93,406,240,437"/><area shape="rect" id="node21" href="a00179.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="117,166,400,197"/><area shape="rect" id="node79" href="a00183.html" title="roboptim/core/util.hxx" alt="" coords="985,166,1132,197"/><area shape="rect" id="node32" href="a00102.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="413,246,661,277"/><area shape="rect" id="node74" href="a00180.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="1752,246,2043,277"/><area shape="rect" id="node39" href="a00113.html" title="roboptim/core/function.hh" alt="" coords="867,326,1037,357"/><area shape="rect" id="node69" href="a00103.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="1656,326,1912,357"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00274.png" border="0" usemap="#twice-derivable-function_8hhdep" alt=""/></div>
-<map name="twice-derivable-function_8hhdep" id="twice-derivable-function_8hhdep">
-<area shape="rect" id="node3" href="a00065.html" title="core.hh" alt="" coords="61,86,128,117"/></map>
+<div class="center"><img src="a00280.png" border="0" usemap="#linear-function_8hxxdep" alt=""/></div>
+<map name="linear-function_8hxxdep" id="linear-function_8hxxdep">
+<area shape="rect" id="node3" href="a00131.html" title="linear&#45;function.hh" alt="" coords="173,86,293,117"/><area shape="rect" id="node5" href="a00093.html" title="constant.hh" alt="" coords="7,166,95,197"/><area shape="rect" id="node7" href="a00127.html" title="identity.hh" alt="" coords="119,166,199,197"/><area shape="rect" id="node9" href="a00139.html" title="numeric&#45;linear&#45;function.hh" alt="" coords="223,166,393,197"/><area shape="rect" id="node18" href="a00094.html" title="core.hh" alt="" coords="412,406,479,437"/><area shape="rect" id="node11" href="a00140.html" title="numeric&#45;linear&#45;function.hxx" alt="" coords="5,246,184,277"/><area shape="rect" id="node14" href="a00142.html" title="numeric&#45;quadratic&#45;function.hxx" alt="" coords="208,246,408,277"/><area shape="rect" id="node16" href="a00141.html" title="numeric&#45;quadratic&#45;function.hh" alt="" coords="212,326,407,357"/></map>
 </div>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
-<tr><td colspan="2"><h2><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef TwiceDifferentiableFunction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html#a8fe946bb68641ff262c0cfef38af94d5">roboptim::TwiceDerivableFunction</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy name of DifferentiableFunction.  <a href="#a8fe946bb68641ff262c0cfef38af94d5"></a><br/></td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -106,6 +102,6 @@ Typedefs</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00132.html">twice-derivable-function.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00132.html">linear-function.hxx</a>      </li>
 </body>
 </html>

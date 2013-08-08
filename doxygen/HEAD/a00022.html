@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::derivativeSize&lt; NTimesDerivableFunction&lt; N &gt; &gt; Struct Template Reference</title>
+<title>roboptim::BadGradient&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,36 +58,324 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::derivativeSize&lt; NTimesDerivableFunction&lt; N &gt; &gt; Struct Template Reference</div>  </div>
+<div class="title">roboptim::BadGradient&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::derivativeSize&lt; NTimesDerivableFunction&lt; N &gt; &gt;" -->
-<p><code>#include &lt;roboptim/core/derivative-size.hh&gt;</code></p>
+<!-- doxytag: class="roboptim::BadGradient" --><!-- doxytag: inherits="std::runtime_error" -->
+<p>Exception thrown when a gradient check fails.  
+ <a href="a00022.html#details">More...</a></p>
 
-<p><a href="a00294.html">List of all members.</a></p>
+<p><code>#include &lt;roboptim/core/finite-difference-gradient.hh&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for roboptim::BadGradient&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00399.png" border="0" usemap="#roboptim_1_1_bad_gradient_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="roboptim_1_1_bad_gradient_3_01_t_01_4_inherit__map" id="roboptim_1_1_bad_gradient_3_01_t_01_4_inherit__map">
+<area shape="rect" id="node2" title="STL class." alt="" coords="39,86,164,117"/><area shape="rect" id="node4" title="STL class." alt="" coords="48,6,155,37"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for roboptim::BadGradient&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00400.png" border="0" usemap="#roboptim_1_1_bad_gradient_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="roboptim_1_1_bad_gradient_3_01_t_01_4_coll__map" id="roboptim_1_1_bad_gradient_3_01_t_01_4_coll__map">
+<area shape="rect" id="node2" title="STL class." alt="" coords="39,86,164,117"/><area shape="rect" id="node4" title="STL class." alt="" coords="48,6,155,37"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+
+<p><a href="a00401.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a34265fc0fe2ff375c6a79a3c363f320d">value</a> = N</td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#ae2b00592d29b72cf5d2f2d46a5152780">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00041.html">GenericDifferentiableFunction</a>&lt; T &gt;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#addf3ffa72b5a56b3086e1f7a65a478a0">BadGradient</a> (const vector_t &amp;x, const gradient_t &amp;analyticalGradient, const gradient_t &amp;finiteDifferenceGradient, const value_type &amp;threshold)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#addf3ffa72b5a56b3086e1f7a65a478a0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a816e99a4b100be1b2d20a4fc78348bcd">~BadGradient</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a88bc929422fb09c8c2e917cff995e31e">print</a> (std::ostream &amp;o) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the exception on the specified output stream.  <a href="#a88bc929422fb09c8c2e917cff995e31e"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00022.html#a0462025ce57910443773b1cc932cf44f">BadGradient</a> (const vector_t &amp;x, const gradient_t &amp;analyticalGradient, const gradient_t &amp;finiteDifferenceGradient, const value_type &amp;threshold)</td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a37ed84edbe133fcba39b7a57e14b52c0">x_</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient has been computed for this point.  <a href="#a37ed84edbe133fcba39b7a57e14b52c0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">gradient_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a996913f299ace5594870dd6450809fd2">analyticalGradient_</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Analytical gradient.  <a href="#a996913f299ace5594870dd6450809fd2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">gradient_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a0ee5e02adc7850c52d0dd3a2ce3d799d">finiteDifferenceGradient_</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient computed through finite differences.  <a href="#a0ee5e02adc7850c52d0dd3a2ce3d799d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a41da132097e037c090594dff45e4683a">maxDelta_</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum error.  <a href="#a41da132097e037c090594dff45e4683a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a152b5bee9fce8fee0344d8215f936693">maxDeltaComponent_</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Component containing the maximum error.  <a href="#a152b5bee9fce8fee0344d8215f936693"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#a92b51f4af83c438916da6dec80a33c8d">threshold_</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Allowed threshold.  <a href="#a92b51f4af83c438916da6dec80a33c8d"></a><br/></td></tr>
 </table>
-<h3>template&lt;unsigned N&gt;<br/>
- struct roboptim::derivativeSize&lt; NTimesDerivableFunction&lt; N &gt; &gt;</h3>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+class roboptim::BadGradient&lt; T &gt;</h3>
 
-<hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a34265fc0fe2ff375c6a79a3c363f320d"></a><!-- doxytag: member="roboptim::derivativeSize&lt; NTimesDerivableFunction&lt; N &gt; &gt;::value" ref="a34265fc0fe2ff375c6a79a3c363f320d" args="" -->
+<p>Exception thrown when a gradient check fails. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00001.html#_a10">finite-difference-gradient.cc</a>.</dd>
+</dl></div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="addf3ffa72b5a56b3086e1f7a65a478a0"></a><!-- doxytag: member="roboptim::BadGradient::BadGradient" ref="addf3ffa72b5a56b3086e1f7a65a478a0" args="(const vector_t &amp;x, const gradient_t &amp;analyticalGradient, const gradient_t &amp;finiteDifferenceGradient, const value_type &amp;threshold)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;unsigned N&gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned int roboptim::derivativeSize&lt; <a class="el" href="a00044.html">NTimesDerivableFunction</a>&lt; N &gt; &gt;::<a class="el" href="a00022.html#a34265fc0fe2ff375c6a79a3c363f320d">value</a> = N<code> [static]</code></td>
+          <td class="memname"><a class="el" href="a00022.html">roboptim::BadGradient</a>&lt; T &gt;::<a class="el" href="a00022.html">BadGradient</a> </td>
+          <td>(</td>
+          <td class="paramtype">const vector_t &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const gradient_t &amp;&#160;</td>
+          <td class="paramname"><em>analyticalGradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const gradient_t &amp;&#160;</td>
+          <td class="paramname"><em>finiteDifferenceGradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const value_type &amp;&#160;</td>
+          <td class="paramname"><em>threshold</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Default constructor. </p>
+
+<p>References <a class="el" href="a00022.html#a41da132097e037c090594dff45e4683a">roboptim::BadGradient&lt; T &gt;::maxDelta_</a>, and <a class="el" href="a00022.html#a152b5bee9fce8fee0344d8215f936693">roboptim::BadGradient&lt; T &gt;::maxDeltaComponent_</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a816e99a4b100be1b2d20a4fc78348bcd"></a><!-- doxytag: member="roboptim::BadGradient::~BadGradient" ref="a816e99a4b100be1b2d20a4fc78348bcd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00022.html">roboptim::BadGradient</a>&lt; T &gt;::~<a class="el" href="a00022.html">BadGradient</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0462025ce57910443773b1cc932cf44f"></a><!-- doxytag: member="roboptim::BadGradient::BadGradient" ref="a0462025ce57910443773b1cc932cf44f" args="(const vector_t &amp;x, const gradient_t &amp;analyticalGradient, const gradient_t &amp;finiteDifferenceGradient, const value_type &amp;threshold)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00022.html">roboptim::BadGradient</a>&lt; <a class="el" href="a00038.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00022.html">BadGradient</a> </td>
+          <td>(</td>
+          <td class="paramtype">const vector_t &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const gradient_t &amp;&#160;</td>
+          <td class="paramname"><em>analyticalGradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const gradient_t &amp;&#160;</td>
+          <td class="paramname"><em>finiteDifferenceGradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const value_type &amp;&#160;</td>
+          <td class="paramname"><em>threshold</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a88bc929422fb09c8c2e917cff995e31e"></a><!-- doxytag: member="roboptim::BadGradient::print" ref="a88bc929422fb09c8c2e917cff995e31e" args="(std::ostream &amp;o) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; <a class="el" href="a00022.html">roboptim::BadGradient</a>&lt; T &gt;::<a class="el" href="a00022.html#a88bc929422fb09c8c2e917cff995e31e">print</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Display the exception on the specified output stream. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
+
+<p>References <a class="el" href="a00188.html#a5a9d36182ac616874a038fd4217f0a9c">roboptim::decindent()</a>, <a class="el" href="a00188.html#a27b6e86639bb04ec042979cdaad0a851">roboptim::iendl()</a>, and <a class="el" href="a00188.html#a053552edbb5c42ac287c22175ea43e69">roboptim::incindent()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2b00592d29b72cf5d2f2d46a5152780"></a><!-- doxytag: member="roboptim::BadGradient::ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="ae2b00592d29b72cf5d2f2d46a5152780" args="(GenericDifferentiableFunction&lt; T &gt;)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00022.html">roboptim::BadGradient</a>&lt; T &gt;::<a class="el" href="a00022.html#ae2b00592d29b72cf5d2f2d46a5152780">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00041.html">GenericDifferentiableFunction</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a996913f299ace5594870dd6450809fd2"></a><!-- doxytag: member="roboptim::BadGradient::analyticalGradient_" ref="a996913f299ace5594870dd6450809fd2" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">gradient_t <a class="el" href="a00022.html">roboptim::BadGradient</a>&lt; T &gt;::<a class="el" href="a00022.html#a996913f299ace5594870dd6450809fd2">analyticalGradient_</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Analytical gradient. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ee5e02adc7850c52d0dd3a2ce3d799d"></a><!-- doxytag: member="roboptim::BadGradient::finiteDifferenceGradient_" ref="a0ee5e02adc7850c52d0dd3a2ce3d799d" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">gradient_t <a class="el" href="a00022.html">roboptim::BadGradient</a>&lt; T &gt;::<a class="el" href="a00022.html#a0ee5e02adc7850c52d0dd3a2ce3d799d">finiteDifferenceGradient_</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gradient computed through finite differences. </p>
+
+</div>
+</div>
+<a class="anchor" id="a41da132097e037c090594dff45e4683a"></a><!-- doxytag: member="roboptim::BadGradient::maxDelta_" ref="a41da132097e037c090594dff45e4683a" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">value_type <a class="el" href="a00022.html">roboptim::BadGradient</a>&lt; T &gt;::<a class="el" href="a00022.html#a41da132097e037c090594dff45e4683a">maxDelta_</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Maximum error. </p>
+
+<p>Referenced by <a class="el" href="a00022.html#addf3ffa72b5a56b3086e1f7a65a478a0">roboptim::BadGradient&lt; T &gt;::BadGradient()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a152b5bee9fce8fee0344d8215f936693"></a><!-- doxytag: member="roboptim::BadGradient::maxDeltaComponent_" ref="a152b5bee9fce8fee0344d8215f936693" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_type <a class="el" href="a00022.html">roboptim::BadGradient</a>&lt; T &gt;::<a class="el" href="a00022.html#a152b5bee9fce8fee0344d8215f936693">maxDeltaComponent_</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Component containing the maximum error. </p>
+
+<p>Referenced by <a class="el" href="a00022.html#addf3ffa72b5a56b3086e1f7a65a478a0">roboptim::BadGradient&lt; T &gt;::BadGradient()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a92b51f4af83c438916da6dec80a33c8d"></a><!-- doxytag: member="roboptim::BadGradient::threshold_" ref="a92b51f4af83c438916da6dec80a33c8d" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">value_type <a class="el" href="a00022.html">roboptim::BadGradient</a>&lt; T &gt;::<a class="el" href="a00022.html#a92b51f4af83c438916da6dec80a33c8d">threshold_</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Allowed threshold. </p>
+
+</div>
+</div>
+<a class="anchor" id="a37ed84edbe133fcba39b7a57e14b52c0"></a><!-- doxytag: member="roboptim::BadGradient::x_" ref="a37ed84edbe133fcba39b7a57e14b52c0" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">vector_t <a class="el" href="a00022.html">roboptim::BadGradient</a>&lt; T &gt;::<a class="el" href="a00022.html#a37ed84edbe133fcba39b7a57e14b52c0">x_</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gradient has been computed for this point. </p>
 
 </div>
 </div>
@@ -109,7 +397,7 @@ template&lt;unsigned N&gt; </div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00022.html">derivativeSize&lt; NTimesDerivableFunction&lt; N &gt; &gt;</a>      </li>
+      <li class="navelem"><a class="el" href="a00188.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00022.html">BadGradient</a>      </li>
 </body>
 </html>

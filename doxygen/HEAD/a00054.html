@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt; Class Template Reference</title>
+<title>roboptim::visualization::Gnuplot Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,160 +58,208 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt; Class Template Reference</div>  </div>
+<div class="title">roboptim::visualization::Gnuplot Class Reference<div class="ingroups"><a class="el" href="a00203.html">Visualization</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::finiteDifferenceGradientPolicies::Simple" -->
-<p>Fast finite difference gradient computation.  
+<!-- doxytag: class="roboptim::visualization::Gnuplot" -->
+<p><a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> script.  
  <a href="a00054.html#details">More...</a></p>
 
-<p><code>#include &lt;roboptim/core/finite-difference-gradient.hh&gt;</code></p>
+<p><code>#include &lt;roboptim/core/visualization/gnuplot.hh&gt;</code></p>
 
-<p><a href="a00371.html">List of all members.</a></p>
+<p><a href="a00497.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#a589c0a7f4d846453adf91866789ebd7d">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00029.html">GenericDifferentiableFunction</a>&lt; T &gt;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#ac177c36cf832e17f3104c7db9288e8cb">computeGradient</a> (const <a class="el" href="a00031.html">GenericFunction</a>&lt; T &gt; &amp;adaptee, value_type epsilon, gradient_t &amp;gradient, const argument_t &amp;argument, size_type idFunction, argument_t &amp;xEps) const   throw ()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00054.html#af6fb145667fec7f294b3c3314bda209e">computeGradient</a> (const <a class="el" href="a00031.html">GenericFunction</a>&lt; <a class="el" href="a00027.html">EigenMatrixSparse</a> &gt; &amp;adaptee, value_type epsilon, gradient_t &amp;gradient, const argument_t &amp;argument, size_type idFunction, argument_t &amp;xEps) const  throw()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#ab2620f9d29a97757d0acbfe68e6a2c79">~Gnuplot</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#aaa242efdd1e20124d0698793b4fd4bdd">push_command</a> (<a class="el" href="a00026.html">gnuplot::Command</a> cmd)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> command to the script.  <a href="#aaa242efdd1e20124d0698793b4fd4bdd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#ad4b42f563ebbdb501d397a42a4420525">print</a> (std::ostream &amp;) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> script on the specified output stream.  <a href="#ad4b42f563ebbdb501d397a42a4420525"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00054.html">Gnuplot</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#af7addb186708c556e603c3fd8e7768a6">operator&lt;&lt;</a> (<a class="el" href="a00026.html">gnuplot::Command</a>)  throw ()</td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00054.html">Gnuplot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#a55c76cc46b5c54b1bc0d4684128403ff">make_gnuplot</a> (bool with_header=true)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Instanciate a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> without setting a term.  <a href="#a55c76cc46b5c54b1bc0d4684128403ff"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="a00054.html">Gnuplot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#a14e55569e7e70d12d7cd1d83117576a1">make_interactive_gnuplot</a> (bool with_header=true)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Instanciate a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> suitable for interactive use.  <a href="#a14e55569e7e70d12d7cd1d83117576a1"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#ab134923cbb8cc53b251664f4b5c6b73c">Gnuplot</a> (bool with_header=true)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor can not be called directly.  <a href="#ab134923cbb8cc53b251664f4b5c6b73c"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br/>
-class roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt;</h3>
-
-<p>Fast finite difference gradient computation. </p>
-<p>Finite difference is computed using forward difference. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00002.html#_a8">finite-difference-gradient.cc</a>.</dd>
-</dl></div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac177c36cf832e17f3104c7db9288e8cb"></a><!-- doxytag: member="roboptim::finiteDifferenceGradientPolicies::Simple::computeGradient" ref="ac177c36cf832e17f3104c7db9288e8cb" args="(const GenericFunction&lt; T &gt; &amp;adaptee, value_type epsilon, gradient_t &amp;gradient, const argument_t &amp;argument, size_type idFunction, argument_t &amp;xEps) const " -->
+<div class="textblock"><p><a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> script. </p>
+<p>This class gathers <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> commands to build a complete <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> script. <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> commands can be inserted through this object through the <code>&lt;&lt;</code> operator and this object can be put into an output stream using the <code>&lt;&lt;</code> operator. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00001.html#_a13">finite-difference-gradient.cc</a>, <a class="el" href="a00011.html#_a2">visualization-gnuplot-function.cc</a>, and <a class="el" href="a00010.html#_a0">visualization-gnuplot-simple.cc</a>.</dd>
+</dl></div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ab2620f9d29a97757d0acbfe68e6a2c79"></a><!-- doxytag: member="roboptim::visualization::Gnuplot::~Gnuplot" ref="ab2620f9d29a97757d0acbfe68e6a2c79" args="()" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00054.html">roboptim::finiteDifferenceGradientPolicies::Simple</a>&lt; T &gt;::<a class="el" href="a00054.html#ac177c36cf832e17f3104c7db9288e8cb">computeGradient</a> </td>
+          <td class="memname"><a class="el" href="a00054.html#ab2620f9d29a97757d0acbfe68e6a2c79">roboptim::visualization::Gnuplot::~Gnuplot</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">GenericFunction</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>adaptee</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">value_type&#160;</td>
-          <td class="paramname"><em>epsilon</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">gradient_t &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const argument_t &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_type&#160;</td>
-          <td class="paramname"><em>idFunction</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">argument_t &amp;&#160;</td>
-          <td class="paramname"><em>xEps</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>References <a class="el" href="a00031.html#ac56c279d34f3c4047c0f66b738a1bd7f">roboptim::GenericFunction&lt; T &gt;::inputSize()</a>, and <a class="el" href="a00031.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">roboptim::GenericFunction&lt; T &gt;::outputSize()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af6fb145667fec7f294b3c3314bda209e"></a><!-- doxytag: member="roboptim::finiteDifferenceGradientPolicies::Simple::computeGradient" ref="af6fb145667fec7f294b3c3314bda209e" args="(const GenericFunction&lt; EigenMatrixSparse &gt; &amp;adaptee, value_type epsilon, gradient_t &amp;gradient, const argument_t &amp;argument, size_type idFunction, argument_t &amp;xEps) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00054.html">roboptim::finiteDifferenceGradientPolicies::Simple</a>&lt; <a class="el" href="a00027.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00054.html#ac177c36cf832e17f3104c7db9288e8cb">computeGradient</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">GenericFunction</a>&lt; <a class="el" href="a00027.html">EigenMatrixSparse</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>adaptee</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">value_type&#160;</td>
-          <td class="paramname"><em>epsilon</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">gradient_t &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const argument_t &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_type&#160;</td>
-          <td class="paramname"><em>idFunction</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">argument_t &amp;&#160;</td>
-          <td class="paramname"><em>xEps</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>References <a class="el" href="a00031.html#ac56c279d34f3c4047c0f66b738a1bd7f">roboptim::GenericFunction&lt; T &gt;::inputSize()</a>, and <a class="el" href="a00031.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">roboptim::GenericFunction&lt; T &gt;::outputSize()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a589c0a7f4d846453adf91866789ebd7d"></a><!-- doxytag: member="roboptim::finiteDifferenceGradientPolicies::Simple::ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="a589c0a7f4d846453adf91866789ebd7d" args="(GenericDifferentiableFunction&lt; T &gt;)" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00054.html">roboptim::finiteDifferenceGradientPolicies::Simple</a>&lt; T &gt;::<a class="el" href="a00054.html#a589c0a7f4d846453adf91866789ebd7d">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00029.html">GenericDifferentiableFunction</a>&lt; T &gt;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td>  throw ()</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab134923cbb8cc53b251664f4b5c6b73c"></a><!-- doxytag: member="roboptim::visualization::Gnuplot::Gnuplot" ref="ab134923cbb8cc53b251664f4b5c6b73c" args="(bool with_header=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00054.html#ab134923cbb8cc53b251664f4b5c6b73c">roboptim::visualization::Gnuplot::Gnuplot</a> </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>with_header</em> = <code>true</code></td><td>)</td>
+          <td>  throw ()<code> [explicit, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Default constructor can not be called directly. </p>
+<p>Use of the named constructor (see static methods) to instantiate this class. </p>
+
+<p>References <a class="el" href="a00203.html#ga108c0cb6161fb8813817a7b7a1ac980d">roboptim::visualization::gnuplot::comment()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a55c76cc46b5c54b1bc0d4684128403ff"></a><!-- doxytag: member="roboptim::visualization::Gnuplot::make_gnuplot" ref="a55c76cc46b5c54b1bc0d4684128403ff" args="(bool with_header=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00054.html">Gnuplot</a> <a class="el" href="a00054.html#a55c76cc46b5c54b1bc0d4684128403ff">roboptim::visualization::Gnuplot::make_gnuplot</a> </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>with_header</em> = <code>true</code></td><td>)</td>
+          <td>  throw ()<code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Instanciate a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> without setting a term. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">with_header</td><td>whether to print the header or not </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> instance </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a14e55569e7e70d12d7cd1d83117576a1"></a><!-- doxytag: member="roboptim::visualization::Gnuplot::make_interactive_gnuplot" ref="a14e55569e7e70d12d7cd1d83117576a1" args="(bool with_header=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00054.html">Gnuplot</a> <a class="el" href="a00054.html#a14e55569e7e70d12d7cd1d83117576a1">roboptim::visualization::Gnuplot::make_interactive_gnuplot</a> </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>with_header</em> = <code>true</code></td><td>)</td>
+          <td>  throw ()<code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Instanciate a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> suitable for interactive use. </p>
+<p>This initializes a persistent <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> instance which is suitable for user interaction. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">with_header</td><td>whether to print the header or not </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> instance </dd></dl>
+
+<p>References <a class="el" href="a00054.html#aaa242efdd1e20124d0698793b4fd4bdd">push_command()</a>, and <a class="el" href="a00203.html#gad77630a233193748534b41d069d4e180">roboptim::visualization::gnuplot::set()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af7addb186708c556e603c3fd8e7768a6"></a><!-- doxytag: member="roboptim::visualization::Gnuplot::operator&lt;&lt;" ref="af7addb186708c556e603c3fd8e7768a6" args="(gnuplot::Command)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00054.html">Gnuplot</a> &amp; roboptim::visualization::Gnuplot::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00026.html">gnuplot::Command</a>&#160;</td>
+          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td>  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad4b42f563ebbdb501d397a42a4420525"></a><!-- doxytag: member="roboptim::visualization::Gnuplot::print" ref="ad4b42f563ebbdb501d397a42a4420525" args="(std::ostream &amp;) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; <a class="el" href="a00054.html#ad4b42f563ebbdb501d397a42a4420525">roboptim::visualization::Gnuplot::print</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Display the <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> script on the specified output stream. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
+
+<p>Referenced by <a class="el" href="a00194.html#a45951c8d967c172f9f8213900b3d7884">roboptim::visualization::operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa242efdd1e20124d0698793b4fd4bdd"></a><!-- doxytag: member="roboptim::visualization::Gnuplot::push_command" ref="aaa242efdd1e20124d0698793b4fd4bdd" args="(gnuplot::Command cmd)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00054.html#aaa242efdd1e20124d0698793b4fd4bdd">roboptim::visualization::Gnuplot::push_command</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00026.html">gnuplot::Command</a>&#160;</td>
+          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td>  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Add a new <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> command to the script. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>command that will be pushed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Referenced by <a class="el" href="a00054.html#a14e55569e7e70d12d7cd1d83117576a1">make_interactive_gnuplot()</a>, and <a class="el" href="a00203.html#ga22576c0708e8fe4af42060ff87bfad20">roboptim::visualization::operator&lt;&lt;()</a>.</p>
 
 </div>
 </div>
@@ -233,8 +281,8 @@ template&lt;typename T &gt; </div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00145.html">finiteDifferenceGradientPolicies</a>      </li>
-      <li class="navelem"><a class="el" href="a00054.html">Simple</a>      </li>
+      <li class="navelem"><a class="el" href="a00188.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00194.html">visualization</a>      </li>
+      <li class="navelem"><a class="el" href="a00054.html">Gnuplot</a>      </li>
 </body>
 </html>

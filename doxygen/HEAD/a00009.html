@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>visualization-gnuplot-function.cc</title>
+<title>result.cc</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -50,10 +50,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">visualization-gnuplot-function.cc</div>  </div>
+<div class="title">result.cc</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Example shows function display with Gnuplot.</p>
+<p>Example shows Result class use.</p>
 <div class="fragment"><pre class="fragment"><span class="comment">// Copyright (C) 2009 by Thomas Moulard, AIST, CNRS, INRIA.</span>
 <span class="comment">//</span>
 <span class="comment">// This file is part of the roboptim.</span>
@@ -75,74 +75,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <span class="preprocessor">#include &lt;iostream&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00097.html">roboptim/core/io.hh</a>&gt;</span>
-
-<span class="preprocessor">#include &lt;<a class="code" href="a00092.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00088.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00090.html">roboptim/core/visualization/gnuplot-function.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00130.html">roboptim/core/io.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00157.html">roboptim/core/result.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00155.html">roboptim/core/result-with-warnings.hh</a>&gt;</span>
 
 <span class="keyword">using namespace </span>roboptim;
-<span class="keyword">using namespace </span>roboptim::visualization;
-
-
-<span class="comment">// Define f(x) = x * x</span>
-<span class="keyword">struct </span>Square : <span class="keyword">public</span> <a name="_a0"></a><a class="code" href="a00031.html" title="Define an abstract mathematical function ( ).">Function</a>
-{
-  <span class="keyword">explicit</span> Square ()
-    : <a name="a1"></a><a class="code" href="a00140.html#a1864afd8c0c95cea8029da9b52352736" title="Dense function.">Function</a> (1, 1, <span class="stringliteral">&quot;x * x&quot;</span>)
-  {
-  }
-
-  <span class="keywordtype">void</span> impl_compute (result_t&amp; result,
-         <span class="keyword">const</span> <a name="a2"></a><a class="code" href="a00154.html#ga35de8a579b650a9e3bb0cd4cf98aa179" title="Import discrete interval type from function.">argument_t</a>&amp; argument) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
-  {
-    result[0] = argument[0] * argument[0];
-  }
-};
-
-<span class="comment">// Define a function that displays a circle.</span>
-<span class="keyword">struct </span>Circle : <span class="keyword">public</span> <a class="code" href="a00031.html" title="Define an abstract mathematical function ( ).">Function</a>
-{
-  <span class="keyword">explicit</span> Circle (<span class="keywordtype">double</span> r = 1.)
-    : <a class="code" href="a00031.html" title="Define an abstract mathematical function ( ).">Function</a> (1, 2, <span class="stringliteral">&quot;{sin (x) * r; cos (x) * r}&quot;</span>),
-      r_ (r)
-  {
-  }
-
-  <span class="keywordtype">void</span> impl_compute (result_t&amp; result,
-         <span class="keyword">const</span> <a class="code" href="a00154.html#ga35de8a579b650a9e3bb0cd4cf98aa179" title="Import discrete interval type from function.">argument_t</a>&amp; argument) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
-  {
-    result[0] = sin (argument[0]) * r_;
-    result[1] = cos (argument[0]) * r_;
-  }
-
-  <span class="keywordtype">double</span> r_;
-};
 
 BOOST_FIXTURE_TEST_SUITE (core, TestSuiteConfiguration)
 
-BOOST_AUTO_TEST_CASE (visualization_gnuplot_function)
+BOOST_AUTO_TEST_CASE (result)
 {
   boost::shared_ptr&lt;boost::test_tools::output_test_stream&gt;
-    output = retrievePattern (<span class="stringliteral">&quot;visualization-gnuplot-function&quot;</span>);
+    output = retrievePattern (<span class="stringliteral">&quot;result&quot;</span>);
 
-  <span class="keyword">using namespace </span>roboptim::visualization::gnuplot;
-  <a name="_a3"></a><a class="code" href="a00040.html" title="Gnuplot script.">Gnuplot</a> gnuplot = Gnuplot::make_interactive_gnuplot ();
+  <span class="comment">// Instantiate some results.</span>
+  <a name="_a0"></a><a class="code" href="a00073.html" title="Represents the solution of an optimization problem.">Result</a> result (3, 8);
 
-  Square square;
-  <a class="code" href="a00154.html#ga1c2bbde67ed2275a6def58e1cea970f3" title="Import discrete interval type from function.">discreteInterval_t</a> intervalS (-10., 10., 0.01);
+  assert (result.<a name="a1"></a><a class="code" href="a00073.html#a31284faee67e87284026280767720008" title="Point found by the solver.">x</a>.size () == 3);
+  assert (result.<a name="a2"></a><a class="code" href="a00073.html#a3164fe63a285d7c4739f2606b8cf6b9e" title="Function value at the solver found point.">value</a>.size () == 8);
+  assert (result.<a name="a3"></a><a class="code" href="a00073.html#a4a3c615497bd8c83d21a35430f9b204c" title="Lagrange multipliers.">lambda</a>.size () == 0);
 
-  Circle circle;
-  <a class="code" href="a00154.html#ga1c2bbde67ed2275a6def58e1cea970f3" title="Import discrete interval type from function.">discreteInterval_t</a> intervalC (0., 2 * M_PI, 0.01);
+  <a class="code" href="a00073.html" title="Represents the solution of an optimization problem.">Result</a> result2 (result);
+  <a class="code" href="a00073.html" title="Represents the solution of an optimization problem.">Result</a> result3 = result;
 
-  (*output)
-    &lt;&lt; (gnuplot
-  &lt;&lt; <a name="a4"></a><a class="code" href="a00154.html#ga108c0cb6161fb8813817a7b7a1ac980d" title="Make a Gnuplot comment.">comment</a> (<span class="stringliteral">&quot;Hello, world (complex)!&quot;</span>)
-  &lt;&lt; <span class="keyword">set</span> (<span class="stringliteral">&quot;multiplot&quot;</span>)
-  &lt;&lt; <a name="a5"></a><a class="code" href="a00154.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (square, intervalS)
-  &lt;&lt; <a name="a6"></a><a class="code" href="a00154.html#ga0dba01288d4436dfa417d3dfd5520c27" title="Plot a 2D function with Gnuplot.">plot_xy</a> (circle, intervalC)
-  &lt;&lt; <a name="a7"></a><a class="code" href="a00154.html#ga2c2a188b2e89955eee09aa10b5426e43" title="Make a Gnuplot unset command.">unset</a> (<span class="stringliteral">&quot;multiplot&quot;</span>)
-  );
+  (*output) &lt;&lt; result &lt;&lt; std::endl;
 
   std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;
   BOOST_CHECK (output-&gt;match_pattern ());

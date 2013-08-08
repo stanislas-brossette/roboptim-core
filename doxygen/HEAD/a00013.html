@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>How to link the library with a new solver?</title>
+<title>Frequently Asked Questions (FAQ)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -50,56 +50,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">How to link the library with a new solver? </div>  </div>
+<div class="title">Frequently Asked Questions (FAQ) </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This part assumes the reader went through the <a class="el" href="a00012.html">Design choices and libraries' internals</a> page and is familiar with the user interface.</p>
-<h2><a class="anchor" id="tutorial"></a>
-Intregrating a solver step by step.</h2>
-<h3><a class="anchor" id="prereq"></a>
-Pre-requesite</h3>
-<p>The first step is determining if there is any interest in integrating the solver.</p>
-<p>The solver should target one of the following optimization problem's: </p>
-<ul>
-<li>
-Non-linear optimization </li>
-<li>
-Linear optimization </li>
-</ul>
-<p>...with or without constraints.</p>
-<p>It should also support bounds and scales. If not, emulating them should be possible.</p>
-<p>Integrating solvers that solve very different problems will likely not match the interface and lead to major changement in the package. These changes are beyond the scope of this document and should be discussed on the mailing-list.</p>
-<h3><a class="anchor" id="pkg"></a>
-Modifying the package.</h3>
-<p>Basically, adding a new solver means adding a new leaf in the solver hierarchy.</p>
-<p>The new header and source files should be added in the <code>src</code> directory.</p>
-<p>The naming convention is CamlCase, the name should be the solver's name suffixed by <code>Solver</code>.</p>
-<p>This plug-in must be provided as a separate package to avoid cluttering RobOptim Core with useless dependencies.</p>
-<h3><a class="anchor" id="impl"></a>
-Implementing the bridge.</h3>
-<p>The first step is choosing from which <code>Solver</code> you want to inherit from. The <code>F</code> parameters should be straight-forward: it is the kind of objective function you expect. For the constraints, there is two cases: </p>
-<ul>
-<li>
-Constraint's type are unique: set <code>C</code> to <code>const MyConstraintType*</code> where <code>MyConstraintType</code> is the solver's constraints type. </li>
-<li>
-If you want to discriminate your constriants into different categories, you will have to use a Boost.Variant. <code>C</code> should be: <code>boost::variant&lt;const MyConstraintType1*, const MyConstraintType2*&gt; </code> </li>
-</ul>
-<p>Then, the <code>solve</code> method should be implemented in the bridge.</p>
-<p>Following guidelines should be respected by any bridge: </p>
-<ul>
-<li>
-Be sure to call <code>reset</code> if the result has to be recomputed the next time <code>getMinimum</code> is called. </li>
-<li>
-Be sure that <code>solve</code> put the computed value in the <code>result_</code> attribute. </li>
-<li>
-Solver's arguments should be exposed to user through the class. </li>
-<li>
-The solver should not display anything by default. If possible, use the <code>print</code> method to display internal state. </li>
-</ul>
-<h3><a class="anchor" id="ccl"></a>
-Conclusion</h3>
-<p>The dummy solver can be a good starting point for anyone who wants to add a new solver as the code can be considered as the minimum stub to get a compilable bridge. It should also be quite easy to understand.</p>
-<p>If you write a new bridge, please post an annoucement to the RobOptim Google group. </p>
+<div class="textblock"><h2><a class="anchor" id="avl_solvers"></a>
+What solvers are currently available?</h2>
+<p>Supported solvers are available on seperated packages, please check <a href="http://www.roboptim.net/">the project webpage</a> of the supported solvers list.</p>
+<h2><a class="anchor" id="boost_optvar"></a>
+What are those Optional and Variant types?</h2>
+<p>An optional type is a templated class which modelize the possibility in C++ to have "no value" in a variable. It is safer than passing a null pointer as an exception will be launched if you try to dereference a variable which has no content.</p>
+<p>See the following example: </p>
+<div class="fragment"><pre class="fragment">   <span class="comment">// Declare an empty optional int.</span>
+   boost::optional&lt;int&gt; optInt;
+
+   <span class="comment">// There is nothing in our optional int.</span>
+   <span class="comment">// Check if this is really the case.</span>
+   <span class="keywordflow">if</span> (optInt)
+      assert (<span class="keyword">false</span>);
+
+   <span class="comment">// Set a value in our optional int.</span>
+   optInt = 42;
+
+   <span class="comment">// Access our optional int.</span>
+   std::cout &lt;&lt; *optInt &lt;&lt; std::endl;
+</pre></div><p>A variant is an object-oriented way to define a C enum. Here is a small example:</p>
+<div class="fragment"><pre class="fragment">   <span class="comment">// x can be a string or an int.</span>
+   boost::variant&lt;int, std::string&gt; x;
+
+   <span class="comment">// Set x to 42.</span>
+   x = 42;
+
+   <span class="comment">// Which allows to determine what is the current type of x</span>
+   <span class="comment">// First type (int) is zero, second (string) is one, etc.</span>
+   assert (x.which () == 0);
+
+   <span class="comment">// Set x to &quot;hello world&quot;.</span>
+   x = <span class="stringliteral">&quot;hello world&quot;</span>;
+
+   <span class="comment">// Test again.</span>
+   assert (x.which () == 1);
+</pre></div><p>Please note that a variant can never be empty.</p>
+<p>See the <a href="http://www.boost.org/">Boost.Optional and Boost.Variant documentation</a> for more information. </p>
 </div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->

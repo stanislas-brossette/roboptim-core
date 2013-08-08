@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::SolverError Class Reference</title>
+<title>roboptim::Map&lt; U &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,146 +58,113 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::SolverError Class Reference<div class="ingroups"><a class="el" href="a00152.html">Optimization problems</a></div></div>  </div>
+<div class="title">roboptim::Map&lt; U &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::SolverError" --><!-- doxytag: inherits="std::runtime_error" -->
-<p>Base exception class for solving errors.  
+<!-- doxytag: class="roboptim::Map" -->
+<p>Apply a function several times to an input vector.  
  <a href="a00056.html#details">More...</a></p>
 
-<p><code>#include &lt;roboptim/core/solver-error.hh&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for roboptim::SolverError:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00350.png" border="0" usemap="#roboptim_1_1_solver_error_inherit__map" alt="Inheritance graph"/></div>
-<map name="roboptim_1_1_solver_error_inherit__map" id="roboptim_1_1_solver_error_inherit__map">
-<area shape="rect" id="node7" href="a00058.html" title="Exception used for non&#45;critical errors during optimization." alt="" coords="5,246,173,277"/><area shape="rect" id="node2" title="STL class." alt="" coords="27,86,152,117"/><area shape="rect" id="node4" title="STL class." alt="" coords="36,6,143,37"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for roboptim::SolverError:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00351.png" border="0" usemap="#roboptim_1_1_solver_error_coll__map" alt="Collaboration graph"/></div>
-<map name="roboptim_1_1_solver_error_coll__map" id="roboptim_1_1_solver_error_coll__map">
-<area shape="rect" id="node2" title="STL class." alt="" coords="16,86,141,117"/><area shape="rect" id="node4" title="STL class." alt="" coords="25,6,132,37"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;roboptim/core/filter/map.hh&gt;</code></p>
 
-<p><a href="a00352.html">List of all members.</a></p>
+<p><a href="a00387.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="a00017.html">detail::AutopromoteTrait</a>&lt; U &gt;<br class="typebreak"/>
+::T_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#aa472baf5213f2a8afc29b442073031eb">parentType_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="a00056.html">Map</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#a574f40013b83ac08459277e74dc8289e">MapShPtr_t</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#aa8893a6fd45b24fcd4f9a21dc33a5516">SolverError</a> (const std::string &amp;arg)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate an error from an error message.  <a href="#aa8893a6fd45b24fcd4f9a21dc33a5516"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#ac8b42969cdfac13559a460c4ae38b7a0">SolverError</a> (const std::string &amp;arg, const <a class="el" href="a00052.html">Result</a> &amp;res)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate an error from an error message.  <a href="#ac8b42969cdfac13559a460c4ae38b7a0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#ab95d88488f2c6a8563cd2242e41c0b01">SolverError</a> (const <a class="el" href="a00056.html">SolverError</a> &amp;error)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#ab95d88488f2c6a8563cd2242e41c0b01"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#a1a06e6de7a8827debf85b100948a25e8">~SolverError</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Trivial destructor.  <a href="#a1a06e6de7a8827debf85b100948a25e8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#a8bffd424a6556c49b69aa8cefc0f9b64">print</a> (std::ostream &amp;) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the error on the specified output stream.  <a href="#a8bffd424a6556c49b69aa8cefc0f9b64"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const boost::optional&lt; <a class="el" href="a00052.html">Result</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#a902e79a13337accd1abe8a9acd0bbacd">lastState</a> () const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the (optional) last state of the solver.  <a href="#a902e79a13337accd1abe8a9acd0bbacd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="a00052.html">Result</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#a242b7cb46fe4e752f4e2077c2879c1a5">lastState</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the (optional) last state of the solver.  <a href="#a242b7cb46fe4e752f4e2077c2879c1a5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#a934ae91992e7f17a02dbde5ec8e7de3c">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00056.html#aa472baf5213f2a8afc29b442073031eb">parentType_t</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#a4c8f20cf07ee28545f24df00a427e7b9">Map</a> (boost::shared_ptr&lt; U &gt; <a class="el" href="a00056.html#a6084518aafb074773522d069b84418b3">origin</a>, size_type repeat)  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#af65411ba263b5776211a5edb162a89aa">~Map</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#a6084518aafb074773522d069b84418b3">origin</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#a323b53ffd6ed09b1460ea1c112c1b340">origin</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#ac5105e01d83e5837753b3c99d0b6ed71">impl_compute</a> (result_t &amp;result, const argument_t &amp;x) const   throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#a8f63c844358c42b4cf223dcddc5caba6">impl_gradient</a> (gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const   throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html#aaf3d90bb7f6484f288ee797366f8f6a1">impl_jacobian</a> (jacobian_t &amp;jacobian, const argument_t &amp;arg) const   throw ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Base exception class for solving errors. </p>
-<p>All other exceptions classes concerning the optimization process should inherits this class. </p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa8893a6fd45b24fcd4f9a21dc33a5516"></a><!-- doxytag: member="roboptim::SolverError::SolverError" ref="aa8893a6fd45b24fcd4f9a21dc33a5516" args="(const std::string &amp;arg)" -->
+<div class="textblock"><h3>template&lt;typename U&gt;<br/>
+class roboptim::Map&lt; U &gt;</h3>
+
+<p>Apply a function several times to an input vector. </p>
+<p>Input: [x_0^0 x_1^0 ... x_N^0 ... x_0^M x_1^M ... x_N^M]</p>
+<p>Output: [f(x_0^0 x_1^0 ... x_N^0) ... f(x_0^M x_1^M ... x_N^M)] </p>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="a574f40013b83ac08459277e74dc8289e"></a><!-- doxytag: member="roboptim::Map::MapShPtr_t" ref="a574f40013b83ac08459277e74dc8289e" args="" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00056.html#aa8893a6fd45b24fcd4f9a21dc33a5516">roboptim::SolverError::SolverError</a> </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>arg</em></td><td>)</td>
-          <td>  throw ()<code> [explicit]</code></td>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="a00056.html">Map</a>&gt; <a class="el" href="a00056.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00056.html#a574f40013b83ac08459277e74dc8289e">MapShPtr_t</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Instantiate an error from an error message. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">arg</td><td>error message. </td></tr>
-  </table>
-  </dd>
-</dl>
+</div>
+</div>
+<a class="anchor" id="aa472baf5213f2a8afc29b442073031eb"></a><!-- doxytag: member="roboptim::Map::parentType_t" ref="aa472baf5213f2a8afc29b442073031eb" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="a00017.html">detail::AutopromoteTrait</a>&lt;U&gt;::T_type <a class="el" href="a00056.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00056.html#aa472baf5213f2a8afc29b442073031eb">parentType_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ac8b42969cdfac13559a460c4ae38b7a0"></a><!-- doxytag: member="roboptim::SolverError::SolverError" ref="ac8b42969cdfac13559a460c4ae38b7a0" args="(const std::string &amp;arg, const Result &amp;res)" -->
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4c8f20cf07ee28545f24df00a427e7b9"></a><!-- doxytag: member="roboptim::Map::Map" ref="a4c8f20cf07ee28545f24df00a427e7b9" args="(boost::shared_ptr&lt; U &gt; origin, size_type repeat)" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00056.html#aa8893a6fd45b24fcd4f9a21dc33a5516">roboptim::SolverError::SolverError</a> </td>
+          <td class="memname"><a class="el" href="a00056.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00056.html">Map</a> </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>arg</em>, </td>
+          <td class="paramtype">boost::shared_ptr&lt; U &gt;&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a00052.html">Result</a> &amp;&#160;</td>
-          <td class="paramname"><em>res</em>&#160;</td>
+          <td class="paramtype">size_type&#160;</td>
+          <td class="paramname"><em>repeat</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>  throw ()</td>
+          <td></td><td>  throw ()<code> [explicit]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Instantiate an error from an error message. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">arg</td><td>error message. </td></tr>
-    <tr><td class="paramname">res</td><td>last state of the solver. </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a class="anchor" id="ab95d88488f2c6a8563cd2242e41c0b01"></a><!-- doxytag: member="roboptim::SolverError::SolverError" ref="ab95d88488f2c6a8563cd2242e41c0b01" args="(const SolverError &amp;error)" -->
+<a class="anchor" id="af65411ba263b5776211a5edb162a89aa"></a><!-- doxytag: member="roboptim::Map::~Map" ref="af65411ba263b5776211a5edb162a89aa" args="()" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00056.html#aa8893a6fd45b24fcd4f9a21dc33a5516">roboptim::SolverError::SolverError</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00056.html">SolverError</a> &amp;&#160;</td>
-          <td class="paramname"><em>error</em></td><td>)</td>
-          <td>  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Copy constructor. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">error</td><td>other error to copy. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a1a06e6de7a8827debf85b100948a25e8"></a><!-- doxytag: member="roboptim::SolverError::~SolverError" ref="a1a06e6de7a8827debf85b100948a25e8" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00056.html#a1a06e6de7a8827debf85b100948a25e8">roboptim::SolverError::~SolverError</a> </td>
+          <td class="memname"><a class="el" href="a00056.html">roboptim::Map</a>&lt; U &gt;::~<a class="el" href="a00056.html">Map</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td>  throw ()</td>
@@ -205,79 +172,157 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Trivial destructor. </p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a902e79a13337accd1abe8a9acd0bbacd"></a><!-- doxytag: member="roboptim::SolverError::lastState" ref="a902e79a13337accd1abe8a9acd0bbacd" args="() const " -->
+<a class="anchor" id="ac5105e01d83e5837753b3c99d0b6ed71"></a><!-- doxytag: member="roboptim::Map::impl_compute" ref="ac5105e01d83e5837753b3c99d0b6ed71" args="(result_t &amp;result, const argument_t &amp;x) const " -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const boost::optional&lt; <a class="el" href="a00052.html">Result</a> &gt; &amp; <a class="el" href="a00056.html#a902e79a13337accd1abe8a9acd0bbacd">roboptim::SolverError::lastState</a> </td>
+          <td class="memname">void <a class="el" href="a00056.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00056.html#ac5105e01d83e5837753b3c99d0b6ed71">impl_compute</a> </td>
+          <td>(</td>
+          <td class="paramtype">result_t &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const argument_t &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8f63c844358c42b4cf223dcddc5caba6"></a><!-- doxytag: member="roboptim::Map::impl_gradient" ref="a8f63c844358c42b4cf223dcddc5caba6" args="(gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00056.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00056.html#a8f63c844358c42b4cf223dcddc5caba6">impl_gradient</a> </td>
+          <td>(</td>
+          <td class="paramtype">gradient_t &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const argument_t &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_type&#160;</td>
+          <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaf3d90bb7f6484f288ee797366f8f6a1"></a><!-- doxytag: member="roboptim::Map::impl_jacobian" ref="aaf3d90bb7f6484f288ee797366f8f6a1" args="(jacobian_t &amp;jacobian, const argument_t &amp;arg) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00056.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00056.html#aaf3d90bb7f6484f288ee797366f8f6a1">impl_jacobian</a> </td>
+          <td>(</td>
+          <td class="paramtype">jacobian_t &amp;&#160;</td>
+          <td class="paramname"><em>jacobian</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const argument_t &amp;&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6084518aafb074773522d069b84418b3"></a><!-- doxytag: member="roboptim::Map::origin" ref="a6084518aafb074773522d069b84418b3" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const boost::shared_ptr&lt;U&gt;&amp; <a class="el" href="a00056.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00056.html#a6084518aafb074773522d069b84418b3">origin</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const  throw ()</td>
+          <td> const<code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Retrieve the (optional) last state of the solver. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>last state of the solver. </dd></dl>
+<p>Referenced by <a class="el" href="a00188.html#a12201667276a7a25982f7ba037720734">roboptim::map()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a242b7cb46fe4e752f4e2077c2879c1a5"></a><!-- doxytag: member="roboptim::SolverError::lastState" ref="a242b7cb46fe4e752f4e2077c2879c1a5" args="()" -->
+<a class="anchor" id="a323b53ffd6ed09b1460ea1c112c1b340"></a><!-- doxytag: member="roboptim::Map::origin" ref="a323b53ffd6ed09b1460ea1c112c1b340" args="()" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">boost::optional&lt; <a class="el" href="a00052.html">Result</a> &gt; &amp; <a class="el" href="a00056.html#a902e79a13337accd1abe8a9acd0bbacd">roboptim::SolverError::lastState</a> </td>
+          <td class="memname">boost::shared_ptr&lt;U&gt;&amp; <a class="el" href="a00056.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00056.html#a6084518aafb074773522d069b84418b3">origin</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>  throw ()</td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Retrieve the (optional) last state of the solver. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>last state of the solver. </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="a8bffd424a6556c49b69aa8cefc0f9b64"></a><!-- doxytag: member="roboptim::SolverError::print" ref="a8bffd424a6556c49b69aa8cefc0f9b64" args="(std::ostream &amp;) const " -->
+<a class="anchor" id="a934ae91992e7f17a02dbde5ec8e7de3c"></a><!-- doxytag: member="roboptim::Map::ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="a934ae91992e7f17a02dbde5ec8e7de3c" args="(parentType_t)" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream &amp; <a class="el" href="a00056.html#a8bffd424a6556c49b69aa8cefc0f9b64">roboptim::SolverError::print</a> </td>
+          <td class="memname"><a class="el" href="a00056.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00056.html#a934ae91992e7f17a02dbde5ec8e7de3c">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>o</em></td><td>)</td>
-          <td> const  throw ()<code> [virtual]</code></td>
+          <td class="paramtype"><a class="el" href="a00056.html#aa472baf5213f2a8afc29b442073031eb">parentType_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Display the error on the specified output stream. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
-
-<p>Reimplemented in <a class="el" href="a00058.html#a1b851aa758c3cccd4594ff817fb10190">roboptim::SolverWarning</a>.</p>
-
-<p>References <a class="el" href="a00144.html#a9fe9bfad8dc3d4d18468fa71a1e924d2">roboptim::fg::fail()</a>, and <a class="el" href="a00144.html#ac20a553dc2fb3400a4e1a2a639c3ab34">roboptim::fg::reset()</a>.</p>
-
-<p>Referenced by <a class="el" href="a00140.html#ae6c649aa8d935cb8c8fbe8307cfa2b1f">roboptim::operator&lt;&lt;()</a>.</p>
 
 </div>
 </div>
@@ -299,7 +344,7 @@ Public Member Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00056.html">SolverError</a>      </li>
+      <li class="navelem"><a class="el" href="a00188.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00056.html">Map</a>      </li>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>core.hh File Reference</title>
+<title>roboptim::detail::PrecisionTrait&lt; T &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -13,8 +13,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -36,8 +36,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -55,50 +57,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a>  </div>
   <div class="headertitle">
-<div class="title">core.hh File Reference</div>  </div>
+<div class="title">roboptim::detail::PrecisionTrait&lt; T &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00130.html">roboptim/core/sys.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00066.html">roboptim/core/debug.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00083.html">roboptim/core/fwd.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00097.html">roboptim/core/io.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00084.html">roboptim/core/visualization/fwd.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00114.html">roboptim/core/result-with-warnings.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00064.html">roboptim/core/constant-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00068.html">roboptim/core/derivable-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00069.html">roboptim/core/derivable-parametrized-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00079.html">roboptim/core/finite-difference-gradient.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00082.html">roboptim/core/function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00086.html">roboptim/core/generic-solver.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00094.html">roboptim/core/identity-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00096.html">roboptim/core/indent.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00098.html">roboptim/core/linear-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00100.html">roboptim/core/n-times-derivable-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00102.html">roboptim/core/numeric-linear-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00105.html">roboptim/core/numeric-quadratic-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00106.html">roboptim/core/parametrized-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00109.html">roboptim/core/problem.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00111.html">roboptim/core/quadratic-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00116.html">roboptim/core/result.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00118.html">roboptim/core/solver-error.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00119.html">roboptim/core/solver-factory.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00122.html">roboptim/core/solver-warning.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00124.html">roboptim/core/solver.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00132.html">roboptim/core/twice-derivable-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00136.html">roboptim/core/util.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00061.html">roboptim/core/filter/cached-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00092.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00088.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00090.html">roboptim/core/visualization/gnuplot-function.hh</a>&gt;</code><br/>
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for core.hh:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00166.png" border="0" usemap="#core_8hh" alt=""/></div>
-<map name="core_8hh" id="core_8hh">
-<area shape="rect" id="node3" href="a00130.html" title="roboptim/core/sys.hh" alt="" coords="1785,806,1932,837"/><area shape="rect" id="node7" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="2099,646,2261,677"/><area shape="rect" id="node11" href="a00096.html" title="roboptim/core/indent.hh" alt="" coords="2100,726,2260,757"/><area shape="rect" id="node15" href="a00083.html" title="roboptim/core/fwd.hh" alt="" coords="4665,726,4812,757"/><area shape="rect" id="node17" href="a00097.html" title="roboptim/core/io.hh" alt="" coords="325,566,461,597"/><area shape="rect" id="node25" href="a00084.html" title="roboptim/core/visualization/fwd.hh" alt="" coords="789,566,1013,597"/><area shape="rect" id="node29" href="a00114.html" title="roboptim/core/result&#45;with&#45;warnings.hh" alt="" coords="1931,326,2171,357"/><area shape="rect" id="node36" href="a00116.html" title="roboptim/core/result.hh" alt="" coords="2184,566,2341,597"/><area shape="rect" id="node43" href="a00082.html" title="roboptim/core/function.hh" alt="" coords="3772,646,3943,677"/><area shape="rect" id="node67" href="a00122.html" title="roboptim/core/solver&#45;warning.hh" alt="" coords="1752,406,1963,437"/><area shape="rect" id="node71" href="a00118.html" title="roboptim/core/solver&#45;error.hh" alt="" coords="2517,486,2712,517"/><area shape="rect" id="node79" href="a00064.html" title="roboptim/core/constant&#45;function.hh" alt="" coords="5497,486,5719,517"/><area shape="rect" id="node82" href="a00098.html" title="roboptim/core/linear&#45;function.hh" alt="" coords="5405,566,5611,597"/><area shape="rect" id="node87" href="a00111.html" title="roboptim/core/quadratic&#45;function.hh" alt="" coords="5179,646,5408,677"/><area shape="rect" id="node93" href="a00068.html" title="roboptim/core/derivable&#45;function.hh" alt="" coords="4479,166,4708,197"/><area shape="rect" id="node104" href="a00069.html" title="roboptim/core/derivable&#45;parametrized&#45;function.hh" alt="" coords="4971,486,5280,517"/><area shape="rect" id="node108" href="a00106.html" title="roboptim/core/parametrized&#45;function.hh" alt="" coords="4053,566,4304,597"/><area shape="rect" id="node117" href="a00079.html" title="roboptim/core/finite&#45;difference&#45;gradient.hh" alt="" coords="4668,486,4935,517"/><area shape="rect" id="node126" href="a00086.html" title="roboptim/core/generic&#45;solver.hh" alt="" coords="2976,246,3187,277"/><area shape="rect" id="node133" href="a00109.html" title="roboptim/core/problem.hh" alt="" coords="3812,486,3985,517"/><area shape="rect" id="node144" href="a00094.html" title="roboptim/core/identity&#45;function.hh" alt="" coords="3372,486,3585,517"/><area shape="rect" id="node151" href="a00100.html" title="roboptim/core/n&#45;times&#45;derivable&#45;function.hh" alt="" coords="1632,566,1907,597"/><area shape="rect" id="node156" href="a00102.html" title="roboptim/core/numeric&#45;linear&#45;function.hh" alt="" coords="1701,486,1957,517"/><area shape="rect" id="node161" href="a00105.html" title="roboptim/core/numeric&#45;quadratic&#45;function.hh" alt="" coords="2619,566,2899,597"/><area shape="rect" id="node171" href="a00119.html" title="roboptim/core/solver&#45;factory.hh" alt="" coords="3181,86,3387,117"/><area shape="rect" id="node178" href="a00124.html" title="roboptim/core/solver.hh" alt="" coords="3643,166,3805,197"/><area shape="rect" id="node190" href="a00132.html" title="roboptim/core/twice&#45;derivable&#45;function.hh" alt="" coords="5888,86,6152,117"/><area shape="rect" id="node192" href="a00136.html" title="roboptim/core/util.hh" alt="" coords="5837,646,5979,677"/><area shape="rect" id="node196" href="a00061.html" title="roboptim/core/filter/cached&#45;function.hh" alt="" coords="1381,486,1627,517"/><area shape="rect" id="node201" href="a00092.html" title="roboptim/core/visualization/gnuplot.hh" alt="" coords="1061,486,1307,517"/><area shape="rect" id="node208" href="a00088.html" title="roboptim/core/visualization/gnuplot&#45;commands.hh" alt="" coords="1189,566,1507,597"/><area shape="rect" id="node214" href="a00090.html" title="roboptim/core/visualization/gnuplot&#45;function.hh" alt="" coords="2973,566,3267,597"/><area shape="rect" id="node5" href="a00108.html" title="roboptim/core/portability.hh" alt="" coords="5481,886,5663,917"/><area shape="rect" id="node95" href="a00071.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="4581,566,4829,597"/><area shape="rect" id="node123" href="a00080.html" title="roboptim/core/finite&#45;difference&#45;gradient.hxx" alt="" coords="4853,566,5128,597"/></map>
+<!-- doxytag: class="roboptim::detail::PrecisionTrait" -->
+<p><code>#include &lt;roboptim/core/detail/autopromote.hh&gt;</code></p>
+
+<p><a href="a00477.html">List of all members.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br/>
+&#160;&#160;<a class="el" href="a00065.html#ab417ff615de14b49dd3b4785c868b5dea4ccdca47cf406064482465b2bd3404b8">precisionRank</a> =  0, 
+<br/>
+&#160;&#160;<a class="el" href="a00065.html#ab417ff615de14b49dd3b4785c868b5dea9660cd681308d153488bac4462b842fb">knowPrecisionRank</a> =  0
+<br/>
+ }</td></tr>
+</table>
+<h3>template&lt;class T&gt;<br/>
+ struct roboptim::detail::PrecisionTrait&lt; T &gt;</h3>
+
+<hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="ab417ff615de14b49dd3b4785c868b5de"></a><!-- doxytag: member="roboptim::detail::PrecisionTrait::@0" ref="ab417ff615de14b49dd3b4785c868b5de" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
 </div>
-</div></div><!-- contents -->
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ab417ff615de14b49dd3b4785c868b5dea4ccdca47cf406064482465b2bd3404b8"></a><!-- doxytag: member="precisionRank" ref="ab417ff615de14b49dd3b4785c868b5dea4ccdca47cf406064482465b2bd3404b8" args="" -->precisionRank</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ab417ff615de14b49dd3b4785c868b5dea9660cd681308d153488bac4462b842fb"></a><!-- doxytag: member="knowPrecisionRank" ref="ab417ff615de14b49dd3b4785c868b5dea9660cd681308d153488bac4462b842fb" args="" -->knowPrecisionRank</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -116,6 +122,8 @@ Include dependency graph for core.hh:</div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00065.html">core.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00188.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00191.html">detail</a>      </li>
+      <li class="navelem"><a class="el" href="a00065.html">PrecisionTrait</a>      </li>
 </body>
 </html>

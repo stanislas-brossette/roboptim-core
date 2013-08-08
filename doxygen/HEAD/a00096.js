@@ -1,10 +1,9 @@
 var a00096 =
 [
-    [ "decendl", "a00140.html#a40c2b30f2b9839b3f1f16f3e1bcf8769", null ],
-    [ "decindent", "a00140.html#a5a9d36182ac616874a038fd4217f0a9c", null ],
-    [ "iendl", "a00140.html#a27b6e86639bb04ec042979cdaad0a851", null ],
-    [ "incendl", "a00140.html#a522f7549c2f312397403265b950a9144", null ],
-    [ "incindent", "a00140.html#a053552edbb5c42ac287c22175ea43e69", null ],
-    [ "indent", "a00140.html#a2b00a3916f44e9f9d69e4fc157a0da79", null ],
-    [ "resetindent", "a00140.html#a3f228456aacf0bc862482828cbde643b", null ]
+    [ "ROBOPTIM_DEBUG_ONLY", "a00096.html#a63c786a95b42777d0562bfacd96e5bfd", null ],
+    [ "RoboptimCoreDebug", "a00096.html#a8899571db39503447bd1d99e926e99da", null ],
+    [ "RoboptimCoreDout", "a00096.html#a248f62148d681974f16f5213d844f25c", null ],
+    [ "RoboptimCoreDoutFatal", "a00096.html#a239887dba9b43a2403f6389ae7a4fc3a", null ],
+    [ "RoboptimCoreForAllDebugChannels", "a00096.html#a4c35c60faacd327b995e06935dcfeb4c", null ],
+    [ "RoboptimCoreForAllDebugObjects", "a00096.html#a3a513caec78746ae88ef7daf0905baf2", null ]
 ];

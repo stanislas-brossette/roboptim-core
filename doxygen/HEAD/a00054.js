@@ -1,6 +1,10 @@
 var a00054 =
 [
-    [ "computeGradient", "a00054.html#ac177c36cf832e17f3104c7db9288e8cb", null ],
-    [ "computeGradient", "a00054.html#af6fb145667fec7f294b3c3314bda209e", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00054.html#a589c0a7f4d846453adf91866789ebd7d", null ]
+    [ "~Gnuplot", "a00054.html#ab2620f9d29a97757d0acbfe68e6a2c79", null ],
+    [ "Gnuplot", "a00054.html#ab134923cbb8cc53b251664f4b5c6b73c", null ],
+    [ "make_gnuplot", "a00054.html#a55c76cc46b5c54b1bc0d4684128403ff", null ],
+    [ "make_interactive_gnuplot", "a00054.html#a14e55569e7e70d12d7cd1d83117576a1", null ],
+    [ "operator<<", "a00054.html#af7addb186708c556e603c3fd8e7768a6", null ],
+    [ "print", "a00054.html#ad4b42f563ebbdb501d397a42a4420525", null ],
+    [ "push_command", "a00054.html#aaa242efdd1e20124d0698793b4fd4bdd", null ]
 ];

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::finiteDifferenceGradientPolicies Namespace Reference</title>
+<title>plus.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -12,9 +12,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -36,8 +36,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="namespaces.html"><span>Namespace&#160;List</span></a></li>
-      <li><a href="namespacemembers.html"><span>Namespace&#160;Members</span></a></li>
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -56,26 +56,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::finiteDifferenceGradientPolicies Namespace Reference</div>  </div>
+<div class="title">plus.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Contains finite difference gradients policies.  
-<a href="#details">More...</a></p>
-<table class="memberdecls">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;boost/shared_ptr.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00086.html">roboptim/core/detail/autopromote.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00102.html">roboptim/core/differentiable-function.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00146.html">roboptim/core/filter/plus.hxx</a>&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for plus.hh:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00301.png" border="0" usemap="#plus_8hh" alt=""/></div>
+<map name="plus_8hh" id="plus_8hh">
+<area shape="rect" id="node7" href="a00086.html" title="roboptim/core/detail/autopromote.hh" alt="" coords="499,86,736,117"/><area shape="rect" id="node13" href="a00102.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="952,86,1200,117"/><area shape="rect" id="node89" href="a00146.html" title="roboptim/core/filter/plus.hxx" alt="" coords="2444,86,2628,117"/><area shape="rect" id="node11" href="a00114.html" title="roboptim/core/fwd.hh" alt="" coords="552,406,699,437"/><area shape="rect" id="node24" href="a00113.html" title="roboptim/core/function.hh" alt="" coords="1281,326,1452,357"/><area shape="rect" id="node54" href="a00147.html" title="roboptim/core/portability.hh" alt="" coords="645,646,827,677"/><area shape="rect" id="node64" href="a00103.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="268,166,524,197"/><area shape="rect" id="node50" href="a00129.html" title="roboptim/core/indent.hh" alt="" coords="72,486,232,517"/><area shape="rect" id="node52" href="a00176.html" title="roboptim/core/sys.hh" alt="" coords="5,566,152,597"/><area shape="rect" id="node56" href="a00096.html" title="roboptim/core/debug.hh" alt="" coords="261,566,424,597"/><area shape="rect" id="node68" href="a00182.html" title="roboptim/core/util.hh" alt="" coords="325,246,467,277"/><area shape="rect" id="node72" href="a00179.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="705,326,988,357"/><area shape="rect" id="node86" href="a00183.html" title="roboptim/core/util.hxx" alt="" coords="433,326,580,357"/><area shape="rect" id="node81" href="a00180.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="187,406,477,437"/></map>
+</div>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html">Simple</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast finite difference gradient computation.  <a href="a00054.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00028.html">FivePointsRule</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Precise finite difference gradient computation.  <a href="a00028.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html">roboptim::Plus&lt; U, V &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum two RobOptim functions.  <a href="a00063.html#details">More...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html">roboptim</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
+<br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename U , typename V &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Plus&lt; U, V &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00188.html#a29192465f69ffd7e843e907cb66dbe75">roboptim::plus</a> (boost::shared_ptr&lt; U &gt; left, boost::shared_ptr&lt; V &gt; right)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename U , typename V &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Plus&lt; U, V &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00188.html#a1c85364bc3106af5973bb6cb5113e2dd">roboptim::operator+</a> (boost::shared_ptr&lt; U &gt; left, boost::shared_ptr&lt; V &gt; right)</td></tr>
 </table>
-<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Contains finite difference gradients policies. </p>
-<p>Each class of this algorithm implements a finite difference gradient computation algorithm. </p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -93,7 +110,6 @@ Classes</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00145.html">finiteDifferenceGradientPolicies</a>      </li>
+      <li class="navelem"><a class="el" href="a00145.html">plus.hh</a>      </li>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>problem-cc.cc</title>
+<title>numeric-linear-function.cc</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -50,10 +50,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">problem-cc.cc</div>  </div>
+<div class="title">numeric-linear-function.cc</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Example shows problem class use.</p>
+<p>Example shows numeric linear function use.</p>
 <div class="fragment"><pre class="fragment"><span class="comment">// Copyright (C) 2009 by Thomas Moulard, AIST, CNRS, INRIA.</span>
 <span class="comment">//</span>
 <span class="comment">// This file is part of the roboptim.</span>
@@ -73,47 +73,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <span class="preprocessor">#include &quot;shared-tests/fixture.hh&quot;</span>
 
-<span class="preprocessor">#include &lt;boost/mpl/vector.hpp&gt;</span>
+<span class="preprocessor">#include &lt;iostream&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00097.html">roboptim/core/io.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00064.html">roboptim/core/constant-function.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00071.html">roboptim/core/differentiable-function.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00109.html">roboptim/core/problem.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00130.html">roboptim/core/io.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00139.html">roboptim/core/numeric-linear-function.hh</a>&gt;</span>
 
 <span class="keyword">using namespace </span>roboptim;
 
-<span class="comment">// Check that a problem has really been copied.</span>
-<span class="preprocessor">#define CHECK_COPY(A, B)                                                \</span>
-<span class="preprocessor">  assert (&amp;(A).function () == &amp;(B).function ());                        \</span>
-<span class="preprocessor">  assert ((A).constraints ().size () == (B).constraints ().size ());</span>
-<span class="preprocessor"></span>
+<span class="keyword">typedef</span> <a name="_a0"></a><a class="code" href="a00035.html" title="Dummy solver which always fails.">DummySolver</a> <a name="a1"></a><a class="code" href="a00105.html#a5aafe251d5465495fdbaff79da9e5a7d">solver_t</a>;
+
+<span class="keyword">typedef</span> boost::mpl::list&lt; <a name="_a2"></a><a class="code" href="a00037.html" title="Tag type for functions using Eigen dense matrices.">::roboptim::EigenMatrixDense</a>,
+        <a name="_a3"></a><a class="code" href="a00038.html" title="Tag type for functions using Eigen sparse matrices.">::roboptim::EigenMatrixSparse</a>&gt; functionTypes_t;
+
 BOOST_FIXTURE_TEST_SUITE (core, TestSuiteConfiguration)
 
-BOOST_AUTO_TEST_CASE (problem_copy_constructor)
+BOOST_AUTO_TEST_CASE_TEMPLATE (numeric_linear_function, T, functionTypes_t)
 {
-  <span class="keyword">typedef</span> <a name="_a0"></a><a class="code" href="a00050.html">Problem</a>&lt;<a name="a1"></a><a class="code" href="a00140.html#a1fe6728680de2e1a17e250717269fe22" title="Dense differentiable function.">DifferentiableFunction</a>,
-      boost::mpl::vector&lt;DifferentiableFunction&gt; &gt;
-    problemSrc_t;
-  <span class="keyword">typedef</span> <a class="code" href="a00050.html">Problem&lt;Function, boost::mpl::vector&lt;Function&gt;</a> &gt; problemDst_t;
+  boost::shared_ptr&lt;boost::test_tools::output_test_stream&gt;
+    output = retrievePattern (<span class="stringliteral">&quot;numeric-linear-function&quot;</span>);
 
-  <a name="a2"></a><a class="code" href="a00035.html#ab271637f8057c0196d3648aaa773b73c" title="Basic vector type.">ConstantFunction::vector_t</a> v (1);
-  v.setZero ();
+  <span class="keyword">typename</span> <a name="_a4"></a><a class="code" href="a00049.html" title="Build a linear function from a vector and a matrix.">GenericNumericLinearFunction&lt;T&gt;::matrix_t</a> a (1, 5);
+  <span class="keyword">typename</span> <a class="code" href="a00049.html" title="Build a linear function from a vector and a matrix.">GenericNumericLinearFunction&lt;T&gt;::vector_t</a> b (1);
+  <span class="keyword">typename</span> <a class="code" href="a00049.html" title="Build a linear function from a vector and a matrix.">GenericNumericLinearFunction&lt;T&gt;::vector_t</a> x (5);
 
-  <a name="_a3"></a><a class="code" href="a00018.html" title="Constant function.">ConstantFunction</a> f (v);
+  a.<a name="a5"></a><a class="code" href="a00053.html#a042286a811a4ec9b79c9d2c34f8e63c0" title="Set a symmetric matrix to zero.">setZero</a> ();
+  b.<a name="a6"></a><a class="code" href="a00053.html#a042286a811a4ec9b79c9d2c34f8e63c0" title="Set a symmetric matrix to zero.">setZero</a> ();
+  x.<a class="code" href="a00053.html#a042286a811a4ec9b79c9d2c34f8e63c0" title="Set a symmetric matrix to zero.">setZero</a> ();
 
-  problemSrc_t pbSrc (f);
+  a.coeffRef (0, 0) = 1.2;
+  a.coeffRef (0, 1) = 3.4;
+  a.coeffRef (0, 2) = 5.6;
+  a.coeffRef (0, 3) = 7.8;
 
-  <span class="comment">// Check with same type.</span>
-  {
-    problemSrc_t pbDst (pbSrc);
-    CHECK_COPY(pbSrc, pbDst);
-  }
+  b[0] = 1.;
 
-  <span class="comment">// Check with a more general type.</span>
-  {
-    problemDst_t pbDst (pbSrc);
-    CHECK_COPY(pbSrc, pbDst);
-  }
+  <a class="code" href="a00049.html" title="Build a linear function from a vector and a matrix.">GenericNumericLinearFunction&lt;T&gt;</a> f (a, b);
+
+  (*output) &lt;&lt; f &lt;&lt; std::endl;
+
+  x[0] = 0.1;
+  x[1] = 1.2;
+  x[2] = 2.3;
+  x[3] = 3.4;
+  x[4] = 4.5;
+
+  (*output) &lt;&lt; <span class="stringliteral">&quot;f(x) = &quot;</span> &lt;&lt; f (x) &lt;&lt; std::endl;
+  (*output) &lt;&lt; <span class="stringliteral">&quot;J(x) = &quot;</span> &lt;&lt; f.<a name="a7"></a><a class="code" href="a00041.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> (x) &lt;&lt; std::endl;
+
+  std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;
+  <span class="comment">//BOOST_CHECK (output-&gt;match_pattern ());</span>
 }
 
 BOOST_AUTO_TEST_SUITE_END ()

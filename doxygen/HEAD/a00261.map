@@ -1,7 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node5" href="$a00097.html" title="roboptim/core/io.hh" alt="" coords="243,86,379,117"/>
-<area shape="rect" id="node7" href="$a00130.html" title="roboptim/core/sys.hh" alt="" coords="23,326,169,357"/>
-<area shape="rect" id="node11" href="$a00066.html" title="roboptim/core/debug.hh" alt="" coords="137,166,300,197"/>
-<area shape="rect" id="node9" href="$a00108.html" title="roboptim/core/portability.hh" alt="" coords="5,406,187,437"/>
-<area shape="rect" id="node15" href="$a00096.html" title="roboptim/core/indent.hh" alt="" coords="212,246,372,277"/>
+<area shape="rect" id="node5" href="$a00176.html" title="roboptim/core/sys.hh" alt="" coords="191,566,337,597"/>
+<area shape="rect" id="node9" href="$a00096.html" title="roboptim/core/debug.hh" alt="" coords="224,326,387,357"/>
+<area shape="rect" id="node19" href="$a00113.html" title="roboptim/core/function.hh" alt="" coords="1611,326,1781,357"/>
+<area shape="rect" id="node52" href="$a00102.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="1081,86,1329,117"/>
+<area shape="rect" id="node7" href="$a00147.html" title="roboptim/core/portability.hh" alt="" coords="971,646,1152,677"/>
+<area shape="rect" id="node13" href="$a00129.html" title="roboptim/core/indent.hh" alt="" coords="248,486,408,517"/>
+<area shape="rect" id="node48" href="$a00114.html" title="roboptim/core/fwd.hh" alt="" coords="563,406,709,437"/>
+<area shape="rect" id="node61" href="$a00103.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="663,166,919,197"/>
+<area shape="rect" id="node65" href="$a00182.html" title="roboptim/core/util.hh" alt="" coords="692,246,833,277"/>
+<area shape="rect" id="node69" href="$a00179.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="715,326,997,357"/>
+<area shape="rect" id="node83" href="$a00183.html" title="roboptim/core/util.hxx" alt="" coords="1021,326,1168,357"/>
+<area shape="rect" id="node78" href="$a00180.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="733,406,1024,437"/>
 </map>

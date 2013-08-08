@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>io.hh File Reference</title>
+<title>debug.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -55,29 +55,584 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Defines</a>  </div>
   <div class="headertitle">
-<div class="title">io.hh File Reference</div>  </div>
+<div class="title">debug.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00130.html">roboptim/core/sys.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00066.html">roboptim/core/debug.hh</a>&gt;</code><br/>
-<code>#include &lt;boost/tuple/tuple_io.hpp&gt;</code><br/>
-<code>#include &lt;boost/variant/detail/variant_io.hpp&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="a00176.html">roboptim/core/sys.hh</a>&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;cstdlib&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00096.html">roboptim/core/debug.hh</a>&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for io.hh:</div>
+Include dependency graph for src/debug.hh:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00214.png" border="0" usemap="#io_8hh" alt=""/></div>
-<map name="io_8hh" id="io_8hh">
-<area shape="rect" id="node3" href="a00130.html" title="roboptim/core/sys.hh" alt="" coords="23,246,169,277"/><area shape="rect" id="node7" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="137,86,300,117"/><area shape="rect" id="node5" href="a00108.html" title="roboptim/core/portability.hh" alt="" coords="5,326,187,357"/><area shape="rect" id="node11" href="a00096.html" title="roboptim/core/indent.hh" alt="" coords="212,166,372,197"/></map>
+<div class="center"><img src="a00226.png" border="0" usemap="#debug_8hh" alt=""/></div>
+<map name="debug_8hh" id="debug_8hh">
+<area shape="rect" id="node3" href="a00176.html" title="roboptim/core/sys.hh" alt="" coords="23,246,169,277"/><area shape="rect" id="node11" href="a00096.html" title="roboptim/core/debug.hh" alt="" coords="228,86,391,117"/><area shape="rect" id="node5" href="a00147.html" title="roboptim/core/portability.hh" alt="" coords="5,326,187,357"/><area shape="rect" id="node15" href="a00129.html" title="roboptim/core/indent.hh" alt="" coords="229,166,389,197"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00215.png" border="0" usemap="#io_8hhdep" alt=""/></div>
-<map name="io_8hhdep" id="io_8hhdep">
-<area shape="rect" id="node3" href="a00125.html" title="solver.hxx" alt="" coords="373,86,456,117"/><area shape="rect" id="node17" href="a00065.html" title="core.hh" alt="" coords="393,326,460,357"/><area shape="rect" id="node5" href="a00124.html" title="solver.hh" alt="" coords="335,166,409,197"/><area shape="rect" id="node7" href="a00075.html" title="dummy&#45;laststate.hh" alt="" coords="5,246,141,277"/><area shape="rect" id="node11" href="a00077.html" title="dummy.hh" alt="" coords="165,246,248,277"/><area shape="rect" id="node15" href="a00119.html" title="solver&#45;factory.hh" alt="" coords="272,246,389,277"/><area shape="rect" id="node20" href="a00123.html" title="solver.cc" alt="" coords="464,246,539,277"/><area shape="rect" id="node9" href="a00074.html" title="dummy&#45;laststate.cc" alt="" coords="5,326,141,357"/><area shape="rect" id="node13" href="a00076.html" title="dummy.cc" alt="" coords="165,326,248,357"/></map>
+<div class="center"><img src="a00227.png" border="0" usemap="#debug_8hhdep" alt=""/></div>
+<map name="debug_8hhdep" id="debug_8hhdep">
+<area shape="rect" id="node3" href="a00105.html" title="dummy&#45;laststate.cc" alt="" coords="5,86,141,117"/><area shape="rect" id="node5" href="a00107.html" title="dummy.cc" alt="" coords="165,86,248,117"/><area shape="rect" id="node7" href="a00116.html" title="generic&#45;solver.cc" alt="" coords="272,86,395,117"/><area shape="rect" id="node9" href="a00128.html" title="indent.cc" alt="" coords="419,86,493,117"/><area shape="rect" id="node11" href="a00154.html" title="result&#45;with&#45;warnings.cc" alt="" coords="517,86,672,117"/><area shape="rect" id="node13" href="a00156.html" title="result.cc" alt="" coords="696,86,765,117"/><area shape="rect" id="node15" href="a00163.html" title="solver&#45;error.cc" alt="" coords="789,86,896,117"/><area shape="rect" id="node17" href="a00167.html" title="solver&#45;warning.cc" alt="" coords="920,86,1045,117"/><area shape="rect" id="node19" href="a00169.html" title="solver.cc" alt="" coords="1069,86,1144,117"/><area shape="rect" id="node21" href="a00181.html" title="util.cc" alt="" coords="1168,86,1221,117"/></map>
 </div>
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+Defines</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#ade568978a8710986fbcdb3d395f55cdd">AllocTag1</a>(p)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a5f8e28f669ff7b48073c425490f59736">AllocTag2</a>(p, desc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a2766e0847d0ba8c9aa4e1de0a97d405b">AllocTag_dynamic_description</a>(p, data)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#af4e1b96100382851ec6677e4c5825e7e">AllocTag</a>(p, data)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a5fb5488bccf070065b61cd8e027525c6">Debug</a>(STATEMENT)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a345365647bad2709dac5955a83d33aa3">Dout</a>(cntrl, data)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#aa45bf8d78ed558bebec07438c4f8abf1">DoutFatal</a>(cntrl, data)&#160;&#160;&#160;<a class="el" href="a00097.html#a2762e88dc53603ed71008dd2d6b90780">LibcwDoutFatal</a>(, , cntrl, data)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a302fbedccc5c6173cc2ed18de3f34e23">ForAllDebugChannels</a>(STATEMENT)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#adafb6cdf27741ff9c87dd83a8f6e3d88">ForAllDebugObjects</a>(STATEMENT)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a723c72a1617ae1c051f18e23eae28e98">LibcwDebug</a>(dc_namespace, STATEMENT)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#af019d9d15281021bc852f83a1c98aba8">LibcwDout</a>(dc_namespace, d, cntrl, data)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a2762e88dc53603ed71008dd2d6b90780">LibcwDoutFatal</a>(dc_namespace, d, cntrl, data)&#160;&#160;&#160;do { ::std::cerr &lt;&lt; data &lt;&lt; ::std::endl; ::std::exit(EXIT_FAILURE); } while(1)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#adf75facca7546690d11e62a1234cb0cc">LibcwdForAllDebugChannels</a>(dc_namespace, STATEMENT)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#ac3147dfa216e5889b71579cf03f3ec54">LibcwdForAllDebugObjects</a>(dc_namespace, STATEMENT)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a7324348ee403bddaf991adcbde25b678">NEW</a>(x)&#160;&#160;&#160;new x</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#abc7382aaf34fd3523d37147c8db25543">CWDEBUG_ALLOC</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#ac707de3cf9cdcff738425e24a5747c0d">CWDEBUG_MAGIC</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a957687dd612e5bd0ac06da2275a1a675">CWDEBUG_LOCATION</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a8313839e2c6bc6f6d468c939ea00cb6b">CWDEBUG_LIBBFD</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a4db04181a8aefb4d05a43178de3c6e35">CWDEBUG_DEBUG</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a4fe82fc98f509b53703c10bd0e8fa3c3">CWDEBUG_DEBUGOUTPUT</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#af38691eed2119b5297eac012a523e7df">CWDEBUG_DEBUGM</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#aea535f52e2a34a7cecd9603fc2e2554d">CWDEBUG_DEBUGT</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a6afe7dc8b7cf99d8063d83534799449d">CWDEBUG_MARKER</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a38f25a92212e070233383b18faab82f0">ROBOPTIM_CORE_INTERNAL</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a229fff65ddcd774b6cfe99a1c66b4687">DEBUGCHANNELS</a>&#160;&#160;&#160;roboptim::debug::channels</td></tr>
+</table>
+<hr/><h2>Define Documentation</h2>
+<a class="anchor" id="af4e1b96100382851ec6677e4c5825e7e"></a><!-- doxytag: member="src/debug.hh::AllocTag" ref="af4e1b96100382851ec6677e4c5825e7e" args="(p, data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#af4e1b96100382851ec6677e4c5825e7e">AllocTag</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ade568978a8710986fbcdb3d395f55cdd"></a><!-- doxytag: member="src/debug.hh::AllocTag1" ref="ade568978a8710986fbcdb3d395f55cdd" args="(p)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#ade568978a8710986fbcdb3d395f55cdd">AllocTag1</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5f8e28f669ff7b48073c425490f59736"></a><!-- doxytag: member="src/debug.hh::AllocTag2" ref="a5f8e28f669ff7b48073c425490f59736" args="(p, desc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a5f8e28f669ff7b48073c425490f59736">AllocTag2</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">desc&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2766e0847d0ba8c9aa4e1de0a97d405b"></a><!-- doxytag: member="src/debug.hh::AllocTag_dynamic_description" ref="a2766e0847d0ba8c9aa4e1de0a97d405b" args="(p, data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a2766e0847d0ba8c9aa4e1de0a97d405b">AllocTag_dynamic_description</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abc7382aaf34fd3523d37147c8db25543"></a><!-- doxytag: member="src/debug.hh::CWDEBUG_ALLOC" ref="abc7382aaf34fd3523d37147c8db25543" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#abc7382aaf34fd3523d37147c8db25543">CWDEBUG_ALLOC</a>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4db04181a8aefb4d05a43178de3c6e35"></a><!-- doxytag: member="src/debug.hh::CWDEBUG_DEBUG" ref="a4db04181a8aefb4d05a43178de3c6e35" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a4db04181a8aefb4d05a43178de3c6e35">CWDEBUG_DEBUG</a>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af38691eed2119b5297eac012a523e7df"></a><!-- doxytag: member="src/debug.hh::CWDEBUG_DEBUGM" ref="af38691eed2119b5297eac012a523e7df" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#af38691eed2119b5297eac012a523e7df">CWDEBUG_DEBUGM</a>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4fe82fc98f509b53703c10bd0e8fa3c3"></a><!-- doxytag: member="src/debug.hh::CWDEBUG_DEBUGOUTPUT" ref="a4fe82fc98f509b53703c10bd0e8fa3c3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a4fe82fc98f509b53703c10bd0e8fa3c3">CWDEBUG_DEBUGOUTPUT</a>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aea535f52e2a34a7cecd9603fc2e2554d"></a><!-- doxytag: member="src/debug.hh::CWDEBUG_DEBUGT" ref="aea535f52e2a34a7cecd9603fc2e2554d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#aea535f52e2a34a7cecd9603fc2e2554d">CWDEBUG_DEBUGT</a>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8313839e2c6bc6f6d468c939ea00cb6b"></a><!-- doxytag: member="src/debug.hh::CWDEBUG_LIBBFD" ref="a8313839e2c6bc6f6d468c939ea00cb6b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a8313839e2c6bc6f6d468c939ea00cb6b">CWDEBUG_LIBBFD</a>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a957687dd612e5bd0ac06da2275a1a675"></a><!-- doxytag: member="src/debug.hh::CWDEBUG_LOCATION" ref="a957687dd612e5bd0ac06da2275a1a675" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a957687dd612e5bd0ac06da2275a1a675">CWDEBUG_LOCATION</a>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac707de3cf9cdcff738425e24a5747c0d"></a><!-- doxytag: member="src/debug.hh::CWDEBUG_MAGIC" ref="ac707de3cf9cdcff738425e24a5747c0d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#ac707de3cf9cdcff738425e24a5747c0d">CWDEBUG_MAGIC</a>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6afe7dc8b7cf99d8063d83534799449d"></a><!-- doxytag: member="src/debug.hh::CWDEBUG_MARKER" ref="a6afe7dc8b7cf99d8063d83534799449d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a6afe7dc8b7cf99d8063d83534799449d">CWDEBUG_MARKER</a>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5fb5488bccf070065b61cd8e027525c6"></a><!-- doxytag: member="src/debug.hh::Debug" ref="a5fb5488bccf070065b61cd8e027525c6" args="(STATEMENT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a5fb5488bccf070065b61cd8e027525c6">Debug</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">STATEMENT</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a229fff65ddcd774b6cfe99a1c66b4687"></a><!-- doxytag: member="src/debug.hh::DEBUGCHANNELS" ref="a229fff65ddcd774b6cfe99a1c66b4687" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a229fff65ddcd774b6cfe99a1c66b4687">DEBUGCHANNELS</a>&#160;&#160;&#160;roboptim::debug::channels</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a345365647bad2709dac5955a83d33aa3"></a><!-- doxytag: member="src/debug.hh::Dout" ref="a345365647bad2709dac5955a83d33aa3" args="(cntrl, data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a345365647bad2709dac5955a83d33aa3">Dout</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cntrl, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa45bf8d78ed558bebec07438c4f8abf1"></a><!-- doxytag: member="src/debug.hh::DoutFatal" ref="aa45bf8d78ed558bebec07438c4f8abf1" args="(cntrl, data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#aa45bf8d78ed558bebec07438c4f8abf1">DoutFatal</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cntrl, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="a00097.html#a2762e88dc53603ed71008dd2d6b90780">LibcwDoutFatal</a>(, , cntrl, data)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a302fbedccc5c6173cc2ed18de3f34e23"></a><!-- doxytag: member="src/debug.hh::ForAllDebugChannels" ref="a302fbedccc5c6173cc2ed18de3f34e23" args="(STATEMENT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a302fbedccc5c6173cc2ed18de3f34e23">ForAllDebugChannels</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">STATEMENT</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adafb6cdf27741ff9c87dd83a8f6e3d88"></a><!-- doxytag: member="src/debug.hh::ForAllDebugObjects" ref="adafb6cdf27741ff9c87dd83a8f6e3d88" args="(STATEMENT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#adafb6cdf27741ff9c87dd83a8f6e3d88">ForAllDebugObjects</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">STATEMENT</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a723c72a1617ae1c051f18e23eae28e98"></a><!-- doxytag: member="src/debug.hh::LibcwDebug" ref="a723c72a1617ae1c051f18e23eae28e98" args="(dc_namespace, STATEMENT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a723c72a1617ae1c051f18e23eae28e98">LibcwDebug</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc_namespace, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">STATEMENT&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adf75facca7546690d11e62a1234cb0cc"></a><!-- doxytag: member="src/debug.hh::LibcwdForAllDebugChannels" ref="adf75facca7546690d11e62a1234cb0cc" args="(dc_namespace, STATEMENT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#adf75facca7546690d11e62a1234cb0cc">LibcwdForAllDebugChannels</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc_namespace, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">STATEMENT&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac3147dfa216e5889b71579cf03f3ec54"></a><!-- doxytag: member="src/debug.hh::LibcwdForAllDebugObjects" ref="ac3147dfa216e5889b71579cf03f3ec54" args="(dc_namespace, STATEMENT)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#ac3147dfa216e5889b71579cf03f3ec54">LibcwdForAllDebugObjects</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc_namespace, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">STATEMENT&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af019d9d15281021bc852f83a1c98aba8"></a><!-- doxytag: member="src/debug.hh::LibcwDout" ref="af019d9d15281021bc852f83a1c98aba8" args="(dc_namespace, d, cntrl, data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#af019d9d15281021bc852f83a1c98aba8">LibcwDout</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc_namespace, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">d, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cntrl, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2762e88dc53603ed71008dd2d6b90780"></a><!-- doxytag: member="src/debug.hh::LibcwDoutFatal" ref="a2762e88dc53603ed71008dd2d6b90780" args="(dc_namespace, d, cntrl, data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a2762e88dc53603ed71008dd2d6b90780">LibcwDoutFatal</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dc_namespace, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">d, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cntrl, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;do { ::std::cerr &lt;&lt; data &lt;&lt; ::std::endl; ::std::exit(EXIT_FAILURE); } while(1)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7324348ee403bddaf991adcbde25b678"></a><!-- doxytag: member="src/debug.hh::NEW" ref="a7324348ee403bddaf991adcbde25b678" args="(x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a7324348ee403bddaf991adcbde25b678">NEW</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;new x</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a38f25a92212e070233383b18faab82f0"></a><!-- doxytag: member="src/debug.hh::ROBOPTIM_CORE_INTERNAL" ref="a38f25a92212e070233383b18faab82f0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00097.html#a38f25a92212e070233383b18faab82f0">ROBOPTIM_CORE_INTERNAL</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -95,6 +650,6 @@ This graph shows which files directly or indirectly include this file:</div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00097.html">io.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00097.html">debug.hh</a>      </li>
 </body>
 </html>

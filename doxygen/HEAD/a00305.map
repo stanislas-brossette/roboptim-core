@@ -1,4 +1,16 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$a00029.html" title="Define an abstract derivable function ( )." alt="" coords="48,86,339,117"/>
-<area shape="rect" id="node4" href="$a00031.html" title="Define an abstract mathematical function ( )." alt="" coords="88,6,299,37"/>
+<area shape="rect" id="node27" href="$a00114.html" title="roboptim/core/fwd.hh" alt="" coords="1704,486,1850,517"/>
+<area shape="rect" id="node29" href="$a00147.html" title="roboptim/core/portability.hh" alt="" coords="2224,646,2405,677"/>
+<area shape="rect" id="node31" href="$a00113.html" title="roboptim/core/function.hh" alt="" coords="1005,406,1176,437"/>
+<area shape="rect" id="node73" href="$a00149.html" title="roboptim/core/problem.hxx" alt="" coords="1409,86,1588,117"/>
+<area shape="rect" id="node61" href="$a00129.html" title="roboptim/core/indent.hh" alt="" coords="1274,486,1434,517"/>
+<area shape="rect" id="node63" href="$a00176.html" title="roboptim/core/sys.hh" alt="" coords="2102,566,2249,597"/>
+<area shape="rect" id="node66" href="$a00096.html" title="roboptim/core/debug.hh" alt="" coords="1037,566,1200,597"/>
+<area shape="rect" id="node88" href="$a00177.html" title="roboptim/core/terminal&#45;color.hh" alt="" coords="40,406,245,437"/>
+<area shape="rect" id="node96" href="$a00182.html" title="roboptim/core/util.hh" alt="" coords="1673,166,1814,197"/>
+<area shape="rect" id="node100" href="$a00179.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="1948,246,2230,277"/>
+<area shape="rect" id="node127" href="$a00183.html" title="roboptim/core/util.hxx" alt="" coords="1765,246,1912,277"/>
+<area shape="rect" id="node108" href="$a00102.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="1804,326,2052,357"/>
+<area shape="rect" id="node122" href="$a00180.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="1317,326,1608,357"/>
+<area shape="rect" id="node117" href="$a00103.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="1436,406,1692,437"/>
 </map>

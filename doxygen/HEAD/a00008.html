@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>visualization-gnuplot-simple.cc</title>
+<title>problem-cc.cc</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -50,10 +50,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">visualization-gnuplot-simple.cc</div>  </div>
+<div class="title">problem-cc.cc</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Example shows simple Gnuplot visualization.</p>
+<p>Example shows problem class use.</p>
 <div class="fragment"><pre class="fragment"><span class="comment">// Copyright (C) 2009 by Thomas Moulard, AIST, CNRS, INRIA.</span>
 <span class="comment">//</span>
 <span class="comment">// This file is part of the roboptim.</span>
@@ -73,37 +73,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <span class="preprocessor">#include &quot;shared-tests/fixture.hh&quot;</span>
 
-<span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="preprocessor">#include &lt;boost/mpl/vector.hpp&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00097.html">roboptim/core/io.hh</a>&gt;</span>
-
-<span class="preprocessor">#include &lt;<a class="code" href="a00092.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00088.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00130.html">roboptim/core/io.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00093.html">roboptim/core/function/constant.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00102.html">roboptim/core/differentiable-function.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00148.html">roboptim/core/problem.hh</a>&gt;</span>
 
 <span class="keyword">using namespace </span>roboptim;
-<span class="keyword">using namespace </span>roboptim::visualization;
 
+<span class="comment">// Check that a problem has really been copied.</span>
+<span class="preprocessor">#define CHECK_COPY(A, B)                                                \</span>
+<span class="preprocessor">  assert (&amp;(A).function () == &amp;(B).function ());                        \</span>
+<span class="preprocessor">  assert ((A).constraints ().size () == (B).constraints ().size ());</span>
+<span class="preprocessor"></span>
 BOOST_FIXTURE_TEST_SUITE (core, TestSuiteConfiguration)
 
-BOOST_AUTO_TEST_CASE (visualization_gnuplot_simple)
+BOOST_AUTO_TEST_CASE (problem_copy_constructor)
 {
-  boost::shared_ptr&lt;boost::test_tools::output_test_stream&gt;
-    output = retrievePattern (<span class="stringliteral">&quot;visualization-gnuplot-simple&quot;</span>);
+  <span class="keyword">typedef</span> <a name="_a0"></a><a class="code" href="a00067.html">Problem</a>&lt;<a name="a1"></a><a class="code" href="a00188.html#a1fe6728680de2e1a17e250717269fe22" title="Dense differentiable function.">DifferentiableFunction</a>,
+      boost::mpl::vector&lt;DifferentiableFunction&gt; &gt;
+    problemSrc_t;
+  <span class="keyword">typedef</span> <a class="code" href="a00067.html">Problem&lt;Function, boost::mpl::vector&lt;Function&gt;</a> &gt; problemDst_t;
 
-  <span class="keyword">using namespace </span>roboptim::visualization::gnuplot;
-  <a name="_a0"></a><a class="code" href="a00040.html" title="Gnuplot script.">Gnuplot</a> gnuplot = Gnuplot::make_gnuplot ();
+  <a class="code" href="a00043.html#a76763e91e51e9cddf579d52091dce746" title="Basic vector type.">ConstantFunction::vector_t</a> v (1);
+  v.setZero ();
 
-  <span class="comment">// Display nothing, generate just some valid Gnuplot commands.</span>
-  (*output)
-    &lt;&lt; (gnuplot
-  &lt;&lt; <span class="keyword">set</span> (<span class="stringliteral">&quot;term&quot;</span>, <span class="stringliteral">&quot;x11 enhanced persist&quot;</span>)
-  &lt;&lt; <a name="a1"></a><a class="code" href="a00154.html#ga108c0cb6161fb8813817a7b7a1ac980d" title="Make a Gnuplot comment.">comment</a> (<span class="stringliteral">&quot;Hello, world!&quot;</span>)
-  &lt;&lt; <a name="a2"></a><a class="code" href="a00154.html#ga195d042fd97469e044b37abc0faf1e0f" title="Make a Gnuplot cd command.">cd</a> (<span class="stringliteral">&quot;/tmp&quot;</span>)
-  &lt;&lt; <a name="a3"></a><a class="code" href="a00144.html#ac20a553dc2fb3400a4e1a2a639c3ab34">reset</a>
-  );
+  <a name="_a2"></a><a class="code" href="a00040.html" title="Constant function.">ConstantFunction</a> f (v);
 
-  std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;
-  BOOST_CHECK (output-&gt;match_pattern ());
+  problemSrc_t pbSrc (f);
+
+  <span class="comment">// Check with same type.</span>
+  {
+    problemSrc_t pbDst (pbSrc);
+    CHECK_COPY(pbSrc, pbDst);
+  }
+
+  <span class="comment">// Check with a more general type.</span>
+  {
+    problemDst_t pbDst (pbSrc);
+    CHECK_COPY(pbSrc, pbDst);
+  }
 }
 
 BOOST_AUTO_TEST_SUITE_END ()

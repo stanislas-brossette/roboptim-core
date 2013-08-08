@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>identity-function.cc File Reference</title>
+<title>constant.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,26 +56,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">identity-function.cc File Reference</div>  </div>
+<div class="title">constant.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;debug.hh&quot;</code><br/>
-<code>#include &lt;<a class="el" href="a00096.html">roboptim/core/indent.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00094.html">roboptim/core/identity-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00136.html">roboptim/core/util.hh</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="a00114.html">roboptim/core/fwd.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00131.html">roboptim/core/linear-function.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00147.html">roboptim/core/portability.hh</a>&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for identity-function.cc:</div>
+Include dependency graph for constant.hh:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00208.png" border="0" usemap="#identity-function_8cc" alt=""/></div>
-<map name="identity-function_8cc" id="identity-function_8cc">
-<area shape="rect" id="node5" href="a00096.html" title="roboptim/core/indent.hh" alt="" coords="2320,566,2480,597"/><area shape="rect" id="node18" href="a00094.html" title="roboptim/core/identity&#45;function.hh" alt="" coords="2795,86,3008,117"/><area shape="rect" id="node85" href="a00136.html" title="roboptim/core/util.hh" alt="" coords="2155,566,2296,597"/><area shape="rect" id="node7" href="a00130.html" title="roboptim/core/sys.hh" alt="" coords="2307,646,2453,677"/><area shape="rect" id="node11" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="2477,646,2640,677"/><area shape="rect" id="node9" href="a00108.html" title="roboptim/core/portability.hh" alt="" coords="243,726,424,757"/><area shape="rect" id="node22" href="a00098.html" title="roboptim/core/linear&#45;function.hh" alt="" coords="181,166,387,197"/><area shape="rect" id="node26" href="a00083.html" title="roboptim/core/fwd.hh" alt="" coords="429,646,576,677"/><area shape="rect" id="node29" href="a00111.html" title="roboptim/core/quadratic&#45;function.hh" alt="" coords="93,246,323,277"/><area shape="rect" id="node102" href="a00099.html" title="roboptim/core/linear&#45;function.hxx" alt="" coords="2499,486,2712,517"/><area shape="rect" id="node34" href="a00133.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="584,326,867,357"/><area shape="rect" id="node98" href="a00112.html" title="roboptim/core/quadratic&#45;function.hxx" alt="" coords="2240,486,2475,517"/><area shape="rect" id="node44" href="a00071.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="792,406,1040,437"/><area shape="rect" id="node93" href="a00134.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="1875,486,2165,517"/><area shape="rect" id="node51" href="a00082.html" title="roboptim/core/function.hh" alt="" coords="1051,486,1221,517"/><area shape="rect" id="node81" href="a00072.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="1544,486,1800,517"/><area shape="rect" id="node90" href="a00137.html" title="roboptim/core/util.hxx" alt="" coords="1880,646,2027,677"/></map>
+<div class="center"><img src="a00221.png" border="0" usemap="#constant_8hh" alt=""/></div>
+<map name="constant_8hh" id="constant_8hh">
+<area shape="rect" id="node3" href="a00114.html" title="roboptim/core/fwd.hh" alt="" coords="2509,566,2656,597"/><area shape="rect" id="node5" href="a00131.html" title="roboptim/core/linear&#45;function.hh" alt="" coords="1459,86,1664,117"/><area shape="rect" id="node10" href="a00147.html" title="roboptim/core/portability.hh" alt="" coords="92,646,273,677"/><area shape="rect" id="node12" href="a00152.html" title="roboptim/core/quadratic&#45;function.hh" alt="" coords="1447,166,1676,197"/><area shape="rect" id="node96" href="a00132.html" title="roboptim/core/linear&#45;function.hxx" alt="" coords="245,406,459,437"/><area shape="rect" id="node17" href="a00179.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="1420,246,1703,277"/><area shape="rect" id="node92" href="a00153.html" title="roboptim/core/quadratic&#45;function.hxx" alt="" coords="483,406,717,437"/><area shape="rect" id="node28" href="a00102.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="1437,326,1685,357"/><area shape="rect" id="node87" href="a00180.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="741,406,1032,437"/><area shape="rect" id="node35" href="a00113.html" title="roboptim/core/function.hh" alt="" coords="1592,406,1763,437"/><area shape="rect" id="node75" href="a00103.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="1107,406,1363,437"/><area shape="rect" id="node62" href="a00129.html" title="roboptim/core/indent.hh" alt="" coords="427,486,587,517"/><area shape="rect" id="node64" href="a00176.html" title="roboptim/core/sys.hh" alt="" coords="331,566,477,597"/><area shape="rect" id="node67" href="a00096.html" title="roboptim/core/debug.hh" alt="" coords="501,566,664,597"/><area shape="rect" id="node79" href="a00182.html" title="roboptim/core/util.hh" alt="" coords="611,486,752,517"/><area shape="rect" id="node84" href="a00183.html" title="roboptim/core/util.hxx" alt="" coords="863,566,1009,597"/></map>
 </div>
 </div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00040.html">roboptim::GenericConstantFunction&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant function.  <a href="a00040.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
 </table>
@@ -97,6 +101,6 @@ Namespaces</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00093.html">identity-function.cc</a>      </li>
+      <li class="navelem"><a class="el" href="a00093.html">constant.hh</a>      </li>
 </body>
 </html>

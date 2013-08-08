@@ -1,17 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node5" href="$a00096.html" title="roboptim/core/indent.hh" alt="" coords="2053,486,2213,517"/>
-<area shape="rect" id="node18" href="$a00105.html" title="roboptim/core/numeric&#45;quadratic&#45;function.hh" alt="" coords="1688,86,1968,117"/>
-<area shape="rect" id="node80" href="$a00136.html" title="roboptim/core/util.hh" alt="" coords="2237,486,2379,517"/>
-<area shape="rect" id="node7" href="$a00130.html" title="roboptim/core/sys.hh" alt="" coords="2171,566,2317,597"/>
-<area shape="rect" id="node11" href="$a00066.html" title="roboptim/core/debug.hh" alt="" coords="596,566,759,597"/>
-<area shape="rect" id="node9" href="$a00108.html" title="roboptim/core/portability.hh" alt="" coords="1799,646,1980,677"/>
-<area shape="rect" id="node22" href="$a00111.html" title="roboptim/core/quadratic&#45;function.hh" alt="" coords="1111,166,1340,197"/>
-<area shape="rect" id="node26" href="$a00083.html" title="roboptim/core/fwd.hh" alt="" coords="311,566,457,597"/>
-<area shape="rect" id="node29" href="$a00133.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="415,246,697,277"/>
-<area shape="rect" id="node93" href="$a00112.html" title="roboptim/core/quadratic&#45;function.hxx" alt="" coords="2043,406,2277,437"/>
-<area shape="rect" id="node39" href="$a00071.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="499,326,747,357"/>
-<area shape="rect" id="node88" href="$a00134.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="1677,406,1968,437"/>
-<area shape="rect" id="node46" href="$a00082.html" title="roboptim/core/function.hh" alt="" coords="964,406,1135,437"/>
-<area shape="rect" id="node76" href="$a00072.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="1397,406,1653,437"/>
-<area shape="rect" id="node85" href="$a00137.html" title="roboptim/core/util.hxx" alt="" coords="1949,566,2096,597"/>
+<area shape="rect" id="node3" href="$a00105.html" title="dummy&#45;laststate.cc" alt="" coords="5,86,141,117"/>
+<area shape="rect" id="node5" href="$a00107.html" title="dummy.cc" alt="" coords="165,86,248,117"/>
+<area shape="rect" id="node7" href="$a00116.html" title="generic&#45;solver.cc" alt="" coords="272,86,395,117"/>
+<area shape="rect" id="node9" href="$a00128.html" title="indent.cc" alt="" coords="419,86,493,117"/>
+<area shape="rect" id="node11" href="$a00154.html" title="result&#45;with&#45;warnings.cc" alt="" coords="517,86,672,117"/>
+<area shape="rect" id="node13" href="$a00156.html" title="result.cc" alt="" coords="696,86,765,117"/>
+<area shape="rect" id="node15" href="$a00163.html" title="solver&#45;error.cc" alt="" coords="789,86,896,117"/>
+<area shape="rect" id="node17" href="$a00167.html" title="solver&#45;warning.cc" alt="" coords="920,86,1045,117"/>
+<area shape="rect" id="node19" href="$a00169.html" title="solver.cc" alt="" coords="1069,86,1144,117"/>
+<area shape="rect" id="node21" href="$a00181.html" title="util.cc" alt="" coords="1168,86,1221,117"/>
 </map>

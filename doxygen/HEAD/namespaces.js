@@ -1,9 +1,10 @@
 var namespaces =
 [
-    [ "roboptim", "a00140.html", "a00140" ],
-    [ "roboptim::detail", "a00143.html", "a00143" ],
-    [ "roboptim::fg", "a00144.html", "a00144" ],
-    [ "roboptim::finiteDifferenceGradientPolicies", "a00145.html", "a00145" ],
-    [ "roboptim::visualization", "a00146.html", "a00146" ],
-    [ "roboptim::visualization::gnuplot", "a00147.html", "a00147" ]
+    [ "roboptim", "a00188.html", "a00188" ],
+    [ "roboptim::detail", "a00191.html", "a00191" ],
+    [ "roboptim::fg", "a00192.html", "a00192" ],
+    [ "roboptim::finiteDifferenceGradientPolicies", "a00193.html", "a00193" ],
+    [ "roboptim::visualization", "a00194.html", "a00194" ],
+    [ "roboptim::visualization::gnuplot", "a00195.html", "a00195" ],
+    [ "roboptim::visualization::gnuplot::detail", "a00196.html", "a00196" ]
 ];

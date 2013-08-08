@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>solver-error.hh File Reference</title>
+<title>gnuplot-commands.cc File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,48 +56,112 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Defines</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">solver-error.hh File Reference</div>  </div>
+<div class="title">gnuplot-commands.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00130.html">roboptim/core/sys.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00066.html">roboptim/core/debug.hh</a>&gt;</code><br/>
-<code>#include &lt;iostream&gt;</code><br/>
-<code>#include &lt;stdexcept&gt;</code><br/>
-<code>#include &lt;boost/optional.hpp&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00116.html">roboptim/core/result.hh</a>&gt;</code><br/>
+<div class="textblock"><code>#include &quot;roboptim/core/config.hh&quot;</code><br/>
+<code>#include &lt;boost/format.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00119.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for solver-error.hh:</div>
+Include dependency graph for gnuplot-commands.cc:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00249.png" border="0" usemap="#solver-error_8hh" alt=""/></div>
-<map name="solver-error_8hh" id="solver-error_8hh">
-<area shape="rect" id="node3" href="a00130.html" title="roboptim/core/sys.hh" alt="" coords="1840,326,1987,357"/><area shape="rect" id="node7" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="169,166,332,197"/><area shape="rect" id="node23" href="a00116.html" title="roboptim/core/result.hh" alt="" coords="1808,86,1965,117"/><area shape="rect" id="node5" href="a00108.html" title="roboptim/core/portability.hh" alt="" coords="1761,406,1943,437"/><area shape="rect" id="node11" href="a00096.html" title="roboptim/core/indent.hh" alt="" coords="5,246,165,277"/><area shape="rect" id="node30" href="a00082.html" title="roboptim/core/function.hh" alt="" coords="957,166,1128,197"/><area shape="rect" id="node57" href="a00083.html" title="roboptim/core/fwd.hh" alt="" coords="461,246,608,277"/></map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00250.png" border="0" usemap="#solver-error_8hhdep" alt=""/></div>
-<map name="solver-error_8hhdep" id="solver-error_8hhdep">
-<area shape="rect" id="node3" href="a00122.html" title="solver&#45;warning.hh" alt="" coords="456,86,581,117"/><area shape="rect" id="node7" href="a00086.html" title="generic&#45;solver.hh" alt="" coords="641,246,764,277"/><area shape="rect" id="node19" href="a00119.html" title="solver&#45;factory.hh" alt="" coords="472,406,589,437"/><area shape="rect" id="node21" href="a00065.html" title="core.hh" alt="" coords="545,486,612,517"/><area shape="rect" id="node40" href="a00117.html" title="solver&#45;error.cc" alt="" coords="928,86,1035,117"/><area shape="rect" id="node5" href="a00114.html" title="result&#45;with&#45;warnings.hh" alt="" coords="523,166,677,197"/><area shape="rect" id="node30" href="a00113.html" title="result&#45;with&#45;warnings.cc" alt="" coords="361,246,516,277"/><area shape="rect" id="node35" href="a00121.html" title="solver&#45;warning.cc" alt="" coords="373,166,499,197"/><area shape="rect" id="node9" href="a00124.html" title="solver.hh" alt="" coords="360,326,435,357"/><area shape="rect" id="node27" href="a00085.html" title="generic&#45;solver.cc" alt="" coords="629,326,752,357"/><area shape="rect" id="node11" href="a00075.html" title="dummy&#45;laststate.hh" alt="" coords="5,406,141,437"/><area shape="rect" id="node15" href="a00077.html" title="dummy.hh" alt="" coords="165,406,248,437"/><area shape="rect" id="node24" href="a00123.html" title="solver.cc" alt="" coords="323,406,397,437"/><area shape="rect" id="node13" href="a00074.html" title="dummy&#45;laststate.cc" alt="" coords="5,486,141,517"/><area shape="rect" id="node17" href="a00076.html" title="dummy.cc" alt="" coords="165,486,248,517"/></map>
+<div class="center"><img src="a00257.png" border="0" usemap="#gnuplot-commands_8cc" alt=""/></div>
+<map name="gnuplot-commands_8cc" id="gnuplot-commands_8cc">
+<area shape="rect" id="node7" href="a00119.html" title="roboptim/core/visualization/gnuplot&#45;commands.hh" alt="" coords="1355,86,1672,117"/><area shape="rect" id="node9" href="a00176.html" title="roboptim/core/sys.hh" alt="" coords="5,566,152,597"/><area shape="rect" id="node13" href="a00096.html" title="roboptim/core/debug.hh" alt="" coords="216,406,379,437"/><area shape="rect" id="node23" href="a00182.html" title="roboptim/core/util.hh" alt="" coords="1443,166,1584,197"/><area shape="rect" id="node11" href="a00147.html" title="roboptim/core/portability.hh" alt="" coords="1479,646,1660,677"/><area shape="rect" id="node17" href="a00129.html" title="roboptim/core/indent.hh" alt="" coords="57,486,217,517"/><area shape="rect" id="node25" href="a00114.html" title="roboptim/core/fwd.hh" alt="" coords="1767,486,1913,517"/><area shape="rect" id="node28" href="a00179.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="1491,246,1773,277"/><area shape="rect" id="node86" href="a00183.html" title="roboptim/core/util.hxx" alt="" coords="1320,246,1467,277"/><area shape="rect" id="node39" href="a00102.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="1308,326,1556,357"/><area shape="rect" id="node81" href="a00180.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="608,326,899,357"/><area shape="rect" id="node46" href="a00113.html" title="roboptim/core/function.hh" alt="" coords="1148,406,1319,437"/><area shape="rect" id="node76" href="a00103.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="405,406,661,437"/></map>
 </div>
 </div><table class="memberdecls">
-<tr><td colspan="2"><h2><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html">roboptim::SolverError</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Base exception class for solving errors.  <a href="a00056.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html">roboptim::visualization</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Graphic visualization. </p>
+<br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00195.html">roboptim::visualization::gnuplot</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p><a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> rendering. </p>
+<br/></td></tr>
+<tr><td colspan="2"><h2><a name="define-members"></a>
+Defines</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00118.html#abdaa2512aec3201d566ccbfc73fafc46">GNUPLOT_UNARY_COMMAND</a>(NAME)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00118.html#a44cffa7dc6979331d7660d604e7c8f48">GNUPLOT_STR_COMMAND</a>(NAME, ARG)</td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00108.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html#ae6c649aa8d935cb8c8fbe8307cfa2b1f">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const SolverError &amp;e)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle error display.  <a href="#ae6c649aa8d935cb8c8fbe8307cfa2b1f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00203.html#ga108c0cb6161fb8813817a7b7a1ac980d">roboptim::visualization::gnuplot::comment</a> (const char *)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> comment.  <a href="a00203.html#ga108c0cb6161fb8813817a7b7a1ac980d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00203.html#gad77630a233193748534b41d069d4e180">roboptim::visualization::gnuplot::set</a> (const char *var, const char *val=&quot;&quot;)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> set command.  <a href="a00203.html#gad77630a233193748534b41d069d4e180"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00203.html#ga2c2a188b2e89955eee09aa10b5426e43">roboptim::visualization::gnuplot::unset</a> (const char *var)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> unset command.  <a href="a00203.html#ga2c2a188b2e89955eee09aa10b5426e43"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00203.html#gaf90f5364d8c3597b8909ba99083fc23f">roboptim::visualization::gnuplot::show</a> (const char *var)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> show command.  <a href="a00203.html#gaf90f5364d8c3597b8909ba99083fc23f"></a><br/></td></tr>
 </table>
+<hr/><h2>Define Documentation</h2>
+<a class="anchor" id="a44cffa7dc6979331d7660d604e7c8f48"></a><!-- doxytag: member="gnuplot&#45;commands.cc::GNUPLOT_STR_COMMAND" ref="a44cffa7dc6979331d7660d604e7c8f48" args="(NAME, ARG)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00118.html#a44cffa7dc6979331d7660d604e7c8f48">GNUPLOT_STR_COMMAND</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ARG&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Value:</b><div class="fragment"><pre class="fragment">Command         \
+      NAME (<span class="keyword">const</span> <span class="keywordtype">char</span>* ARG) <span class="keywordflow">throw</span> ()   \
+      {           \
+  std::string command = #NAME;    \
+  if (*ARG != 0)        \
+    {         \
+      command += <span class="stringliteral">&quot; &#39;&quot;</span>;      \
+      command += ARG;     \
+      command += <span class="stringliteral">&quot;&#39;&quot;</span>;     \
+    }         \
+  return Command (command);   \
+      }
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="abdaa2512aec3201d566ccbfc73fafc46"></a><!-- doxytag: member="gnuplot&#45;commands.cc::GNUPLOT_UNARY_COMMAND" ref="abdaa2512aec3201d566ccbfc73fafc46" args="(NAME)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00118.html#abdaa2512aec3201d566ccbfc73fafc46">GNUPLOT_UNARY_COMMAND</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Value:</b><div class="fragment"><pre class="fragment">Command         \
+      NAME () throw ()        \
+      {           \
+  return Command (#NAME);     \
+      }
+</pre></div>
+</div>
+</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -116,6 +180,6 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00118.html">solver-error.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00118.html">gnuplot-commands.cc</a>      </li>
 </body>
 </html>

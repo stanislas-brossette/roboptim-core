@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Frequently Asked Questions (FAQ)</title>
+<title>visualization-gnuplot-function.cc</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -50,49 +50,127 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">Frequently Asked Questions (FAQ) </div>  </div>
+<div class="title">visualization-gnuplot-function.cc</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h2><a class="anchor" id="avl_solvers"></a>
-What solvers are currently available?</h2>
-<p>Supported solvers are available on seperated packages, please check <a href="http://www.roboptim.net/">the project webpage</a> of the supported solvers list.</p>
-<h2><a class="anchor" id="boost_optvar"></a>
-What are those Optional and Variant types?</h2>
-<p>An optional type is a templated class which modelize the possibility in C++ to have "no value" in a variable. It is safer than passing a null pointer as an exception will be launched if you try to dereference a variable which has no content.</p>
-<p>See the following example: </p>
-<div class="fragment"><pre class="fragment">   <span class="comment">// Declare an empty optional int.</span>
-   boost::optional&lt;int&gt; optInt;
+<p>Example shows function display with Gnuplot.</p>
+<div class="fragment"><pre class="fragment"><span class="comment">// Copyright (C) 2009 by Thomas Moulard, AIST, CNRS, INRIA.</span>
+<span class="comment">//</span>
+<span class="comment">// This file is part of the roboptim.</span>
+<span class="comment">//</span>
+<span class="comment">// roboptim is free software: you can redistribute it and/or modify</span>
+<span class="comment">// it under the terms of the GNU Lesser General Public License as published by</span>
+<span class="comment">// the Free Software Foundation, either version 3 of the License, or</span>
+<span class="comment">// (at your option) any later version.</span>
+<span class="comment">//</span>
+<span class="comment">// roboptim is distributed in the hope that it will be useful,</span>
+<span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="comment">// GNU Lesser General Public License for more details.</span>
+<span class="comment">//</span>
+<span class="comment">// You should have received a copy of the GNU Lesser General Public License</span>
+<span class="comment">// along with roboptim.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
 
-   <span class="comment">// There is nothing in our optional int.</span>
-   <span class="comment">// Check if this is really the case.</span>
-   <span class="keywordflow">if</span> (optInt)
-      assert (<span class="keyword">false</span>);
+<span class="preprocessor">#include &quot;shared-tests/fixture.hh&quot;</span>
 
-   <span class="comment">// Set a value in our optional int.</span>
-   optInt = 42;
+<span class="preprocessor">#include &lt;iostream&gt;</span>
 
-   <span class="comment">// Access our optional int.</span>
-   std::cout &lt;&lt; *optInt &lt;&lt; std::endl;
-</pre></div><p>A variant is an object-oriented way to define a C enum. Here is a small example:</p>
-<div class="fragment"><pre class="fragment">   <span class="comment">// x can be a string or an int.</span>
-   boost::variant&lt;int, std::string&gt; x;
+<span class="preprocessor">#include &lt;<a class="code" href="a00130.html">roboptim/core/io.hh</a>&gt;</span>
 
-   <span class="comment">// Set x to 42.</span>
-   x = 42;
+<span class="preprocessor">#include &lt;<a class="code" href="a00126.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00119.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00122.html">roboptim/core/visualization/gnuplot-function.hh</a>&gt;</span>
 
-   <span class="comment">// Which allows to determine what is the current type of x</span>
-   <span class="comment">// First type (int) is zero, second (string) is one, etc.</span>
-   assert (x.which () == 0);
+<span class="keyword">using namespace </span>roboptim;
+<span class="keyword">using namespace </span>roboptim::visualization;
 
-   <span class="comment">// Set x to &quot;hello world&quot;.</span>
-   x = <span class="stringliteral">&quot;hello world&quot;</span>;
 
-   <span class="comment">// Test again.</span>
-   assert (x.which () == 1);
-</pre></div><p>Please note that a variant can never be empty.</p>
-<p>See the <a href="http://www.boost.org/">Boost.Optional and Boost.Variant documentation</a> for more information. </p>
-</div></div><!-- contents -->
-</div>
+<span class="comment">// Define f(x) = x * x</span>
+<span class="keyword">struct </span>Square : <span class="keyword">public</span> <a name="_a0"></a><a class="code" href="a00043.html" title="Define an abstract mathematical function ( ).">Function</a>
+{
+  <span class="keyword">explicit</span> Square ()
+    : <a name="a1"></a><a class="code" href="a00188.html#a1864afd8c0c95cea8029da9b52352736" title="Dense function.">Function</a> (1, 1, <span class="stringliteral">&quot;x * x&quot;</span>)
+  {
+  }
+
+  <span class="keywordtype">void</span> impl_compute (result_t&amp; result,
+         <span class="keyword">const</span> argument_t&amp; argument) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
+  {
+    result[0] = argument[0] * argument[0];
+  }
+};
+
+<span class="comment">// Define a function that displays a circle.</span>
+<span class="keyword">struct </span>Circle : <span class="keyword">public</span> <a class="code" href="a00043.html" title="Define an abstract mathematical function ( ).">Function</a>
+{
+  <span class="keyword">explicit</span> Circle (<span class="keywordtype">double</span> r = 1.)
+    : <a class="code" href="a00043.html" title="Define an abstract mathematical function ( ).">Function</a> (1, 2, <span class="stringliteral">&quot;{sin (x) * r; cos (x) * r}&quot;</span>),
+      r_ (r)
+  {
+  }
+
+  <span class="keywordtype">void</span> impl_compute (result_t&amp; result,
+         <span class="keyword">const</span> argument_t&amp; argument) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
+  {
+    result[0] = sin (argument[0]) * r_;
+    result[1] = cos (argument[0]) * r_;
+  }
+
+  <span class="keywordtype">double</span> r_;
+};
+
+<span class="comment">// Define a function that displays a cubic and a quartic monomial.</span>
+<span class="keyword">struct </span>Poly : <span class="keyword">public</span> <a class="code" href="a00043.html" title="Define an abstract mathematical function ( ).">Function</a>
+{
+  <span class="keyword">explicit</span> Poly ()
+    : <a class="code" href="a00043.html" title="Define an abstract mathematical function ( ).">Function</a> (1, 2, <span class="stringliteral">&quot;{x^3; x^4}&quot;</span>)
+  {
+  }
+
+  <span class="keywordtype">void</span> impl_compute (result_t&amp; result,
+                     <span class="keyword">const</span> argument_t&amp; argument) <span class="keyword">const</span> <span class="keywordflow">throw</span> ()
+  {
+    result[0] = argument[0] * argument[0] * argument[0];
+    result[1] = result[0] * argument[0];
+  }
+};
+
+BOOST_FIXTURE_TEST_SUITE (core, TestSuiteConfiguration)
+
+BOOST_AUTO_TEST_CASE (visualization_gnuplot_function)
+{
+  boost::shared_ptr&lt;boost::test_tools::output_test_stream&gt;
+    output = retrievePattern (<span class="stringliteral">&quot;visualization-gnuplot-function&quot;</span>);
+
+  <span class="keyword">using namespace </span>roboptim::visualization::gnuplot;
+  <a name="_a2"></a><a class="code" href="a00054.html" title="Gnuplot script.">Gnuplot</a> gnuplot = Gnuplot::make_interactive_gnuplot ();
+
+  Square square;
+  <a class="code" href="a00203.html#ga1c2bbde67ed2275a6def58e1cea970f3" title="Import discrete interval type from function.">discreteInterval_t</a> intervalS (-10., 10., 0.01);
+
+  Circle circle;
+  <a class="code" href="a00203.html#ga1c2bbde67ed2275a6def58e1cea970f3" title="Import discrete interval type from function.">discreteInterval_t</a> intervalC (0., 2 * M_PI, 0.01);
+
+  Poly poly;
+  <a class="code" href="a00203.html#ga1c2bbde67ed2275a6def58e1cea970f3" title="Import discrete interval type from function.">discreteInterval_t</a> intervalP (-1., 1., 0.01);
+
+  (*output)
+    &lt;&lt; (gnuplot
+  &lt;&lt; <a name="a3"></a><a class="code" href="a00203.html#ga108c0cb6161fb8813817a7b7a1ac980d" title="Make a Gnuplot comment.">comment</a> (<span class="stringliteral">&quot;Hello, world (complex)!&quot;</span>)
+        &lt;&lt; <span class="keyword">set</span> (<span class="stringliteral">&quot;multiplot layout 3,1&quot;</span>)
+  &lt;&lt; <a name="a4"></a><a class="code" href="a00203.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (square, intervalS)
+  &lt;&lt; <a name="a5"></a><a class="code" href="a00203.html#ga0dba01288d4436dfa417d3dfd5520c27" title="Plot a 2D function with Gnuplot.">plot_xy</a> (circle, intervalC)
+        &lt;&lt; <a class="code" href="a00203.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (poly, intervalP)
+  &lt;&lt; <a name="a6"></a><a class="code" href="a00203.html#ga2c2a188b2e89955eee09aa10b5426e43" title="Make a Gnuplot unset command.">unset</a> (<span class="stringliteral">&quot;multiplot&quot;</span>)
+  );
+
+  std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;
+  BOOST_CHECK (output-&gt;match_pattern ());
+}
+
+BOOST_AUTO_TEST_SUITE_END ()
+</pre></div> </div><!-- contents -->
+</div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -107,8 +185,8 @@ What are those Optional and Variant types?</h2>
 </iframe>
 </div>
 
+</div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="index.html">User manual</a>      </li>
 </body>
 </html>

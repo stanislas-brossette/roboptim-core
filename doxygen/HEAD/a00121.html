@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>solver-warning.cc File Reference</title>
+<title>gnuplot-differentiable-function.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,26 +56,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">solver-warning.cc File Reference</div>  </div>
+<div class="title">gnuplot-differentiable-function.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;debug.hh&quot;</code><br/>
-<code>#include &quot;<a class="el" href="a00122.html">roboptim/core/solver-warning.hh</a>&quot;</code><br/>
+<div class="textblock"><code>#include &lt;boost/mpl/assert.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00176.html">roboptim/core/sys.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00096.html">roboptim/core/debug.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00113.html">roboptim/core/function.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00102.html">roboptim/core/differentiable-function.hh</a>&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for solver-warning.cc:</div>
+Include dependency graph for gnuplot-differentiable-function.hh:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00255.png" border="0" usemap="#solver-warning_8cc" alt=""/></div>
-<map name="solver-warning_8cc" id="solver-warning_8cc">
-<area shape="rect" id="node5" href="a00122.html" title="roboptim/core/solver&#45;warning.hh" alt="" coords="1264,86,1474,117"/><area shape="rect" id="node7" href="a00130.html" title="roboptim/core/sys.hh" alt="" coords="1720,486,1866,517"/><area shape="rect" id="node11" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="1770,326,1933,357"/><area shape="rect" id="node21" href="a00118.html" title="roboptim/core/solver&#45;error.hh" alt="" coords="1406,166,1601,197"/><area shape="rect" id="node9" href="a00108.html" title="roboptim/core/portability.hh" alt="" coords="1646,566,1828,597"/><area shape="rect" id="node15" href="a00096.html" title="roboptim/core/indent.hh" alt="" coords="1917,406,2077,437"/><area shape="rect" id="node31" href="a00116.html" title="roboptim/core/result.hh" alt="" coords="1021,246,1178,277"/><area shape="rect" id="node38" href="a00082.html" title="roboptim/core/function.hh" alt="" coords="976,326,1146,357"/><area shape="rect" id="node65" href="a00083.html" title="roboptim/core/fwd.hh" alt="" coords="1320,406,1466,437"/></map>
+<div class="center"><img src="a00261.png" border="0" usemap="#gnuplot-differentiable-function_8hh" alt=""/></div>
+<map name="gnuplot-differentiable-function_8hh" id="gnuplot-differentiable-function_8hh">
+<area shape="rect" id="node5" href="a00176.html" title="roboptim/core/sys.hh" alt="" coords="191,566,337,597"/><area shape="rect" id="node9" href="a00096.html" title="roboptim/core/debug.hh" alt="" coords="224,326,387,357"/><area shape="rect" id="node19" href="a00113.html" title="roboptim/core/function.hh" alt="" coords="1611,326,1781,357"/><area shape="rect" id="node52" href="a00102.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="1081,86,1329,117"/><area shape="rect" id="node7" href="a00147.html" title="roboptim/core/portability.hh" alt="" coords="971,646,1152,677"/><area shape="rect" id="node13" href="a00129.html" title="roboptim/core/indent.hh" alt="" coords="248,486,408,517"/><area shape="rect" id="node48" href="a00114.html" title="roboptim/core/fwd.hh" alt="" coords="563,406,709,437"/><area shape="rect" id="node61" href="a00103.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="663,166,919,197"/><area shape="rect" id="node65" href="a00182.html" title="roboptim/core/util.hh" alt="" coords="692,246,833,277"/><area shape="rect" id="node69" href="a00179.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="715,326,997,357"/><area shape="rect" id="node83" href="a00183.html" title="roboptim/core/util.hxx" alt="" coords="1021,326,1168,357"/><area shape="rect" id="node78" href="a00180.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="733,406,1024,437"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00262.png" border="0" usemap="#gnuplot-differentiable-function_8hhdep" alt=""/></div>
+<map name="gnuplot-differentiable-function_8hhdep" id="gnuplot-differentiable-function_8hhdep">
+<area shape="rect" id="node3" href="a00120.html" title="gnuplot&#45;differentiable&#45;function.cc" alt="" coords="5,86,216,117"/></map>
 </div>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html">roboptim::visualization</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Graphic visualization. </p>
+<br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00195.html">roboptim::visualization::gnuplot</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p><a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> rendering. </p>
+<br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">Command&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00203.html#ga892fef0581371b322b075135b9348f74">roboptim::visualization::gnuplot::plot_jac</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;f, const typename GenericDifferentiableFunction&lt; T &gt;::argument_t &amp;arg)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the Jacobian structure with <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a>.  <a href="a00203.html#ga892fef0581371b322b075135b9348f74"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00203.html#ga8697553b2bd7673bec00d45090969a6b">roboptim::visualization::gnuplot::plot_jac</a> (const DifferentiableFunction &amp;f, const DifferentiableFunction::argument_t &amp;arg)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00203.html#ga2d65957a63de6ff08e9a338b519ac320">roboptim::visualization::gnuplot::plot_jac</a> (const DifferentiableSparseFunction &amp;f, const DifferentiableSparseFunction::argument_t &amp;arg)</td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -95,6 +121,6 @@ Namespaces</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00121.html">solver-warning.cc</a>      </li>
+      <li class="navelem"><a class="el" href="a00121.html">gnuplot-differentiable-function.hh</a>      </li>
 </body>
 </html>

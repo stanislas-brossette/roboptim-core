@@ -1,13 +1,16 @@
 var a00084 =
 [
-    [ "DifferentiableFunction", "a00141.html#a1fe6728680de2e1a17e250717269fe22", null ],
-    [ "DifferentiableSparseFunction", "a00141.html#a7e31c0c139e1f6949efdda2c8925bf0a", null ],
-    [ "Function", "a00141.html#a1864afd8c0c95cea8029da9b52352736", null ],
-    [ "LinearFunction", "a00141.html#abbf3e635a932ae99934936a092aec72c", null ],
-    [ "LinearSparseFunction", "a00141.html#aa8f5a3e6e11dab0777930cd974dc9416", null ],
-    [ "QuadraticFunction", "a00141.html#ab03c6ad564de263af42983892cab684a", null ],
-    [ "QuadraticSparseFunction", "a00141.html#a8a37fb59bc67c514268e4ae99c80567d", null ],
-    [ "SparseFunction", "a00141.html#a0036230886e32e7043e29e0f14682637", null ],
-    [ "TwiceDifferentiableFunction", "a00141.html#a664a3377f606592dfc57f9525c9afa37", null ],
-    [ "TwiceDifferentiableSparseFunction", "a00141.html#a18d2ef51eb9bfce27cb92b82a684bf56", null ]
+    [ "argument_t", "a00084.html#a3f7a09b808c2ef23c40a4514a42ab895", null ],
+    [ "gradient_t", "a00084.html#adc4a248471b293b814af28bd25c32a21", null ],
+    [ "jacobian_t", "a00084.html#acfa2c60df910f755669e8fb4d9ba548c", null ],
+    [ "jacobianSize_t", "a00084.html#ab915dd9b93d5fa252883116d9664ea78", null ],
+    [ "parent_t", "a00084.html#ac8169a737d3f6b14a97ea1e6776e723b", null ],
+    [ "size_t", "a00084.html#a26106b8e1b25b7f93121fe1131513b1e", null ],
+    [ "value_t", "a00084.html#a3800eb14f7c82681bfcdb2482bde8d41", null ],
+    [ "SumOfC1Squares", "a00084.html#af76aa1512b18e03a22c0650ac301a7a0", null ],
+    [ "SumOfC1Squares", "a00084.html#a2a4d4ed6b85b7da5a588bc25a0fdc688", null ],
+    [ "~SumOfC1Squares", "a00084.html#a3bab916cc166845d02003578952fea10", null ],
+    [ "baseFunction", "a00084.html#ab5ba76bee2c2ae6ef0f7468e76c9cdbe", null ],
+    [ "impl_compute", "a00084.html#aacfe9e3375a212e91bc16690ba33e2e8", null ],
+    [ "impl_gradient", "a00084.html#a4e1bf6ef6728774f1359fcc825a0a431", null ]
 ];

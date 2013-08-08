@@ -1,11 +1,10 @@
 var a00030 =
 [
-    [ "GenericFiniteDifferenceGradient", "a00030.html#ade644f357e04020a3fb84207994f745b", null ],
-    [ "~GenericFiniteDifferenceGradient", "a00030.html#a52f35b313494e42eba9b96264ac4ab2f", null ],
-    [ "impl_compute", "a00030.html#a231a563eba65eb75c9695ccc337860c5", null ],
-    [ "impl_gradient", "a00030.html#ac9607a594f0a17201fe7149c28185a1c", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00030.html#a583e5aeb130b6c46b7d12fe0f65c717f", null ],
-    [ "adaptee_", "a00030.html#aad6048bf897c560c6a0e03ce355413d1", null ],
-    [ "epsilon_", "a00030.html#a351983c229ac4c9cd42cdeb7ad0aebda", null ],
-    [ "xEps_", "a00030.html#a5c3139b3bfa459c225a2e77058259cb1", null ]
+    [ "DerivativeShPtr_t", "a00030.html#ac31bb4fcfc3f627982f26d53329d18e4", null ],
+    [ "Derivative", "a00030.html#a8c77526d5667849224840b254fd9a2f9", null ],
+    [ "~Derivative", "a00030.html#ae9bbb544ebacd592160d3753e4dde603", null ],
+    [ "impl_compute", "a00030.html#a188587d64e1b4761f7bcc50d8152ae1d", null ],
+    [ "origin", "a00030.html#a2d8a0a49a99ccd4a4140b96e12195d9c", null ],
+    [ "origin", "a00030.html#aaf51f143b5c6881e69b99fb9e481b63c", null ],
+    [ "ROBOPTIM_FUNCTION_FWD_TYPEDEFS_", "a00030.html#af5aa6c2ecd1b2052a0b6ad75ae681f35", null ]
 ];

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>gnuplot.cc File Reference</title>
+<title>concatenate.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,38 +56,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">gnuplot.cc File Reference</div>  </div>
+<div class="title">concatenate.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;roboptim/core/config.hh&quot;</code><br/>
-<code>#include &quot;config.h&quot;</code><br/>
-<code>#include &lt;iostream&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00092.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00088.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00096.html">roboptim/core/indent.hh</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;boost/shared_ptr.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00086.html">roboptim/core/detail/autopromote.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00102.html">roboptim/core/differentiable-function.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00092.html">roboptim/core/filter/concatenate.hxx</a>&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for gnuplot.cc:</div>
+Include dependency graph for concatenate.hh:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00205.png" border="0" usemap="#gnuplot_8cc" alt=""/></div>
-<map name="gnuplot_8cc" id="gnuplot_8cc">
-<area shape="rect" id="node9" href="a00092.html" title="roboptim/core/visualization/gnuplot.hh" alt="" coords="1037,86,1283,117"/><area shape="rect" id="node19" href="a00096.html" title="roboptim/core/indent.hh" alt="" coords="1943,326,2103,357"/><area shape="rect" id="node64" href="a00088.html" title="roboptim/core/visualization/gnuplot&#45;commands.hh" alt="" coords="1769,166,2087,197"/><area shape="rect" id="node11" href="a00130.html" title="roboptim/core/sys.hh" alt="" coords="2233,406,2380,437"/><area shape="rect" id="node15" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="2107,246,2269,277"/><area shape="rect" id="node25" href="a00082.html" title="roboptim/core/function.hh" alt="" coords="1075,166,1245,197"/><area shape="rect" id="node60" href="a00084.html" title="roboptim/core/visualization/fwd.hh" alt="" coords="2111,166,2335,197"/><area shape="rect" id="node13" href="a00108.html" title="roboptim/core/portability.hh" alt="" coords="1445,486,1627,517"/><area shape="rect" id="node53" href="a00083.html" title="roboptim/core/fwd.hh" alt="" coords="976,246,1123,277"/></map>
+<div class="center"><img src="a00218.png" border="0" usemap="#concatenate_8hh" alt=""/></div>
+<map name="concatenate_8hh" id="concatenate_8hh">
+<area shape="rect" id="node7" href="a00086.html" title="roboptim/core/detail/autopromote.hh" alt="" coords="499,86,736,117"/><area shape="rect" id="node13" href="a00102.html" title="roboptim/core/differentiable&#45;function.hh" alt="" coords="952,86,1200,117"/><area shape="rect" id="node89" href="a00092.html" title="roboptim/core/filter/concatenate.hxx" alt="" coords="2444,86,2679,117"/><area shape="rect" id="node11" href="a00114.html" title="roboptim/core/fwd.hh" alt="" coords="552,406,699,437"/><area shape="rect" id="node24" href="a00113.html" title="roboptim/core/function.hh" alt="" coords="1281,326,1452,357"/><area shape="rect" id="node54" href="a00147.html" title="roboptim/core/portability.hh" alt="" coords="645,646,827,677"/><area shape="rect" id="node64" href="a00103.html" title="roboptim/core/differentiable&#45;function.hxx" alt="" coords="268,166,524,197"/><area shape="rect" id="node50" href="a00129.html" title="roboptim/core/indent.hh" alt="" coords="72,486,232,517"/><area shape="rect" id="node52" href="a00176.html" title="roboptim/core/sys.hh" alt="" coords="5,566,152,597"/><area shape="rect" id="node56" href="a00096.html" title="roboptim/core/debug.hh" alt="" coords="261,566,424,597"/><area shape="rect" id="node68" href="a00182.html" title="roboptim/core/util.hh" alt="" coords="325,246,467,277"/><area shape="rect" id="node72" href="a00179.html" title="roboptim/core/twice&#45;differentiable&#45;function.hh" alt="" coords="705,326,988,357"/><area shape="rect" id="node86" href="a00183.html" title="roboptim/core/util.hxx" alt="" coords="433,326,580,357"/><area shape="rect" id="node81" href="a00180.html" title="roboptim/core/twice&#45;differentiable&#45;function.hxx" alt="" coords="187,406,477,437"/></map>
 </div>
 </div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html">roboptim::Concatenate&lt; U &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00027.html" title="Concatenate several functions output.">Concatenate</a> several functions output.  <a href="a00027.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
-<br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html">roboptim::visualization</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Graphic visualization. </p>
 <br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00108.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00146.html#a45951c8d967c172f9f8213900b3d7884">roboptim::visualization::operator&lt;&lt;</a> (std::ostream &amp;, const Gnuplot &amp;gp)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle <a class="el" href="a00040.html" title="Gnuplot script.">Gnuplot</a> script display.  <a href="#a45951c8d967c172f9f8213900b3d7884"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename U , typename V &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Concatenate<br class="typebreak"/>
+&lt; typename <br class="typebreak"/>
+detail::PromoteTrait&lt; U, V &gt;<br class="typebreak"/>
+::T_promote &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00188.html#ab96495c02bce2fe1e2ad1e08770f4dcc">roboptim::concatenate</a> (boost::shared_ptr&lt; U &gt; left, boost::shared_ptr&lt; V &gt; right)</td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -107,6 +111,6 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00091.html">gnuplot.cc</a>      </li>
+      <li class="navelem"><a class="el" href="a00091.html">concatenate.hh</a>      </li>
 </body>
 </html>

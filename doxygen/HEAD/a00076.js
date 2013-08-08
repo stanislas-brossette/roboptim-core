@@ -1,7 +1,13 @@
 var a00076 =
 [
-    [ "solver_t", "a00076.html#a926347d1adaf0ea2a6a2a50bc50a209e", null ],
-    [ "create", "a00076.html#a0a575b89f014bf2e20cb9ab341d88393", null ],
-    [ "destroy", "a00076.html#af992438f02837bfe836ba0a937747829", null ],
-    [ "getSizeOfProblem", "a00076.html#a4ddee346c9488925f266b831b229d18a", null ]
+    [ "parentType_t", "a00076.html#a6802dfd6761714f83c4dbbe5f9bcef19", null ],
+    [ "SelectionShPtr_t", "a00076.html#a5cf29c8b2e9a95cf3553d7f21bb1ee83", null ],
+    [ "Selection", "a00076.html#a0dddb1c4cdb30e96e2ca952a63d49831", null ],
+    [ "~Selection", "a00076.html#a2f5c18b892a2c6e4d6d1f30561334d4e", null ],
+    [ "impl_compute", "a00076.html#a36ebb4a5335d3265e7678344aaacfcb7", null ],
+    [ "impl_gradient", "a00076.html#ae8b19b2db91de830c6d7d5081fb7c6bf", null ],
+    [ "impl_jacobian", "a00076.html#ae1860cce95830c0ed620aa241e891a24", null ],
+    [ "origin", "a00076.html#a5e3e5098b2fe6dd32b773d06ba3de648", null ],
+    [ "origin", "a00076.html#a0cbd7cc3ecf575d338b16306ea1b4646", null ],
+    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00076.html#a224033bde371676be065a7c89fba3d77", null ]
 ];

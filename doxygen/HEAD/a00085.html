@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>generic-solver.cc File Reference</title>
+<title>roboptim::VectorInterpolation&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -13,8 +13,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -36,8 +36,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -56,36 +58,278 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">generic-solver.cc File Reference</div>  </div>
+<div class="title">roboptim::VectorInterpolation&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;debug.hh&quot;</code><br/>
-<code>#include &lt;cassert&gt;</code><br/>
-<code>#include &lt;log4cxx/logger.h&gt;</code><br/>
-<code>#include &quot;<a class="el" href="a00086.html">roboptim/core/generic-solver.hh</a>&quot;</code><br/>
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for generic-solver.cc:</div>
+<!-- doxytag: class="roboptim::VectorInterpolation" --><!-- doxytag: inherits="roboptim::GenericDifferentiableFunction" -->
+<p>Takes a vector or argument and differentiate it.  
+ <a href="a00085.html#details">More...</a></p>
+
+<p><code>#include &lt;roboptim/core/filter/vector-interpolation.hh&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for roboptim::VectorInterpolation&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00196.png" border="0" usemap="#generic-solver_8cc" alt=""/></div>
-<map name="generic-solver_8cc" id="generic-solver_8cc">
-<area shape="rect" id="node9" href="a00086.html" title="roboptim/core/generic&#45;solver.hh" alt="" coords="2101,86,2312,117"/><area shape="rect" id="node11" href="a00130.html" title="roboptim/core/sys.hh" alt="" coords="2089,646,2236,677"/><area shape="rect" id="node15" href="a00066.html" title="roboptim/core/debug.hh" alt="" coords="2251,486,2413,517"/><area shape="rect" id="node33" href="a00083.html" title="roboptim/core/fwd.hh" alt="" coords="33,566,180,597"/><area shape="rect" id="node35" href="a00109.html" title="roboptim/core/problem.hh" alt="" coords="857,246,1031,277"/><area shape="rect" id="node113" href="a00116.html" title="roboptim/core/result.hh" alt="" coords="2120,406,2277,437"/><area shape="rect" id="node120" href="a00114.html" title="roboptim/core/result&#45;with&#45;warnings.hh" alt="" coords="2341,166,2581,197"/><area shape="rect" id="node127" href="a00122.html" title="roboptim/core/solver&#45;warning.hh" alt="" coords="2219,246,2429,277"/><area shape="rect" id="node131" href="a00118.html" title="roboptim/core/solver&#45;error.hh" alt="" coords="1899,326,2093,357"/><area shape="rect" id="node13" href="a00108.html" title="roboptim/core/portability.hh" alt="" coords="921,726,1103,757"/><area shape="rect" id="node18" href="a00096.html" title="roboptim/core/indent.hh" alt="" coords="1915,566,2075,597"/><area shape="rect" id="node58" href="a00082.html" title="roboptim/core/function.hh" alt="" coords="856,486,1027,517"/><area shape="rect" id="node89" href="a00110.html" title="roboptim/core/problem.hxx" alt="" coords="1445,326,1624,357"/><area shape="rect" id="node103" href="a00131.html" title="roboptim/core/terminal&#45;color.hh" alt="" coords="1429,406,1635,437"/><area shape="rect" id="node109" href="a00136.html" title="roboptim/core/util.hh" alt="" coords="180,486,321,517"/></map>
-</div>
-</div><table class="memberdecls">
-<tr><td colspan="2"><h2><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html">roboptim</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
-<br/></td></tr>
-<tr><td colspan="2"><h2><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00108.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html#af9168236068ddff8b8df413c430212e8">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const GenericSolver &amp;gs)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle solver display.  <a href="#af9168236068ddff8b8df413c430212e8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00108.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00140.html#a41ae14a82f5a36b0a5d17c3b4455a922">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const NoSolution &amp;ns)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to display ``no solution'' objects.  <a href="#a41ae14a82f5a36b0a5d17c3b4455a922"></a><br/></td></tr>
+<div class="center"><img src="a00394.png" border="0" usemap="#roboptim_1_1_vector_interpolation_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="roboptim_1_1_vector_interpolation_3_01_t_01_4_inherit__map" id="roboptim_1_1_vector_interpolation_3_01_t_01_4_inherit__map">
+<area shape="rect" id="node2" href="a00041.html" title="Define an abstract derivable function ( )." alt="" coords="5,86,296,117"/><area shape="rect" id="node4" href="a00043.html" title="Define an abstract mathematical function ( )." alt="" coords="45,6,256,37"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for roboptim::VectorInterpolation&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00395.png" border="0" usemap="#roboptim_1_1_vector_interpolation_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="roboptim_1_1_vector_interpolation_3_01_t_01_4_coll__map" id="roboptim_1_1_vector_interpolation_3_01_t_01_4_coll__map">
+<area shape="rect" id="node2" href="a00041.html" title="Define an abstract derivable function ( )." alt="" coords="5,86,296,117"/><area shape="rect" id="node4" href="a00043.html" title="Define an abstract mathematical function ( )." alt="" coords="45,6,256,37"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+
+<p><a href="a00396.html">List of all members.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="a00085.html">VectorInterpolation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a93e2e8bd462686fe4b29891ae779e9a6">VectorInterpolationShPtr_t</a></td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#abe0c00f18e9a52a817580fe4dd792117">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00041.html">GenericDifferentiableFunction</a>&lt; T &gt;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#ab960030f248f493c940a382bd7a4558f">VectorInterpolation</a> (const <a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">vector_t</a> &amp;x, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">outputSize</a>)  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a3d1fe193000a4055ec76b7d50f78b43a">~VectorInterpolation</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a8174827edfa589b0dd43d0422129dc99">impl_compute</a> (<a class="el" href="a00043.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;result, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;x) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function evaluation.  <a href="#a8174827edfa589b0dd43d0422129dc99"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a0babb4ec80bad140606ba075a1a16050">impl_gradient</a> (<a class="el" href="a00041.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;<a class="el" href="a00041.html#a0d0772c3e1ea6ff70c2909ceaf776169">gradient</a>, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;argument, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> functionId=0) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient evaluation.  <a href="#a0babb4ec80bad140606ba075a1a16050"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#ab03109c3d7103bd752be1b5fd01c0d4f">impl_jacobian</a> (<a class="el" href="a00041.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;<a class="el" href="a00041.html#a18879d9ec115089c02e685a020a11c4d">jacobian</a>, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;arg) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Jacobian evaluation.  <a href="#ab03109c3d7103bd752be1b5fd01c0d4f"></a><br/></td></tr>
 </table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+class roboptim::VectorInterpolation&lt; T &gt;</h3>
+
+<p>Takes a vector or argument and differentiate it. </p>
+<p>It is common to have an optimization vector where a pattern is repeated:</p>
+<p>[x_0^0 ... x_N^0 ... x_0^M x_N^M]</p>
+<p>The pattern is here of length N and repeated M times.</p>
+<p>By using numerical interpolation, it is possible to differentiate this pattern.</p>
+<p>A classical example are trajectories. </p>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="a93e2e8bd462686fe4b29891ae779e9a6"></a><!-- doxytag: member="roboptim::VectorInterpolation::VectorInterpolationShPtr_t" ref="a93e2e8bd462686fe4b29891ae779e9a6" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="a00085.html">VectorInterpolation</a>&gt; <a class="el" href="a00085.html">roboptim::VectorInterpolation</a>&lt; T &gt;::<a class="el" href="a00085.html#a93e2e8bd462686fe4b29891ae779e9a6">VectorInterpolationShPtr_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ab960030f248f493c940a382bd7a4558f"></a><!-- doxytag: member="roboptim::VectorInterpolation::VectorInterpolation" ref="ab960030f248f493c940a382bd7a4558f" args="(const vector_t &amp;x, size_type outputSize)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00085.html">roboptim::VectorInterpolation</a>&lt; T &gt;::<a class="el" href="a00085.html">VectorInterpolation</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">vector_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>outputSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw ()<code> [explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3d1fe193000a4055ec76b7d50f78b43a"></a><!-- doxytag: member="roboptim::VectorInterpolation::~VectorInterpolation" ref="a3d1fe193000a4055ec76b7d50f78b43a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00085.html">roboptim::VectorInterpolation</a>&lt; T &gt;::~<a class="el" href="a00085.html">VectorInterpolation</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a8174827edfa589b0dd43d0422129dc99"></a><!-- doxytag: member="roboptim::VectorInterpolation::impl_compute" ref="a8174827edfa589b0dd43d0422129dc99" args="(result_t &amp;result, const argument_t &amp;x) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00085.html">roboptim::VectorInterpolation</a>&lt; T &gt;::<a class="el" href="a00085.html#a8174827edfa589b0dd43d0422129dc99">impl_compute</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00043.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Function evaluation. </p>
+<p>Evaluate the function, has to be implemented in concrete classes. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a58f0bde147e54bbeb8df944ef194f9ae" title="Evaluate the function at a specified point.">operator()(result_t&amp;, const argument_t&amp;) const </a>throw () instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>result will be stored in this vector </td></tr>
+    <tr><td class="paramname">argument</td><td>point at which the function will be evaluated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="a00043.html#a19fb6005aabfae3862429de2c736ab6e">roboptim::GenericFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0babb4ec80bad140606ba075a1a16050"></a><!-- doxytag: member="roboptim::VectorInterpolation::impl_gradient" ref="a0babb4ec80bad140606ba075a1a16050" args="(gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00085.html">roboptim::VectorInterpolation</a>&lt; T &gt;::<a class="el" href="a00085.html#a0babb4ec80bad140606ba075a1a16050">impl_gradient</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00041.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gradient evaluation. </p>
+<p>Compute the gradient, has to be implemented in concrete classes. The gradient is computed for a specific sub-function which id is passed through the functionId argument. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00041.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gradient</td><td>gradient will be store in this argument </td></tr>
+    <tr><td class="paramname">argument</td><td>point where the gradient will be computed </td></tr>
+    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="a00041.html#a84657c4eb2f67ea3bbaf49462f54fb68">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab03109c3d7103bd752be1b5fd01c0d4f"></a><!-- doxytag: member="roboptim::VectorInterpolation::impl_jacobian" ref="ab03109c3d7103bd752be1b5fd01c0d4f" args="(jacobian_t &amp;jacobian, const argument_t &amp;arg) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00085.html">roboptim::VectorInterpolation</a>&lt; T &gt;::<a class="el" href="a00085.html#ab03109c3d7103bd752be1b5fd01c0d4f">impl_jacobian</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00041.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>jacobian</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Jacobian evaluation. </p>
+<p>Computes the jacobian, can be overridden by concrete classes. The default behavior is to compute the jacobian from the gradient. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00041.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jacobian</td><td>jacobian will be store in this argument </td></tr>
+    <tr><td class="paramname">arg</td><td>point where the jacobian will be computed </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ROBOPTIM_DO_NOT_CHECK_ALLOCATION </p>
+
+<p>Reimplemented from <a class="el" href="a00041.html#a5aa21359d6844bc4c21280cbd1155d22">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe0c00f18e9a52a817580fe4dd792117"></a><!-- doxytag: member="roboptim::VectorInterpolation::ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="abe0c00f18e9a52a817580fe4dd792117" args="(GenericDifferentiableFunction&lt; T &gt;)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00085.html">roboptim::VectorInterpolation</a>&lt; T &gt;::<a class="el" href="a00085.html#abe0c00f18e9a52a817580fe4dd792117">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00041.html">GenericDifferentiableFunction</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -104,6 +348,7 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00085.html">generic-solver.cc</a>      </li>
+      <li class="navelem"><a class="el" href="a00188.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00085.html">VectorInterpolation</a>      </li>
 </body>
 </html>

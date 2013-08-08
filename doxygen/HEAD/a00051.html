@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt; Class Template Reference</title>
+<title>roboptim::GenericQuadraticFunction&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -59,64 +59,168 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt; Class Template Reference<div class="ingroups"><a class="el" href="a00152.html">Optimization problems</a></div></div>  </div>
+<div class="title">roboptim::GenericQuadraticFunction&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="a00198.html">Mathematical abstract functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt;" -->
-<p><code>#include &lt;roboptim/core/problem.hh&gt;</code></p>
+<!-- doxytag: class="roboptim::GenericQuadraticFunction" --><!-- doxytag: inherits="roboptim::GenericTwiceDifferentiableFunction" -->
+<p>Define an abstract quadratic function.  
+ <a href="a00051.html#details">More...</a></p>
 
-<p><a href="a00340.html">List of all members.</a></p>
+<p><code>#include &lt;roboptim/core/quadratic-function.hh&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for roboptim::GenericQuadraticFunction&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00451.png" border="0" usemap="#roboptim_1_1_generic_quadratic_function_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="roboptim_1_1_generic_quadratic_function_3_01_t_01_4_inherit__map" id="roboptim_1_1_generic_quadratic_function_3_01_t_01_4_inherit__map">
+<area shape="rect" id="node9" href="a00048.html" title="Define an abstract linear function." alt="" coords="1337,58,1585,89"/><area shape="rect" id="node17" href="a00050.html" title="Build a quadratic function from a matrix and a vector." alt="" coords="1303,111,1620,142"/><area shape="rect" id="node2" href="a00053.html" title="Define an abstract function which is derivable twice ( )." alt="" coords="605,85,933,115"/><area shape="rect" id="node4" href="a00041.html" title="Define an abstract derivable function ( )." alt="" coords="267,85,557,115"/><area shape="rect" id="node6" href="a00043.html" title="Define an abstract mathematical function ( )." alt="" coords="7,85,217,115"/><area shape="rect" id="node11" href="a00040.html" title="Constant function." alt="" coords="1687,5,1951,35"/><area shape="rect" id="node13" href="a00047.html" title="Identity function." alt="" coords="1692,58,1945,89"/><area shape="rect" id="node15" href="a00049.html" title="Build a linear function from a vector and a matrix." alt="" coords="1669,111,1968,142"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for roboptim::GenericQuadraticFunction&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00452.png" border="0" usemap="#roboptim_1_1_generic_quadratic_function_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="roboptim_1_1_generic_quadratic_function_3_01_t_01_4_coll__map" id="roboptim_1_1_generic_quadratic_function_3_01_t_01_4_coll__map">
+<area shape="rect" id="node2" href="a00053.html" title="Define an abstract function which is derivable twice ( )." alt="" coords="5,166,333,197"/><area shape="rect" id="node4" href="a00041.html" title="Define an abstract derivable function ( )." alt="" coords="24,86,315,117"/><area shape="rect" id="node6" href="a00043.html" title="Define an abstract mathematical function ( )." alt="" coords="64,6,275,37"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+
+<p><a href="a00453.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef F&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga7aea22d30d62c71d6e97078a45cfcb79">function_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function type.  <a href="a00152.html#ga7aea22d30d62c71d6e97078a45cfcb79"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef function_t::value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga39720e9fd5bb9e9e9978625388a87203">value_type</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef boost::optional<br class="typebreak"/>
-&lt; <a class="el" href="a00031.html#a76763e91e51e9cddf579d52091dce746">Function::vector_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga73bcf2b80c951811c681788fce7e396e">startingPoint_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional vector defines a starting point.  <a href="a00152.html#ga73bcf2b80c951811c681788fce7e396e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00031.html#ac34c3e5a5464b789ba16d2e6773455cf">Function::interval_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gae8b3c65ad10a5a1d9ce7d36a4a8edc91">interval_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00031.html#a4adad3122f872279c13a49e4d9025b01">Function::intervals_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gab10340f4facc8ba67d60806d7222f332">intervals_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="a00152.html#ga39720e9fd5bb9e9e9978625388a87203">value_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gae99cdf43b9e6e469068890e150f2af81">scales_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale vector.  <a href="a00152.html#gae99cdf43b9e6e469068890e150f2af81"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+<a class="el" href="a00053.html">GenericTwiceDifferentiableFunction</a><br class="typebreak"/>
+&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#ae53c4978f626bcb0c85fa1155a1f4f12">parent_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">parent_t::size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#ab6dedaffecb43767584c42bf98346ebb">size_type</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Size type.  <a href="#ab6dedaffecb43767584c42bf98346ebb"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gab8e4c8c63039bd83b2537cd4a139a0cc">print</a> (std::ostream &amp;o) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the problem on the specified output stream.  <a href="a00152.html#gab8e4c8c63039bd83b2537cd4a139a0cc"></a><br/></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Constructors and destructors.</div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gadcca92e64b652ed01d3b277105e9a503">Problem</a> (const <a class="el" href="a00152.html#ga7aea22d30d62c71d6e97078a45cfcb79">function_t</a> &amp;)  throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga58de36c497db8306e8648cd7f23b401f">Problem</a> (const <a class="el" href="a00050.html">Problem</a>&lt; F, boost::mpl::vector&lt;&gt; &gt; &amp;)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="a00152.html#ga58de36c497db8306e8648cd7f23b401f"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename F_ &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00152.html#gafc8876f9b6f551a7f410c7839768cee9">Problem</a> (const <a class="el" href="a00050.html">Problem</a>&lt; F_, boost::mpl::vector&lt;&gt; &gt; &amp;)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor (convert from another class of problem).  <a href="a00152.html#gafc8876f9b6f551a7f410c7839768cee9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga18c4d0e5a905e7154a5109aa03e47561">~Problem</a> ()  throw ()</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Cost function.</div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00152.html#ga7aea22d30d62c71d6e97078a45cfcb79">function_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga228e69db29968ff3fd6721672be5193e">function</a> () const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve cost function.  <a href="a00152.html#ga228e69db29968ff3fd6721672be5193e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00152.html#gab10340f4facc8ba67d60806d7222f332">intervals_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga7c0c46e2510ad60fb66212e6b568318b">argumentBounds</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve arguments bounds.  <a href="a00152.html#ga7c0c46e2510ad60fb66212e6b568318b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00152.html#gab10340f4facc8ba67d60806d7222f332">intervals_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga5fa1e1daba19616a2a5026104e036ca9">argumentBounds</a> () const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve arguments bounds.  <a href="a00152.html#ga5fa1e1daba19616a2a5026104e036ca9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00152.html#gae99cdf43b9e6e469068890e150f2af81">scales_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga0613681457a770b22dea21d02a17600d">argumentScales</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve arguments scales.  <a href="a00152.html#ga0613681457a770b22dea21d02a17600d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00152.html#gae99cdf43b9e6e469068890e150f2af81">scales_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gac4e8cb9b614553863159bce28b41a7c0">argumentScales</a> () const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve arguments scales.  <a href="a00152.html#gac4e8cb9b614553863159bce28b41a7c0"></a><br/></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Starting point (initial guess).</div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00152.html#ga73bcf2b80c951811c681788fce7e396e">startingPoint_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga8f6ac3f234d690a1a51760665b13ec6b">startingPoint</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the initial guess.  <a href="a00152.html#ga8f6ac3f234d690a1a51760665b13ec6b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00152.html#ga73bcf2b80c951811c681788fce7e396e">startingPoint_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#ga266d759261ed5ecfe1525b7faeeafd2d">startingPoint</a> () const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial guess.  <a href="a00152.html#ga266d759261ed5ecfe1525b7faeeafd2d"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="friends"></a>
-Friends</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00152.html#gacc081cc87e465ee811f25f9676550d09">Problem</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#a874e014f8499fd0a5d2c04d5bad36fcc">GenericQuadraticFunction</a> (<a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#ac56c279d34f3c4047c0f66b738a1bd7f">inputSize</a>, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">outputSize</a>=1, std::string name=std::string())  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete class constructor should call this constructor.  <a href="#a874e014f8499fd0a5d2c04d5bad36fcc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#a38f3f609626f43393e854351555459ee">print</a> (std::ostream &amp;) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the function on the specified output stream.  <a href="#a38f3f609626f43393e854351555459ee"></a><br/></td></tr>
 </table>
-<h3>template&lt;typename F&gt;<br/>
- class roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt;</h3>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+class roboptim::GenericQuadraticFunction&lt; T &gt;</h3>
 
+<p>Define an abstract quadratic function. </p>
+<p>Inherit from this class when implementing quadratic functions. </p>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="ae53c4978f626bcb0c85fa1155a1f4f12"></a><!-- doxytag: member="roboptim::GenericQuadraticFunction::parent_t" ref="ae53c4978f626bcb0c85fa1155a1f4f12" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="a00053.html">GenericTwiceDifferentiableFunction</a>&lt;T&gt; <a class="el" href="a00051.html">roboptim::GenericQuadraticFunction</a>&lt; T &gt;::<a class="el" href="a00051.html#ae53c4978f626bcb0c85fa1155a1f4f12">parent_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab6dedaffecb43767584c42bf98346ebb"></a><!-- doxytag: member="roboptim::GenericQuadraticFunction::size_type" ref="ab6dedaffecb43767584c42bf98346ebb" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">parent_t::size_type</a> <a class="el" href="a00051.html">roboptim::GenericQuadraticFunction</a>&lt; T &gt;::<a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Size type. </p>
+<p>This type is used to represent sizes, indexes, etc. </p>
+
+<p>Reimplemented from <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">roboptim::GenericFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a874e014f8499fd0a5d2c04d5bad36fcc"></a><!-- doxytag: member="roboptim::GenericQuadraticFunction::GenericQuadraticFunction" ref="a874e014f8499fd0a5d2c04d5bad36fcc" args="(size_type inputSize, size_type outputSize=1, std::string name=std::string())" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00051.html">roboptim::GenericQuadraticFunction</a>&lt; T &gt;::<a class="el" href="a00051.html">GenericQuadraticFunction</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>inputSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>outputSize</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>std::string&#160;()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Concrete class constructor should call this constructor. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputSize</td><td>function arity </td></tr>
+    <tr><td class="paramname">outputSize</td><td>result size </td></tr>
+    <tr><td class="paramname">name</td><td>function's name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a38f3f609626f43393e854351555459ee"></a><!-- doxytag: member="roboptim::GenericQuadraticFunction::print" ref="a38f3f609626f43393e854351555459ee" args="(std::ostream &amp;) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; <a class="el" href="a00051.html">roboptim::GenericQuadraticFunction</a>&lt; T &gt;::<a class="el" href="a00051.html#a38f3f609626f43393e854351555459ee">print</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Display the function on the specified output stream. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
+
+<p>Reimplemented from <a class="el" href="a00053.html#a78bf9018548e92c38803bbd0b39ef29a">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;</a>.</p>
+
+<p>Reimplemented in <a class="el" href="a00050.html#ab43858fd0eb1c257664a80004111c8ab">roboptim::GenericNumericQuadraticFunction&lt; T &gt;</a>, <a class="el" href="a00040.html#ac98c86704dc8443933a50ad664cca533">roboptim::GenericConstantFunction&lt; T &gt;</a>, <a class="el" href="a00047.html#adc5eff6387532970e7b1e14daeb2d8af">roboptim::GenericIdentityFunction&lt; T &gt;</a>, <a class="el" href="a00049.html#ae57fb039df18b98b7ab403b73c277632">roboptim::GenericNumericLinearFunction&lt; T &gt;</a>, and <a class="el" href="a00048.html#a00e124bc18548130332a1f5ceacf70c5">roboptim::GenericLinearFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -135,7 +239,7 @@ Friends</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00051.html">Problem&lt; F, boost::mpl::vector&lt;&gt; &gt;</a>      </li>
+      <li class="navelem"><a class="el" href="a00188.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00051.html">GenericQuadraticFunction</a>      </li>
 </body>
 </html>

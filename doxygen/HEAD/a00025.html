@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::DummySolverLastState Class Reference</title>
+<title>roboptim::Chain&lt; U, V &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -61,100 +61,113 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::DummySolverLastState Class Reference</div>  </div>
+<div class="title">roboptim::Chain&lt; U, V &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::DummySolverLastState" --><!-- doxytag: inherits="Solver&lt; Function, boost::mpl::vector&lt; Function &gt; &gt;" -->
-<p>Dummy solver which always fails, but returns the last state of the solver.  
+<!-- doxytag: class="roboptim::Chain" -->
+<p><a class="el" href="a00025.html" title="Chain two RobOptim functions.">Chain</a> two RobOptim functions.  
  <a href="a00025.html#details">More...</a></p>
 
-<p><code>#include &lt;roboptim/core/plugin/dummy-laststate.hh&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for roboptim::DummySolverLastState:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00332.png" border="0" usemap="#roboptim_1_1_dummy_solver_last_state_inherit__map" alt="Inheritance graph"/></div>
-<map name="roboptim_1_1_dummy_solver_last_state_inherit__map" id="roboptim_1_1_dummy_solver_last_state_inherit__map">
-<area shape="rect" id="node2" href="a00055.html" title="roboptim::Solver\&lt; Function, boost::mpl::vector\&lt; Function \&gt; \&gt;" alt="" coords="5,86,387,117"/><area shape="rect" id="node4" href="a00038.html" title="Abstract interface satisfied by all solvers." alt="" coords="112,6,280,37"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for roboptim::DummySolverLastState:</div>
-<div class="dyncontent">
-<div class="center"><img src="a00335.png" border="0" usemap="#roboptim_1_1_dummy_solver_last_state_coll__map" alt="Collaboration graph"/></div>
-<map name="roboptim_1_1_dummy_solver_last_state_coll__map" id="roboptim_1_1_dummy_solver_last_state_coll__map">
-<area shape="rect" id="node2" href="a00055.html" title="roboptim::Solver\&lt; Function, boost::mpl::vector\&lt; Function \&gt; \&gt;" alt="" coords="1032,58,1413,89"/><area shape="rect" id="node4" href="a00038.html" title="Abstract interface satisfied by all solvers." alt="" coords="707,5,875,35"/><area shape="rect" id="node8" href="a00047.html" title="Parameters type." alt="" coords="425,90,567,121"/><area shape="rect" id="node10" title="STL class." alt="" coords="227,53,307,83"/><area shape="rect" id="node12" title="STL class." alt="" coords="7,53,175,83"/><area shape="rect" id="node15" href="a00050.html" title="roboptim::Problem\&lt; F, CLIST \&gt;" alt="" coords="687,111,895,142"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;roboptim/core/filter/chain.hh&gt;</code></p>
 
-<p><a href="a00336.html">List of all members.</a></p>
+<p><a href="a00382.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00055.html">Solver</a>&lt; <a class="el" href="a00140.html#a1864afd8c0c95cea8029da9b52352736">Function</a>, <br class="typebreak"/>
-boost::mpl::vector&lt; <a class="el" href="a00140.html#a1864afd8c0c95cea8029da9b52352736">Function</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#abb95d1d2970a694195e10d1b58d76b5c">parent_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define parent's type.  <a href="#abb95d1d2970a694195e10d1b58d76b5c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00072.html">detail::PromoteTrait</a><br class="typebreak"/>
+&lt; U, V &gt;::T_promote&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#a2758ec83589ff92f05a3fd33419e8cee">parentType_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="a00025.html">Chain</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#a455221a00edbb17db76f12fff0c11af7">ChainShPtr_t</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#aa4dd713591d15c58525f48c75a3a70f6">DummySolverLastState</a> (const <a class="el" href="a00055.html#a5b5c016b1da3aadc3d619023124b2197">problem_t</a> &amp;<a class="el" href="a00055.html#a7920ef2fd1c7068111df0496c4f742ce">problem</a>)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a solver from a problem.  <a href="#aa4dd713591d15c58525f48c75a3a70f6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#a3b29e3266bdcf904947e35e5caa6789c">~DummySolverLastState</a> ()  throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#a4f8573ba06d5a95443a90517a09f8ad6">solve</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement the solve algorithm.  <a href="#a4f8573ba06d5a95443a90517a09f8ad6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#ab84dbd0d8f31fcd09c7bb5ed286f3b9a">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00025.html#a2758ec83589ff92f05a3fd33419e8cee">parentType_t</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#abc5883a2547b98bbe0d1b668527c7558">Chain</a> (boost::shared_ptr&lt; U &gt; <a class="el" href="a00025.html#a2fcbb3075374508619be3db9d39f7037">left</a>, boost::shared_ptr&lt; V &gt; <a class="el" href="a00025.html#a37e148da90ab5055a1417f8ee3b0e5c3">right</a>)  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#abb3479b18f4d7a7840fc9113d2f5355e">~Chain</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#a2fcbb3075374508619be3db9d39f7037">left</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">U &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#aba36d1645a1d66832e9e5c1176ec5e5a">left</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; V &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#a37e148da90ab5055a1417f8ee3b0e5c3">right</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">V &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#a43d851b612e1097d8eab788b27980305">right</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#af20809382db3dc56248d9a8d289ad247">impl_compute</a> (result_t &amp;result, const argument_t &amp;x) const   throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#a36924648eb7945700ac3deb7f7822d1f">impl_gradient</a> (gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const   throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00025.html#adcd2af3d372d413fe77111b9862a6533">impl_jacobian</a> (jacobian_t &amp;jacobian, const argument_t &amp;arg) const   throw ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Dummy solver which always fails, but returns the last state of the solver. </p>
-<p>The <a class="el" href="a00056.html" title="Base exception class for solving errors.">SolverError</a> generated contains a dummy state of the solver (x, constraints etc.). These values can be obtained thanks to <a class="el" href="a00056.html#a902e79a13337accd1abe8a9acd0bbacd" title="Retrieve the (optional) last state of the solver.">SolverError::lastState</a>.</p>
-<p>This solver always fails but is always available as it does not rely on the plug-in mechanism.</p>
-<p>It is also a good starting point for users that want to develop their own solver. </p>
+<div class="textblock"><h3>template&lt;typename U, typename V&gt;<br/>
+class roboptim::Chain&lt; U, V &gt;</h3>
+
+<p><a class="el" href="a00025.html" title="Chain two RobOptim functions.">Chain</a> two RobOptim functions. </p>
+<p>left(right(x)) </p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="abb95d1d2970a694195e10d1b58d76b5c"></a><!-- doxytag: member="roboptim::DummySolverLastState::parent_t" ref="abb95d1d2970a694195e10d1b58d76b5c" args="" -->
+<a class="anchor" id="a455221a00edbb17db76f12fff0c11af7"></a><!-- doxytag: member="roboptim::Chain::ChainShPtr_t" ref="a455221a00edbb17db76f12fff0c11af7" args="" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="a00055.html">Solver</a>&lt;<a class="el" href="a00140.html#a1864afd8c0c95cea8029da9b52352736">Function</a>, boost::mpl::vector&lt;<a class="el" href="a00140.html#a1864afd8c0c95cea8029da9b52352736">Function</a>&gt; &gt; <a class="el" href="a00025.html#abb95d1d2970a694195e10d1b58d76b5c">roboptim::DummySolverLastState::parent_t</a></td>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="a00025.html">Chain</a>&gt; <a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::<a class="el" href="a00025.html#a455221a00edbb17db76f12fff0c11af7">ChainShPtr_t</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Define parent's type. </p>
+</div>
+</div>
+<a class="anchor" id="a2758ec83589ff92f05a3fd33419e8cee"></a><!-- doxytag: member="roboptim::Chain::parentType_t" ref="a2758ec83589ff92f05a3fd33419e8cee" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="a00072.html">detail::PromoteTrait</a>&lt;U, V&gt;::T_promote <a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::<a class="el" href="a00025.html#a2758ec83589ff92f05a3fd33419e8cee">parentType_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa4dd713591d15c58525f48c75a3a70f6"></a><!-- doxytag: member="roboptim::DummySolverLastState::DummySolverLastState" ref="aa4dd713591d15c58525f48c75a3a70f6" args="(const problem_t &amp;problem)" -->
+<a class="anchor" id="abc5883a2547b98bbe0d1b668527c7558"></a><!-- doxytag: member="roboptim::Chain::Chain" ref="abc5883a2547b98bbe0d1b668527c7558" args="(boost::shared_ptr&lt; U &gt; left, boost::shared_ptr&lt; V &gt; right)" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00025.html#aa4dd713591d15c58525f48c75a3a70f6">roboptim::DummySolverLastState::DummySolverLastState</a> </td>
+          <td class="memname"><a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::<a class="el" href="a00025.html">Chain</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00055.html#a5b5c016b1da3aadc3d619023124b2197">problem_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>problem</em></td><td>)</td>
-          <td>  throw ()<code> [explicit]</code></td>
+          <td class="paramtype">boost::shared_ptr&lt; U &gt;&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::shared_ptr&lt; V &gt;&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw ()<code> [explicit]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Build a solver from a problem. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">problem</td><td>problem that will be solved </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a class="anchor" id="a3b29e3266bdcf904947e35e5caa6789c"></a><!-- doxytag: member="roboptim::DummySolverLastState::~DummySolverLastState" ref="a3b29e3266bdcf904947e35e5caa6789c" args="()" -->
+<a class="anchor" id="abb3479b18f4d7a7840fc9113d2f5355e"></a><!-- doxytag: member="roboptim::Chain::~Chain" ref="abb3479b18f4d7a7840fc9113d2f5355e" args="()" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00025.html#a3b29e3266bdcf904947e35e5caa6789c">roboptim::DummySolverLastState::~DummySolverLastState</a> </td>
+          <td class="memname"><a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::~<a class="el" href="a00025.html">Chain</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>  throw ()<code> [virtual]</code></td>
+          <td>  throw ()</td>
         </tr>
       </table>
 </div>
@@ -163,26 +176,191 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a4f8573ba06d5a95443a90517a09f8ad6"></a><!-- doxytag: member="roboptim::DummySolverLastState::solve" ref="a4f8573ba06d5a95443a90517a09f8ad6" args="()" -->
+<a class="anchor" id="af20809382db3dc56248d9a8d289ad247"></a><!-- doxytag: member="roboptim::Chain::impl_compute" ref="af20809382db3dc56248d9a8d289ad247" args="(result_t &amp;result, const argument_t &amp;x) const " -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00025.html#a4f8573ba06d5a95443a90517a09f8ad6">roboptim::DummySolverLastState::solve</a> </td>
+          <td class="memname">void <a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::<a class="el" href="a00025.html#af20809382db3dc56248d9a8d289ad247">impl_compute</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>  throw ()<code> [virtual]</code></td>
+          <td class="paramtype">result_t &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const argument_t &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Implement the solve algorithm. </p>
-<p>Implement the solve method as required by the <a class="el" href="a00038.html#ac73eb90d375eebe2580be8ad275bbf39">GenericSolver</a> class. </p>
+</div>
+</div>
+<a class="anchor" id="a36924648eb7945700ac3deb7f7822d1f"></a><!-- doxytag: member="roboptim::Chain::impl_gradient" ref="a36924648eb7945700ac3deb7f7822d1f" args="(gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::<a class="el" href="a00025.html#a36924648eb7945700ac3deb7f7822d1f">impl_gradient</a> </td>
+          <td>(</td>
+          <td class="paramtype">gradient_t &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const argument_t &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_type&#160;</td>
+          <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
-<p>Implements <a class="el" href="a00038.html#a4573db8138895e5dc5eee8880e02e928">roboptim::GenericSolver</a>.</p>
+</div>
+</div>
+<a class="anchor" id="adcd2af3d372d413fe77111b9862a6533"></a><!-- doxytag: member="roboptim::Chain::impl_jacobian" ref="adcd2af3d372d413fe77111b9862a6533" args="(jacobian_t &amp;jacobian, const argument_t &amp;arg) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::<a class="el" href="a00025.html#adcd2af3d372d413fe77111b9862a6533">impl_jacobian</a> </td>
+          <td>(</td>
+          <td class="paramtype">jacobian_t &amp;&#160;</td>
+          <td class="paramname"><em>jacobian</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const argument_t &amp;&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
-<p>References <a class="el" href="a00052.html#ac35af0a7460b2f266b74af35c8d89f3b">roboptim::Result::constraints</a>, <a class="el" href="a00052.html#a4a3c615497bd8c83d21a35430f9b204c">roboptim::Result::lambda</a>, <a class="el" href="a00038.html#ab36ece190971122f7111d7e92c4e66cf">roboptim::GenericSolver::result_</a>, <a class="el" href="a00052.html#a3164fe63a285d7c4739f2606b8cf6b9e">roboptim::Result::value</a>, and <a class="el" href="a00052.html#a31284faee67e87284026280767720008">roboptim::Result::x</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a2fcbb3075374508619be3db9d39f7037"></a><!-- doxytag: member="roboptim::Chain::left" ref="a2fcbb3075374508619be3db9d39f7037" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const boost::shared_ptr&lt;U&gt;&amp; <a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::<a class="el" href="a00025.html#a2fcbb3075374508619be3db9d39f7037">left</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="a00188.html#ac0b8c0fb2f17746d44b4a74b90da5520">roboptim::chain()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba36d1645a1d66832e9e5c1176ec5e5a"></a><!-- doxytag: member="roboptim::Chain::left" ref="aba36d1645a1d66832e9e5c1176ec5e5a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">U&amp; <a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::<a class="el" href="a00025.html#a2fcbb3075374508619be3db9d39f7037">left</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a37e148da90ab5055a1417f8ee3b0e5c3"></a><!-- doxytag: member="roboptim::Chain::right" ref="a37e148da90ab5055a1417f8ee3b0e5c3" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const boost::shared_ptr&lt;V&gt;&amp; <a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::<a class="el" href="a00025.html#a37e148da90ab5055a1417f8ee3b0e5c3">right</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="a00188.html#ac0b8c0fb2f17746d44b4a74b90da5520">roboptim::chain()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a43d851b612e1097d8eab788b27980305"></a><!-- doxytag: member="roboptim::Chain::right" ref="a43d851b612e1097d8eab788b27980305" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">V&amp; <a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::<a class="el" href="a00025.html#a37e148da90ab5055a1417f8ee3b0e5c3">right</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab84dbd0d8f31fcd09c7bb5ed286f3b9a"></a><!-- doxytag: member="roboptim::Chain::ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="ab84dbd0d8f31fcd09c7bb5ed286f3b9a" args="(parentType_t)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U , typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00025.html">roboptim::Chain</a>&lt; U, V &gt;::<a class="el" href="a00025.html#ab84dbd0d8f31fcd09c7bb5ed286f3b9a">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00025.html#a2758ec83589ff92f05a3fd33419e8cee">parentType_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -204,7 +382,7 @@ Public Member Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00140.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00025.html">DummySolverLastState</a>      </li>
+      <li class="navelem"><a class="el" href="a00188.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00025.html">Chain</a>      </li>
 </body>
 </html>
