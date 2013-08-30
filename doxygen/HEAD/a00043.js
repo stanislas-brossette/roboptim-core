@@ -10,8 +10,8 @@ var a00043 =
     [ "traits_t", "a00043.html#a28cc55c9e45976db775fe9fec8fedc94", null ],
     [ "value_type", "a00043.html#a1cfc07bf5c22d02af3dae45364ef1407", null ],
     [ "vector_t", "a00043.html#a76763e91e51e9cddf579d52091dce746", null ],
-    [ "~GenericFunction", "a00198.html#gac5f8e82a0e2ec840c40396a8a6d949c2", null ],
-    [ "GenericFunction", "a00198.html#ga1d025a85d12b2eb8f85409a150cad994", null ],
+    [ "~GenericFunction", "a00199.html#gac5f8e82a0e2ec840c40396a8a6d949c2", null ],
+    [ "GenericFunction", "a00199.html#ga1d025a85d12b2eb8f85409a150cad994", null ],
     [ "epsilon", "a00043.html#a8166423941ffb4b4f07f5321fe941fb4", null ],
     [ "foreach", "a00043.html#a17aa035d334aa84cadade27cb7e8dd37", null ],
     [ "foreach", "a00043.html#a200b1c4f2230a656b5e0c6f6541138e2", null ],
@@ -34,6 +34,6 @@ var a00043 =
     [ "operator()", "a00043.html#a536ee0e9317b322f4c7d747dd100a27a", null ],
     [ "operator()", "a00043.html#a58f0bde147e54bbeb8df944ef194f9ae", null ],
     [ "outputSize", "a00043.html#a0aaf1d1daaab80d27aa6cba0a3ee006f", null ],
-    [ "print", "a00198.html#ga762e9ee9b4cff36e36b78dad53ba9e32", null ],
-    [ "logger", "a00198.html#gac33ccf681554a2bad6663a107f436be8", null ]
+    [ "print", "a00199.html#ga762e9ee9b4cff36e36b78dad53ba9e32", null ],
+    [ "logger", "a00199.html#gac33ccf681554a2bad6663a107f436be8", null ]
 ];

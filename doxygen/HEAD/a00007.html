@@ -144,8 +144,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (numeric_quadratic_function, T, functionTypes_t)
       BOOST_CHECK (<a name="a10"></a><a class="code" href="a00188.html#abf0a2c6465667b5f8cc0c9ab9c5d1fe3" title="Compare dense vectors (matrices) using both relative and absolute tolerances.">allclose</a> (f.<a class="code" href="a00041.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> (x), J));
       BOOST_CHECK (<a class="code" href="a00188.html#abf0a2c6465667b5f8cc0c9ab9c5d1fe3" title="Compare dense vectors (matrices) using both relative and absolute tolerances.">allclose</a> (f.<a class="code" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2" title="Compute the hessian at a given point.">hessian</a> (x, 0), a));
 
-      BOOST_CHECK (<a name="a11"></a><a class="code" href="a00199.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (f, 0, x));
-      BOOST_CHECK (<a name="a12"></a><a class="code" href="a00199.html#gaa32250244db065fae2e23e779ae6cf12" title="Check if a Jacobian is valid.">checkJacobian</a> (f, x));
+      BOOST_CHECK (<a name="a11"></a><a class="code" href="a00200.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (f, 0, x));
+      BOOST_CHECK (<a name="a12"></a><a class="code" href="a00200.html#gaa32250244db065fae2e23e779ae6cf12" title="Check if a Jacobian is valid.">checkJacobian</a> (f, x));
     }
 }
 
@@ -177,8 +177,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (random_gradient_check, T, sparseOnly_t)
       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; ++i)
   {
     x = <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t::Random</a> (5);
-    BOOST_CHECK (<a class="code" href="a00199.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (f, 0, x));
-    BOOST_CHECK (<a class="code" href="a00199.html#gaa32250244db065fae2e23e779ae6cf12" title="Check if a Jacobian is valid.">checkJacobian</a> (f, x));
+    BOOST_CHECK (<a class="code" href="a00200.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (f, 0, x));
+    BOOST_CHECK (<a class="code" href="a00200.html#gaa32250244db065fae2e23e779ae6cf12" title="Check if a Jacobian is valid.">checkJacobian</a> (f, x));
   }
     }
 }

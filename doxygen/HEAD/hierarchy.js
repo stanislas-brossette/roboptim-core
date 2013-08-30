@@ -12,6 +12,7 @@ var hierarchy =
     [ "roboptim::Chain< U, V >", "a00025.html", null ],
     [ "roboptim::visualization::gnuplot::Command", "a00026.html", null ],
     [ "roboptim::Concatenate< U >", "a00027.html", null ],
+    [ "roboptim::Derivative< U >", "a00030.html", null ],
     [ "roboptim::derivativeSize< GenericDifferentiableFunction< T > >", "a00031.html", null ],
     [ "roboptim::derivativeSize< GenericFunction< T > >", "a00032.html", null ],
     [ "roboptim::derivativeSize< GenericTwiceDifferentiableFunction< T > >", "a00033.html", null ],
@@ -38,13 +39,9 @@ var hierarchy =
         [ "roboptim::VectorInterpolation< T >", "a00085.html", null ]
       ] ]
     ] ],
-    [ "roboptim::GenericFunction< U::traits_t >", "a00043.html", [
-      [ "roboptim::Derivative< U >", "a00030.html", null ]
-    ] ],
     [ "roboptim::GenericFunctionTraits< T >", "a00044.html", null ],
     [ "roboptim::GenericFunctionTraits< EigenMatrixDense >", "a00045.html", null ],
     [ "roboptim::GenericFunctionTraits< EigenMatrixSparse >", "a00046.html", null ],
-    [ "roboptim::GenericFunctionTraits< U::traits_t >", "a00044.html", null ],
     [ "roboptim::GenericSolver", "a00052.html", [
       [ "roboptim::Solver< F, C >", "a00079.html", null ],
       [ "roboptim::Solver< Function, boost::mpl::vector< Function > >", "a00079.html", [

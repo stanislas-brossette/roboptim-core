@@ -3,7 +3,7 @@ var searchData=
   ['genericconstantfunction',['GenericConstantFunction',['../a00040.html#a9f9dae33c9657528e0a82410cb161817',1,'roboptim::GenericConstantFunction']]],
   ['genericdifferentiablefunction',['GenericDifferentiableFunction',['../a00041.html#a5fa47fea06495251f413721483a35dba',1,'roboptim::GenericDifferentiableFunction']]],
   ['genericfinitedifferencegradient',['GenericFiniteDifferenceGradient',['../a00042.html#ade644f357e04020a3fb84207994f745b',1,'roboptim::GenericFiniteDifferenceGradient']]],
-  ['genericfunction',['GenericFunction',['../a00198.html#ga1d025a85d12b2eb8f85409a150cad994',1,'roboptim::GenericFunction']]],
+  ['genericfunction',['GenericFunction',['../a00199.html#ga1d025a85d12b2eb8f85409a150cad994',1,'roboptim::GenericFunction']]],
   ['genericidentityfunction',['GenericIdentityFunction',['../a00047.html#ab54d82769bc4a7bf83aad7a6ca7b26d5',1,'roboptim::GenericIdentityFunction']]],
   ['genericlinearfunction',['GenericLinearFunction',['../a00048.html#a413894f3e510da5ec620231f30d4bb08',1,'roboptim::GenericLinearFunction']]],
   ['genericnumericlinearfunction',['GenericNumericLinearFunction',['../a00049.html#a61e801b2acf4e5c5046218a19610c4ce',1,'roboptim::GenericNumericLinearFunction']]],
@@ -22,5 +22,5 @@ var searchData=
   ['gnuplot',['Gnuplot',['../a00054.html#ab134923cbb8cc53b251664f4b5c6b73c',1,'roboptim::visualization::Gnuplot']]],
   ['gradient',['gradient',['../a00029.html#a7ed5ea57d8e58c65ddce49a894f07eba',1,'roboptim::DerivableParametrizedFunction::gradient(const argument_t &amp;argument, size_type functionId=0, size_type order=0) const '],['../a00029.html#a410fe28abefd645359a4c15b371eeb7c',1,'roboptim::DerivableParametrizedFunction::gradient(gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0, size_type order=0) const '],['../a00041.html#a0d0772c3e1ea6ff70c2909ceaf776169',1,'roboptim::GenericDifferentiableFunction::gradient(const argument_t &amp;argument, size_type functionId=0) const '],['../a00041.html#aec24fff2d16284b2832bd2d2998c47fe',1,'roboptim::GenericDifferentiableFunction::gradient(gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const ']]],
   ['gradientsize',['gradientSize',['../a00029.html#a313708158dabab24b7d2525a89b2813f',1,'roboptim::DerivableParametrizedFunction::gradientSize()'],['../a00041.html#a8c3700cd209f38a0079b739a83edbb4a',1,'roboptim::GenericDifferentiableFunction::gradientSize()']]],
-  ['green',['green',['../a00192.html#af56277d22032f2e720a4ac600c0d26af',1,'roboptim::fg']]]
+  ['green',['green',['../a00193.html#af56277d22032f2e720a4ac600c0d26af',1,'roboptim::fg']]]
 ];

@@ -384,18 +384,18 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (finite_difference_gradient, T, functionTypes_t)
       displayGradient (output, sq, x);
       displayGradient (output, sq, x, 1);
 
-      BOOST_CHECK (<a name="a8"></a><a class="code" href="a00199.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (fg, 0, x));
-      BOOST_CHECK (! <a class="code" href="a00199.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (fb, 0, x));
-      BOOST_CHECK_THROW (<a name="a9"></a><a class="code" href="a00199.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (fb, 0, x),
+      BOOST_CHECK (<a name="a8"></a><a class="code" href="a00200.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (fg, 0, x));
+      BOOST_CHECK (! <a class="code" href="a00200.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (fb, 0, x));
+      BOOST_CHECK_THROW (<a name="a9"></a><a class="code" href="a00200.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (fb, 0, x),
        ::<a name="_a10"></a><a class="code" href="a00022.html" title="Exception thrown when a gradient check fails.">roboptim::BadGradient&lt;T&gt;</a>);
-      BOOST_CHECK_THROW (<a name="a11"></a><a class="code" href="a00199.html#ga516899da0b771c79abe8a23a5028d8ea">checkJacobianAndThrow</a> (fb, x),
+      BOOST_CHECK_THROW (<a name="a11"></a><a class="code" href="a00200.html#ga516899da0b771c79abe8a23a5028d8ea">checkJacobianAndThrow</a> (fb, x),
        ::<a name="_a12"></a><a class="code" href="a00023.html" title="Exception thrown when a Jacobian check fails.">roboptim::BadJacobian&lt;T&gt;</a>);
 
 
-      BOOST_CHECK (<a class="code" href="a00199.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (sq, 0, x));
-      BOOST_CHECK (<a class="code" href="a00199.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (sq, 1, x));
-      <a class="code" href="a00199.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (sq, 0, x);
-      <a class="code" href="a00199.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (sq, 1, x);
+      BOOST_CHECK (<a class="code" href="a00200.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (sq, 0, x));
+      BOOST_CHECK (<a class="code" href="a00200.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (sq, 1, x));
+      <a class="code" href="a00200.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (sq, 0, x);
+      <a class="code" href="a00200.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (sq, 1, x);
     }
 
   x.resize (2);
@@ -404,8 +404,8 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (finite_difference_gradient, T, functionTypes_t)
       {
   (*output) &lt;&lt; <span class="stringliteral">&quot;# Times at x = &quot;</span> &lt;&lt; x &lt;&lt; std::endl;
   displayGradient (output, times, x);
-  BOOST_CHECK (<a class="code" href="a00199.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (times, 0, x));
-  <a class="code" href="a00199.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (times, 0, x);
+  BOOST_CHECK (<a class="code" href="a00200.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (times, 0, x));
+  <a class="code" href="a00200.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (times, 0, x);
       }
 
   <a name="_a13"></a><a class="code" href="a00054.html" title="Gnuplot script.">Gnuplot</a> gnuplot = Gnuplot::make_interactive_gnuplot (<span class="keyword">false</span>);
@@ -425,11 +425,11 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (finite_difference_gradient, T, functionTypes_t)
   (*output)
     &lt;&lt; (gnuplot
   &lt;&lt; <span class="keyword">set</span> (<span class="stringliteral">&quot;multiplot layout 2,2&quot;</span>)
-  &lt;&lt; <a name="a15"></a><a class="code" href="a00203.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (fg, interval)
-  &lt;&lt; <a class="code" href="a00203.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (fg_fd, interval)
-  &lt;&lt; <a class="code" href="a00203.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (p, interval)
-  &lt;&lt; <a class="code" href="a00203.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (p_fd, interval)
-  &lt;&lt; <a name="a16"></a><a class="code" href="a00203.html#ga2c2a188b2e89955eee09aa10b5426e43" title="Make a Gnuplot unset command.">unset</a> (<span class="stringliteral">&quot;multiplot&quot;</span>)
+  &lt;&lt; <a name="a15"></a><a class="code" href="a00204.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (fg, interval)
+  &lt;&lt; <a class="code" href="a00204.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (fg_fd, interval)
+  &lt;&lt; <a class="code" href="a00204.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (p, interval)
+  &lt;&lt; <a class="code" href="a00204.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (p_fd, interval)
+  &lt;&lt; <a name="a16"></a><a class="code" href="a00204.html#ga2c2a188b2e89955eee09aa10b5426e43" title="Make a Gnuplot unset command.">unset</a> (<span class="stringliteral">&quot;multiplot&quot;</span>)
   );
 
   std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;

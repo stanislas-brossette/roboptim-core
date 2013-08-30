@@ -1,8 +1,26 @@
 var a00196 =
 [
-    [ "dense_jacobian_to_gnuplot", "a00196.html#a6efa66dcc23edbd627ec2a66a14414f8", null ],
-    [ "dense_matrix_to_gnuplot", "a00196.html#adb2224ca300cd683bf5229fd2cee7d01", null ],
-    [ "set_matrix_header", "a00196.html#a2d8c719cadd72df2ba3bb999d4e2cda1", null ],
-    [ "sparse_jacobian_to_gnuplot", "a00196.html#a556cf30724feeec8aa2ab21ca3800105", null ],
-    [ "sparse_matrix_to_gnuplot", "a00196.html#a1303f8764337206a0b83e3bd5508bc46", null ]
+    [ "Command", "a00026.html", null ],
+    [ "discreteInterval_t", "a00204.html#ga1c2bbde67ed2275a6def58e1cea970f3", null ],
+    [ "cd", "a00204.html#ga195d042fd97469e044b37abc0faf1e0f", null ],
+    [ "clear", "a00204.html#gad96d84d9e1a5bab7a33ed90bef8bc01d", null ],
+    [ "comment", "a00204.html#ga108c0cb6161fb8813817a7b7a1ac980d", null ],
+    [ "comment", "a00204.html#ga80c2272d3610440e4ba4c6f035bf9007", null ],
+    [ "help", "a00204.html#gabecfe2b1ab67fa65ea2fa8f9de592d0a", null ],
+    [ "plot", "a00204.html#ga7a1939a1db1b12c576e85859b728458c", null ],
+    [ "plot_jac", "a00204.html#ga892fef0581371b322b075135b9348f74", null ],
+    [ "plot_jac", "a00204.html#ga8697553b2bd7673bec00d45090969a6b", null ],
+    [ "plot_jac", "a00204.html#ga2d65957a63de6ff08e9a338b519ac320", null ],
+    [ "plot_mat", "a00204.html#ga40c69971a140078c622852953fb092b3", null ],
+    [ "plot_mat", "a00204.html#ga156782554154a4064795107504821778", null ],
+    [ "plot_mat", "a00204.html#ga762c6f8a6573db7dfa3bf9a27b63ad90", null ],
+    [ "plot_xy", "a00204.html#ga0dba01288d4436dfa417d3dfd5520c27", null ],
+    [ "pwd", "a00204.html#ga05e850b5c5dc912807d645863c01acd9", null ],
+    [ "quit", "a00204.html#ga9ecd6983c2e9525527f1269b72b85291", null ],
+    [ "replot", "a00204.html#gaa265dffb4d80ad3841b7775136f9f9bb", null ],
+    [ "reread", "a00204.html#gacc11e69c9499c334e4ec1a962c6e6536", null ],
+    [ "reset", "a00204.html#ga73987a2ddca2e5fc23ff8bbdf703842d", null ],
+    [ "set", "a00204.html#gad77630a233193748534b41d069d4e180", null ],
+    [ "show", "a00204.html#gaf90f5364d8c3597b8909ba99083fc23f", null ],
+    [ "unset", "a00204.html#ga2c2a188b2e89955eee09aa10b5426e43", null ]
 ];

@@ -12,6 +12,6 @@ var searchData=
   ['linear_2dfunction_2ehxx',['linear-function.hxx',['../a00132.html',1,'']]],
   ['linearfunction',['LinearFunction',['../a00188.html#abbf3e635a932ae99934936a092aec72c',1,'roboptim']]],
   ['linearsparsefunction',['LinearSparseFunction',['../a00188.html#aa8f5a3e6e11dab0777930cd974dc9416',1,'roboptim']]],
-  ['logger',['logger',['../a00198.html#gac33ccf681554a2bad6663a107f436be8',1,'roboptim::GenericFunction::logger()'],['../a00052.html#a7fbfdfbf962a90aace9fd42e92e0a428',1,'roboptim::GenericSolver::logger()'],['../a00079.html#a8963aaae43fc6df3f2faa38e94df8c47',1,'roboptim::Solver::logger()']]],
+  ['logger',['logger',['../a00199.html#gac33ccf681554a2bad6663a107f436be8',1,'roboptim::GenericFunction::logger()'],['../a00052.html#a7fbfdfbf962a90aace9fd42e92e0a428',1,'roboptim::GenericSolver::logger()'],['../a00079.html#a8963aaae43fc6df3f2faa38e94df8c47',1,'roboptim::Solver::logger()']]],
   ['ltvector',['ltvector',['../a00055.html',1,'roboptim::detail']]]
 ];

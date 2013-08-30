@@ -1,26 +1,9 @@
 var a00195 =
 [
-    [ "Command", "a00026.html", null ],
-    [ "discreteInterval_t", "a00203.html#ga1c2bbde67ed2275a6def58e1cea970f3", null ],
-    [ "cd", "a00203.html#ga195d042fd97469e044b37abc0faf1e0f", null ],
-    [ "clear", "a00203.html#gad96d84d9e1a5bab7a33ed90bef8bc01d", null ],
-    [ "comment", "a00203.html#ga108c0cb6161fb8813817a7b7a1ac980d", null ],
-    [ "comment", "a00203.html#ga80c2272d3610440e4ba4c6f035bf9007", null ],
-    [ "help", "a00203.html#gabecfe2b1ab67fa65ea2fa8f9de592d0a", null ],
-    [ "plot", "a00203.html#ga7a1939a1db1b12c576e85859b728458c", null ],
-    [ "plot_jac", "a00203.html#ga892fef0581371b322b075135b9348f74", null ],
-    [ "plot_jac", "a00203.html#ga8697553b2bd7673bec00d45090969a6b", null ],
-    [ "plot_jac", "a00203.html#ga2d65957a63de6ff08e9a338b519ac320", null ],
-    [ "plot_mat", "a00203.html#ga40c69971a140078c622852953fb092b3", null ],
-    [ "plot_mat", "a00203.html#ga156782554154a4064795107504821778", null ],
-    [ "plot_mat", "a00203.html#ga762c6f8a6573db7dfa3bf9a27b63ad90", null ],
-    [ "plot_xy", "a00203.html#ga0dba01288d4436dfa417d3dfd5520c27", null ],
-    [ "pwd", "a00203.html#ga05e850b5c5dc912807d645863c01acd9", null ],
-    [ "quit", "a00203.html#ga9ecd6983c2e9525527f1269b72b85291", null ],
-    [ "replot", "a00203.html#gaa265dffb4d80ad3841b7775136f9f9bb", null ],
-    [ "reread", "a00203.html#gacc11e69c9499c334e4ec1a962c6e6536", null ],
-    [ "reset", "a00203.html#ga73987a2ddca2e5fc23ff8bbdf703842d", null ],
-    [ "set", "a00203.html#gad77630a233193748534b41d069d4e180", null ],
-    [ "show", "a00203.html#gaf90f5364d8c3597b8909ba99083fc23f", null ],
-    [ "unset", "a00203.html#ga2c2a188b2e89955eee09aa10b5426e43", null ]
+    [ "Gnuplot", "a00054.html", null ],
+    [ "normalize", "a00204.html#ga03109edccbaa5f071371ee52c447ee70", null ],
+    [ "normalize", "a00204.html#gaf0f79518896936efeba27dabdce72963", null ],
+    [ "normalize", "a00204.html#ga823decd192bfbc6405e61c28947ddc4d", null ],
+    [ "operator<<", "a00204.html#ga22576c0708e8fe4af42060ff87bfad20", null ],
+    [ "operator<<", "a00195.html#a45951c8d967c172f9f8213900b3d7884", null ]
 ];
