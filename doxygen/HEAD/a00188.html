@@ -275,7 +275,7 @@ V &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el
 <tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00200.html#ga8fdc2e0627fa0b18b05c1ae5f85dd477">addNonScalarConstraint</a> (P &amp;problem, boost::shared_ptr&lt; C &gt; constraint, std::vector&lt; <a class="el" href="a00043.html#ac34c3e5a5464b789ba16d2e6773455cf">Function::interval_t</a> &gt; interval, std::vector&lt; <a class="el" href="a00043.html#a1cfc07bf5c22d02af3dae45364ef1407">Function::value_type</a> &gt; scale=std::vector&lt; <a class="el" href="a00043.html#a1cfc07bf5c22d02af3dae45364ef1407">Function::value_type</a> &gt;())  throw (std::runtime_error)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr<br class="typebreak"/>
-&lt; <a class="el" href="a00085.html">VectorInterpolation</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00188.html#a1a7a81c96130bf94dbb061c99797158a">vectorInterpolation</a> (typename <a class="el" href="a00085.html">VectorInterpolation</a>&lt; T &gt;::vector_t x, typename <a class="el" href="a00085.html">VectorInterpolation</a>&lt; T &gt;::size_type outputSize)</td></tr>
+&lt; <a class="el" href="a00085.html">VectorInterpolation</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00188.html#a2f36b3da44b72bc429187ac0a1e4629e">vectorInterpolation</a> (typename <a class="el" href="a00085.html">VectorInterpolation</a>&lt; T &gt;::vector_t x, typename <a class="el" href="a00085.html">VectorInterpolation</a>&lt; T &gt;::size_type outputSize, typename <a class="el" href="a00085.html">VectorInterpolation</a>&lt; T &gt;::value_type dt=1.)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00188.html#ae6e53e4f7183cc2816db6aa8ea7cab6e">operator&lt;&lt;</a> (std::ostream &amp;o, const <a class="el" href="a00022.html">BadGradient</a>&lt; T &gt; &amp;f)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle exception display.  <a href="#ae6e53e4f7183cc2816db6aa8ea7cab6e"></a><br/></td></tr>
@@ -1779,14 +1779,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a1a7a81c96130bf94dbb061c99797158a"></a><!-- doxytag: member="roboptim::vectorInterpolation" ref="a1a7a81c96130bf94dbb061c99797158a" args="(typename VectorInterpolation&lt; T &gt;::vector_t x, typename VectorInterpolation&lt; T &gt;::size_type outputSize)" -->
+<a class="anchor" id="a2f36b3da44b72bc429187ac0a1e4629e"></a><!-- doxytag: member="roboptim::vectorInterpolation" ref="a2f36b3da44b72bc429187ac0a1e4629e" args="(typename VectorInterpolation&lt; T &gt;::vector_t x, typename VectorInterpolation&lt; T &gt;::size_type outputSize, typename VectorInterpolation&lt; T &gt;::value_type dt=1.)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">boost::shared_ptr&lt;<a class="el" href="a00085.html">VectorInterpolation</a>&lt;T&gt; &gt; <a class="el" href="a00188.html#a1a7a81c96130bf94dbb061c99797158a">roboptim::vectorInterpolation</a> </td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="a00085.html">VectorInterpolation</a>&lt;T&gt; &gt; <a class="el" href="a00188.html#a2f36b3da44b72bc429187ac0a1e4629e">roboptim::vectorInterpolation</a> </td>
           <td>(</td>
           <td class="paramtype">typename VectorInterpolation&lt; T &gt;::vector_t&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -1795,7 +1795,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">typename VectorInterpolation&lt; T &gt;::size_type&#160;</td>
-          <td class="paramname"><em>outputSize</em>&#160;</td>
+          <td class="paramname"><em>outputSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename VectorInterpolation&lt; T &gt;::value_type&#160;</td>
+          <td class="paramname"><em>dt</em> = <code>1.</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

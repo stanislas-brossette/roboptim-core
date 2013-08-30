@@ -118,7 +118,7 @@ var a00188 =
     [ "sparse_to_dense", "a00188.html#a01aa8def0fdb53b33781f867b4c31d8a", null ],
     [ "sparse_to_dense", "a00188.html#af4a1126d1b76d53b4b013b9bd60340d2", null ],
     [ "unionCast", "a00188.html#ae24d4890d0c81200480cca7b94ffe272", null ],
-    [ "vectorInterpolation", "a00188.html#a1a7a81c96130bf94dbb061c99797158a", null ],
+    [ "vectorInterpolation", "a00188.html#a2f36b3da44b72bc429187ac0a1e4629e", null ],
     [ "finiteDifferenceEpsilon", "a00188.html#a2b8aa11a97dbc8229249db7357581d83", null ],
     [ "finiteDifferenceThreshold", "a00188.html#aabca7f7ba16e95c606d1bc22b0de8d6b", null ]
 ];

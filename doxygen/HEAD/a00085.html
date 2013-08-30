@@ -89,7 +89,7 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#abe0c00f18e9a52a817580fe4dd792117">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00041.html">GenericDifferentiableFunction</a>&lt; T &gt;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#ab960030f248f493c940a382bd7a4558f">VectorInterpolation</a> (const <a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">vector_t</a> &amp;x, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">outputSize</a>)  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#ae3f54d386a76d028863ba21131e2f8f7">VectorInterpolation</a> (const <a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">vector_t</a> &amp;x, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">outputSize</a>, <a class="el" href="a00043.html#a1cfc07bf5c22d02af3dae45364ef1407">value_type</a> dt)  throw ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a3d1fe193000a4055ec76b7d50f78b43a">~VectorInterpolation</a> ()  throw ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00085.html#a8174827edfa589b0dd43d0422129dc99">impl_compute</a> (<a class="el" href="a00043.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;result, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;x) const   throw ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function evaluation.  <a href="#a8174827edfa589b0dd43d0422129dc99"></a><br/></td></tr>
@@ -125,7 +125,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab960030f248f493c940a382bd7a4558f"></a><!-- doxytag: member="roboptim::VectorInterpolation::VectorInterpolation" ref="ab960030f248f493c940a382bd7a4558f" args="(const vector_t &amp;x, size_type outputSize)" -->
+<a class="anchor" id="ae3f54d386a76d028863ba21131e2f8f7"></a><!-- doxytag: member="roboptim::VectorInterpolation::VectorInterpolation" ref="ae3f54d386a76d028863ba21131e2f8f7" args="(const vector_t &amp;x, size_type outputSize, value_type dt)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -141,7 +141,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
-          <td class="paramname"><em>outputSize</em>&#160;</td>
+          <td class="paramname"><em>outputSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00043.html#a1cfc07bf5c22d02af3dae45364ef1407">value_type</a>&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
