@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>parametrized-function.hxx File Reference</title>
+<title>plus.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,23 +56,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">parametrized-function.hxx File Reference</div>  </div>
+<div class="title">plus.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;boost/shared_ptr.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00085.html">roboptim/core/detail/autopromote.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00101.html">roboptim/core/differentiable-function.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00145.html">roboptim/core/filter/plus.hxx</a>&gt;</code><br/>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html">roboptim::Plus&lt; U, V &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum two RobOptim functions.  <a href="a00063.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00188.html#a83e69e40fcb448a0b888c260ca514b7f">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const ParametrizedFunction&lt; F &gt; &amp;f)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle function display.  <a href="#a83e69e40fcb448a0b888c260ca514b7f"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename U , typename V &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Plus&lt; U, V &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00185.html#a29192465f69ffd7e843e907cb66dbe75">roboptim::plus</a> (boost::shared_ptr&lt; U &gt; left, boost::shared_ptr&lt; V &gt; right)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename U , typename V &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Plus&lt; U, V &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00185.html#a1c85364bc3106af5973bb6cb5113e2dd">roboptim::operator+</a> (boost::shared_ptr&lt; U &gt; left, boost::shared_ptr&lt; V &gt; right)</td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -92,6 +103,6 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00144.html">parametrized-function.hxx</a>      </li>
+      <li class="navelem"><a class="el" href="a00144.html">plus.hh</a>      </li>
 </body>
 </html>

@@ -68,6 +68,5 @@ var annotated =
     [ "roboptim::SolverFactory< T >", "a00081.html", "a00081" ],
     [ "roboptim::SolverWarning", "a00082.html", "a00082" ],
     [ "roboptim::Split< T >", "a00083.html", "a00083" ],
-    [ "roboptim::SumOfC1Squares", "a00084.html", "a00084" ],
-    [ "roboptim::VectorInterpolation< T >", "a00085.html", "a00085" ]
+    [ "roboptim::SumOfC1Squares", "a00084.html", "a00084" ]
 ];

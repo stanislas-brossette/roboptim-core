@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>problem.hxx File Reference</title>
+<title>product.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -60,41 +60,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">problem.hxx File Reference</div>  </div>
+<div class="title">product.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;algorithm&gt;</code><br/>
-<code>#include &lt;stdexcept&gt;</code><br/>
-<code>#include &lt;boost/type_traits/is_pointer.hpp&gt;</code><br/>
-<code>#include &lt;boost/type_traits/remove_pointer.hpp&gt;</code><br/>
-<code>#include &lt;boost/variant.hpp&gt;</code><br/>
-<code>#include &lt;boost/variant/get.hpp&gt;</code><br/>
-<code>#include &lt;boost/variant/apply_visitor.hpp&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00129.html">roboptim/core/indent.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00177.html">roboptim/core/terminal-color.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00182.html">roboptim/core/util.hh</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;boost/shared_ptr.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00085.html">roboptim/core/detail/autopromote.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00101.html">roboptim/core/differentiable-function.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00150.html">roboptim/core/filter/product.hxx</a>&gt;</code><br/>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00066.html">roboptim::detail::printConstraint&lt; P &gt;</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html">roboptim::Product&lt; U, V &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00069.html" title="Product of two RobOptim functions.">Product</a> of two RobOptim functions.  <a href="a00069.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00192.html">roboptim::detail</a></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00202.html#gaa95bff19e4c158ee52b1f0f6804100cf">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const Problem&lt; F, boost::mpl::vector&lt;&gt; &gt; &amp;pb)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle problem display.  <a href="a00202.html#gaa95bff19e4c158ee52b1f0f6804100cf"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00192.html#a974b01d3e6b19ebbfb1c45cc3cabd9ed">roboptim::detail::impl_print</a> (std::ostream &amp;o, const T *t)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00192.html#a92d03025b36c11fc83d49f550228996e">roboptim::detail::impl_print</a> (std::ostream &amp;o, const T &amp;t)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename F , typename CLIST &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00202.html#ga8672f3101648d74dae9f93f62263659e">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const Problem&lt; F, CLIST &gt; &amp;pb)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle problem display.  <a href="a00202.html#ga8672f3101648d74dae9f93f62263659e"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename U , typename V &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Product&lt; U, <br class="typebreak"/>
+V &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00185.html#a673c3306f8238e795813509847ee31f8">roboptim::product</a> (boost::shared_ptr&lt; U &gt; left, boost::shared_ptr&lt; V &gt; right)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename U , typename V &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Product&lt; U, <br class="typebreak"/>
+V &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00185.html#af11c3c491b73e8b7a6587174cb964dc0">roboptim::operator*</a> (boost::shared_ptr&lt; U &gt; left, boost::shared_ptr&lt; V &gt; right)</td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -114,6 +105,6 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00149.html">problem.hxx</a>      </li>
+      <li class="navelem"><a class="el" href="a00149.html">product.hh</a>      </li>
 </body>
 </html>

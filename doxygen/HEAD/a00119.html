@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>gnuplot-commands.hh File Reference</title>
+<title>gnuplot-differentiable-function.cc File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,63 +56,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">gnuplot-commands.hh File Reference</div>  </div>
+<div class="title">gnuplot-differentiable-function.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00176.html">roboptim/core/sys.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00096.html">roboptim/core/debug.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00182.html">roboptim/core/util.hh</a>&gt;</code><br/>
-<code>#include &lt;string&gt;</code><br/>
-<code>#include &lt;iostream&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="a00125.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00118.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00123.html">roboptim/core/visualization/gnuplot-matrix.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00120.html">roboptim/core/visualization/gnuplot-differentiable-function.hh</a>&gt;</code><br/>
+<code>#include &lt;boost/format.hpp&gt;</code><br/>
+<code>#include &lt;boost/lexical_cast.hpp&gt;</code><br/>
 </div><table class="memberdecls">
-<tr><td colspan="2"><h2><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html">roboptim::visualization::gnuplot::Command</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> command.  <a href="a00026.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00188.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00195.html">roboptim::visualization</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00192.html">roboptim::visualization</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Graphic visualization. </p>
 <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim::visualization::gnuplot</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00193.html">roboptim::visualization::gnuplot</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p><a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> rendering. </p>
 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html">roboptim::visualization::gnuplot::detail</a></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ga108c0cb6161fb8813817a7b7a1ac980d">roboptim::visualization::gnuplot::comment</a> (const char *)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> comment.  <a href="a00204.html#ga108c0cb6161fb8813817a7b7a1ac980d"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00204.html#ga80c2272d3610440e4ba4c6f035bf9007">roboptim::visualization::gnuplot::comment</a> (const T &amp;content)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> comment.  <a href="a00204.html#ga80c2272d3610440e4ba4c6f035bf9007"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#gad77630a233193748534b41d069d4e180">roboptim::visualization::gnuplot::set</a> (const char *var, const char *val=&quot;&quot;)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> set command.  <a href="a00204.html#gad77630a233193748534b41d069d4e180"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ga2c2a188b2e89955eee09aa10b5426e43">roboptim::visualization::gnuplot::unset</a> (const char *var)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> unset command.  <a href="a00204.html#ga2c2a188b2e89955eee09aa10b5426e43"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#gaf90f5364d8c3597b8909ba99083fc23f">roboptim::visualization::gnuplot::show</a> (const char *var)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> show command.  <a href="a00204.html#gaf90f5364d8c3597b8909ba99083fc23f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#gad96d84d9e1a5bab7a33ed90bef8bc01d">roboptim::visualization::gnuplot::clear</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> clear command.  <a href="a00204.html#gad96d84d9e1a5bab7a33ed90bef8bc01d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ga05e850b5c5dc912807d645863c01acd9">roboptim::visualization::gnuplot::pwd</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> pwdcommand.  <a href="a00204.html#ga05e850b5c5dc912807d645863c01acd9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ga9ecd6983c2e9525527f1269b72b85291">roboptim::visualization::gnuplot::quit</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> quit command.  <a href="a00204.html#ga9ecd6983c2e9525527f1269b72b85291"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#gaa265dffb4d80ad3841b7775136f9f9bb">roboptim::visualization::gnuplot::replot</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> replot command.  <a href="a00204.html#gaa265dffb4d80ad3841b7775136f9f9bb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#gacc11e69c9499c334e4ec1a962c6e6536">roboptim::visualization::gnuplot::reread</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> reread command.  <a href="a00204.html#gacc11e69c9499c334e4ec1a962c6e6536"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ga73987a2ddca2e5fc23ff8bbdf703842d">roboptim::visualization::gnuplot::reset</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> reset command.  <a href="a00204.html#ga73987a2ddca2e5fc23ff8bbdf703842d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#ga195d042fd97469e044b37abc0faf1e0f">roboptim::visualization::gnuplot::cd</a> (const char *dir)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> cd command.  <a href="a00204.html#ga195d042fd97469e044b37abc0faf1e0f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html#gabecfe2b1ab67fa65ea2fa8f9de592d0a">roboptim::visualization::gnuplot::help</a> (const char *topic=&quot;&quot;)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00054.html" title="Gnuplot script.">Gnuplot</a> help command.  <a href="a00204.html#gabecfe2b1ab67fa65ea2fa8f9de592d0a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#a6efa66dcc23edbd627ec2a66a14414f8">roboptim::visualization::gnuplot::detail::dense_jacobian_to_gnuplot</a> (const DifferentiableFunction::jacobian_t &amp;jac, const std::string &amp;name)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#a556cf30724feeec8aa2ab21ca3800105">roboptim::visualization::gnuplot::detail::sparse_jacobian_to_gnuplot</a> (const DifferentiableSparseFunction::jacobian_t &amp;jac, const std::string &amp;name)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00146.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00201.html#ga8697553b2bd7673bec00d45090969a6b">roboptim::visualization::gnuplot::plot_jac</a> (const DifferentiableFunction &amp;f, const DifferentiableFunction::argument_t &amp;arg)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00146.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00201.html#ga2d65957a63de6ff08e9a338b519ac320">roboptim::visualization::gnuplot::plot_jac</a> (const DifferentiableSparseFunction &amp;f, const DifferentiableSparseFunction::argument_t &amp;arg)</td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -132,6 +108,6 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00119.html">gnuplot-commands.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00119.html">gnuplot-differentiable-function.cc</a>      </li>
 </body>
 </html>

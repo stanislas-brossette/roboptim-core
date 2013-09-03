@@ -7,8 +7,8 @@ var searchData=
   ['makeinterval',['makeInterval',['../a00043.html#a587af71cf143ad546e43c77570056e06',1,'roboptim::GenericFunction']]],
   ['makelowerinterval',['makeLowerInterval',['../a00043.html#a7430258775cd70b3ba7bff92f7465825',1,'roboptim::GenericFunction']]],
   ['makeupperinterval',['makeUpperInterval',['../a00043.html#a1e404d7da24bf01325c4d917a36107a3',1,'roboptim::GenericFunction']]],
-  ['map',['Map',['../a00056.html#a4c8f20cf07ee28545f24df00a427e7b9',1,'roboptim::Map::Map()'],['../a00188.html#a12201667276a7a25982f7ba037720734',1,'roboptim::map()']]],
+  ['map',['Map',['../a00056.html#a4c8f20cf07ee28545f24df00a427e7b9',1,'roboptim::Map::Map()'],['../a00185.html#a12201667276a7a25982f7ba037720734',1,'roboptim::map()']]],
   ['minimum',['minimum',['../a00052.html#aef2460331a80efc404356e9b68269b8c',1,'roboptim::GenericSolver']]],
   ['minimumtype',['minimumType',['../a00052.html#a2426a7c827ce0c46c77ac29ad1d7f846',1,'roboptim::GenericSolver']]],
-  ['minus',['Minus',['../a00057.html#ac824027a41ce9d5a343d1e0faa13bb8c',1,'roboptim::Minus::Minus()'],['../a00188.html#a50b429f2b86fb7a9d63333e4686ca688',1,'roboptim::minus()']]]
+  ['minus',['Minus',['../a00057.html#ac824027a41ce9d5a343d1e0faa13bb8c',1,'roboptim::Minus::Minus()'],['../a00185.html#a50b429f2b86fb7a9d63333e4686ca688',1,'roboptim::minus()']]]
 ];

@@ -75,11 +75,11 @@ Problem definition</h2>
 Defining the cost function.</h2>
 <p>The library contains the following hierarchy of functions:</p>
 <ul>
-<li><a class="el" href="a00188.html#a1864afd8c0c95cea8029da9b52352736" title="Dense function.">roboptim::Function</a></li>
-<li><a class="el" href="a00188.html#a3b8400e3e4a5bc0372d283a4db8eb0de" title="Legacy name of TwiceDifferentiableFunction.">roboptim::DerivableFunction</a></li>
-<li><a class="el" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">roboptim::TwiceDerivableFunction</a></li>
-<li><a class="el" href="a00188.html#ab03c6ad564de263af42983892cab684a">roboptim::QuadraticFunction</a></li>
-<li><a class="el" href="a00188.html#abbf3e635a932ae99934936a092aec72c">roboptim::LinearFunction</a></li>
+<li><a class="el" href="a00185.html#a1864afd8c0c95cea8029da9b52352736" title="Dense function.">roboptim::Function</a></li>
+<li><a class="el" href="a00185.html#a3b8400e3e4a5bc0372d283a4db8eb0de" title="Legacy name of TwiceDifferentiableFunction.">roboptim::DerivableFunction</a></li>
+<li><a class="el" href="a00185.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">roboptim::TwiceDerivableFunction</a></li>
+<li><a class="el" href="a00185.html#ab03c6ad564de263af42983892cab684a">roboptim::QuadraticFunction</a></li>
+<li><a class="el" href="a00185.html#abbf3e635a932ae99934936a092aec72c">roboptim::LinearFunction</a></li>
 </ul>
 <p>These types correspond to dense vectors and matrices relying on Eigen. RobOptim also support dense matrices and you can even extend the framework to support your own types.</p>
 <p>When defining a new function, you have to derive your new function from one of those classes. Depending on the class you derive from, you will be have to implement one or several methods:</p>
@@ -91,9 +91,9 @@ Defining the cost function.</h2>
 <p>It is usually recommended to derive from the deepest possible class of the hierarchy (deriving from TwiceDerivableFunction is better than DerivableFunction).</p>
 <p>Keep in mind that the type of the function represents the amount of information the solver will get, not the real nature of a function (it is possible to avoid defining a hessian by deriving from DerivableFunction, even if you function can be derived twice).</p>
 <p>In the following sample, a TwiceDerivableFunction will be defined.</p>
-<div class="fragment"><pre class="fragment"><span class="keyword">struct </span>F : <span class="keyword">public</span> <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
+<div class="fragment"><pre class="fragment"><span class="keyword">struct </span>F : <span class="keyword">public</span> <a class="code" href="a00185.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
 {
-  F () : <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
+  F () : <a class="code" href="a00185.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
   {
   }
 
@@ -142,10 +142,10 @@ Defining the cost function.</h2>
 Defining the constraints.</h2>
 <p>A constraint is no different from a cost function and can be defined in the same way than a cost function.</p>
 <p>The following sample defines two constraints which are twice derivable functions.</p>
-<div class="fragment"><pre class="fragment"><span class="keyword">struct </span>G0 : <span class="keyword">public</span> <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
+<div class="fragment"><pre class="fragment"><span class="keyword">struct </span>G0 : <span class="keyword">public</span> <a class="code" href="a00185.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
 {
   G0 ()
-    : <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
+    : <a class="code" href="a00185.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
   {
   }
 
@@ -189,10 +189,10 @@ Defining the constraints.</h2>
   }
 };
 
-<span class="keyword">struct </span>G1 : <span class="keyword">public</span> <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
+<span class="keyword">struct </span>G1 : <span class="keyword">public</span> <a class="code" href="a00185.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a>
 {
   G1 ()
-    : <a class="code" href="a00188.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
+    : <a class="code" href="a00185.html#a8fe946bb68641ff262c0cfef38af94d5" title="Legacy name of DifferentiableFunction.">TwiceDerivableFunction</a> (4, 1)
   {
   }
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yellow',['yellow',['../a00193.html#a874128bda8fac54e2a028f7cc4f5c692',1,'roboptim::fg']]]
+  ['yellow',['yellow',['../a00190.html#a874128bda8fac54e2a028f7cc4f5c692',1,'roboptim::fg']]]
 ];

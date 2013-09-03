@@ -35,8 +35,7 @@ var hierarchy =
           [ "roboptim::NTimesDerivableFunction< 2 >", "a00060.html", null ],
           [ "roboptim::Sin< T >", "a00078.html", null ]
         ] ],
-        [ "roboptim::SumOfC1Squares", "a00084.html", null ],
-        [ "roboptim::VectorInterpolation< T >", "a00085.html", null ]
+        [ "roboptim::SumOfC1Squares", "a00084.html", null ]
       ] ]
     ] ],
     [ "roboptim::GenericFunctionTraits< T >", "a00044.html", null ],
