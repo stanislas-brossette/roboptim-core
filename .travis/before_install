@@ -19,6 +19,9 @@ sudo apt-get update -qq
 
 # Check if we are in a debian branch...
 if [ -d debian ]; then
+    # Fetch tags.
+    git fetch --tags
+
     # If we are, we install Debian package development tools and
     # create a sid pbuilder. Package dependencies will be installed
     # automatically.
