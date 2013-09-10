@@ -62,9 +62,10 @@ debian_build_package()
 {
     echo "Building Debian package..."
     cd "$root_dir"
-    git-dch -a -S
-    sudo git-buildpackage			\
+    git-dch -a -S --ignore-branch
+    sudo git-buildpackage		\
 	--git-submodules		\
+	--git-ignore-branch		\
 	--git-export-dir="$build_dir/export" \
 	--git-tag \
 	--git-upstream-branch=master	\
