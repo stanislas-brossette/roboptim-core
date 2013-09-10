@@ -1,6 +1,16 @@
 #!/bin/sh
 set -ev
 
+# Directories.
+root_dir=`pwd`
+build_dir="/tmp/_travis/build"
+install_dir="/tmp/_travis/install"
+
+# Create layout.
+rm -rf "$build_dir" "$install_dir"
+mkdir -p "$build_dir"
+mkdir -p "$install_dir"
+
 # Retrive the submodules.
 git submodule update --init --recursive
 
@@ -15,6 +25,11 @@ if [ -d debian ]; then
     sudo apt-get install -qq			\
 	debootstrap devscripts			\
 	git-buildpackage debian-archive-keyring
+
+    cd "$build_dir"
+    git clone git://honk.sigxcpu.org/git/git-buildpackage.git
+    sudo python setup.py install
+    cd "$root_dir"
 
     # Remove previous sandbox.
     sudo rm -rf /var/cache/pbuilder/base-unstable.cow
