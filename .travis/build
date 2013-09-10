@@ -58,6 +58,7 @@ debian_build_package()
     echo "Building Debian package..."
     cd "$root_dir"
     git-dch -a -S --ignore-branch
+    sudo chmod -R 777 /var/cache/pbuilder/ccache
     sudo git-buildpackage		\
 	--git-submodules		\
 	--git-ignore-branch		\
