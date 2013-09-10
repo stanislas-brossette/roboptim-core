@@ -55,6 +55,7 @@ build_package()
 # sandbox.
 debian_build_package()
 {
+    export GNUPGHOME="$root_dir/.travis/.gnupg"
     echo "Building Debian package..."
     cd "$root_dir"
     git-dch -a -S --snapshot-number=1 --ignore-branch --git-author
@@ -70,7 +71,23 @@ debian_build_package()
 	--git-force-create		\
 	--git-verbose			\
 	--git-ignore-new		\
-	--git-retag
+	--git-retag			\
+	-p'gpg --passphrase "${GNUPG_PASSPHRASE}"'
+
+     sudo git-buildpackage		\
+	--git-submodules		\
+	--git-ignore-branch		\
+	--git-export-dir="$build_dir/export" \
+	--git-tag \
+	--git-upstream-branch=master	\
+	--git-dist=unstable		\
+	--git-pbuilder			\
+	--git-force-create		\
+	--git-verbose			\
+	--git-ignore-new		\
+	--git-retag			\
+	 -p'gpg --passphrase "${GNUPG_PASSPHRASE}"' \
+	 -S -sa
 }
 
 
