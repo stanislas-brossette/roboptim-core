@@ -24,7 +24,7 @@ if [ -d debian ]; then
     # automatically.
     sudo apt-get install -qq			\
 	debootstrap devscripts			\
-	git-buildpackage debian-archive-keyring
+	git-buildpackage debian-archive-keyring pkg-kde-tools
 
     cd "$build_dir"
     git clone git://honk.sigxcpu.org/git/git-buildpackage.git
