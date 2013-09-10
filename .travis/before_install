@@ -28,6 +28,7 @@ if [ -d debian ]; then
 
     cd "$build_dir"
     git clone git://honk.sigxcpu.org/git/git-buildpackage.git
+    cd "$build_dir/git-buildpackage"
     sudo python setup.py install
     cd "$root_dir"
 
