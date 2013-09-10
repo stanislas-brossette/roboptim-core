@@ -13,14 +13,16 @@ if [ -d debian ]; then
     # create a sid pbuilder. Package dependencies will be installed
     # automatically.
     sudo apt-get install -qq			\
-	pbuilder debootstrap devscripts		\
+	debootstrap devscripts			\
 	git-buildpackage debian-archive-keyring
-    sudo pbuilder create \
-	--distribution unstable \
-	--mirror ftp://ftp.us.debian.org/debian/ \
-	--debootstrapopts \
-	"--keyring=/usr/share/keyrings/debian-archive-keyring.gpg"
-    sudo pbuilder update
+
+    # Remove previous sandbox.
+    sudo rm -rf /var/cache/pbuilder/base-unstable.cow
+    # Create a new one.
+    DIST=unstable git-pbuilder create		\
+	--debootstrapopts "--variant=buildd"	\
+	--debootstrapopts "--keyring=/usr/share/keyrings/debian-archive-keyring.gpg" \
+	--mirror http://ftp.us.debian.org/debian/
 else
     # ...otherwise we install the dependencies explicitly.
     sudo apt-get install -qq			\
