@@ -12,7 +12,7 @@ mkdir -p "$build_dir"
 mkdir -p "$install_dir"
 
 # Setup Git identity.
-git config --global user.name "Travis CI"
+git config --global user.name "Thomas Moulard (Travis Automatic Builds)"
 git config --global user.email "thomas.moulard+travis@gmail.com"
 
 # Retrive the submodules.
@@ -31,7 +31,8 @@ if [ -d debian ]; then
     # automatically.
     sudo apt-get install -qq			\
 	debootstrap devscripts			\
-	git-buildpackage debian-archive-keyring pkg-kde-tools
+	git-buildpackage debian-archive-keyring \
+	pkg-kde-tools dput
 
     cd "$build_dir"
     git clone git://honk.sigxcpu.org/git/git-buildpackage.git

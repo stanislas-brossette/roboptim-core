@@ -1,9 +1,17 @@
 #!/bin/sh
 set -ev
 
+# Directories.
+root_dir=`pwd`
+build_dir="/tmp/_travis/build"
+install_dir="/tmp/_travis/install"
+
 if [ -d debian ]; then
-    ; # FIXME: upload the generated Debian source package to Launchpad
-    ; # for publication.
+    export GNUPGHOME="$root_dir/.travis/.gnupg"
+    debsign -p'gpg --passphrase "${GNUPG_PASSPHRASE}"' \
+	"$build_dir"/export/roboptim-core_*_source.changes
+    # If the build is a success, upload the source package to Launchpad.
+    dput ppa:roboptim/ppa "$build_dir"/export/roboptim-core_*_source.changes
 else
     coveralls						\
 	-e _travis/install				\

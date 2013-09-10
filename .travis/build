@@ -57,8 +57,7 @@ debian_build_package()
 {
     echo "Building Debian package..."
     cd "$root_dir"
-    export CCACHE_DISABLE=1
-    git-dch -a -S --snapshot-number=1 --ignore-branch
+    git-dch -a -S --snapshot-number=1 --ignore-branch --git-author
     sudo chmod -R 777 /var/cache/pbuilder/ccache
     sudo git-buildpackage		\
 	--git-submodules		\
