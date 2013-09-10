@@ -11,6 +11,10 @@ rm -rf "$build_dir" "$install_dir"
 mkdir -p "$build_dir"
 mkdir -p "$install_dir"
 
+# Setup Git identity.
+git config --global user.name "Travis CI"
+git config --global user.email "thomas.moulard+travis@gmail.com"
+
 # Retrive the submodules.
 git submodule update --init --recursive
 
