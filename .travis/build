@@ -70,7 +70,8 @@ debian_build_package()
 	--git-pbuilder			\
 	--git-force-create		\
 	--git-verbose			\
-	--git-ignore-new
+	--git-ignore-new		\
+	--git-retag
 }
 
 
