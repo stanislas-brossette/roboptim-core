@@ -42,7 +42,7 @@ if [ -d debian ]; then
 	--debootstrapopts "--variant=buildd"	\
 	--debootstrapopts "--keyring=/usr/share/keyrings/debian-archive-keyring.gpg" \
 	--mirror http://ftp.us.debian.org/debian/
-    echo "apt-get remove ccache" | DIST=unstable git-pbuilder login --save-after-exec
+    echo "apt-get -y remove ccache" | DIST=unstable git-pbuilder login --save-after-exec
 else
     # ...otherwise we install the dependencies explicitly.
     sudo apt-get install -qq			\
