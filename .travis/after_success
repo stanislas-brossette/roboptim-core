@@ -7,6 +7,7 @@ build_dir="/tmp/_travis/build"
 install_dir="/tmp/_travis/install"
 
 if [ -d debian ]; then
+    export GNUPGHOME="$root_dir/.travis/.gnupg"
     # If the build is a success, upload the source package to Launchpad.
     dput ppa:roboptim/ppa "$build_dir"/export/roboptim-core_*_source.changes
 else
