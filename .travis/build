@@ -1,5 +1,5 @@
 #!/bin/sh
-set -ev
+set -e
 
 # Directories.
 root_dir=`pwd`
@@ -63,31 +63,33 @@ debian_build_package()
 
     # If orig tarball exists, delete it.
     rm -f "$build_dir/export/roboptim-core_*.orig.tar*"
-    sudo git-buildpackage		\
+    git-buildpackage					\
+	--git-submodules				\
+	--git-ignore-branch				\
+	--git-export-dir="$build_dir/export"		\
+	--git-tag					\
+	--git-upstream-branch=master			\
+	--git-dist=unstable				\
+	--git-pbuilder					\
+	--git-force-create				\
+	--git-verbose					\
+	--git-ignore-new				\
+	--git-retag					\
+	-p\"gpg\\ --passphrase\\ ${GNUPG_PASSPHRASE}\" \
+	-k${DEBSIGN_KEYID}
+
+    git-buildpackage			\
 	--git-submodules		\
 	--git-ignore-branch		\
 	--git-export-dir="$build_dir/export" \
-	--git-tag \
+	--git-tag			\
 	--git-upstream-branch=master	\
 	--git-dist=unstable		\
-	--git-pbuilder			\
-	--git-force-create		\
 	--git-verbose			\
 	--git-ignore-new		\
 	--git-retag			\
-	-p\"gpg\\ --passphrase\\ \'${GNUPG_PASSPHRASE}\'\"
-    sudo git-buildpackage		\
-	--git-submodules		\
-	--git-ignore-branch		\
-	--git-export-dir="$build_dir/export" \
-	--git-tag \
-	--git-upstream-branch=master	\
-	--git-dist=unstable		\
-	--git-pbuilder			\
-	--git-verbose			\
-	--git-ignore-new		\
-	--git-retag			\
-	-p\"gpg\\ --passphrase\\ \'${GNUPG_PASSPHRASE}\'\" \
+	-p\"gpg --passphrase ${GNUPG_PASSPHRASE}\" \
+	-k${DEBSIGN_KEYID} \
 	-S -sa
 }
 
