@@ -59,6 +59,12 @@ debian_build_package()
     echo "Building Debian package..."
     cd "$root_dir"
     git-dch -a -S --snapshot-number=1 --ignore-branch --git-author
+
+    # Fix distribution
+    sed -i "s/UNRELEASED/saucy/" debian/changelog
+    # Fix versioning
+    sed -i "s/ubuntu1~1/-ppa1/" debian/changelog
+
     sudo chmod -R 777 /var/cache/pbuilder/ccache
 
     # If orig tarball exists, delete it.
