@@ -76,10 +76,6 @@ debian_build_package()
 	--git-ignore-new		\
 	--git-retag			\
 	-p\"gpg\\ --passphrase\\ \'${GNUPG_PASSPHRASE}\'\"
-
-    # Remove the orig tarball and let be being recreated to keep the
-    # same flags for both git-buildpackage invocation.
-    rm -f "$build_dir/export/roboptim-core_*.orig.tar*"
     sudo git-buildpackage		\
 	--git-submodules		\
 	--git-ignore-branch		\
@@ -88,7 +84,6 @@ debian_build_package()
 	--git-upstream-branch=master	\
 	--git-dist=unstable		\
 	--git-pbuilder			\
-	--git-force-create		\
 	--git-verbose			\
 	--git-ignore-new		\
 	--git-retag			\
