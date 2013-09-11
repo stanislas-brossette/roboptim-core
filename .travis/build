@@ -72,7 +72,7 @@ debian_build_package()
 	--git-verbose			\
 	--git-ignore-new		\
 	--git-retag			\
-	-p'gpg --passphrase "${GNUPG_PASSPHRASE}"'
+	-p\"gpg\\ --passphrase\\ \'${GNUPG_PASSPHRASE}\'\"
 
      sudo git-buildpackage		\
 	--git-submodules		\
@@ -86,7 +86,7 @@ debian_build_package()
 	--git-verbose			\
 	--git-ignore-new		\
 	--git-retag			\
-	 -p'gpg --passphrase "${GNUPG_PASSPHRASE}"' \
+	-p\"gpg\\ --passphrase\\ \'${GNUPG_PASSPHRASE}\'\" \
 	 -S -sa
 }
 
