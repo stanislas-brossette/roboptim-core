@@ -60,6 +60,9 @@ debian_build_package()
     cd "$root_dir"
     git-dch -a -S --snapshot-number=1 --ignore-branch --git-author
     sudo chmod -R 777 /var/cache/pbuilder/ccache
+
+    # If orig tarball exists, delete it.
+    rm -f "$build_dir/export/roboptim-core_*.orig.tar"
     sudo git-buildpackage		\
 	--git-submodules		\
 	--git-ignore-branch		\
@@ -74,7 +77,10 @@ debian_build_package()
 	--git-retag			\
 	-p\"gpg\\ --passphrase\\ \'${GNUPG_PASSPHRASE}\'\"
 
-     sudo git-buildpackage		\
+    # Remove the orig tarball and let be being recreated to keep the
+    # same flags for both git-buildpackage invocation.
+    rm -f "$build_dir/export/roboptim-core_*.orig.tar"
+    sudo git-buildpackage		\
 	--git-submodules		\
 	--git-ignore-branch		\
 	--git-export-dir="$build_dir/export" \
@@ -87,7 +93,7 @@ debian_build_package()
 	--git-ignore-new		\
 	--git-retag			\
 	-p\"gpg\\ --passphrase\\ \'${GNUPG_PASSPHRASE}\'\" \
-	 -S -sa
+	-S -sa
 }
 
 
