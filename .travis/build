@@ -56,14 +56,20 @@ build_package()
 debian_build_package()
 {
     export GNUPGHOME="$root_dir/.travis/.gnupg"
+    export NAME="Thomas Moulard (Travis Automatic Builds)"
+    export DEBEMAIL="thomas.moulard+travis@gmail.com"
+
     echo "Building Debian package..."
     cd "$root_dir"
-    git-dch -a -S --snapshot-number=1 --ignore-branch --git-author
 
-    # Fix distribution
-    sed -i "s/UNRELEASED/saucy/" debian/changelog
-    # Fix versioning
-    sed -i "s/ubuntu1~1/-ppa1/" debian/changelog
+    buildNumber=$(git rev-list \
+	$(git describe --tags --match "debian/*" --abbrev=0)..HEAD | wc -l) \
+	|| buildNumber=1
+    dch --force-distribution --distribution saucy \
+	--local -ppa$buildNumber "Travis automatic build"
+
+    echo "debian/changelog first line:"
+    head -n 1 debian/changelog
 
     sudo chmod -R 777 /var/cache/pbuilder/ccache
 
