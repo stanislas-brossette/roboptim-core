@@ -24,7 +24,6 @@ sudo apt-get update -qq
 # Check if we are in a debian branch...
 if [ -d debian ]; then
     # Fetch remote
-    git fetch origin pristine-tar:pristine-tar
     git fetch --tags
 
     # If we are, we install Debian package development tools and
