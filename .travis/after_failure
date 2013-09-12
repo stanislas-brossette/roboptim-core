@@ -2,7 +2,7 @@
 set -ev
 
 if [ -d debian ]; then
-    ;
+    true
 else
     cat `pwd`/_travis/build/tests/*.log
 fi
