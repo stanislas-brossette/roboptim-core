@@ -81,6 +81,8 @@ debian_build_package()
     git-buildpackage					\
 	--git-submodules				\
 	--git-ignore-branch				\
+	--git-no-pristine-tar				\
+	--git-debian-branch=HEAD			\
 	--git-export-dir="$build_dir/export"		\
 	--git-tag					\
 	--git-upstream-branch=master			\
@@ -95,6 +97,8 @@ debian_build_package()
 
     git-buildpackage			\
 	--git-submodules		\
+	--git-no-pristine-tar		\
+	--git-debian-branch=HEAD	\
 	--git-ignore-branch		\
 	--git-export-dir="$build_dir/export" \
 	--git-tag			\
