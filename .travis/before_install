@@ -49,6 +49,8 @@ if [ -d debian ]; then
 	--debootstrapopts "--keyring=/usr/share/keyrings/debian-archive-keyring.gpg" \
 	--mirror http://ftp.us.debian.org/debian/
     echo "apt-get -y remove ccache" | DIST=unstable git-pbuilder login --save-after-exec
+    # Speed up pbuilder.
+    echo "echo \"force-unsafe-io\"" > /etc/dpkg/dpkg.cfg.d/02apt-speedup | DIST=unstable git-pbuilder login --save-after-exec
 else
     # ...otherwise we install the dependencies explicitly.
     sudo apt-get install -qq			\
