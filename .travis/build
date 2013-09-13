@@ -65,8 +65,8 @@ debian_build_package()
     buildNumber=$(git rev-list \
 	$(git describe --tags --match "debian/*" --abbrev=0)..HEAD | wc -l) \
 	|| buildNumber=1
-    dch --force-distribution --distribution saucy \
-	--local ppa$buildNumber "Travis automatic build"
+    dch --force-distribution --distribution ${DIST} \
+	--local -ppa$buildNumber "Travis automatic build"
 
     echo "debian/changelog first line:"
     head -n 1 debian/changelog
@@ -86,7 +86,7 @@ debian_build_package()
 	--git-export-dir="$build_dir/export"		\
 	--git-tag					\
 	--git-upstream-branch=master			\
-	--git-dist=unstable				\
+	--git-dist=${DIST}				\
 	--git-pbuilder					\
 	--git-force-create				\
 	--git-verbose					\
@@ -103,7 +103,7 @@ debian_build_package()
 	--git-export-dir="$build_dir/export" \
 	--git-tag			\
 	--git-upstream-branch=master	\
-	--git-dist=unstable		\
+	--git-dist=${DIST}		\
 	--git-verbose			\
 	--git-ignore-new		\
 	--git-retag			\

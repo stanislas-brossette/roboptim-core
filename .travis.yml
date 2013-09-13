@@ -3,21 +3,22 @@ env:
   - DEBSIGN_KEYID=5AE5CD75
   - secure: Slm+HqRT+Vy0SG7E9gEShuHvNz6XWRUmBhVBLVJEaYy/0Lo2qp4OjFEWDjiJwFIiXstW2Wclds4SuewAn3Tc4x7dsY+5uaMCX7S/HPzsBCjLXUwjKasUqEGaVTIYmtFJm57hOkz6K2SLUUV4intkMiwtCiq/R0xe92QTTKkHyfo=
   - secure: F9mibfsT3Ezk0RRsgOHy8RUO82H05REGmJKLDKdHiHE3toxykQX64oNBB8txjHoi+UF0H1Gwmk4oB/pNeILtyHdSuB7hB1Muod9wspOuKrzO7SMTGdjpPw7nDjQEmtfrZFhXEGb/3xm66uSGojhwe0RJF5mOzyfno+G8SIJyos4=
+  matrix:
+    - DIST=unstable # Debian Sid
+    - DIST=saucy    # Ubuntu 13.10 Saucy
+    - DIST=raring   # Ubuntu 13.04 Raring
+    - DIST=quantal  # Ubuntu 12.10 Quantal
+    - DIST=precise  # Ubuntu 12.04 LTS Precise
 notifications:
   email:
   - roboptim@googlegroups.com
-script: ./.travis/build
 branches:
   only:
   - master
   - debian
 language: cpp
+compiler: gcc
 before_install: ./.travis/before_install
+script: ./.travis/build
 after_success: ./.travis/after_success
-matrix:
-  allow_failures:
-  - compiler: clang
-compiler:
-- clang
-- gcc
 after_failure: ./.travis/after_failure

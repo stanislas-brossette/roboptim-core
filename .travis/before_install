@@ -23,7 +23,13 @@ sudo apt-get update -qq
 
 # Check if we are in a debian branch...
 if [ -d debian ]; then
-    # Fetch remote
+    echo "Target distribution: ${DIST}"
+    if `test x${DIST} = x`; then
+	echo "distribution is not set"
+	return 1
+    fi
+
+    # Fetch tags.
     git fetch --tags
 
     # If we are, we install Debian package development tools and
@@ -41,15 +47,24 @@ if [ -d debian ]; then
     cd "$root_dir"
 
     # Remove previous sandbox.
-    sudo rm -rf /var/cache/pbuilder/base-unstable.cow
+    sudo rm -rf /var/cache/pbuilder/base-${DEBIAN_TARGET_RELEASE}.cow
+
+    if `test x${DIST} = xunstable`; then
+	MIRROR=http://ftp.us.debian.org/debian/
+    else
+	MIRROR=http://archive.ubuntu.com/ubuntu/
+    fi
+
     # Create a new one.
-    DIST=unstable git-pbuilder create		\
+    git-pbuilder create				\
 	--debootstrapopts "--variant=buildd"	\
 	--debootstrapopts "--keyring=/usr/share/keyrings/debian-archive-keyring.gpg" \
-	--mirror http://ftp.us.debian.org/debian/
-    echo "apt-get -y remove ccache" | DIST=unstable git-pbuilder login --save-after-exec
+	--mirror ${MIRROR}
+    echo "apt-get -y remove ccache" | \
+	git-pbuilder login --save-after-exec
     # Speed up pbuilder.
-    echo "echo \"force-unsafe-io\"" > /etc/dpkg/dpkg.cfg.d/02apt-speedup | DIST=unstable git-pbuilder login --save-after-exec
+    echo "echo \"force-unsafe-io\"" > /etc/dpkg/dpkg.cfg.d/02apt-speedup | \
+	git-pbuilder login --save-after-exec
 else
     # ...otherwise we install the dependencies explicitly.
     sudo apt-get install -qq			\
