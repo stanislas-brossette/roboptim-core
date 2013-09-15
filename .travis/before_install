@@ -54,12 +54,11 @@ if [ -d debian ]; then
 	ADDITIONAL_OPTIONS="--debootstrapopts \"--keyring=/usr/share/keyrings/debian-archive-keyring.gpg\""
     else
 	MIRROR=http://archive.ubuntu.com/ubuntu/
-	ADDITIONAL_OPTIONS=""
+	ADDITIONAL_OPTIONS="--components 'main universe multiverse restricted'"
     fi
 
     # Create a new one.
-    COMPONENTS="main universe multiverse restricted"	\
-	git-pbuilder create				\
+    git-pbuilder create					\
 	--debootstrapopts "--variant=buildd"		\
 	${ADDITIONAL_OPTIONS}				\
 	--mirror ${MIRROR}
