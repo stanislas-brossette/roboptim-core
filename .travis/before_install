@@ -38,31 +38,21 @@ if [ -d debian ]; then
     sudo apt-get install -qq			\
 	debootstrap devscripts			\
 	git-buildpackage debian-archive-keyring \
-	pkg-kde-tools dput
+	pkg-kde-tools dput eatmydata
 
-    #cd "$build_dir"
-    #git clone git://honk.sigxcpu.org/git/git-buildpackage.git
-    #cd "$build_dir/git-buildpackage"
-    #sudo python setup.py install
+    cd "$build_dir"
+    git clone git://honk.sigxcpu.org/git/git-buildpackage.git
+    cd "$build_dir/git-buildpackage"
+    sudo python setup.py install
     cd "$root_dir"
 
     # Remove previous sandbox.
     sudo rm -rf /var/cache/pbuilder/base-${DEBIAN_TARGET_RELEASE}.cow
 
-    echo > $HOME/.pbuilderrc
-    if `test x${DIST} = xunstable`; then
-	echo "MIRRORSITE=\"http://ftp.us.debian.org/debian/\"" >> $HOME/.pbuilderrc
-	ADDITIONAL_OPTIONS="--debootstrapopts \"--keyring=/usr/share/keyrings/debian-archive-keyring.gpg\""
-    else
-	ADDITIONAL_OPTIONS=
-	echo "MIRRORSITE=\"http://archive.ubuntu.com/ubuntu/\"" >> $HOME/.pbuilderrc
-	echo "COMPONENTS=\"main restricted universe multiverse\"" >> $HOME/.pbuilderrc
-    fi
+    cp $root_dir/.travis/.pbuilderrc $HOME/.pbuilderrc
 
     # Create a new one.
-    git-pbuilder create					\
-	--debootstrapopts "--variant=buildd"		\
-	${ADDITIONAL_OPTIONS}
+    git-pbuilder create --config "$root_dir/.travis/pbuilderrc"
     echo "apt-get -y remove ccache" |			\
 	git-pbuilder login --save-after-exec
     # Speed up pbuilder.
