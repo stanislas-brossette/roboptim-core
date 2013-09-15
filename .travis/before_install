@@ -58,11 +58,12 @@ if [ -d debian ]; then
     fi
 
     # Create a new one.
-    git-pbuilder create				\
-	--debootstrapopts "--variant=buildd"	\
-	${ADDITIONAL_OPTIONS}			\
+    COMPONENTS="main universe multiverse restricted"	\
+	git-pbuilder create				\
+	--debootstrapopts "--variant=buildd"		\
+	${ADDITIONAL_OPTIONS}				\
 	--mirror ${MIRROR}
-    echo "apt-get -y remove ccache" | \
+    echo "apt-get -y remove ccache" |			\
 	git-pbuilder login --save-after-exec
     # Speed up pbuilder.
     echo "echo \"force-unsafe-io\"" > /etc/dpkg/dpkg.cfg.d/02apt-speedup | \
