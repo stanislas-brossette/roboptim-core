@@ -54,7 +54,7 @@ if [ -d debian ]; then
 	ADDITIONAL_OPTIONS="--debootstrapopts \"--keyring=/usr/share/keyrings/debian-archive-keyring.gpg\""
     else
 	MIRROR=http://archive.ubuntu.com/ubuntu/
-	ADDITIONAL_OPTIONS="--components 'main universe multiverse restricted'"
+	ADDITIONAL_OPTIONS=""
     fi
 
     # Create a new one.
@@ -62,11 +62,14 @@ if [ -d debian ]; then
 	--debootstrapopts "--variant=buildd"		\
 	${ADDITIONAL_OPTIONS}				\
 	--mirror ${MIRROR}
+    "sudo add-apt-repository \"deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse\"" | \
+	git-pbuilder login --save-after-exec
     echo "apt-get -y remove ccache" |			\
 	git-pbuilder login --save-after-exec
     # Speed up pbuilder.
     echo "echo \"force-unsafe-io\"" > /etc/dpkg/dpkg.cfg.d/02apt-speedup | \
 	git-pbuilder login --save-after-exec
+    git-pbuilder update
 else
     # ...otherwise we install the dependencies explicitly.
     sudo apt-get install -qq			\
