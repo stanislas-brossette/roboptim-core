@@ -44,7 +44,10 @@ if [ -d debian ]; then
     sudo rm -rf /var/cache/pbuilder/base-${DEBIAN_TARGET_RELEASE}.cow
 
     # Create a new one.
-    git-pbuilder create --config "$root_dir/.travis/pbuilderrc"
+    cp $root_dir/.travis/pbuilderrc $HOME/.pbuilderrc
+    sed -i "s|@DIST@|${DIST}|g" $HOME/.pbuilderrc
+
+    git-pbuilder create
     echo "apt-get -y remove ccache" |			\
 	git-pbuilder login --save-after-exec
     # Speed up pbuilder.

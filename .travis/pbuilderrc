@@ -1,4 +1,6 @@
 # -*- sh -*-
+DIST="@DIST@"
+
 # Codenames for Debian suites according to their alias. Update these when
 # needed.
 UNSTABLE_CODENAME="sid"
@@ -27,9 +29,7 @@ if [ -z "${DIST}" ] && [ -r "debian/changelog" ]; then
     fi
 fi
 
-# Optionally set a default distribution if none is used. Note that you can set
-# your own default (i.e. ${DIST:="unstable"}).
-: ${DIST:="unstable"}
+echo "pbuilderrc: " ${DIST}
 
 # Optionally change Debian codenames in $DIST to their aliases.
 case "$DIST" in
