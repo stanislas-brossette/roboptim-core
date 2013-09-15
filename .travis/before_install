@@ -51,14 +51,16 @@ if [ -d debian ]; then
 
     if `test x${DIST} = xunstable`; then
 	MIRROR=http://ftp.us.debian.org/debian/
+	ADDITIONAL_OPTIONS="--debootstrapopts \"--keyring=/usr/share/keyrings/debian-archive-keyring.gpg\""
     else
 	MIRROR=http://archive.ubuntu.com/ubuntu/
+	ADDITIONAL_OPTIONS=""
     fi
 
     # Create a new one.
     git-pbuilder create				\
 	--debootstrapopts "--variant=buildd"	\
-	--debootstrapopts "--keyring=/usr/share/keyrings/debian-archive-keyring.gpg" \
+	${ADDITIONAL_OPTIONS}			\
 	--mirror ${MIRROR}
     echo "apt-get -y remove ccache" | \
 	git-pbuilder login --save-after-exec
