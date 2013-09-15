@@ -62,7 +62,7 @@ if [ -d debian ]; then
     git-pbuilder create					\
 	--debootstrapopts "--variant=buildd"		\
 	${ADDITIONAL_OPTIONS}				\
-	--mirror ${MIRROR}
+	--mirror=${MIRROR}
     echo "apt-get -y remove ccache" |			\
 	git-pbuilder login --save-after-exec
     # Speed up pbuilder.
