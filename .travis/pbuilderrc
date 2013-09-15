@@ -44,10 +44,6 @@ case "$DIST" in
         ;;
 esac
 
-# Optionally set the architecture to the host architecture if none set. Note
-# that you can set your own default (i.e. ${ARCH:="i386"}).
-: ${ARCH:="$(dpkg --print-architecture)"}
-
 NAME="$DIST"
 if [ -n "${ARCH}" ]; then
     NAME="$NAME-$ARCH"
