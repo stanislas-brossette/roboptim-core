@@ -49,8 +49,6 @@ if [ -d debian ]; then
     # Remove previous sandbox.
     sudo rm -rf /var/cache/pbuilder/base-${DEBIAN_TARGET_RELEASE}.cow
 
-    cp $root_dir/.travis/.pbuilderrc $HOME/.pbuilderrc
-
     # Create a new one.
     git-pbuilder create --config "$root_dir/.travis/pbuilderrc"
     echo "apt-get -y remove ccache" |			\
