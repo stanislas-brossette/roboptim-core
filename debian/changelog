@@ -1,3 +1,9 @@
+roboptim-core (2.0-5ppa60+unstable1) unstable; urgency=low
+
+  * Travis automatic build
+
+ -- Thomas Moulard (Travis Automatic Builds) <thomas.moulard+travis@gmail.com>  Mon, 16 Sep 2013 16:26:46 +0900
+
 roboptim-core (2.0-5) unstable; urgency=low
 
   * Update symbols for alpha and s390x.
