@@ -101,7 +101,7 @@ Public Types</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import interval type.  <a href="#ad61b9e552b4de32b866b6f822508f525"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00083.html#aac02000ca51339540f5c8c735bdd6644">Split</a> (boost::shared_ptr&lt; const T &gt; fct, <a class="el" href="a00083.html#a4c012c28154dd0c1e7e875c392763372">size_type</a> functionId)  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00083.html#aac02000ca51339540f5c8c735bdd6644">Split</a> (boost::shared_ptr&lt; const T &gt; fct, <a class="el" href="a00083.html#a4c012c28154dd0c1e7e875c392763372">size_type</a> functionId)  throw (std::runtime_error)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00083.html#ab0adb407b53247a47eb666d9ada74c8a">~Split</a> ()  throw ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -301,7 +301,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>  throw ()<code> [explicit]</code></td>
+          <td></td><td>  throw (std::runtime_error)<code> [explicit]</code></td>
         </tr>
       </table>
 </div>

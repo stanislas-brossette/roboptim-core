@@ -82,7 +82,7 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ab26d75a8300334c995bdc034996bdba1">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00027.html#a296934dc4f3e7ce26fe30d70af74f13b">parentType_t</a>)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#a31c6c96619fbe0b2bcf4fe96ecc7de1f">Concatenate</a> (boost::shared_ptr&lt; U &gt; <a class="el" href="a00027.html#a69c82195a72ff27466dd3340bd6d26ca">left</a>, boost::shared_ptr&lt; U &gt; <a class="el" href="a00027.html#ad06ecba459096c32962f5908a586932f">right</a>)  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#a31c6c96619fbe0b2bcf4fe96ecc7de1f">Concatenate</a> (boost::shared_ptr&lt; U &gt; <a class="el" href="a00027.html#a69c82195a72ff27466dd3340bd6d26ca">left</a>, boost::shared_ptr&lt; U &gt; <a class="el" href="a00027.html#ad06ecba459096c32962f5908a586932f">right</a>)  throw (std::runtime_error)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#a01f215c419d421a23aeedc726bc6684f">~Concatenate</a> ()  throw ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#a69c82195a72ff27466dd3340bd6d26ca">left</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ab48a0ce2381f9644034f31ae78998dac">left</a> ()</td></tr>
@@ -150,7 +150,7 @@ template&lt;typename U &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>  throw ()<code> [explicit]</code></td>
+          <td></td><td>  throw (std::runtime_error)<code> [explicit]</code></td>
         </tr>
       </table>
 </div>
