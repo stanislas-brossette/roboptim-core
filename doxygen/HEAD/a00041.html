@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the function on the specified output stream.  <a href="#a9c50e545609bd7ace4f2dad69029fac3"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a5fa47fea06495251f413721483a35dba">GenericDifferentiableFunction</a> (<a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#ac56c279d34f3c4047c0f66b738a1bd7f">inputSize</a>, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">outputSize</a>=1, std::string name=std::string())  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a5fa47fea06495251f413721483a35dba">GenericDifferentiableFunction</a> (<a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#ac56c279d34f3c4047c0f66b738a1bd7f">inputSize</a>, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">outputSize</a>=1, std::string name=std::string())  throw (std::runtime_error)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete class constructor should call this constructor.  <a href="#a5fa47fea06495251f413721483a35dba"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#a5aa21359d6844bc4c21280cbd1155d22">impl_jacobian</a> (<a class="el" href="a00041.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;<a class="el" href="a00041.html#a18879d9ec115089c02e685a020a11c4d">jacobian</a>, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;arg) const   throw ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Jacobian evaluation.  <a href="#a5aa21359d6844bc4c21280cbd1155d22"></a><br/></td></tr>
@@ -238,7 +238,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>  throw ()<code> [protected]</code></td>
+          <td></td><td>  throw (std::runtime_error)<code> [protected]</code></td>
         </tr>
       </table>
 </div>

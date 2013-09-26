@@ -114,7 +114,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the function on the specified output stream.  <a href="#a78bf9018548e92c38803bbd0b39ef29a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#af01b4e2ebb1119493337e12c105128c2">GenericTwiceDifferentiableFunction</a> (<a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#ac56c279d34f3c4047c0f66b738a1bd7f">inputSize</a>, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">outputSize</a>=1, std::string name=std::string())  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#af01b4e2ebb1119493337e12c105128c2">GenericTwiceDifferentiableFunction</a> (<a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#ac56c279d34f3c4047c0f66b738a1bd7f">inputSize</a>, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> <a class="el" href="a00043.html#a0aaf1d1daaab80d27aa6cba0a3ee006f">outputSize</a>=1, std::string name=std::string())  throw (std::runtime_error)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete class constructor should call this constructor.  <a href="#af01b4e2ebb1119493337e12c105128c2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html#ac5b5430ab527d7de393f876f4db314c2">impl_hessian</a> (<a class="el" href="a00053.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;<a class="el" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2">hessian</a>, const <a class="el" href="a00043.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;argument, <a class="el" href="a00043.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> functionId=0) const =0  throw ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Hessian evaluation.  <a href="#ac5b5430ab527d7de393f876f4db314c2"></a><br/></td></tr>
@@ -197,7 +197,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>  throw ()<code> [protected]</code></td>
+          <td></td><td>  throw (std::runtime_error)<code> [protected]</code></td>
         </tr>
       </table>
 </div>

@@ -87,7 +87,7 @@ Functions</h2></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00196.html#gac1811528dd1c9cc4c233c14bf5ed6e81">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const GenericFunction&lt; T &gt; &amp;f)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle function display.  <a href="#gac1811528dd1c9cc4c233c14bf5ed6e81"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#ga1d025a85d12b2eb8f85409a150cad994">roboptim::GenericFunction&lt; T &gt;::GenericFunction</a> (size_type inputSize, size_type outputSize=1, std::string name=std::string())  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#ga1d025a85d12b2eb8f85409a150cad994">roboptim::GenericFunction&lt; T &gt;::GenericFunction</a> (size_type inputSize, size_type outputSize=1, std::string name=std::string())  throw (std::runtime_error)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete class constructor should call this constructor.  <a href="#ga1d025a85d12b2eb8f85409a150cad994"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#gac5f8e82a0e2ec840c40396a8a6d949c2">roboptim::GenericFunction&lt; T &gt;::~GenericFunction</a> ()  throw ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Trivial destructor.  <a href="#gac5f8e82a0e2ec840c40396a8a6d949c2"></a><br/></td></tr>
@@ -126,7 +126,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>  throw ()<code> [protected]</code></td>
+          <td></td><td>  throw (std::runtime_error)<code> [protected]</code></td>
         </tr>
       </table>
 </div>
