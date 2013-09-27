@@ -3,7 +3,7 @@ var a00118 =
     [ "cd", "a00201.html#ga195d042fd97469e044b37abc0faf1e0f", null ],
     [ "clear", "a00201.html#gad96d84d9e1a5bab7a33ed90bef8bc01d", null ],
     [ "comment", "a00201.html#ga108c0cb6161fb8813817a7b7a1ac980d", null ],
-    [ "comment", "a00201.html#ga80c2272d3610440e4ba4c6f035bf9007", null ],
+    [ "comment", "a00201.html#ga7a509faa4e3dd9a30373a2b320b98c23", null ],
     [ "help", "a00201.html#gabecfe2b1ab67fa65ea2fa8f9de592d0a", null ],
     [ "pwd", "a00201.html#ga05e850b5c5dc912807d645863c01acd9", null ],
     [ "quit", "a00201.html#ga9ecd6983c2e9525527f1269b72b85291", null ],
