@@ -87,9 +87,15 @@ Inheritance diagram for roboptim::Solver&lt; F, C &gt;:</div>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00067.html">Problem</a>&lt; F, C &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00079.html#a5b5c016b1da3aadc3d619023124b2197">problem_t</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00079.html" title="Solver for a specific problem class.">Solver</a> problem type.  <a href="#a5b5c016b1da3aadc3d619023124b2197"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef F::vector_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00079.html#a42813adb1bed4804c8fadf94da6e624b">vector_t</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import vector type from cost function.  <a href="#a42813adb1bed4804c8fadf94da6e624b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <br class="typebreak"/>
 <a class="el" href="a00061.html">Parameter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00079.html#aedb5c66ead4f0eb1b8851f58b7fd8aee">parameters_t</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00056.html" title="Apply a function several times to an input vector.">Map</a> of parameters.  <a href="#aedb5c66ead4f0eb1b8851f58b7fd8aee"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void(const <br class="typebreak"/>
+<a class="el" href="a00079.html#a42813adb1bed4804c8fadf94da6e624b">vector_t</a> &amp;x, const <a class="el" href="a00079.html#a5b5c016b1da3aadc3d619023124b2197">problem_t</a> <br class="typebreak"/>
+&amp;<a class="el" href="a00079.html#a7920ef2fd1c7068111df0496c4f742ce">problem</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00079.html#a1f7e4304c8d63be203efcb3002fa821f">callback_t</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-iteration callback type.  <a href="#a1f7e4304c8d63be203efcb3002fa821f"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00079.html#aab9fcd2e4c0adb07666634ea8b3e8c6a">Solver</a> (const <a class="el" href="a00079.html#a5b5c016b1da3aadc3d619023124b2197">problem_t</a> &amp;<a class="el" href="a00079.html#a7920ef2fd1c7068111df0496c4f742ce">problem</a>)  throw ()</td></tr>
@@ -100,6 +106,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00079.html#abb93279689228b6d0f2338ce75f056d9">~Solver</a> ()  throw ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00079.html#a5b5c016b1da3aadc3d619023124b2197">problem_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00079.html#a7920ef2fd1c7068111df0496c4f742ce">problem</a> () const   throw ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the problem.  <a href="#a7920ef2fd1c7068111df0496c4f742ce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00079.html#aca06f8826cb1ffcad60a6d1f99938ab2">setIterationCallback</a> (<a class="el" href="a00079.html#a1f7e4304c8d63be203efcb3002fa821f">callback_t</a>)  throw (std::runtime_error)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the per-iteration callback.  <a href="#aca06f8826cb1ffcad60a6d1f99938ab2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00079.html#afc073c4023a0146bef3e67bbb1a2b4f9">print</a> (std::ostream &amp;) const   throw ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the solver on the specified output stream.  <a href="#afc073c4023a0146bef3e67bbb1a2b4f9"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Parameters</div></td></tr>
@@ -134,6 +142,28 @@ class roboptim::Solver&lt; F, C &gt;</h3>
 </dl>
 <dl class="pre"><dt><b>Precondition:</b></dt><dd>F is a subtype of Function </dd></dl>
 </div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="a1f7e4304c8d63be203efcb3002fa821f"></a><!-- doxytag: member="roboptim::Solver::callback_t" ref="a1f7e4304c8d63be203efcb3002fa821f" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F, typename C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::function&lt;void (const <a class="el" href="a00079.html#a42813adb1bed4804c8fadf94da6e624b">vector_t</a>&amp; x, const <a class="el" href="a00079.html#a5b5c016b1da3aadc3d619023124b2197">problem_t</a>&amp; <a class="el" href="a00079.html#a7920ef2fd1c7068111df0496c4f742ce">problem</a>)&gt; <a class="el" href="a00079.html">roboptim::Solver</a>&lt; F, C &gt;::<a class="el" href="a00079.html#a1f7e4304c8d63be203efcb3002fa821f">callback_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Per-iteration callback type. </p>
+<p>Callback parameters: </p>
+<ul>
+<li>x is the current considered point, </li>
+<li>problem is a (constant) reference to the problem </li>
+</ul>
+
+</div>
+</div>
 <a class="anchor" id="aedb5c66ead4f0eb1b8851f58b7fd8aee"></a><!-- doxytag: member="roboptim::Solver::parameters_t" ref="aedb5c66ead4f0eb1b8851f58b7fd8aee" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -166,6 +196,23 @@ template&lt;typename F, typename C&gt; </div>
 
 <p><a class="el" href="a00079.html" title="Solver for a specific problem class.">Solver</a> problem type. </p>
 <p>The solver can solve problems of this type. If another kind of problem is given, a conversion will be required. </p>
+
+</div>
+</div>
+<a class="anchor" id="a42813adb1bed4804c8fadf94da6e624b"></a><!-- doxytag: member="roboptim::Solver::vector_t" ref="a42813adb1bed4804c8fadf94da6e624b" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F, typename C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef F::vector_t <a class="el" href="a00079.html">roboptim::Solver</a>&lt; F, C &gt;::<a class="el" href="a00079.html#a42813adb1bed4804c8fadf94da6e624b">vector_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Import vector type from cost function. </p>
 
 </div>
 </div>
@@ -361,6 +408,29 @@ template&lt;typename F , typename C &gt; </div>
 
 <p>Retrieve the problem. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>problem this solver is solving </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aca06f8826cb1ffcad60a6d1f99938ab2"></a><!-- doxytag: member="roboptim::Solver::setIterationCallback" ref="aca06f8826cb1ffcad60a6d1f99938ab2" args="(callback_t)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F, typename C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="a00079.html">roboptim::Solver</a>&lt; F, C &gt;::<a class="el" href="a00079.html#aca06f8826cb1ffcad60a6d1f99938ab2">setIterationCallback</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00079.html#a1f7e4304c8d63be203efcb3002fa821f">callback_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td>  throw (std::runtime_error)<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the per-iteration callback. </p>
+<p>The per-iteration callback is a callback called each time one iteration of the optimization process is finished.</p>
+<p>Not all the solvers support such a callback so this method may throw a std::runtime_error to let you know this feature is unsupported. </p>
 
 </div>
 </div>

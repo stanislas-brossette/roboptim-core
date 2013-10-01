@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['callback_5ft',['callback_t',['../a00079.html#a1f7e4304c8d63be203efcb3002fa821f',1,'roboptim::Solver']]],
   ['chainshptr_5ft',['ChainShPtr_t',['../a00025.html#a455221a00edbb17db76f12fff0c11af7',1,'roboptim::Chain']]],
   ['concatenateshptr_5ft',['ConcatenateShPtr_t',['../a00027.html#a5d14bdcac92150922c3a6ab7e0e83ac3',1,'roboptim::Concatenate']]],
   ['constantfunction',['ConstantFunction',['../a00185.html#aae31207e6c555a8c607a7f444c1d437b',1,'roboptim']]],

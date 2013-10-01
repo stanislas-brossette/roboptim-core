@@ -5,6 +5,7 @@ var searchData=
   ['selection',['Selection',['../a00076.html#a0dddb1c4cdb30e96e2ca952a63d49831',1,'roboptim::Selection::Selection()'],['../a00185.html#ab04bd0199420c0f6bcbe3d25029428bc',1,'roboptim::selection()']]],
   ['set',['set',['../a00201.html#gad77630a233193748534b41d069d4e180',1,'roboptim::visualization::gnuplot']]],
   ['set_5fmatrix_5fheader',['set_matrix_header',['../a00194.html#a2d8c719cadd72df2ba3bb999d4e2cda1',1,'roboptim::visualization::gnuplot::detail']]],
+  ['setiterationcallback',['setIterationCallback',['../a00079.html#aca06f8826cb1ffcad60a6d1f99938ab2',1,'roboptim::Solver']]],
   ['setzero',['setZero',['../a00053.html#a042286a811a4ec9b79c9d2c34f8e63c0',1,'roboptim::GenericTwiceDifferentiableFunction']]],
   ['show',['show',['../a00201.html#gaf90f5364d8c3597b8909ba99083fc23f',1,'roboptim::visualization::gnuplot']]],
   ['sin',['Sin',['../a00078.html#a4732d5e0a1e37379c5b0275effe7e67c',1,'roboptim::Sin']]],

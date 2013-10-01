@@ -1,7 +1,6 @@
 var a00052 =
 [
     [ "result_t", "a00052.html#acd6988bec0b7bda9b8565232d32d1bae", null ],
-    [ "vector_t", "a00052.html#a24d6320d21eeb5a33b3abcd9078b133b", null ],
     [ "solutions", "a00052.html#a12c31c6bd2e018b05a71d51dd5b34846", null ],
     [ "GenericSolver", "a00052.html#ac73eb90d375eebe2580be8ad275bbf39", null ],
     [ "GenericSolver", "a00052.html#a73789e83216bf0ef32a3f123088f04b4", null ],

@@ -99,8 +99,6 @@ Public Types</h2></td></tr>
 <br/>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the kind of solution which has been found.  <a href="a00052.html#a12c31c6bd2e018b05a71d51dd5b34846">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">Function::vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#a24d6320d21eeb5a33b3abcd9078b133b">vector_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector type imported from function class.  <a href="#a24d6320d21eeb5a33b3abcd9078b133b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef boost::variant<br class="typebreak"/>
 &lt; <a class="el" href="a00058.html">NoSolution</a>, <a class="el" href="a00073.html">Result</a>, <br class="typebreak"/>
 <a class="el" href="a00074.html">ResultWithWarnings</a>, <br class="typebreak"/>
@@ -128,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00052.html#acd6988bec0b7bda9b8565232d32d1bae">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#ab36ece190971122f7111d7e92c4e66cf">result_</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">/brief Optimization result.  <a href="#ab36ece190971122f7111d7e92c4e66cf"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimization result.  <a href="#ab36ece190971122f7111d7e92c4e66cf"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static log4cxx::LoggerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html#a7fbfdfbf962a90aace9fd42e92e0a428">logger</a></td></tr>
@@ -156,21 +154,6 @@ Static Protected Attributes</h2></td></tr>
 <li>result and warnings (problem solved but some errors happened),</li>
 <li>solver error (optimization has failed). </li>
 </ul>
-
-</div>
-</div>
-<a class="anchor" id="a24d6320d21eeb5a33b3abcd9078b133b"></a><!-- doxytag: member="roboptim::GenericSolver::vector_t" ref="a24d6320d21eeb5a33b3abcd9078b133b" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00043.html#a76763e91e51e9cddf579d52091dce746">Function::vector_t</a> <a class="el" href="a00052.html#a24d6320d21eeb5a33b3abcd9078b133b">roboptim::GenericSolver::vector_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Vector type imported from function class. </p>
 
 </div>
 </div>
@@ -426,7 +409,7 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>/brief Optimization result. </p>
+<p>Optimization result. </p>
 
 <p>Referenced by <a class="el" href="a00052.html#aef2460331a80efc404356e9b68269b8c">minimum()</a>, <a class="el" href="a00052.html#a16884b058070f8fb6759c6c194665cb7">reset()</a>, <a class="el" href="a00035.html#a3d67feee267c21554172ba5153b6d10a">roboptim::DummySolver::solve()</a>, and <a class="el" href="a00036.html#a4f8573ba06d5a95443a90517a09f8ad6">roboptim::DummySolverLastState::solve()</a>.</p>
 
