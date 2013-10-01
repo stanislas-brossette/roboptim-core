@@ -1,9 +1,8 @@
 var a00125 =
 [
-    [ "EIGEN_YES_I_KNOW_SPARE_MODULE_IS_NOT_STABLE_YET", "a00125.html#a77e6db63e071b40535df9ee30f2acfd7", null ],
-    [ "normalize", "a00201.html#ga03109edccbaa5f071371ee52c447ee70", null ],
-    [ "normalize", "a00201.html#gaf0f79518896936efeba27dabdce72963", null ],
-    [ "normalize", "a00201.html#ga823decd192bfbc6405e61c28947ddc4d", null ],
-    [ "operator<<", "a00201.html#ga22576c0708e8fe4af42060ff87bfad20", null ],
-    [ "operator<<", "a00192.html#a45951c8d967c172f9f8213900b3d7884", null ]
+    [ "dense_matrix_to_gnuplot", "a00198.html#adb2224ca300cd683bf5229fd2cee7d01", null ],
+    [ "plot_mat", "a00205.html#ga40c69971a140078c622852953fb092b3", null ],
+    [ "plot_mat", "a00205.html#ga156782554154a4064795107504821778", null ],
+    [ "set_matrix_header", "a00198.html#a2d8c719cadd72df2ba3bb999d4e2cda1", null ],
+    [ "sparse_matrix_to_gnuplot", "a00198.html#a1303f8764337206a0b83e3bd5508bc46", null ]
 ];

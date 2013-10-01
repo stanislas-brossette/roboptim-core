@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::Parameter Struct Reference</title>
+<title>roboptim::NTimesDerivableFunction&lt; DerivabilityOrder &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -59,80 +59,187 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::Parameter Struct Reference<div class="ingroups"><a class="el" href="a00199.html">Optimization problems</a></div></div>  </div>
+<div class="title">roboptim::NTimesDerivableFunction&lt; DerivabilityOrder &gt; Class Template Reference<div class="ingroups"><a class="el" href="a00201.html">Mathematical functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::Parameter" -->
-<p>Parameters type.  
+<!-- doxytag: class="roboptim::NTimesDerivableFunction" -->
+<p>Define a <img class="formulaInl" alt="$\mathbb{R} \rightarrow \mathbb{R}^m$" src="form_24.png"/> function, derivable n times ( <img class="formulaInl" alt="$n \geq 2$" src="form_25.png"/>).  
  <a href="a00061.html#details">More...</a></p>
 
-<p><code>#include &lt;roboptim/core/solver.hh&gt;</code></p>
+<p><code>#include &lt;roboptim/core/n-times-derivable-function.hh&gt;</code></p>
 
-<p><a href="a00252.html">List of all members.</a></p>
+<p><a href="a00242.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef boost::variant<br class="typebreak"/>
-&lt; <a class="el" href="a00043.html#a1cfc07bf5c22d02af3dae45364ef1407">Function::value_type</a>, int, <br class="typebreak"/>
-std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a20a7c0403832ff03174d093943f98f77">parameterValues_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Allowed types for parameters.  <a href="#a20a7c0403832ff03174d093943f98f77"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a8758825ae290c6722354c7e2b4a40453">description</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00061.html" title="Parameters type.">Parameter</a> description (for humans).  <a href="#a8758825ae290c6722354c7e2b4a40453"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00061.html#a20a7c0403832ff03174d093943f98f77">parameterValues_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a6a9253ce0d03f844c642a1a41dcd60b1">value</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Value.  <a href="#a6a9253ce0d03f844c642a1a41dcd60b1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">Function::size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a0b16636d1ed2950355c0cd7e22aaffa8">size_type</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import size type from function.  <a href="#a0b16636d1ed2950355c0cd7e22aaffa8"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="a00061.html#a0b16636d1ed2950355c0cd7e22aaffa8">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a78da40b42cc149c600873c1c7707941b">derivabilityOrderMax</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum derivability order.  <a href="#a78da40b42cc149c600873c1c7707941b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#abac49e2227ca9041fd9a70b429ea3fa1">~NTimesDerivableFunction</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a1f48092699bd7d0ec66d698d215e24ac">print</a> (std::ostream &amp;) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the function on the specified output stream.  <a href="#a1f48092699bd7d0ec66d698d215e24ac"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="a00061.html#a0b16636d1ed2950355c0cd7e22aaffa8">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#ad7b273dd6b55a50f56851d372fe1daa1">derivabilityOrder</a> = DerivabilityOrder</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function derivability order.  <a href="#ad7b273dd6b55a50f56851d372fe1daa1"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html#a794258aa1fd8a40705cb07af333dc5dd">NTimesDerivableFunction</a> (<a class="el" href="a00061.html#a0b16636d1ed2950355c0cd7e22aaffa8">size_type</a> outputSize=1, std::string name=std::string())  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete class constructor should call this constructor.  <a href="#a794258aa1fd8a40705cb07af333dc5dd"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Parameters type. </p>
+<div class="textblock"><h3>template&lt;unsigned DerivabilityOrder&gt;<br/>
+class roboptim::NTimesDerivableFunction&lt; DerivabilityOrder &gt;</h3>
+
+<p>Define a <img class="formulaInl" alt="$\mathbb{R} \rightarrow \mathbb{R}^m$" src="form_24.png"/> function, derivable n times ( <img class="formulaInl" alt="$n \geq 2$" src="form_25.png"/>). </p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a20a7c0403832ff03174d093943f98f77"></a><!-- doxytag: member="roboptim::Parameter::parameterValues_t" ref="a20a7c0403832ff03174d093943f98f77" args="" -->
+<a class="anchor" id="a0b16636d1ed2950355c0cd7e22aaffa8"></a><!-- doxytag: member="roboptim::NTimesDerivableFunction::size_type" ref="a0b16636d1ed2950355c0cd7e22aaffa8" args="" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned DerivabilityOrder&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::variant&lt;<a class="el" href="a00043.html#a1cfc07bf5c22d02af3dae45364ef1407">Function::value_type</a>, int, std::string&gt; <a class="el" href="a00061.html#a20a7c0403832ff03174d093943f98f77">roboptim::Parameter::parameterValues_t</a></td>
+          <td class="memname">typedef <a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">Function::size_type</a> <a class="el" href="a00061.html">roboptim::NTimesDerivableFunction</a>&lt; DerivabilityOrder &gt;::<a class="el" href="a00061.html#a0b16636d1ed2950355c0cd7e22aaffa8">size_type</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Allowed types for parameters. </p>
+<p>Import size type from function. </p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="abac49e2227ca9041fd9a70b429ea3fa1"></a><!-- doxytag: member="roboptim::NTimesDerivableFunction::~NTimesDerivableFunction" ref="abac49e2227ca9041fd9a70b429ea3fa1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned dorder&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00061.html">roboptim::NTimesDerivableFunction</a>&lt; dorder &gt;::~<a class="el" href="a00061.html">NTimesDerivableFunction</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a794258aa1fd8a40705cb07af333dc5dd"></a><!-- doxytag: member="roboptim::NTimesDerivableFunction::NTimesDerivableFunction" ref="a794258aa1fd8a40705cb07af333dc5dd" args="(size_type outputSize=1, std::string name=std::string())" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned DerivabilityOrder&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00061.html">roboptim::NTimesDerivableFunction</a>&lt; DerivabilityOrder &gt;::<a class="el" href="a00061.html">NTimesDerivableFunction</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00061.html#a0b16636d1ed2950355c0cd7e22aaffa8">size_type</a>&#160;</td>
+          <td class="paramname"><em>outputSize</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>std::string&#160;()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw ()<code> [inline, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Concrete class constructor should call this constructor. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outputSize</td><td>output size (result size) </td></tr>
+    <tr><td class="paramname">name</td><td>function name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a78da40b42cc149c600873c1c7707941b"></a><!-- doxytag: member="roboptim::NTimesDerivableFunction::derivabilityOrderMax" ref="a78da40b42cc149c600873c1c7707941b" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned DerivabilityOrder&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="a00061.html#a0b16636d1ed2950355c0cd7e22aaffa8">size_type</a> <a class="el" href="a00061.html">roboptim::NTimesDerivableFunction</a>&lt; DerivabilityOrder &gt;::<a class="el" href="a00061.html#a78da40b42cc149c600873c1c7707941b">derivabilityOrderMax</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the maximum derivability order. </p>
+
+<p>Referenced by <a class="el" href="a00062.html#a43fdcf084e530944935aaa081679a538">roboptim::NTimesDerivableFunction&lt; 2 &gt;::derivative()</a>, and <a class="el" href="a00062.html#ae0961c8f2f33ecb177216919420b21cb">roboptim::NTimesDerivableFunction&lt; 2 &gt;::print()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f48092699bd7d0ec66d698d215e24ac"></a><!-- doxytag: member="roboptim::NTimesDerivableFunction::print" ref="a1f48092699bd7d0ec66d698d215e24ac" args="(std::ostream &amp;) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned dorder&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; <a class="el" href="a00061.html">roboptim::NTimesDerivableFunction</a>&lt; dorder &gt;::<a class="el" href="a00061.html#a1f48092699bd7d0ec66d698d215e24ac">print</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Display the function on the specified output stream. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
 
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a8758825ae290c6722354c7e2b4a40453"></a><!-- doxytag: member="roboptim::Parameter::description" ref="a8758825ae290c6722354c7e2b4a40453" args="" -->
+<a class="anchor" id="ad7b273dd6b55a50f56851d372fe1daa1"></a><!-- doxytag: member="roboptim::NTimesDerivableFunction::derivabilityOrder" ref="ad7b273dd6b55a50f56851d372fe1daa1" args="" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned DerivabilityOrder&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="a00061.html#a8758825ae290c6722354c7e2b4a40453">roboptim::Parameter::description</a></td>
+          <td class="memname">const <a class="el" href="a00061.html#a0b16636d1ed2950355c0cd7e22aaffa8">size_type</a> <a class="el" href="a00061.html">roboptim::NTimesDerivableFunction</a>&lt; DerivabilityOrder &gt;::<a class="el" href="a00061.html#ad7b273dd6b55a50f56851d372fe1daa1">derivabilityOrder</a> = DerivabilityOrder<code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p><a class="el" href="a00061.html" title="Parameters type.">Parameter</a> description (for humans). </p>
-
-<p>Referenced by <a class="el" href="a00199.html#gaec29bb03838e3b8e4fd86b85db5fe19a">roboptim::operator&lt;&lt;()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6a9253ce0d03f844c642a1a41dcd60b1"></a><!-- doxytag: member="roboptim::Parameter::value" ref="a6a9253ce0d03f844c642a1a41dcd60b1" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00061.html#a20a7c0403832ff03174d093943f98f77">parameterValues_t</a> <a class="el" href="a00061.html#a6a9253ce0d03f844c642a1a41dcd60b1">roboptim::Parameter::value</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Value. </p>
+<p>Function derivability order. </p>
 
 </div>
 </div>
@@ -154,7 +261,7 @@ Public Attributes</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00185.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00061.html">Parameter</a>      </li>
+      <li class="navelem"><a class="el" href="a00189.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00061.html">NTimesDerivableFunction</a>      </li>
 </body>
 </html>

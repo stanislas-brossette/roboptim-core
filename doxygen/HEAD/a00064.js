@@ -1,7 +1,6 @@
 var a00064 =
 [
-    [ "computeGradient", "a00064.html#a3a068afe196458fcc7d499440c19b820", null ],
-    [ "computeJacobian", "a00064.html#a343812ba28f1cd2b5b88ffbf8d265611", null ],
-    [ "computeJacobian", "a00064.html#aa901d45463cccc8db7dd31f7c00f977c", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00064.html#af62d50124971caeadae570717fbf1740", null ]
+    [ "parameterValues_t", "a00064.html#a20a7c0403832ff03174d093943f98f77", null ],
+    [ "description", "a00064.html#a8758825ae290c6722354c7e2b4a40453", null ],
+    [ "value", "a00064.html#a6a9253ce0d03f844c642a1a41dcd60b1", null ]
 ];

@@ -1,6 +1,7 @@
 var a00077 =
 [
-    [ "computeGradient", "a00077.html#ac177c36cf832e17f3104c7db9288e8cb", null ],
-    [ "computeGradient", "a00077.html#af6fb145667fec7f294b3c3314bda209e", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00077.html#a589c0a7f4d846453adf91866789ebd7d", null ]
+    [ "ResultWithWarnings", "a00077.html#a2e3e3d6637bb1968eef831d451079124", null ],
+    [ "~ResultWithWarnings", "a00077.html#aa3c7d443e5144fb8dea37bb88b50b387", null ],
+    [ "print", "a00077.html#a555b074ff9d1e8ecacc2c2665f9a5eec", null ],
+    [ "warnings", "a00077.html#a644b84239da645b252e1d9cb1b0b49c8", null ]
 ];

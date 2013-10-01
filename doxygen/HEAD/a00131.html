@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>linear-function.hxx File Reference</title>
+<title>indent.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,19 +56,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">linear-function.hxx File Reference</div>  </div>
+<div class="title">indent.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00128.html">roboptim/core/indent.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00181.html">roboptim/core/util.hh</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="a00179.html">roboptim/core/sys.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00098.html">roboptim/core/debug.hh</a>&gt;</code><br/>
+<code>#include &lt;iosfwd&gt;</code><br/>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> long int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html#a2b00a3916f44e9f9d69e4fc157a0da79">roboptim::indent</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The current indentation level for <em>o</em>.  <a href="#a2b00a3916f44e9f9d69e4fc157a0da79"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html#a053552edbb5c42ac287c22175ea43e69">roboptim::incindent</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the indentation.  <a href="#a053552edbb5c42ac287c22175ea43e69"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html#a5a9d36182ac616874a038fd4217f0a9c">roboptim::decindent</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement the indentation.  <a href="#a5a9d36182ac616874a038fd4217f0a9c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html#a3f228456aacf0bc862482828cbde643b">roboptim::resetindent</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the indentation.  <a href="#a3f228456aacf0bc862482828cbde643b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html#a27b6e86639bb04ec042979cdaad0a851">roboptim::iendl</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Print an end of line, then set the indentation.  <a href="#a27b6e86639bb04ec042979cdaad0a851"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html#a522f7549c2f312397403265b950a9144">roboptim::incendl</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the indentation, print an end of line, and set the indentation.  <a href="#a522f7549c2f312397403265b950a9144"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html#a40c2b30f2b9839b3f1f16f3e1bcf8769">roboptim::decendl</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement the indentation, print an end of line, and set the indentation.  <a href="#a40c2b30f2b9839b3f1f16f3e1bcf8769"></a><br/></td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -88,6 +106,6 @@ Namespaces</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00131.html">linear-function.hxx</a>      </li>
+      <li class="navelem"><a class="el" href="a00131.html">indent.hh</a>      </li>
 </body>
 </html>

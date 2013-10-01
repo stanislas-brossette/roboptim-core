@@ -75,29 +75,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <span class="preprocessor">#include &lt;iostream&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00129.html">roboptim/core/io.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00109.html">roboptim/core/finite-difference-gradient.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00140.html">roboptim/core/numeric-quadratic-function.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00181.html">roboptim/core/util.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00132.html">roboptim/core/io.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00112.html">roboptim/core/finite-difference-gradient.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00143.html">roboptim/core/numeric-quadratic-function.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00185.html">roboptim/core/util.hh</a>&gt;</span>
 
 <span class="keyword">using namespace </span>roboptim;
 
-<span class="keyword">typedef</span> <a name="_a0"></a><a class="code" href="a00035.html" title="Dummy solver which always fails.">DummySolver</a> <a name="a1"></a><a class="code" href="a00104.html#a5aafe251d5465495fdbaff79da9e5a7d">solver_t</a>;
+<span class="keyword">typedef</span> <a name="_a0"></a><a class="code" href="a00036.html" title="Dummy solver which always fails.">DummySolver</a> <a name="a1"></a><a class="code" href="a00107.html#a5aafe251d5465495fdbaff79da9e5a7d">solver_t</a>;
 
-<span class="keyword">typedef</span> boost::mpl::list&lt; <a name="_a2"></a><a class="code" href="a00037.html" title="Tag type for functions using Eigen dense matrices.">::roboptim::EigenMatrixDense</a>,
-        <a name="_a3"></a><a class="code" href="a00038.html" title="Tag type for functions using Eigen sparse matrices.">::roboptim::EigenMatrixSparse</a>&gt; functionTypes_t;
+<span class="keyword">typedef</span> boost::mpl::list&lt; <a name="_a2"></a><a class="code" href="a00038.html" title="Tag type for functions using Eigen dense matrices.">::roboptim::EigenMatrixDense</a>,
+        <a name="_a3"></a><a class="code" href="a00039.html" title="Tag type for functions using Eigen sparse matrices.">::roboptim::EigenMatrixSparse</a>&gt; functionTypes_t;
 
 BOOST_FIXTURE_TEST_SUITE (core, TestSuiteConfiguration)
 
 BOOST_AUTO_TEST_CASE_TEMPLATE (numeric_quadratic_function, T, functionTypes_t)
 {
-  <span class="keyword">typename</span> <a name="_a4"></a><a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t</a> a (5, 5);
-  <span class="keyword">typename</span> <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t</a> b (5);
-  <span class="keyword">typename</span> <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t</a> x (5);
+  <span class="keyword">typename</span> <a name="_a4"></a><a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t</a> a (5, 5);
+  <span class="keyword">typename</span> <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t</a> b (5);
+  <span class="keyword">typename</span> <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t</a> x (5);
 
-  a.<a name="a5"></a><a class="code" href="a00053.html#a042286a811a4ec9b79c9d2c34f8e63c0" title="Set a symmetric matrix to zero.">setZero</a> ();
-  b.<a name="a6"></a><a class="code" href="a00053.html#a042286a811a4ec9b79c9d2c34f8e63c0" title="Set a symmetric matrix to zero.">setZero</a> ();
-  x.<a class="code" href="a00053.html#a042286a811a4ec9b79c9d2c34f8e63c0" title="Set a symmetric matrix to zero.">setZero</a> ();
+  a.<a name="a5"></a><a class="code" href="a00055.html#a042286a811a4ec9b79c9d2c34f8e63c0" title="Set a symmetric matrix to zero.">setZero</a> ();
+  b.<a name="a6"></a><a class="code" href="a00055.html#a042286a811a4ec9b79c9d2c34f8e63c0" title="Set a symmetric matrix to zero.">setZero</a> ();
+  x.<a class="code" href="a00055.html#a042286a811a4ec9b79c9d2c34f8e63c0" title="Set a symmetric matrix to zero.">setZero</a> ();
 
   a.coeffRef (0, 0) = 1., a.coeffRef (0, 1) = 0.,
     a.coeffRef (0, 2) = 0., a.coeffRef (0, 3) = 0., a.coeffRef (0, 4) = 0.;
@@ -116,20 +116,20 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (numeric_quadratic_function, T, functionTypes_t)
   b[3] = 0.;
   b[4] = 0.;
 
-  <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;</a> f (a, b);
+  <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;</a> f (a, b);
 
   std::cout &lt;&lt; f &lt;&lt; std::endl;
 
   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; ++i)
     {
-      x = <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t::Random</a> (5);
+      x = <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t::Random</a> (5);
 
       std::cout &lt;&lt; <span class="stringliteral">&quot;f(x) = &quot;</span> &lt;&lt; f (x) &lt;&lt; std::endl;
-      std::cout &lt;&lt; <span class="stringliteral">&quot;J(x) = &quot;</span> &lt;&lt; f.<a name="a7"></a><a class="code" href="a00041.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> (x) &lt;&lt; std::endl;
-      std::cout &lt;&lt; <span class="stringliteral">&quot;G(x) = &quot;</span> &lt;&lt; f.<a name="a8"></a><a class="code" href="a00041.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x, 0) &lt;&lt; std::endl;
-      std::cout &lt;&lt; <span class="stringliteral">&quot;H(x) = &quot;</span> &lt;&lt; f.<a name="a9"></a><a class="code" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2" title="Compute the hessian at a given point.">hessian</a> (x, 0) &lt;&lt; std::endl;
+      std::cout &lt;&lt; <span class="stringliteral">&quot;J(x) = &quot;</span> &lt;&lt; f.<a name="a7"></a><a class="code" href="a00043.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> (x) &lt;&lt; std::endl;
+      std::cout &lt;&lt; <span class="stringliteral">&quot;G(x) = &quot;</span> &lt;&lt; f.<a name="a8"></a><a class="code" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x, 0) &lt;&lt; std::endl;
+      std::cout &lt;&lt; <span class="stringliteral">&quot;H(x) = &quot;</span> &lt;&lt; f.<a name="a9"></a><a class="code" href="a00055.html#a7ab6bda5039008fb215ab24ecacd85a2" title="Compute the hessian at a given point.">hessian</a> (x, 0) &lt;&lt; std::endl;
 
-      <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t</a> matrix_t;
+      <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t</a> matrix_t;
       matrix_t J (1, 5);
 
       <span class="keywordflow">for</span> (<span class="keyword">typename</span> matrix_t::Index i = 0; i &lt; 5; ++i)
@@ -137,15 +137,15 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (numeric_quadratic_function, T, functionTypes_t)
 
       <span class="keywordflow">for</span> (<span class="keyword">typename</span> matrix_t::Index i = 0; i &lt; 5; ++i)
   {
-    std::cout &lt;&lt; f.<a class="code" href="a00041.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> (x).coeffRef (0, i) &lt;&lt; std::endl;
+    std::cout &lt;&lt; f.<a class="code" href="a00043.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> (x).coeffRef (0, i) &lt;&lt; std::endl;
     std::cout &lt;&lt; J.coeffRef (0, i) &lt;&lt; std::endl;
   }
 
-      BOOST_CHECK (<a name="a10"></a><a class="code" href="a00185.html#abf0a2c6465667b5f8cc0c9ab9c5d1fe3" title="Compare dense vectors (matrices) using both relative and absolute tolerances.">allclose</a> (f.<a class="code" href="a00041.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> (x), J));
-      BOOST_CHECK (<a class="code" href="a00185.html#abf0a2c6465667b5f8cc0c9ab9c5d1fe3" title="Compare dense vectors (matrices) using both relative and absolute tolerances.">allclose</a> (f.<a class="code" href="a00053.html#a7ab6bda5039008fb215ab24ecacd85a2" title="Compute the hessian at a given point.">hessian</a> (x, 0), a));
+      BOOST_CHECK (<a name="a10"></a><a class="code" href="a00189.html#abf0a2c6465667b5f8cc0c9ab9c5d1fe3" title="Compare dense vectors (matrices) using both relative and absolute tolerances.">allclose</a> (f.<a class="code" href="a00043.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> (x), J));
+      BOOST_CHECK (<a class="code" href="a00189.html#abf0a2c6465667b5f8cc0c9ab9c5d1fe3" title="Compare dense vectors (matrices) using both relative and absolute tolerances.">allclose</a> (f.<a class="code" href="a00055.html#a7ab6bda5039008fb215ab24ecacd85a2" title="Compute the hessian at a given point.">hessian</a> (x, 0), a));
 
-      BOOST_CHECK (<a name="a11"></a><a class="code" href="a00197.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (f, 0, x));
-      BOOST_CHECK (<a name="a12"></a><a class="code" href="a00197.html#gaa32250244db065fae2e23e779ae6cf12" title="Check if a Jacobian is valid.">checkJacobian</a> (f, x));
+      BOOST_CHECK (<a name="a11"></a><a class="code" href="a00201.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (f, 0, x));
+      BOOST_CHECK (<a name="a12"></a><a class="code" href="a00201.html#gaa32250244db065fae2e23e779ae6cf12" title="Check if a Jacobian is valid.">checkJacobian</a> (f, x));
     }
 }
 
@@ -153,9 +153,9 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (numeric_quadratic_function, T, functionTypes_t)
 
 BOOST_AUTO_TEST_CASE_TEMPLATE (random_gradient_check, T, sparseOnly_t)
 {
-  <span class="keyword">typename</span> <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t</a> a (5, 5);
-  <span class="keyword">typename</span> <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t</a> b (5);
-  <span class="keyword">typename</span> <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t</a> x (5);
+  <span class="keyword">typename</span> <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t</a> a (5, 5);
+  <span class="keyword">typename</span> <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t</a> b (5);
+  <span class="keyword">typename</span> <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t</a> x (5);
 
   <span class="keywordflow">for</span> (<span class="keywordtype">int</span> randomTry = 0; randomTry &lt; 10; ++randomTry)
     {
@@ -163,22 +163,22 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (random_gradient_check, T, sparseOnly_t)
       b.setZero ();
       x.setZero ();
 
-      <span class="keywordflow">for</span> (<span class="keyword">typename</span> <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t::Index</a> i = 0; i &lt; 5; ++i)
-  <span class="keywordflow">for</span> (<span class="keyword">typename</span> <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t::Index</a> j = 0; j &lt; 5; ++j)
+      <span class="keywordflow">for</span> (<span class="keyword">typename</span> <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t::Index</a> i = 0; i &lt; 5; ++i)
+  <span class="keywordflow">for</span> (<span class="keyword">typename</span> <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t::Index</a> j = 0; j &lt; 5; ++j)
     a.insert (i, j) = 0.;
-      <span class="keywordflow">for</span> (<span class="keyword">typename</span> <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t::Index</a> i = 0; i &lt; 5; ++i)
-  <span class="keywordflow">for</span> (<span class="keyword">typename</span> <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t::Index</a> j = 0; j &lt; 5; ++j)
+      <span class="keywordflow">for</span> (<span class="keyword">typename</span> <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t::Index</a> i = 0; i &lt; 5; ++i)
+  <span class="keywordflow">for</span> (<span class="keyword">typename</span> <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::matrix_t::Index</a> j = 0; j &lt; 5; ++j)
     a.coeffRef (i, j) = a.coeffRef (j, i) = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span> (std::rand () / RAND_MAX);
 
-      b = <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t::Random</a> (5);
+      b = <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t::Random</a> (5);
 
-      <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;</a> f (a, b);
+      <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;</a> f (a, b);
 
       <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; ++i)
   {
-    x = <a class="code" href="a00050.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t::Random</a> (5);
-    BOOST_CHECK (<a class="code" href="a00197.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (f, 0, x));
-    BOOST_CHECK (<a class="code" href="a00197.html#gaa32250244db065fae2e23e779ae6cf12" title="Check if a Jacobian is valid.">checkJacobian</a> (f, x));
+    x = <a class="code" href="a00052.html" title="Build a quadratic function from a matrix and a vector.">GenericNumericQuadraticFunction&lt;T&gt;::vector_t::Random</a> (5);
+    BOOST_CHECK (<a class="code" href="a00201.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (f, 0, x));
+    BOOST_CHECK (<a class="code" href="a00201.html#gaa32250244db065fae2e23e779ae6cf12" title="Check if a Jacobian is valid.">checkJacobian</a> (f, x));
   }
     }
 }

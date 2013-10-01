@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>util.hh File Reference</title>
+<title>twice-derivable-function.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -57,51 +57,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">util.hh File Reference</div>  </div>
+<div class="title">twice-derivable-function.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00113.html">roboptim/core/fwd.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00146.html">roboptim/core/portability.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00178.html">roboptim/core/twice-differentiable-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00182.html">roboptim/core/util.hxx</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="a00182.html">roboptim/core/twice-differentiable-function.hh</a>&gt;</code><br/>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html">roboptim::detail</a></td></tr>
-<tr><td colspan="2"><h2><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00146.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html#a949d11dcf394e98cfba78e6bc9965500">roboptim::detail::vector_to_array</a> (Function::value_type *dst, const Function::vector_t &amp;src)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00146.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html#a9189c68dd65912496f805aad9171288b">roboptim::detail::array_to_vector</a> (Function::vector_t &amp;dst, const Function::value_type *src)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00189.html#a81de9d321de7e4aaccd11060a2d61643">roboptim::detail::jacobian_from_gradients</a> (typename DifferentiableFunction::matrix_t &amp;jac, const std::vector&lt; const T * &gt; &amp;c, const DifferentiableFunction::vector_t &amp;x)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00185.html#a6950b140fa3344f40395d549821d738c">roboptim::operator&lt;&lt;</a> (std::ostream &amp;, const std::vector&lt; T &gt; &amp;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a vector.  <a href="#a6950b140fa3344f40395d549821d738c"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00185.html#a60f421259ace431168bc735b2e0ba023">roboptim::operator&lt;&lt;</a> (std::ostream &amp;, const std::pair&lt; T1, T2 &gt; &amp;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a pair.  <a href="#a60f421259ace431168bc735b2e0ba023"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00185.html#a77056f38462908511453bafb27f9cb76">roboptim::operator&lt;&lt;</a> (std::ostream &amp;, const Eigen::MatrixBase&lt; T &gt; &amp;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display an Eigen object with the appropriate IOFormat.  <a href="#a77056f38462908511453bafb27f9cb76"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00146.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <br class="typebreak"/>
-GenericFunctionTraits<br class="typebreak"/>
-&lt; EigenMatrixDense &gt;::matrix_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#a01aa8def0fdb53b33781f867b4c31d8a">roboptim::sparse_to_dense</a> (const GenericFunctionTraits&lt; EigenMatrixSparse &gt;::matrix_t &amp;)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a sparse matrix into a dense matrix.  <a href="#a01aa8def0fdb53b33781f867b4c31d8a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00146.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <br class="typebreak"/>
-GenericFunctionTraits<br class="typebreak"/>
-&lt; EigenMatrixDense &gt;::vector_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00185.html#af4a1126d1b76d53b4b013b9bd60340d2">roboptim::sparse_to_dense</a> (const GenericFunctionTraits&lt; EigenMatrixSparse &gt;::gradient_t &amp;v)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a sparse vector into a dense vector.  <a href="#af4a1126d1b76d53b4b013b9bd60340d2"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00185.html#abf0a2c6465667b5f8cc0c9ab9c5d1fe3">roboptim::allclose</a> (const Eigen::DenseBase&lt; DerivedA &gt; &amp;a, const Eigen::DenseBase&lt; DerivedB &gt; &amp;b, const typename DerivedA::RealScalar &amp;rtol=Eigen::NumTraits&lt; typename DerivedA::RealScalar &gt;::dummy_precision(), const typename DerivedA::RealScalar &amp;atol=Eigen::NumTraits&lt; typename DerivedA::RealScalar &gt;::epsilon())</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare dense vectors (matrices) using both relative and absolute tolerances.  <a href="#abf0a2c6465667b5f8cc0c9ab9c5d1fe3"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00185.html#a07401e39f06cf997c6d263a2aa9afd01">roboptim::allclose</a> (const Eigen::SparseMatrixBase&lt; DerivedA &gt; &amp;a, const Eigen::SparseMatrixBase&lt; DerivedB &gt; &amp;b, const typename DerivedA::RealScalar &amp;rtol=Eigen::NumTraits&lt; typename DerivedA::RealScalar &gt;::dummy_precision(), const typename DerivedA::RealScalar &amp;atol=Eigen::NumTraits&lt; typename DerivedA::RealScalar &gt;::epsilon())</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare sparse vectors (matrices) using both relative and absolute tolerances.  <a href="#a07401e39f06cf997c6d263a2aa9afd01"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef TwiceDifferentiableFunction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html#a8fe946bb68641ff262c0cfef38af94d5">roboptim::TwiceDerivableFunction</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy name of DifferentiableFunction.  <a href="#a8fe946bb68641ff262c0cfef38af94d5"></a><br/></td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -121,6 +92,6 @@ GenericFunctionTraits<br class="typebreak"/>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00181.html">util.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00181.html">twice-derivable-function.hh</a>      </li>
 </body>
 </html>

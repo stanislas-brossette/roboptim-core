@@ -1,8 +1,5 @@
 var a00104 =
 [
-    [ "solver_t", "a00104.html#a5aafe251d5465495fdbaff79da9e5a7d", null ],
-    [ "create", "a00104.html#a169ce847a46be8172611912ce302ac30", null ],
-    [ "destroy", "a00104.html#af992438f02837bfe836ba0a937747829", null ],
-    [ "getSizeOfProblem", "a00104.html#a60635b065e290b461a1e7be6b54f9cbc", null ],
-    [ "getTypeIdOfConstraintsList", "a00104.html#ac19e43ce0aec95e0349d94f62dce2b12", null ]
+    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS", "a00104.html#acb0d62d89669ee019cf7dfc94b3e8189", null ],
+    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00104.html#afa0830bb1d13a88e3228fe29833b6164", null ]
 ];

@@ -1,4 +1,5 @@
 var a00100 =
 [
-    [ "derivative", "a00185.html#a2aca003d14f5cd52e55a6b4fd6fec025", null ]
+    [ "DerivableFunction", "a00189.html#a3b8400e3e4a5bc0372d283a4db8eb0de", null ],
+    [ "DerivableSparseFunction", "a00189.html#a275e26321d31ddd72098657cd80e7844", null ]
 ];

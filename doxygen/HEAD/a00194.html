@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::visualization::gnuplot::detail Namespace Reference</title>
+<title>roboptim::fg Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,148 +58,206 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::visualization::gnuplot::detail Namespace Reference</div>  </div>
+<div class="title">roboptim::fg Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#a6efa66dcc23edbd627ec2a66a14414f8">dense_jacobian_to_gnuplot</a> (const <a class="el" href="a00041.html#a87eb6981a9e7e658bb45ced35914d938">DifferentiableFunction::jacobian_t</a> &amp;jac, const std::string &amp;name)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#a556cf30724feeec8aa2ab21ca3800105">sparse_jacobian_to_gnuplot</a> (const <a class="el" href="a00041.html#a87eb6981a9e7e658bb45ced35914d938">DifferentiableSparseFunction::jacobian_t</a> &amp;jac, const std::string &amp;name)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00194.html#a2d8c719cadd72df2ba3bb999d4e2cda1">set_matrix_header</a> (std::string &amp;str, const typename <a class="el" href="a00044.html">GenericFunctionTraits</a>&lt; T &gt;::matrix_t &amp;mat)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#adb2224ca300cd683bf5229fd2cee7d01">dense_matrix_to_gnuplot</a> (const <a class="el" href="a00044.html">GenericFunctionTraits</a>&lt; <a class="el" href="a00037.html">EigenMatrixDense</a> &gt;::matrix_t &amp;mat)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#a1303f8764337206a0b83e3bd5508bc46">sparse_matrix_to_gnuplot</a> (const <a class="el" href="a00044.html">GenericFunctionTraits</a>&lt; <a class="el" href="a00038.html">EigenMatrixSparse</a> &gt;::matrix_t &amp;mat)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#ac20a553dc2fb3400a4e1a2a639c3ab34">reset</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#ab6a33a0073e8b3a206ebf68ffd86a1cb">red</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#af56277d22032f2e720a4ac600c0d26af">green</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#a874128bda8fac54e2a028f7cc4f5c692">yellow</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#a399dec9b833e5e69dbafa4fc99b32606">blue</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#aea878fc1fd1dd7c1e312000d3cd4415d">orange</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#ab9da0ad7b96b5a1222f64f6fbe4d5f83">ok</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#a9fe9bfad8dc3d4d18468fa71a1e924d2">fail</a> (std::ostream &amp;o)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html#ad1b6fb6ef2783862c8c516408daacc40">warn</a> (std::ostream &amp;o)</td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a6efa66dcc23edbd627ec2a66a14414f8"></a><!-- doxytag: member="roboptim::visualization::gnuplot::detail::dense_jacobian_to_gnuplot" ref="a6efa66dcc23edbd627ec2a66a14414f8" args="(const DifferentiableFunction::jacobian_t &amp;jac, const std::string &amp;name)" -->
+<a class="anchor" id="a399dec9b833e5e69dbafa4fc99b32606"></a><!-- doxytag: member="roboptim::fg::blue" ref="a399dec9b833e5e69dbafa4fc99b32606" args="(std::ostream &amp;o)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="a00194.html#a6efa66dcc23edbd627ec2a66a14414f8">roboptim::visualization::gnuplot::detail::dense_jacobian_to_gnuplot</a> </td>
+          <td class="memname">std::ostream&amp; <a class="el" href="a00194.html#a399dec9b833e5e69dbafa4fc99b32606">roboptim::fg::blue</a> </td>
           <td>(</td>
-          <td class="paramtype">const DifferentiableFunction::jacobian_t &amp;&#160;</td>
-          <td class="paramname"><em>jac</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="a00026.html#a0e26b3adc037ad75f7ff4c254c250f94">roboptim::visualization::gnuplot::Command::command()</a>, and <a class="el" href="a00201.html#ga40c69971a140078c622852953fb092b3">roboptim::visualization::gnuplot::plot_mat()</a>.</p>
-
-<p>Referenced by <a class="el" href="a00201.html#ga8697553b2bd7673bec00d45090969a6b">roboptim::visualization::gnuplot::plot_jac()</a>.</p>
+<p>References <a class="el" href="a00180.html#a8ec7a571e7e244c5de2d4ab494acd62f">ROBOPTIM_CORE_FILTER_TTY</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="adb2224ca300cd683bf5229fd2cee7d01"></a><!-- doxytag: member="roboptim::visualization::gnuplot::detail::dense_matrix_to_gnuplot" ref="adb2224ca300cd683bf5229fd2cee7d01" args="(const GenericFunctionTraits&lt; EigenMatrixDense &gt;::matrix_t &amp;mat)" -->
+<a class="anchor" id="a9fe9bfad8dc3d4d18468fa71a1e924d2"></a><!-- doxytag: member="roboptim::fg::fail" ref="a9fe9bfad8dc3d4d18468fa71a1e924d2" args="(std::ostream &amp;o)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="a00194.html#adb2224ca300cd683bf5229fd2cee7d01">roboptim::visualization::gnuplot::detail::dense_matrix_to_gnuplot</a> </td>
+          <td class="memname">std::ostream&amp; <a class="el" href="a00194.html#a9fe9bfad8dc3d4d18468fa71a1e924d2">roboptim::fg::fail</a> </td>
           <td>(</td>
-          <td class="paramtype">const GenericFunctionTraits&lt; EigenMatrixDense &gt;::matrix_t &amp;&#160;</td>
-          <td class="paramname"><em>mat</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="a00201.html#ga03109edccbaa5f071371ee52c447ee70">roboptim::visualization::normalize()</a>.</p>
+<p>References <a class="el" href="a00194.html#ab6a33a0073e8b3a206ebf68ffd86a1cb">red()</a>.</p>
 
-<p>Referenced by <a class="el" href="a00201.html#ga40c69971a140078c622852953fb092b3">roboptim::visualization::gnuplot::plot_mat()</a>.</p>
+<p>Referenced by <a class="el" href="a00069.html#abfdcb4e8f58d49dd2e48869dfdf58348">roboptim::detail::printConstraint&lt; P &gt;::operator()()</a>, and <a class="el" href="a00083.html#a8bffd424a6556c49b69aa8cefc0f9b64">roboptim::SolverError::print()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2d8c719cadd72df2ba3bb999d4e2cda1"></a><!-- doxytag: member="roboptim::visualization::gnuplot::detail::set_matrix_header" ref="a2d8c719cadd72df2ba3bb999d4e2cda1" args="(std::string &amp;str, const typename GenericFunctionTraits&lt; T &gt;::matrix_t &amp;mat)" -->
+<a class="anchor" id="af56277d22032f2e720a4ac600c0d26af"></a><!-- doxytag: member="roboptim::fg::green" ref="af56277d22032f2e720a4ac600c0d26af" args="(std::ostream &amp;o)" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00194.html#a2d8c719cadd72df2ba3bb999d4e2cda1">roboptim::visualization::gnuplot::detail::set_matrix_header</a> </td>
+          <td class="memname">std::ostream&amp; <a class="el" href="a00194.html#af56277d22032f2e720a4ac600c0d26af">roboptim::fg::green</a> </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const typename GenericFunctionTraits&lt; T &gt;::matrix_t &amp;&#160;</td>
-          <td class="paramname"><em>mat</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
+<p>References <a class="el" href="a00180.html#a8ec7a571e7e244c5de2d4ab494acd62f">ROBOPTIM_CORE_FILTER_TTY</a>.</p>
+
+<p>Referenced by <a class="el" href="a00194.html#ab9da0ad7b96b5a1222f64f6fbe4d5f83">ok()</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a556cf30724feeec8aa2ab21ca3800105"></a><!-- doxytag: member="roboptim::visualization::gnuplot::detail::sparse_jacobian_to_gnuplot" ref="a556cf30724feeec8aa2ab21ca3800105" args="(const DifferentiableSparseFunction::jacobian_t &amp;jac, const std::string &amp;name)" -->
+<a class="anchor" id="ab9da0ad7b96b5a1222f64f6fbe4d5f83"></a><!-- doxytag: member="roboptim::fg::ok" ref="ab9da0ad7b96b5a1222f64f6fbe4d5f83" args="(std::ostream &amp;o)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="a00194.html#a556cf30724feeec8aa2ab21ca3800105">roboptim::visualization::gnuplot::detail::sparse_jacobian_to_gnuplot</a> </td>
+          <td class="memname">std::ostream&amp; <a class="el" href="a00194.html#ab9da0ad7b96b5a1222f64f6fbe4d5f83">roboptim::fg::ok</a> </td>
           <td>(</td>
-          <td class="paramtype">const DifferentiableSparseFunction::jacobian_t &amp;&#160;</td>
-          <td class="paramname"><em>jac</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="a00026.html#a0e26b3adc037ad75f7ff4c254c250f94">roboptim::visualization::gnuplot::Command::command()</a>, and <a class="el" href="a00201.html#ga40c69971a140078c622852953fb092b3">roboptim::visualization::gnuplot::plot_mat()</a>.</p>
+<p>References <a class="el" href="a00194.html#af56277d22032f2e720a4ac600c0d26af">green()</a>.</p>
 
-<p>Referenced by <a class="el" href="a00201.html#ga2d65957a63de6ff08e9a338b519ac320">roboptim::visualization::gnuplot::plot_jac()</a>.</p>
+<p>Referenced by <a class="el" href="a00069.html#abfdcb4e8f58d49dd2e48869dfdf58348">roboptim::detail::printConstraint&lt; P &gt;::operator()()</a>, and <a class="el" href="a00203.html#gad4c21d7353f11e2348381a3c1deac234">roboptim::Problem&lt; F, CLIST &gt;::print()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1303f8764337206a0b83e3bd5508bc46"></a><!-- doxytag: member="roboptim::visualization::gnuplot::detail::sparse_matrix_to_gnuplot" ref="a1303f8764337206a0b83e3bd5508bc46" args="(const GenericFunctionTraits&lt; EigenMatrixSparse &gt;::matrix_t &amp;mat)" -->
+<a class="anchor" id="aea878fc1fd1dd7c1e312000d3cd4415d"></a><!-- doxytag: member="roboptim::fg::orange" ref="aea878fc1fd1dd7c1e312000d3cd4415d" args="(std::ostream &amp;o)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="a00194.html#a1303f8764337206a0b83e3bd5508bc46">roboptim::visualization::gnuplot::detail::sparse_matrix_to_gnuplot</a> </td>
+          <td class="memname">std::ostream&amp; <a class="el" href="a00194.html#aea878fc1fd1dd7c1e312000d3cd4415d">roboptim::fg::orange</a> </td>
           <td>(</td>
-          <td class="paramtype">const GenericFunctionTraits&lt; EigenMatrixSparse &gt;::matrix_t &amp;&#160;</td>
-          <td class="paramname"><em>mat</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="a00201.html#ga156782554154a4064795107504821778">roboptim::visualization::gnuplot::plot_mat()</a>.</p>
+<p>References <a class="el" href="a00180.html#a8ec7a571e7e244c5de2d4ab494acd62f">ROBOPTIM_CORE_FILTER_TTY</a>.</p>
+
+<p>Referenced by <a class="el" href="a00194.html#ad1b6fb6ef2783862c8c516408daacc40">warn()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6a33a0073e8b3a206ebf68ffd86a1cb"></a><!-- doxytag: member="roboptim::fg::red" ref="ab6a33a0073e8b3a206ebf68ffd86a1cb" args="(std::ostream &amp;o)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; <a class="el" href="a00194.html#ab6a33a0073e8b3a206ebf68ffd86a1cb">roboptim::fg::red</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>References <a class="el" href="a00180.html#a8ec7a571e7e244c5de2d4ab494acd62f">ROBOPTIM_CORE_FILTER_TTY</a>.</p>
+
+<p>Referenced by <a class="el" href="a00194.html#a9fe9bfad8dc3d4d18468fa71a1e924d2">fail()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac20a553dc2fb3400a4e1a2a639c3ab34"></a><!-- doxytag: member="roboptim::fg::reset" ref="ac20a553dc2fb3400a4e1a2a639c3ab34" args="(std::ostream &amp;o)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; <a class="el" href="a00194.html#ac20a553dc2fb3400a4e1a2a639c3ab34">roboptim::fg::reset</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00010.html#a3">visualization-gnuplot-simple.cc</a>.</dd>
+</dl>
+<p>References <a class="el" href="a00180.html#a8ec7a571e7e244c5de2d4ab494acd62f">ROBOPTIM_CORE_FILTER_TTY</a>.</p>
+
+<p>Referenced by <a class="el" href="a00069.html#abfdcb4e8f58d49dd2e48869dfdf58348">roboptim::detail::printConstraint&lt; P &gt;::operator()()</a>, <a class="el" href="a00083.html#a8bffd424a6556c49b69aa8cefc0f9b64">roboptim::SolverError::print()</a>, <a class="el" href="a00203.html#gab8e4c8c63039bd83b2537cd4a139a0cc">roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt;::print()</a>, and <a class="el" href="a00203.html#gad4c21d7353f11e2348381a3c1deac234">roboptim::Problem&lt; F, CLIST &gt;::print()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1b6fb6ef2783862c8c516408daacc40"></a><!-- doxytag: member="roboptim::fg::warn" ref="ad1b6fb6ef2783862c8c516408daacc40" args="(std::ostream &amp;o)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; <a class="el" href="a00194.html#ad1b6fb6ef2783862c8c516408daacc40">roboptim::fg::warn</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>References <a class="el" href="a00194.html#aea878fc1fd1dd7c1e312000d3cd4415d">orange()</a>.</p>
+
+<p>Referenced by <a class="el" href="a00203.html#gab8e4c8c63039bd83b2537cd4a139a0cc">roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt;::print()</a>, and <a class="el" href="a00203.html#gad4c21d7353f11e2348381a3c1deac234">roboptim::Problem&lt; F, CLIST &gt;::print()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a874128bda8fac54e2a028f7cc4f5c692"></a><!-- doxytag: member="roboptim::fg::yellow" ref="a874128bda8fac54e2a028f7cc4f5c692" args="(std::ostream &amp;o)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; <a class="el" href="a00194.html#a874128bda8fac54e2a028f7cc4f5c692">roboptim::fg::yellow</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>References <a class="el" href="a00180.html#a8ec7a571e7e244c5de2d4ab494acd62f">ROBOPTIM_CORE_FILTER_TTY</a>.</p>
 
 </div>
 </div>
@@ -221,9 +279,7 @@ template&lt;typename T &gt; </div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00185.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00192.html">visualization</a>      </li>
-      <li class="navelem"><a class="el" href="a00193.html">gnuplot</a>      </li>
-      <li class="navelem"><a class="el" href="a00194.html">detail</a>      </li>
+      <li class="navelem"><a class="el" href="a00189.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00194.html">fg</a>      </li>
 </body>
 </html>

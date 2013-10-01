@@ -1,13 +1,7 @@
 var a00075 =
 [
-    [ "parentType_t", "a00075.html#a7953a20600361495460caa1f213e9011", null ],
-    [ "ScalarShPtr_t", "a00075.html#a20f63dc977977915cfc81b1743bd2416", null ],
-    [ "Scalar", "a00075.html#a45375aa30475b4928b32a46b8c71b4a8", null ],
-    [ "~Scalar", "a00075.html#a50fe6bb5f735657401bafce30044056c", null ],
-    [ "impl_compute", "a00075.html#af7da2d0ec317d96bbff695866db9cf20", null ],
-    [ "impl_gradient", "a00075.html#ad591b61ba39de5f5bbf7f7108926e978", null ],
-    [ "impl_jacobian", "a00075.html#a853cd301281c7c21036ee5c8de280d0b", null ],
-    [ "origin", "a00075.html#ad17cc3b06c7818946a6b94254ffcb1c1", null ],
-    [ "origin", "a00075.html#a4e8961237859adaa361aa9fec0d5057d", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00075.html#aefa2eb6460580af5ce6ecc78bf0319de", null ]
+    [ "T1", "a00075.html#ab5acc3d14344b28f8011ccc060d15494", null ],
+    [ "T2", "a00075.html#ac39c39ae33adbfa77d5202b8bdb7539e", null ],
+    [ "T_promote", "a00075.html#afff7587eb16f8d5708a406f08a413463", null ],
+    [ "BOOST_MPL_ASSERT", "a00075.html#a6e4a50c4e55255b57f664c321151579c", null ]
 ];

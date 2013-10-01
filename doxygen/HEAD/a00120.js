@@ -1,6 +1,9 @@
 var a00120 =
 [
-    [ "plot_jac", "a00201.html#ga892fef0581371b322b075135b9348f74", null ],
-    [ "plot_jac", "a00201.html#ga8697553b2bd7673bec00d45090969a6b", null ],
-    [ "plot_jac", "a00201.html#ga2d65957a63de6ff08e9a338b519ac320", null ]
+    [ "GNUPLOT_STR_COMMAND", "a00120.html#a44cffa7dc6979331d7660d604e7c8f48", null ],
+    [ "GNUPLOT_UNARY_COMMAND", "a00120.html#abdaa2512aec3201d566ccbfc73fafc46", null ],
+    [ "comment", "a00205.html#ga108c0cb6161fb8813817a7b7a1ac980d", null ],
+    [ "set", "a00205.html#gad77630a233193748534b41d069d4e180", null ],
+    [ "show", "a00205.html#gaf90f5364d8c3597b8909ba99083fc23f", null ],
+    [ "unset", "a00205.html#ga2c2a188b2e89955eee09aa10b5426e43", null ]
 ];

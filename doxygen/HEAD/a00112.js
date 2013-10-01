@@ -1,8 +1,11 @@
 var a00112 =
 [
-    [ "EIGEN_RUNTIME_NO_MALLOC", "a00112.html#a90bf84d3e5deeec00de77460ca485842", null ],
-    [ "EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET", "a00112.html#aa93624b0b2836d2510e8c92ae951d817", null ],
-    [ "ROBOPTIM_FUNCTION_FWD_TYPEDEFS", "a00112.html#aff4b9961233370447282cd20d9c77860", null ],
-    [ "ROBOPTIM_FUNCTION_FWD_TYPEDEFS_", "a00112.html#a934385dbb178b478182aaf71b426e20b", null ],
-    [ "operator<<", "a00196.html#gac1811528dd1c9cc4c233c14bf5ed6e81", null ]
+    [ "checkGradient", "a00201.html#ga7b974ed3d440aab33b573448ff332552", null ],
+    [ "checkGradientAndThrow", "a00201.html#gae0a448fba694779126c4406d23f02bf1", null ],
+    [ "checkJacobian", "a00201.html#gaa32250244db065fae2e23e779ae6cf12", null ],
+    [ "checkJacobianAndThrow", "a00201.html#ga516899da0b771c79abe8a23a5028d8ea", null ],
+    [ "operator<<", "a00189.html#ae6e53e4f7183cc2816db6aa8ea7cab6e", null ],
+    [ "operator<<", "a00189.html#a67f53906aa3085cb9d1bf44f5515349e", null ],
+    [ "finiteDifferenceEpsilon", "a00189.html#a2b8aa11a97dbc8229249db7357581d83", null ],
+    [ "finiteDifferenceThreshold", "a00189.html#aabca7f7ba16e95c606d1bc22b0de8d6b", null ]
 ];

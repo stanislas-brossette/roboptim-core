@@ -1,9 +1,15 @@
 var a00059 =
 [
-    [ "size_type", "a00059.html#a0b16636d1ed2950355c0cd7e22aaffa8", null ],
-    [ "~NTimesDerivableFunction", "a00059.html#abac49e2227ca9041fd9a70b429ea3fa1", null ],
-    [ "NTimesDerivableFunction", "a00059.html#a794258aa1fd8a40705cb07af333dc5dd", null ],
-    [ "derivabilityOrderMax", "a00059.html#a78da40b42cc149c600873c1c7707941b", null ],
-    [ "print", "a00059.html#a1f48092699bd7d0ec66d698d215e24ac", null ],
-    [ "derivabilityOrder", "a00059.html#ad7b273dd6b55a50f56851d372fe1daa1", null ]
+    [ "MinusShPtr_t", "a00059.html#ae344478e5d53643778a5c4aee576b55c", null ],
+    [ "parentType_t", "a00059.html#a8b7f52fa80d2c59b7c7bc9a35a7e0031", null ],
+    [ "Minus", "a00059.html#ac824027a41ce9d5a343d1e0faa13bb8c", null ],
+    [ "~Minus", "a00059.html#a4eb1f38d5fb4f07cb695b431ff715f6c", null ],
+    [ "impl_compute", "a00059.html#af2c5ad8976a90884a0fadfc99d6e44e7", null ],
+    [ "impl_gradient", "a00059.html#aaf7a2ff910727e27d03cccd5e08a4e9e", null ],
+    [ "impl_jacobian", "a00059.html#aee47ee4fa54a298ea6ae658e274ee5ab", null ],
+    [ "left", "a00059.html#ad452d59bf5247d3f65c8e46154cce947", null ],
+    [ "left", "a00059.html#a6c53d7372eb9f682cf70b372df297b70", null ],
+    [ "right", "a00059.html#a736678b418a2be8841df0558ed2395fd", null ],
+    [ "right", "a00059.html#a6fb299cf7d68ae57699fca015b7f7eba", null ],
+    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00059.html#ada08c22a7499f3af4279f6df1c095d63", null ]
 ];

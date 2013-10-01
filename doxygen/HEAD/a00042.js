@@ -1,12 +1,10 @@
 var a00042 =
 [
-    [ "GenericFiniteDifferenceGradient", "a00042.html#ade644f357e04020a3fb84207994f745b", null ],
-    [ "~GenericFiniteDifferenceGradient", "a00042.html#a52f35b313494e42eba9b96264ac4ab2f", null ],
-    [ "impl_compute", "a00042.html#a231a563eba65eb75c9695ccc337860c5", null ],
-    [ "impl_gradient", "a00042.html#ac9607a594f0a17201fe7149c28185a1c", null ],
-    [ "impl_jacobian", "a00042.html#a27f62e793466865b54308cbf177ba9f0", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00042.html#a583e5aeb130b6c46b7d12fe0f65c717f", null ],
-    [ "adaptee_", "a00042.html#aad6048bf897c560c6a0e03ce355413d1", null ],
-    [ "epsilon_", "a00042.html#a351983c229ac4c9cd42cdeb7ad0aebda", null ],
-    [ "xEps_", "a00042.html#a5c3139b3bfa459c225a2e77058259cb1", null ]
+    [ "GenericConstantFunction", "a00042.html#a9f9dae33c9657528e0a82410cb161817", null ],
+    [ "~GenericConstantFunction", "a00042.html#aab88e6da3308d2ca7b8b58ac6bd87504", null ],
+    [ "impl_compute", "a00042.html#afa384a6db99a3d7c8c5fddb3e8cb92c3", null ],
+    [ "impl_gradient", "a00042.html#a6d30bac1095a5fa14db29ab113dc4502", null ],
+    [ "impl_jacobian", "a00042.html#af3c5004a7d90783c0ff2548e63be9d32", null ],
+    [ "print", "a00042.html#ac98c86704dc8443933a50ad664cca533", null ],
+    [ "ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00042.html#addaf70df2c7d3dbf77ef6e53658d656d", null ]
 ];

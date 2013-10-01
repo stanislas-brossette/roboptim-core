@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt; Struct Template Reference</title>
+<title>roboptim::GenericFunctionTraits&lt; T &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -57,145 +57,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
 <div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#pub-types">Public Types</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt; Struct Template Reference<div class="ingroups"><a class="el" href="a00196.html">Mathematical abstract functions</a></div></div>  </div>
+<div class="title">roboptim::GenericFunctionTraits&lt; T &gt; Struct Template Reference<div class="ingroups"><a class="el" href="a00200.html">Mathematical abstract functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;" -->
-<p>Trait specializing <a class="el" href="a00043.html" title="Define an abstract mathematical function ( ).">GenericFunction</a> for Eigen sparse matrices.  
+<!-- doxytag: class="roboptim::GenericFunctionTraits" -->
+<p><a class="el" href="a00045.html" title="Define an abstract mathematical function ( ).">GenericFunction</a> traits.  
  <a href="a00046.html#details">More...</a></p>
 
 <p><code>#include &lt;roboptim/core/function.hh&gt;</code></p>
-
-<p><a href="a00234.html">List of all members.</a></p>
-<table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef Eigen::SparseMatrix<br class="typebreak"/>
-&lt; double, Eigen::RowMajor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00046.html#a6c134d447ffd0e219d15864cc94b216c">matrix_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef Eigen::Matrix&lt; double, <br class="typebreak"/>
-Eigen::Dynamic, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00046.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef matrix_t::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00046.html#ae382b9a557d9e2f5e54a54ef60acb10c">size_type</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef matrix_t::Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00046.html#af0e69c7fd4c248106029270aef16c58e">value_type</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00046.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00046.html#a866ef9a391daf4e4b20bd2029a67be96">result_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00046.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00046.html#a050f8ec0b678f9dfadd89368d21b3ec9">argument_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef Eigen::SparseVector<br class="typebreak"/>
-&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00046.html#a980c849a750d10a91b3e577a9aea94d8">gradient_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00046.html#a6c134d447ffd0e219d15864cc94b216c">matrix_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00046.html#a4045ada63d693b9b1475ac57b7698690">jacobian_t</a></td></tr>
-</table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;&gt;<br/>
-struct roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+struct roboptim::GenericFunctionTraits&lt; T &gt;</h3>
 
-<p>Trait specializing <a class="el" href="a00043.html" title="Define an abstract mathematical function ( ).">GenericFunction</a> for Eigen sparse matrices. </p>
-</div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a050f8ec0b678f9dfadd89368d21b3ec9"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::argument_t" ref="a050f8ec0b678f9dfadd89368d21b3ec9" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00046.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a> <a class="el" href="a00044.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00038.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00046.html#a050f8ec0b678f9dfadd89368d21b3ec9">argument_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a980c849a750d10a91b3e577a9aea94d8"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::gradient_t" ref="a980c849a750d10a91b3e577a9aea94d8" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef Eigen::SparseVector&lt;double&gt; <a class="el" href="a00044.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00038.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00046.html#a980c849a750d10a91b3e577a9aea94d8">gradient_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a4045ada63d693b9b1475ac57b7698690"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::jacobian_t" ref="a4045ada63d693b9b1475ac57b7698690" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00046.html#a6c134d447ffd0e219d15864cc94b216c">matrix_t</a> <a class="el" href="a00044.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00038.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00046.html#a4045ada63d693b9b1475ac57b7698690">jacobian_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a6c134d447ffd0e219d15864cc94b216c"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::matrix_t" ref="a6c134d447ffd0e219d15864cc94b216c" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef Eigen::SparseMatrix&lt;double, Eigen::RowMajor&gt; <a class="el" href="a00044.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00038.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00046.html#a6c134d447ffd0e219d15864cc94b216c">matrix_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a866ef9a391daf4e4b20bd2029a67be96"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::result_t" ref="a866ef9a391daf4e4b20bd2029a67be96" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00046.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a> <a class="el" href="a00044.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00038.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00046.html#a866ef9a391daf4e4b20bd2029a67be96">result_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae382b9a557d9e2f5e54a54ef60acb10c"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::size_type" ref="ae382b9a557d9e2f5e54a54ef60acb10c" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef matrix_t::Index <a class="el" href="a00044.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00038.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00046.html#ae382b9a557d9e2f5e54a54ef60acb10c">size_type</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af0e69c7fd4c248106029270aef16c58e"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::value_type" ref="af0e69c7fd4c248106029270aef16c58e" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef matrix_t::Scalar <a class="el" href="a00044.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00038.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00046.html#af0e69c7fd4c248106029270aef16c58e">value_type</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a480d3e5b3b2c53451fb99b97e48846c5"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::vector_t" ref="a480d3e5b3b2c53451fb99b97e48846c5" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef Eigen::Matrix&lt;double, Eigen::Dynamic, 1&gt; <a class="el" href="a00044.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00038.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00046.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<p><a class="el" href="a00045.html" title="Define an abstract mathematical function ( ).">GenericFunction</a> traits. </p>
+<p>This helper class is used to define which types a <a class="el" href="a00045.html" title="Define an abstract mathematical function ( ).">GenericFunction</a> should use. The following types are required:</p>
+<ul>
+<li>value_type scalar type used for matrix coefficients (e.g. double)</li>
+<li>size_type type used for indexing matrices (e.g. std::size_t)</li>
+<li>matrix_t the matrix type (e.g. Eigen::Matrix&lt;double, 1, 2&gt;)</li>
+<li>vector_t the used vector type</li>
+<li>result_t function result type (vector or matrix)</li>
+<li>argument_t function argument type (usually vector) </li>
+</ul>
+</div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -213,7 +98,7 @@ struct roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</h3>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00185.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00046.html">GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a>      </li>
+      <li class="navelem"><a class="el" href="a00189.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00046.html">GenericFunctionTraits</a>      </li>
 </body>
 </html>

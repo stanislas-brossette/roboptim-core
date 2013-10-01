@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::Scalar&lt; U &gt; Class Template Reference</title>
+<title>roboptim::detail::PromoteTrait&lt; T1_orig, T2_orig &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -61,48 +61,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::Scalar&lt; U &gt; Class Template Reference</div>  </div>
+<div class="title">roboptim::detail::PromoteTrait&lt; T1_orig, T2_orig &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::Scalar" -->
-<p>Select part of a function.  
- <a href="a00075.html#details">More...</a></p>
+<!-- doxytag: class="roboptim::detail::PromoteTrait" -->
+<p><code>#include &lt;roboptim/core/detail/autopromote.hh&gt;</code></p>
 
-<p><code>#include &lt;roboptim/core/filter/scalar.hh&gt;</code></p>
-
-<p><a href="a00222.html">List of all members.</a></p>
+<p><a href="a00269.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00017.html">detail::AutopromoteTrait</a>&lt; U &gt;<br class="typebreak"/>
-::T_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#a7953a20600361495460caa1f213e9011">parentType_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="a00075.html">Scalar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#a20f63dc977977915cfc81b1743bd2416">ScalarShPtr_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="a00075.html#a551fe860cf3e464e510e611f2f82bdd4ab78214d0ffcf45ba1bb34180f2829be9">promoteToT1</a> =  (T1IsBetter) ? false : true
+ }</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00017.html">AutopromoteTrait</a><br class="typebreak"/>
+&lt; T1_orig &gt;::T_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#ab5acc3d14344b28f8011ccc060d15494">T1</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00017.html">AutopromoteTrait</a><br class="typebreak"/>
+&lt; T2_orig &gt;::T_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#ac39c39ae33adbfa77d5202b8bdb7539e">T2</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00073.html">promote2</a>&lt; <a class="el" href="a00075.html#ab5acc3d14344b28f8011ccc060d15494">T1</a>, <a class="el" href="a00075.html#ac39c39ae33adbfa77d5202b8bdb7539e">T2</a>, <br class="typebreak"/>
+<a class="el" href="a00075.html#a551fe860cf3e464e510e611f2f82bdd4ab78214d0ffcf45ba1bb34180f2829be9">promoteToT1</a> &gt;::<a class="el" href="a00075.html#afff7587eb16f8d5708a406f08a413463">T_promote</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#afff7587eb16f8d5708a406f08a413463">T_promote</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#aefa2eb6460580af5ce6ecc78bf0319de">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00075.html#a7953a20600361495460caa1f213e9011">parentType_t</a>)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#a45375aa30475b4928b32a46b8c71b4a8">Scalar</a> (boost::shared_ptr&lt; U &gt; left, value_type <a class="el" href="a00185.html#a6354c8c5e1101410ab5a74b2f6f11cfb">scalar</a>)  throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#a50fe6bb5f735657401bafce30044056c">~Scalar</a> ()  throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#ad17cc3b06c7818946a6b94254ffcb1c1">origin</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#a4e8961237859adaa361aa9fec0d5057d">origin</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#af7da2d0ec317d96bbff695866db9cf20">impl_compute</a> (result_t &amp;result, const argument_t &amp;x) const   throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#ad591b61ba39de5f5bbf7f7108926e978">impl_gradient</a> (gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const   throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#a853cd301281c7c21036ee5c8de280d0b">impl_jacobian</a> (jacobian_t &amp;jacobian, const argument_t &amp;arg) const   throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00075.html#a6e4a50c4e55255b57f664c321151579c">BOOST_MPL_ASSERT</a> ((boost::mpl::bool_&lt; knowBothRanks &gt;))</td></tr>
 </table>
-<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename U&gt;<br/>
-class roboptim::Scalar&lt; U &gt;</h3>
+<h3>template&lt;class T1_orig, class T2_orig&gt;<br/>
+ struct roboptim::detail::PromoteTrait&lt; T1_orig, T2_orig &gt;</h3>
 
-<p>Select part of a function. </p>
-</div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a7953a20600361495460caa1f213e9011"></a><!-- doxytag: member="roboptim::Scalar::parentType_t" ref="a7953a20600361495460caa1f213e9011" args="" -->
+<hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="ab5acc3d14344b28f8011ccc060d15494"></a><!-- doxytag: member="roboptim::detail::PromoteTrait::T1" ref="ab5acc3d14344b28f8011ccc060d15494" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename U&gt; </div>
+template&lt;class T1_orig, class T2_orig&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="a00017.html">detail::AutopromoteTrait</a>&lt;U&gt;::T_type <a class="el" href="a00075.html">roboptim::Scalar</a>&lt; U &gt;::<a class="el" href="a00075.html#a7953a20600361495460caa1f213e9011">parentType_t</a></td>
+          <td class="memname">typedef <a class="el" href="a00017.html">AutopromoteTrait</a>&lt;T1_orig&gt;::T_type <a class="el" href="a00075.html">roboptim::detail::PromoteTrait</a>&lt; T1_orig, T2_orig &gt;::<a class="el" href="a00075.html#ab5acc3d14344b28f8011ccc060d15494">T1</a></td>
         </tr>
       </table>
 </div>
@@ -110,14 +103,14 @@ template&lt;typename U&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a20f63dc977977915cfc81b1743bd2416"></a><!-- doxytag: member="roboptim::Scalar::ScalarShPtr_t" ref="a20f63dc977977915cfc81b1743bd2416" args="" -->
+<a class="anchor" id="ac39c39ae33adbfa77d5202b8bdb7539e"></a><!-- doxytag: member="roboptim::detail::PromoteTrait::T2" ref="ac39c39ae33adbfa77d5202b8bdb7539e" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename U&gt; </div>
+template&lt;class T1_orig, class T2_orig&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="a00075.html">Scalar</a>&gt; <a class="el" href="a00075.html">roboptim::Scalar</a>&lt; U &gt;::<a class="el" href="a00075.html#a20f63dc977977915cfc81b1743bd2416">ScalarShPtr_t</a></td>
+          <td class="memname">typedef <a class="el" href="a00017.html">AutopromoteTrait</a>&lt;T2_orig&gt;::T_type <a class="el" href="a00075.html">roboptim::detail::PromoteTrait</a>&lt; T1_orig, T2_orig &gt;::<a class="el" href="a00075.html#ac39c39ae33adbfa77d5202b8bdb7539e">T2</a></td>
         </tr>
       </table>
 </div>
@@ -125,29 +118,14 @@ template&lt;typename U&gt; </div>
 
 </div>
 </div>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a45375aa30475b4928b32a46b8c71b4a8"></a><!-- doxytag: member="roboptim::Scalar::Scalar" ref="a45375aa30475b4928b32a46b8c71b4a8" args="(boost::shared_ptr&lt; U &gt; left, value_type scalar)" -->
+<a class="anchor" id="afff7587eb16f8d5708a406f08a413463"></a><!-- doxytag: member="roboptim::detail::PromoteTrait::T_promote" ref="afff7587eb16f8d5708a406f08a413463" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;class T1_orig, class T2_orig&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00075.html">roboptim::Scalar</a>&lt; U &gt;::<a class="el" href="a00075.html">Scalar</a> </td>
-          <td>(</td>
-          <td class="paramtype">boost::shared_ptr&lt; U &gt;&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">value_type&#160;</td>
-          <td class="paramname"><em>scalar</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw ()<code> [explicit]</code></td>
+          <td class="memname">typedef <a class="el" href="a00073.html">promote2</a>&lt;<a class="el" href="a00075.html#ab5acc3d14344b28f8011ccc060d15494">T1</a>, <a class="el" href="a00075.html#ac39c39ae33adbfa77d5202b8bdb7539e">T2</a>, <a class="el" href="a00075.html#a551fe860cf3e464e510e611f2f82bdd4ab78214d0ffcf45ba1bb34180f2829be9">promoteToT1</a>&gt;::<a class="el" href="a00075.html#afff7587eb16f8d5708a406f08a413463">T_promote</a> <a class="el" href="a00075.html">roboptim::detail::PromoteTrait</a>&lt; T1_orig, T2_orig &gt;::<a class="el" href="a00075.html#afff7587eb16f8d5708a406f08a413463">T_promote</a></td>
         </tr>
       </table>
 </div>
@@ -155,166 +133,54 @@ template&lt;typename U &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a50fe6bb5f735657401bafce30044056c"></a><!-- doxytag: member="roboptim::Scalar::~Scalar" ref="a50fe6bb5f735657401bafce30044056c" args="()" -->
+<hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="a5545bc5053fb332153682376f39c1b46"></a><!-- doxytag: member="roboptim::detail::PromoteTrait::@1" ref="a5545bc5053fb332153682376f39c1b46" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;class T1_orig, class T2_orig&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00075.html">roboptim::Scalar</a>&lt; U &gt;::~<a class="el" href="a00075.html">Scalar</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>  throw ()</td>
+          <td class="memname">anonymous enum</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a551fe860cf3e464e510e611f2f82bdd4"></a><!-- doxytag: member="roboptim::detail::PromoteTrait::@2" ref="a551fe860cf3e464e510e611f2f82bdd4" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T1_orig, class T2_orig&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a551fe860cf3e464e510e611f2f82bdd4ab78214d0ffcf45ba1bb34180f2829be9"></a><!-- doxytag: member="promoteToT1" ref="a551fe860cf3e464e510e611f2f82bdd4ab78214d0ffcf45ba1bb34180f2829be9" args="" -->promoteToT1</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af7da2d0ec317d96bbff695866db9cf20"></a><!-- doxytag: member="roboptim::Scalar::impl_compute" ref="af7da2d0ec317d96bbff695866db9cf20" args="(result_t &amp;result, const argument_t &amp;x) const " -->
+<a class="anchor" id="a6e4a50c4e55255b57f664c321151579c"></a><!-- doxytag: member="roboptim::detail::PromoteTrait::BOOST_MPL_ASSERT" ref="a6e4a50c4e55255b57f664c321151579c" args="((boost::mpl::bool_&lt; knowBothRanks &gt;))" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;class T1_orig, class T2_orig&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00075.html">roboptim::Scalar</a>&lt; U &gt;::<a class="el" href="a00075.html#af7da2d0ec317d96bbff695866db9cf20">impl_compute</a> </td>
+          <td class="memname"><a class="el" href="a00075.html">roboptim::detail::PromoteTrait</a>&lt; T1_orig, T2_orig &gt;::<a class="el" href="a00075.html#a6e4a50c4e55255b57f664c321151579c">BOOST_MPL_ASSERT</a> </td>
           <td>(</td>
-          <td class="paramtype">result_t &amp;&#160;</td>
-          <td class="paramname"><em>result</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const argument_t &amp;&#160;</td>
-          <td class="paramname"><em>x</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ad591b61ba39de5f5bbf7f7108926e978"></a><!-- doxytag: member="roboptim::Scalar::impl_gradient" ref="ad591b61ba39de5f5bbf7f7108926e978" args="(gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00075.html">roboptim::Scalar</a>&lt; U &gt;::<a class="el" href="a00075.html#ad591b61ba39de5f5bbf7f7108926e978">impl_gradient</a> </td>
-          <td>(</td>
-          <td class="paramtype">gradient_t &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const argument_t &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_type&#160;</td>
-          <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a853cd301281c7c21036ee5c8de280d0b"></a><!-- doxytag: member="roboptim::Scalar::impl_jacobian" ref="a853cd301281c7c21036ee5c8de280d0b" args="(jacobian_t &amp;jacobian, const argument_t &amp;arg) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00075.html">roboptim::Scalar</a>&lt; U &gt;::<a class="el" href="a00075.html#a853cd301281c7c21036ee5c8de280d0b">impl_jacobian</a> </td>
-          <td>(</td>
-          <td class="paramtype">jacobian_t &amp;&#160;</td>
-          <td class="paramname"><em>jacobian</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const argument_t &amp;&#160;</td>
-          <td class="paramname"><em>arg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ad17cc3b06c7818946a6b94254ffcb1c1"></a><!-- doxytag: member="roboptim::Scalar::origin" ref="ad17cc3b06c7818946a6b94254ffcb1c1" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const boost::shared_ptr&lt;U&gt;&amp; <a class="el" href="a00075.html">roboptim::Scalar</a>&lt; U &gt;::<a class="el" href="a00075.html#ad17cc3b06c7818946a6b94254ffcb1c1">origin</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Referenced by <a class="el" href="a00185.html#a18d7466822b488bac385bfb3a389a8d4">roboptim::operator*()</a>, <a class="el" href="a00185.html#a8d0e9408d11db81a2b24b216ed3cd370">roboptim::operator+()</a>, <a class="el" href="a00185.html#aa692f09a5e2833a1fb15c1834d0603f5">roboptim::operator-()</a>, and <a class="el" href="a00185.html#a6354c8c5e1101410ab5a74b2f6f11cfb">roboptim::scalar()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4e8961237859adaa361aa9fec0d5057d"></a><!-- doxytag: member="roboptim::Scalar::origin" ref="a4e8961237859adaa361aa9fec0d5057d" args="()" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">boost::shared_ptr&lt;U&gt;&amp; <a class="el" href="a00075.html">roboptim::Scalar</a>&lt; U &gt;::<a class="el" href="a00075.html#ad17cc3b06c7818946a6b94254ffcb1c1">origin</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aefa2eb6460580af5ce6ecc78bf0319de"></a><!-- doxytag: member="roboptim::Scalar::ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="aefa2eb6460580af5ce6ecc78bf0319de" args="(parentType_t)" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00075.html">roboptim::Scalar</a>&lt; U &gt;::<a class="el" href="a00075.html#aefa2eb6460580af5ce6ecc78bf0319de">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00075.html#a7953a20600361495460caa1f213e9011">parentType_t</a>&#160;</td>
+          <td class="paramtype">(boost::mpl::bool_&lt; knowBothRanks &gt;)&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -342,7 +208,8 @@ template&lt;typename U&gt; </div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00185.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00075.html">Scalar</a>      </li>
+      <li class="navelem"><a class="el" href="a00189.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00193.html">detail</a>      </li>
+      <li class="navelem"><a class="el" href="a00075.html">PromoteTrait</a>      </li>
 </body>
 </html>

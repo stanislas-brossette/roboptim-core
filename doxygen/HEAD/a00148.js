@@ -1,7 +1,5 @@
 var a00148 =
 [
-    [ "impl_print", "a00189.html#a974b01d3e6b19ebbfb1c45cc3cabd9ed", null ],
-    [ "impl_print", "a00189.html#a92d03025b36c11fc83d49f550228996e", null ],
-    [ "operator<<", "a00199.html#gaa95bff19e4c158ee52b1f0f6804100cf", null ],
-    [ "operator<<", "a00199.html#ga8672f3101648d74dae9f93f62263659e", null ]
+    [ "operator+", "a00189.html#a1c85364bc3106af5973bb6cb5113e2dd", null ],
+    [ "plus", "a00189.html#a29192465f69ffd7e843e907cb66dbe75", null ]
 ];

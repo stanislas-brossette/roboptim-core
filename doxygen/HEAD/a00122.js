@@ -1,8 +1,7 @@
 var a00122 =
 [
-    [ "dense_matrix_to_gnuplot", "a00194.html#adb2224ca300cd683bf5229fd2cee7d01", null ],
-    [ "plot_mat", "a00201.html#ga40c69971a140078c622852953fb092b3", null ],
-    [ "plot_mat", "a00201.html#ga156782554154a4064795107504821778", null ],
-    [ "set_matrix_header", "a00194.html#a2d8c719cadd72df2ba3bb999d4e2cda1", null ],
-    [ "sparse_matrix_to_gnuplot", "a00194.html#a1303f8764337206a0b83e3bd5508bc46", null ]
+    [ "dense_jacobian_to_gnuplot", "a00198.html#a6efa66dcc23edbd627ec2a66a14414f8", null ],
+    [ "plot_jac", "a00205.html#ga8697553b2bd7673bec00d45090969a6b", null ],
+    [ "plot_jac", "a00205.html#ga2d65957a63de6ff08e9a338b519ac320", null ],
+    [ "sparse_jacobian_to_gnuplot", "a00198.html#a556cf30724feeec8aa2ab21ca3800105", null ]
 ];
