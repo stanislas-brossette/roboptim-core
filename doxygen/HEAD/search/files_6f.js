@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['optimization_2dlogger_2ehh',['optimization-logger.hh',['../a00145.html',1,'']]]
+  ['optimization_2dlogger_2ehh',['optimization-logger.hh',['../a00146.html',1,'']]]
 ];

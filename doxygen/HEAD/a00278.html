@@ -53,22 +53,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('a00056.html','');
+  initNavTree('a00081.html','');
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">roboptim::visualization::Gnuplot Member List</div>  </div>
+<div class="title">roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
-This is the complete list of members for <a class="el" href="a00056.html">roboptim::visualization::Gnuplot</a>, including all inherited members.<table>
-  <tr class="memlist"><td><a class="el" href="a00056.html#ab134923cbb8cc53b251664f4b5c6b73c">Gnuplot</a>(bool with_header=true)</td><td><a class="el" href="a00056.html">roboptim::visualization::Gnuplot</a></td><td><code> [explicit, protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00056.html#a55c76cc46b5c54b1bc0d4684128403ff">make_gnuplot</a>(bool with_header=true)</td><td><a class="el" href="a00056.html">roboptim::visualization::Gnuplot</a></td><td><code> [inline, static]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00056.html#a14e55569e7e70d12d7cd1d83117576a1">make_interactive_gnuplot</a>(bool with_header=true)</td><td><a class="el" href="a00056.html">roboptim::visualization::Gnuplot</a></td><td><code> [inline, static]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00056.html#af7addb186708c556e603c3fd8e7768a6">operator&lt;&lt;</a>(gnuplot::Command)</td><td><a class="el" href="a00056.html">roboptim::visualization::Gnuplot</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00056.html#ad4b42f563ebbdb501d397a42a4420525">print</a>(std::ostream &amp;) const </td><td><a class="el" href="a00056.html">roboptim::visualization::Gnuplot</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00056.html#aaa242efdd1e20124d0698793b4fd4bdd">push_command</a>(gnuplot::Command cmd)</td><td><a class="el" href="a00056.html">roboptim::visualization::Gnuplot</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00056.html#ab2620f9d29a97757d0acbfe68e6a2c79">~Gnuplot</a>()</td><td><a class="el" href="a00056.html">roboptim::visualization::Gnuplot</a></td><td></td></tr>
+This is the complete list of members for <a class="el" href="a00081.html">roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt;</a>, including all inherited members.<table>
+  <tr class="memlist"><td><a class="el" href="a00081.html#ac177c36cf832e17f3104c7db9288e8cb">computeGradient</a>(const GenericFunction&lt; T &gt; &amp;adaptee, value_type epsilon, gradient_t &amp;gradient, const argument_t &amp;argument, size_type idFunction, argument_t &amp;xEps) const </td><td><a class="el" href="a00081.html">roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt;</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00081.html#af6fb145667fec7f294b3c3314bda209e">computeGradient</a>(const GenericFunction&lt; EigenMatrixSparse &gt; &amp;adaptee, value_type epsilon, gradient_t &amp;gradient, const argument_t &amp;argument, size_type idFunction, argument_t &amp;xEps) const </td><td><a class="el" href="a00081.html">roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt;</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00068.html#a343812ba28f1cd2b5b88ffbf8d265611">computeJacobian</a>(const GenericFunction&lt; T &gt; &amp;adaptee, value_type epsilon, jacobian_t &amp;jacobian, const argument_t &amp;argument, argument_t &amp;xEps) const </td><td><a class="el" href="a00068.html">roboptim::finiteDifferenceGradientPolicies::Policy&lt; T &gt;</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00068.html#aa901d45463cccc8db7dd31f7c00f977c">computeJacobian</a>(const GenericFunction&lt; EigenMatrixSparse &gt; &amp;adaptee, value_type epsilon, jacobian_t &amp;jacobian, const argument_t &amp;argument, argument_t &amp;xEps) const </td><td><a class="el" href="a00068.html">roboptim::finiteDifferenceGradientPolicies::Policy&lt; T &gt;</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00081.html#a589c0a7f4d846453adf91866789ebd7d">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>(GenericDifferentiableFunction&lt; T &gt;)</td><td><a class="el" href="a00081.html">roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt;</a></td><td></td></tr>
 </table></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"

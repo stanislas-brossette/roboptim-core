@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::visualization::gnuplot Namespace Reference</title>
+<title>roboptim::visualization Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,80 +58,83 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::visualization::gnuplot Namespace Reference</div>  </div>
+<div class="title">roboptim::visualization Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> rendering.  
+<p>Graphic visualization.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00198.html">detail</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00198.html">gnuplot</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p><a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> rendering. </p>
+<br/></td></tr>
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html">Command</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> command.  <a href="a00026.html#details">More...</a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00045.html#aa2795383d22b64891a89acb15c9f0773">Function::discreteInterval_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga1c2bbde67ed2275a6def58e1cea970f3">discreteInterval_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import discrete interval type from function.  <a href="a00205.html#ga1c2bbde67ed2275a6def58e1cea970f3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00056.html">Gnuplot</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> script.  <a href="a00056.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga108c0cb6161fb8813817a7b7a1ac980d">comment</a> (const char *)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> comment.  <a href="a00205.html#ga108c0cb6161fb8813817a7b7a1ac980d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#ga03109edccbaa5f071371ee52c447ee70">normalize</a> (const double &amp;x)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize floating point number output.  <a href="a00206.html#ga03109edccbaa5f071371ee52c447ee70"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#gaf0f79518896936efeba27dabdce72963">normalize</a> (const Eigen::MatrixXd &amp;x)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply normalize to each element of a matrix.  <a href="a00206.html#gaf0f79518896936efeba27dabdce72963"></a><br/></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00026.html">Command</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00205.html#ga7a509faa4e3dd9a30373a2b320b98c23">comment</a> (const T &amp;content)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> comment.  <a href="a00205.html#ga7a509faa4e3dd9a30373a2b320b98c23"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gad77630a233193748534b41d069d4e180">set</a> (const char *var, const char *val=&quot;&quot;)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> set command.  <a href="a00205.html#gad77630a233193748534b41d069d4e180"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga2c2a188b2e89955eee09aa10b5426e43">unset</a> (const char *var)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> unset command.  <a href="a00205.html#ga2c2a188b2e89955eee09aa10b5426e43"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gaf90f5364d8c3597b8909ba99083fc23f">show</a> (const char *var)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> show command.  <a href="a00205.html#gaf90f5364d8c3597b8909ba99083fc23f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gad96d84d9e1a5bab7a33ed90bef8bc01d">clear</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> clear command.  <a href="a00205.html#gad96d84d9e1a5bab7a33ed90bef8bc01d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga05e850b5c5dc912807d645863c01acd9">pwd</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> pwdcommand.  <a href="a00205.html#ga05e850b5c5dc912807d645863c01acd9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga9ecd6983c2e9525527f1269b72b85291">quit</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> quit command.  <a href="a00205.html#ga9ecd6983c2e9525527f1269b72b85291"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gaa265dffb4d80ad3841b7775136f9f9bb">replot</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> replot command.  <a href="a00205.html#gaa265dffb4d80ad3841b7775136f9f9bb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gacc11e69c9499c334e4ec1a962c6e6536">reread</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> reread command.  <a href="a00205.html#gacc11e69c9499c334e4ec1a962c6e6536"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga73987a2ddca2e5fc23ff8bbdf703842d">reset</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> reset command.  <a href="a00205.html#ga73987a2ddca2e5fc23ff8bbdf703842d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga195d042fd97469e044b37abc0faf1e0f">cd</a> (const char *dir)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> cd command.  <a href="a00205.html#ga195d042fd97469e044b37abc0faf1e0f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gabecfe2b1ab67fa65ea2fa8f9de592d0a">help</a> (const char *topic=&quot;&quot;)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> help command.  <a href="a00205.html#gabecfe2b1ab67fa65ea2fa8f9de592d0a"></a><br/></td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00206.html#ga823decd192bfbc6405e61c28947ddc4d">normalize</a> (const T &amp;x)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply normalize to each element of a container.  <a href="a00206.html#ga823decd192bfbc6405e61c28947ddc4d"></a><br/></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00026.html">Command</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00205.html#ga892fef0581371b322b075135b9348f74">plot_jac</a> (const <a class="el" href="a00043.html">GenericDifferentiableFunction</a>&lt; T &gt; &amp;f, const typename <a class="el" href="a00043.html">GenericDifferentiableFunction</a>&lt; T &gt;::argument_t &amp;arg)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the Jacobian structure with <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a>.  <a href="a00205.html#ga892fef0581371b322b075135b9348f74"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00205.html#ga8697553b2bd7673bec00d45090969a6b">plot_jac</a> (const <a class="el" href="a00189.html#a1fe6728680de2e1a17e250717269fe22">DifferentiableFunction</a> &amp;f, const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">DifferentiableFunction::argument_t</a> &amp;arg)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00205.html#ga2d65957a63de6ff08e9a338b519ac320">plot_jac</a> (const <a class="el" href="a00189.html#a7e31c0c139e1f6949efdda2c8925bf0a">DifferentiableSparseFunction</a> &amp;f, const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">DifferentiableSparseFunction::argument_t</a> &amp;arg)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00026.html">Command</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00205.html#ga7a1939a1db1b12c576e85859b728458c">plot</a> (const <a class="el" href="a00045.html">GenericFunction</a>&lt; T &gt; &amp;f, <a class="el" href="a00205.html#ga1c2bbde67ed2275a6def58e1cea970f3">discreteInterval_t</a> interval)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot a 1D function with <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a>.  <a href="a00205.html#ga7a1939a1db1b12c576e85859b728458c"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00026.html">Command</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00205.html#ga0dba01288d4436dfa417d3dfd5520c27">plot_xy</a> (const <a class="el" href="a00045.html">GenericFunction</a>&lt; T &gt; &amp;f, <a class="el" href="a00205.html#ga1c2bbde67ed2275a6def58e1cea970f3">discreteInterval_t</a> interval)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot a 2D function with <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a>.  <a href="a00205.html#ga0dba01288d4436dfa417d3dfd5520c27"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga40c69971a140078c622852953fb092b3">plot_mat</a> (const <a class="el" href="a00046.html">GenericFunctionTraits</a>&lt; <a class="el" href="a00038.html">EigenMatrixDense</a> &gt;::matrix_t &amp;mat)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the structure of a matrix with <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a>.  <a href="a00205.html#ga40c69971a140078c622852953fb092b3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> <a class="el" href="a00026.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga156782554154a4064795107504821778">plot_mat</a> (const <a class="el" href="a00046.html">GenericFunctionTraits</a>&lt; <a class="el" href="a00039.html">EigenMatrixSparse</a> &gt;::matrix_t &amp;mat)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00026.html">Command</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00205.html#ga762c6f8a6573db7dfa3bf9a27b63ad90">plot_mat</a> (const typename <a class="el" href="a00046.html">GenericFunctionTraits</a>&lt; T &gt;::matrix_t &amp;)</td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="a00056.html">Gnuplot</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00206.html#ga22576c0708e8fe4af42060ff87bfad20">operator&lt;&lt;</a> (<a class="el" href="a00056.html">Gnuplot</a> &amp;gp, T t)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> command insertion.  <a href="a00206.html#ga22576c0708e8fe4af42060ff87bfad20"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00151.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html#a45951c8d967c172f9f8213900b3d7884">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="a00056.html">Gnuplot</a> &amp;gp)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> script display.  <a href="#a45951c8d967c172f9f8213900b3d7884"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> rendering. </p>
-<p><a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> display classes. </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>Graphic visualization. </p>
+<p>Visualization related code. Only <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> is supported currently. </p>
+</div><hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a45951c8d967c172f9f8213900b3d7884"></a><!-- doxytag: member="roboptim::visualization::operator&lt;&lt;" ref="a45951c8d967c172f9f8213900b3d7884" args="(std::ostream &amp;, const Gnuplot &amp;gp)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; roboptim::visualization::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Gnuplot &amp;&#160;</td>
+          <td class="paramname"><em>gp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Override operator&lt;&lt; to handle <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> script display. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
+    <tr><td class="paramname">gp</td><td><a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> script to be displayed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
+
+<p>References <a class="el" href="a00056.html#ad4b42f563ebbdb501d397a42a4420525">roboptim::visualization::Gnuplot::print()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -149,8 +152,7 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00189.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00196.html">visualization</a>      </li>
-      <li class="navelem"><a class="el" href="a00197.html">gnuplot</a>      </li>
+      <li class="navelem"><a class="el" href="a00190.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00197.html">visualization</a>      </li>
 </body>
 </html>

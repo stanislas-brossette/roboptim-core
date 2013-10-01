@@ -1,15 +1,13 @@
 var a00059 =
 [
-    [ "MinusShPtr_t", "a00059.html#ae344478e5d53643778a5c4aee576b55c", null ],
-    [ "parentType_t", "a00059.html#a8b7f52fa80d2c59b7c7bc9a35a7e0031", null ],
-    [ "Minus", "a00059.html#ac824027a41ce9d5a343d1e0faa13bb8c", null ],
-    [ "~Minus", "a00059.html#a4eb1f38d5fb4f07cb695b431ff715f6c", null ],
-    [ "impl_compute", "a00059.html#af2c5ad8976a90884a0fadfc99d6e44e7", null ],
-    [ "impl_gradient", "a00059.html#aaf7a2ff910727e27d03cccd5e08a4e9e", null ],
-    [ "impl_jacobian", "a00059.html#aee47ee4fa54a298ea6ae658e274ee5ab", null ],
-    [ "left", "a00059.html#ad452d59bf5247d3f65c8e46154cce947", null ],
-    [ "left", "a00059.html#a6c53d7372eb9f682cf70b372df297b70", null ],
-    [ "right", "a00059.html#a736678b418a2be8841df0558ed2395fd", null ],
-    [ "right", "a00059.html#a6fb299cf7d68ae57699fca015b7f7eba", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00059.html#ada08c22a7499f3af4279f6df1c095d63", null ]
+    [ "MapShPtr_t", "a00059.html#a574f40013b83ac08459277e74dc8289e", null ],
+    [ "parentType_t", "a00059.html#aa472baf5213f2a8afc29b442073031eb", null ],
+    [ "Map", "a00059.html#a4c8f20cf07ee28545f24df00a427e7b9", null ],
+    [ "~Map", "a00059.html#af65411ba263b5776211a5edb162a89aa", null ],
+    [ "impl_compute", "a00059.html#ac5105e01d83e5837753b3c99d0b6ed71", null ],
+    [ "impl_gradient", "a00059.html#a8f63c844358c42b4cf223dcddc5caba6", null ],
+    [ "impl_jacobian", "a00059.html#aaf3d90bb7f6484f288ee797366f8f6a1", null ],
+    [ "origin", "a00059.html#a6084518aafb074773522d069b84418b3", null ],
+    [ "origin", "a00059.html#a323b53ffd6ed09b1460ea1c112c1b340", null ],
+    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00059.html#a934ae91992e7f17a02dbde5ec8e7de3c", null ]
 ];

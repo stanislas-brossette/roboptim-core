@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Mathematical functions</title>
+<title>Mathematical abstract functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -51,589 +51,207 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">Mathematical functions</div>  </div>
+<div class="title">Mathematical abstract functions</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00044.html">roboptim::GenericFiniteDifferenceGradient&lt; T, FdgPolicy &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute automatically a gradient with finite differences.  <a href="a00044.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00042.html">roboptim::GenericConstantFunction&lt; T &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant function.  <a href="a00042.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html">roboptim::Cos&lt; T &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00029.html" title="Cos function.">Cos</a> function.  <a href="a00029.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html">roboptim::GenericIdentityFunction&lt; T &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity function.  <a href="a00049.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00081.html">roboptim::Sin&lt; T &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00081.html" title="Sin function.">Sin</a> function.  <a href="a00081.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00062.html">roboptim::NTimesDerivableFunction&lt; 2 &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit specialization for the stop case of NTimesDerivable class.  <a href="a00062.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html">roboptim::NTimesDerivableFunction&lt; DerivabilityOrder &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a <img class="formulaInl" alt="$\mathbb{R} \rightarrow \mathbb{R}^m$" src="form_24.png"/> function, derivable n times ( <img class="formulaInl" alt="$n \geq 2$" src="form_25.png"/>).  <a href="a00061.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html">roboptim::GenericNumericLinearFunction&lt; T &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a linear function from a vector and a matrix.  <a href="a00051.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00052.html">roboptim::GenericNumericQuadraticFunction&lt; T &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a quadratic function from a matrix and a vector.  <a href="a00052.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00030.html">roboptim::DerivableParametrizedFunction&lt; F &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parametrized function with parameter derivative available.  <a href="a00030.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00043.html">roboptim::GenericDifferentiableFunction&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define an abstract derivable function ( <img class="formulaInl" alt="$C^1$" src="form_0.png"/>).  <a href="a00043.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00046.html">roboptim::GenericFunctionTraits&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00045.html" title="Define an abstract mathematical function ( ).">GenericFunction</a> traits.  <a href="a00046.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00045.html">roboptim::GenericFunction&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define an abstract mathematical function ( <img class="formulaInl" alt="$C^0$" src="form_19.png"/>).  <a href="a00045.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00047.html">roboptim::GenericFunctionTraits&lt; EigenMatrixDense &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Trait specializing <a class="el" href="a00045.html" title="Define an abstract mathematical function ( ).">GenericFunction</a> for Eigen dense matrices.  <a href="a00047.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00048.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Trait specializing <a class="el" href="a00045.html" title="Define an abstract mathematical function ( ).">GenericFunction</a> for Eigen sparse matrices.  <a href="a00048.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00050.html">roboptim::GenericLinearFunction&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define an abstract linear function.  <a href="a00050.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00066.html">roboptim::ParametrizedFunction&lt; F &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define an abstract parametrized mathematical function ( <img class="formulaInl" alt="$C^0$" src="form_19.png"/>).  <a href="a00066.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00053.html">roboptim::GenericQuadraticFunction&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define an abstract quadratic function.  <a href="a00053.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00088.html">roboptim::SumOfC1Squares</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum of the squares of differentiable functions.  <a href="a00088.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00055.html">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define an abstract function which is derivable twice ( <img class="formulaInl" alt="$C^2$" src="form_38.png"/>).  <a href="a00055.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00201.html#ga7b974ed3d440aab33b573448ff332552">roboptim::checkGradient</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, typename GenericDifferentiableFunction&lt; T &gt;::size_type functionId, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a gradient is valid.  <a href="#ga7b974ed3d440aab33b573448ff332552"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00201.html#gae0a448fba694779126c4406d23f02bf1">roboptim::checkGradientAndThrow</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, typename GenericDifferentiableFunction&lt; T &gt;::size_type functionId, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw (BadGradient&lt;T&gt;)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00201.html#gaa32250244db065fae2e23e779ae6cf12">roboptim::checkJacobian</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a Jacobian is valid.  <a href="#gaa32250244db065fae2e23e779ae6cf12"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00201.html#ga516899da0b771c79abe8a23a5028d8ea">roboptim::checkJacobianAndThrow</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw (BadJacobian&lt;T&gt;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#ga43026a8fbf86581222ee5b9f9127f38d">roboptim::Cos&lt; T &gt;::impl_gradient</a> (gradient_t &amp;gradient, const argument_t &amp;x, size_type) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient evaluation.  <a href="#ga43026a8fbf86581222ee5b9f9127f38d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#gae292c8e8787299419706cbee683c4823">roboptim::Cos&lt; T &gt;::impl_jacobian</a> (jacobian_t &amp;jacobian, const argument_t &amp;x) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Jacobian evaluation.  <a href="#gae292c8e8787299419706cbee683c4823"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#gaa595d09dcc1e99f7cc2cb217be1918cc">roboptim::Cos&lt; T &gt;::impl_hessian</a> (hessian_t &amp;hessian, const argument_t &amp;x, size_type) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Hessian evaluation.  <a href="#gaa595d09dcc1e99f7cc2cb217be1918cc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#ga41fe064db0d556f73918a7e6964edc91">roboptim::GenericIdentityFunction&lt; T &gt;::impl_gradient</a> (gradient_t &amp;gradient, const argument_t &amp;, size_type idFunction) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient evaluation.  <a href="#ga41fe064db0d556f73918a7e6964edc91"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#ga2b2d78ac5e5bbc6df4e0d8baa39da573">roboptim::Sin&lt; T &gt;::impl_gradient</a> (gradient_t &amp;gradient, const argument_t &amp;x, size_type) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient evaluation.  <a href="#ga2b2d78ac5e5bbc6df4e0d8baa39da573"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#gacf45616e70d38ed31895ff1b4cdc0830">roboptim::Sin&lt; T &gt;::impl_jacobian</a> (jacobian_t &amp;jacobian, const argument_t &amp;x) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Jacobian evaluation.  <a href="#gacf45616e70d38ed31895ff1b4cdc0830"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#gac58e0e8ecf213c0790fc16479a3d0f47">roboptim::Sin&lt; T &gt;::impl_hessian</a> (hessian_t &amp;hessian, const argument_t &amp;x, size_type) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Hessian evaluation.  <a href="#gac58e0e8ecf213c0790fc16479a3d0f47"></a><br/></td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00201.html#gac1811528dd1c9cc4c233c14bf5ed6e81">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const GenericFunction&lt; T &gt; &amp;f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle function display.  <a href="#gac1811528dd1c9cc4c233c14bf5ed6e81"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#ga1d025a85d12b2eb8f85409a150cad994">roboptim::GenericFunction&lt; T &gt;::GenericFunction</a> (size_type inputSize, size_type outputSize=1, std::string name=std::string())  throw (std::runtime_error)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Concrete class constructor should call this constructor.  <a href="#ga1d025a85d12b2eb8f85409a150cad994"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#gac5f8e82a0e2ec840c40396a8a6d949c2">roboptim::GenericFunction&lt; T &gt;::~GenericFunction</a> ()  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Trivial destructor.  <a href="#gac5f8e82a0e2ec840c40396a8a6d949c2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#ga762e9ee9b4cff36e36b78dad53ba9e32">roboptim::GenericFunction&lt; T &gt;::print</a> (std::ostream &amp;) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the function on the specified output stream.  <a href="#ga762e9ee9b4cff36e36b78dad53ba9e32"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static log4cxx::LoggerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html#gac33ccf681554a2bad6663a107f436be8">roboptim::GenericFunction&lt; T &gt;::logger</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to function logger (see log4cxx documentation).  <a href="#gac33ccf681554a2bad6663a107f436be8"></a><br/></td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="ga7b974ed3d440aab33b573448ff332552"></a><!-- doxytag: member="roboptim::checkGradient" ref="ga7b974ed3d440aab33b573448ff332552" args="(const GenericDifferentiableFunction&lt; T &gt; &amp;function, typename GenericDifferentiableFunction&lt; T &gt;::size_type functionId, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)" -->
+<a class="anchor" id="ga1d025a85d12b2eb8f85409a150cad994"></a><!-- doxytag: member="roboptim::GenericFunction::GenericFunction" ref="ga1d025a85d12b2eb8f85409a150cad994" args="(size_type inputSize, size_type outputSize=1, std::string name=std::string())" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="a00201.html#ga7b974ed3d440aab33b573448ff332552">roboptim::checkGradient</a> </td>
+          <td class="memname"><a class="el" href="a00045.html">roboptim::GenericFunction</a>&lt; T &gt;::GenericFunction </td>
           <td>(</td>
-          <td class="paramtype">const GenericDifferentiableFunction&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>function</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename GenericDifferentiableFunction&lt; T &gt;::size_type&#160;</td>
-          <td class="paramname"><em>functionId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename GenericDifferentiableFunction&lt; T &gt;::value_type&#160;</td>
-          <td class="paramname"><em>threshold</em> = <code>finiteDifferenceThreshold</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Check if a gradient is valid. </p>
-<p>Check if a gradient is valid by comparing the distance between its gradient and an automatically computed finite differences gradient. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">function</td><td>function that will be checked </td></tr>
-    <tr><td class="paramname">functionId</td><td>function id in split representation </td></tr>
-    <tr><td class="paramname">x</td><td>point where the gradient will be evaluated </td></tr>
-    <tr><td class="paramname">threshold</td><td>maximum tolerated error </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if valid, false if not </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00001.html#a8">finite-difference-gradient.cc</a>, and <a class="el" href="a00007.html#a11">numeric-quadratic-function.cc</a>.</dd>
-</dl>
-<p>References <a class="el" href="a00189.html#abf0a2c6465667b5f8cc0c9ab9c5d1fe3">roboptim::allclose()</a>, and <a class="el" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169">roboptim::GenericDifferentiableFunction&lt; T &gt;::gradient()</a>.</p>
-
-<p>Referenced by <a class="el" href="a00201.html#gae0a448fba694779126c4406d23f02bf1">roboptim::checkGradientAndThrow()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gae0a448fba694779126c4406d23f02bf1"></a><!-- doxytag: member="roboptim::checkGradientAndThrow" ref="gae0a448fba694779126c4406d23f02bf1" args="(const GenericDifferentiableFunction&lt; T &gt; &amp;function, typename GenericDifferentiableFunction&lt; T &gt;::size_type functionId, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00201.html#gae0a448fba694779126c4406d23f02bf1">roboptim::checkGradientAndThrow</a> </td>
-          <td>(</td>
-          <td class="paramtype">const GenericDifferentiableFunction&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>function</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename GenericDifferentiableFunction&lt; T &gt;::size_type&#160;</td>
-          <td class="paramname"><em>functionId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename GenericDifferentiableFunction&lt; T &gt;::value_type&#160;</td>
-          <td class="paramname"><em>threshold</em> = <code>finiteDifferenceThreshold</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw (BadGradient&lt;T&gt;)</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00001.html#a9">finite-difference-gradient.cc</a>.</dd>
-</dl>
-<p>References <a class="el" href="a00201.html#ga7b974ed3d440aab33b573448ff332552">roboptim::checkGradient()</a>, and <a class="el" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169">roboptim::GenericDifferentiableFunction&lt; T &gt;::gradient()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gaa32250244db065fae2e23e779ae6cf12"></a><!-- doxytag: member="roboptim::checkJacobian" ref="gaa32250244db065fae2e23e779ae6cf12" args="(const GenericDifferentiableFunction&lt; T &gt; &amp;function, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="a00201.html#gaa32250244db065fae2e23e779ae6cf12">roboptim::checkJacobian</a> </td>
-          <td>(</td>
-          <td class="paramtype">const GenericDifferentiableFunction&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>function</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename GenericDifferentiableFunction&lt; T &gt;::value_type&#160;</td>
-          <td class="paramname"><em>threshold</em> = <code>finiteDifferenceThreshold</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Check if a Jacobian is valid. </p>
-<p>Check if a Jacobian is valid by comparing the distance between the matrix and an automatically computed finite differences Jacobian. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">function</td><td>function that will be checked </td></tr>
-    <tr><td class="paramname">x</td><td>point where the Jacobian will be evaluated </td></tr>
-    <tr><td class="paramname">threshold</td><td>maximum tolerated error </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>true if valid, false if not </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00007.html#a12">numeric-quadratic-function.cc</a>.</dd>
-</dl>
-<p>References <a class="el" href="a00189.html#abf0a2c6465667b5f8cc0c9ab9c5d1fe3">roboptim::allclose()</a>, and <a class="el" href="a00043.html#a18879d9ec115089c02e685a020a11c4d">roboptim::GenericDifferentiableFunction&lt; T &gt;::jacobian()</a>.</p>
-
-<p>Referenced by <a class="el" href="a00201.html#ga516899da0b771c79abe8a23a5028d8ea">roboptim::checkJacobianAndThrow()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga516899da0b771c79abe8a23a5028d8ea"></a><!-- doxytag: member="roboptim::checkJacobianAndThrow" ref="ga516899da0b771c79abe8a23a5028d8ea" args="(const GenericDifferentiableFunction&lt; T &gt; &amp;function, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00201.html#ga516899da0b771c79abe8a23a5028d8ea">roboptim::checkJacobianAndThrow</a> </td>
-          <td>(</td>
-          <td class="paramtype">const GenericDifferentiableFunction&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>function</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename GenericDifferentiableFunction&lt; T &gt;::value_type&#160;</td>
-          <td class="paramname"><em>threshold</em> = <code>finiteDifferenceThreshold</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw (BadJacobian&lt;T&gt;)</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="a00001.html#a11">finite-difference-gradient.cc</a>.</dd>
-</dl>
-<p>References <a class="el" href="a00201.html#gaa32250244db065fae2e23e779ae6cf12">roboptim::checkJacobian()</a>, and <a class="el" href="a00043.html#a18879d9ec115089c02e685a020a11c4d">roboptim::GenericDifferentiableFunction&lt; T &gt;::jacobian()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga2b2d78ac5e5bbc6df4e0d8baa39da573"></a><!-- doxytag: member="roboptim::Sin::impl_gradient" ref="ga2b2d78ac5e5bbc6df4e0d8baa39da573" args="(gradient_t &amp;gradient, const argument_t &amp;x, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00081.html">roboptim::Sin</a>&lt; T &gt;::impl_gradient </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00043.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
+          <td class="paramtype"><a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>inputSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
-          <td class="paramname"><em>functionId</em>&#160;</td>
+          <td class="paramname"><em>outputSize</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>std::string&#160;()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
+          <td></td><td>  throw (std::runtime_error)<code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Gradient evaluation. </p>
-<p>Compute the gradient, has to be implemented in concrete classes. The gradient is computed for a specific sub-function which id is passed through the functionId argument. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> instead. </dd></dl>
+<p>Concrete class constructor should call this constructor. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">gradient</td><td>gradient will be store in this argument </td></tr>
-    <tr><td class="paramname">argument</td><td>point where the gradient will be computed </td></tr>
-    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+    <tr><td class="paramname">inputSize</td><td>function arity </td></tr>
+    <tr><td class="paramname">outputSize</td><td>result size </td></tr>
+    <tr><td class="paramname">name</td><td>function's name </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="a00043.html#a84657c4eb2f67ea3bbaf49462f54fb68">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="ga43026a8fbf86581222ee5b9f9127f38d"></a><!-- doxytag: member="roboptim::Cos::impl_gradient" ref="ga43026a8fbf86581222ee5b9f9127f38d" args="(gradient_t &amp;gradient, const argument_t &amp;x, size_type) const " -->
+<a class="anchor" id="gac1811528dd1c9cc4c233c14bf5ed6e81"></a><!-- doxytag: member="roboptim::operator&lt;&lt;" ref="gac1811528dd1c9cc4c233c14bf5ed6e81" args="(std::ostream &amp;o, const GenericFunction&lt; T &gt; &amp;f)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00029.html">roboptim::Cos</a>&lt; T &gt;::impl_gradient </td>
+          <td class="memname">std::ostream &amp; roboptim::operator&lt;&lt; </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00043.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
-          <td class="paramname"><em>functionId</em>&#160;</td>
+          <td class="paramtype">const GenericFunction&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Gradient evaluation. </p>
-<p>Compute the gradient, has to be implemented in concrete classes. The gradient is computed for a specific sub-function which id is passed through the functionId argument. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> instead. </dd></dl>
+<p>Override operator&lt;&lt; to handle function display. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">gradient</td><td>gradient will be store in this argument </td></tr>
-    <tr><td class="paramname">argument</td><td>point where the gradient will be computed </td></tr>
-    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
+    <tr><td class="paramname">f</td><td>function to be displayed </td></tr>
   </table>
   </dd>
 </dl>
-
-<p>Implements <a class="el" href="a00043.html#a84657c4eb2f67ea3bbaf49462f54fb68">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga41fe064db0d556f73918a7e6964edc91"></a><!-- doxytag: member="roboptim::GenericIdentityFunction::impl_gradient" ref="ga41fe064db0d556f73918a7e6964edc91" args="(gradient_t &amp;gradient, const argument_t &amp;, size_type idFunction) const " -->
+<a class="anchor" id="ga762e9ee9b4cff36e36b78dad53ba9e32"></a><!-- doxytag: member="roboptim::GenericFunction::print" ref="ga762e9ee9b4cff36e36b78dad53ba9e32" args="(std::ostream &amp;) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00049.html">roboptim::GenericIdentityFunction</a>&lt; T &gt;::impl_gradient </td>
+          <td class="memname">std::ostream &amp; <a class="el" href="a00045.html">roboptim::GenericFunction</a>&lt; T &gt;::print </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00043.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
-          <td class="paramname"><em>functionId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td> const  throw ()<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Gradient evaluation. </p>
-<p>Compute the gradient, has to be implemented in concrete classes. The gradient is computed for a specific sub-function which id is passed through the functionId argument. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> instead. </dd></dl>
+<p>Display the function on the specified output stream. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">gradient</td><td>gradient will be store in this argument </td></tr>
-    <tr><td class="paramname">argument</td><td>point where the gradient will be computed </td></tr>
-    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
 
-<p>Implements <a class="el" href="a00043.html#a84657c4eb2f67ea3bbaf49462f54fb68">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="a00043.html#a9c50e545609bd7ace4f2dad69029fac3">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>, <a class="el" href="a00055.html#a78bf9018548e92c38803bbd0b39ef29a">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;</a>, <a class="el" href="a00063.html#ae0961c8f2f33ecb177216919420b21cb">roboptim::NTimesDerivableFunction&lt; 2 &gt;</a>, <a class="el" href="a00052.html#ab43858fd0eb1c257664a80004111c8ab">roboptim::GenericNumericQuadraticFunction&lt; T &gt;</a>, <a class="el" href="a00042.html#ac98c86704dc8443933a50ad664cca533">roboptim::GenericConstantFunction&lt; T &gt;</a>, <a class="el" href="a00049.html#adc5eff6387532970e7b1e14daeb2d8af">roboptim::GenericIdentityFunction&lt; T &gt;</a>, <a class="el" href="a00051.html#ae57fb039df18b98b7ab403b73c277632">roboptim::GenericNumericLinearFunction&lt; T &gt;</a>, <a class="el" href="a00050.html#a00e124bc18548130332a1f5ceacf70c5">roboptim::GenericLinearFunction&lt; T &gt;</a>, <a class="el" href="a00053.html#a38f3f609626f43393e854351555459ee">roboptim::GenericQuadraticFunction&lt; T &gt;</a>, <a class="el" href="a00029.html#a39db9ef66cdb3605a811b232fcfaad13">roboptim::Cos&lt; T &gt;</a>, and <a class="el" href="a00082.html#ad1127d5c57e79dd7c1a4dc20398e1086">roboptim::Sin&lt; T &gt;</a>.</p>
+
+<p>References <a class="el" href="a00045.html#af1cb0698b851bc755145c31ea711b240">roboptim::GenericFunction&lt; T &gt;::getName()</a>, and <a class="el" href="a00190.html#a2b00a3916f44e9f9d69e4fc157a0da79">roboptim::indent()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="gac58e0e8ecf213c0790fc16479a3d0f47"></a><!-- doxytag: member="roboptim::Sin::impl_hessian" ref="gac58e0e8ecf213c0790fc16479a3d0f47" args="(hessian_t &amp;hessian, const argument_t &amp;x, size_type) const " -->
+<a class="anchor" id="gac5f8e82a0e2ec840c40396a8a6d949c2"></a><!-- doxytag: member="roboptim::GenericFunction::~GenericFunction" ref="gac5f8e82a0e2ec840c40396a8a6d949c2" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00081.html">roboptim::Sin</a>&lt; T &gt;::impl_hessian </td>
+          <td class="memname"><a class="el" href="a00045.html">roboptim::GenericFunction</a>&lt; T &gt;::~GenericFunction </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00055.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>hessian</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
-          <td class="paramname"><em>functionId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
+          <td class="paramname"></td><td>)</td>
+          <td>  throw ()<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Hessian evaluation. </p>
-<p>Compute the hessian, has to be implemented in concrete classes. The hessian is computed for a specific sub-function which id is passed through the functionId argument. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00055.html#a7ab6bda5039008fb215ab24ecacd85a2" title="Compute the hessian at a given point.">hessian</a> instead. </dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hessian</td><td>hessian will be stored here </td></tr>
-    <tr><td class="paramname">argument</td><td>point where the hessian will be computed </td></tr>
-    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="a00055.html#ac5b5430ab527d7de393f876f4db314c2">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;</a>.</p>
-
-<p>References <a class="el" href="a00055.html#a7ab6bda5039008fb215ab24ecacd85a2">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::hessian()</a>.</p>
+<p>Trivial destructor. </p>
 
 </div>
 </div>
-<a class="anchor" id="gaa595d09dcc1e99f7cc2cb217be1918cc"></a><!-- doxytag: member="roboptim::Cos::impl_hessian" ref="gaa595d09dcc1e99f7cc2cb217be1918cc" args="(hessian_t &amp;hessian, const argument_t &amp;x, size_type) const " -->
+<hr/><h2>Variable Documentation</h2>
+<a class="anchor" id="gac33ccf681554a2bad6663a107f436be8"></a><!-- doxytag: member="roboptim::GenericFunction::logger" ref="gac33ccf681554a2bad6663a107f436be8" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00029.html">roboptim::Cos</a>&lt; T &gt;::impl_hessian </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00055.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>hessian</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
-          <td class="paramname"><em>functionId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
+          <td class="memname">log4cxx::LoggerPtr <a class="el" href="a00045.html">roboptim::GenericFunction</a>&lt; T &gt;::logger<code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Hessian evaluation. </p>
-<p>Compute the hessian, has to be implemented in concrete classes. The hessian is computed for a specific sub-function which id is passed through the functionId argument. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00055.html#a7ab6bda5039008fb215ab24ecacd85a2" title="Compute the hessian at a given point.">hessian</a> instead. </dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hessian</td><td>hessian will be stored here </td></tr>
-    <tr><td class="paramname">argument</td><td>point where the hessian will be computed </td></tr>
-    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Pointer to function logger (see log4cxx documentation). </p>
 
-<p>Implements <a class="el" href="a00055.html#ac5b5430ab527d7de393f876f4db314c2">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;</a>.</p>
-
-<p>References <a class="el" href="a00055.html#a7ab6bda5039008fb215ab24ecacd85a2">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::hessian()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gacf45616e70d38ed31895ff1b4cdc0830"></a><!-- doxytag: member="roboptim::Sin::impl_jacobian" ref="gacf45616e70d38ed31895ff1b4cdc0830" args="(jacobian_t &amp;jacobian, const argument_t &amp;x) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00081.html">roboptim::Sin</a>&lt; T &gt;::impl_jacobian </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00043.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>jacobian</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>arg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Jacobian evaluation. </p>
-<p>Computes the jacobian, can be overridden by concrete classes. The default behavior is to compute the jacobian from the gradient. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> instead. </dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">jacobian</td><td>jacobian will be store in this argument </td></tr>
-    <tr><td class="paramname">arg</td><td>point where the jacobian will be computed </td></tr>
-  </table>
-  </dd>
-</dl>
-<p>ROBOPTIM_DO_NOT_CHECK_ALLOCATION </p>
-
-<p>Reimplemented from <a class="el" href="a00043.html#a5aa21359d6844bc4c21280cbd1155d22">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
-
-<p>References <a class="el" href="a00043.html#a18879d9ec115089c02e685a020a11c4d">roboptim::GenericDifferentiableFunction&lt; T &gt;::jacobian()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gae292c8e8787299419706cbee683c4823"></a><!-- doxytag: member="roboptim::Cos::impl_jacobian" ref="gae292c8e8787299419706cbee683c4823" args="(jacobian_t &amp;jacobian, const argument_t &amp;x) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00029.html">roboptim::Cos</a>&lt; T &gt;::impl_jacobian </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00043.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>jacobian</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>arg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Jacobian evaluation. </p>
-<p>Computes the jacobian, can be overridden by concrete classes. The default behavior is to compute the jacobian from the gradient. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> instead. </dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">jacobian</td><td>jacobian will be store in this argument </td></tr>
-    <tr><td class="paramname">arg</td><td>point where the jacobian will be computed </td></tr>
-  </table>
-  </dd>
-</dl>
-<p>ROBOPTIM_DO_NOT_CHECK_ALLOCATION </p>
-
-<p>Reimplemented from <a class="el" href="a00043.html#a5aa21359d6844bc4c21280cbd1155d22">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
-
-<p>References <a class="el" href="a00043.html#a18879d9ec115089c02e685a020a11c4d">roboptim::GenericDifferentiableFunction&lt; T &gt;::jacobian()</a>.</p>
+<p>Referenced by <a class="el" href="a00043.html#aec24fff2d16284b2832bd2d2998c47fe">roboptim::GenericDifferentiableFunction&lt; T &gt;::gradient()</a>, <a class="el" href="a00055.html#a62c40461536ac03d4c457f8681f8c2b3">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;::hessian()</a>, <a class="el" href="a00043.html#a56c93142eb8adc0337192dcae2602dbf">roboptim::GenericDifferentiableFunction&lt; T &gt;::jacobian()</a>, and <a class="el" href="a00045.html#a58f0bde147e54bbeb8df944ef194f9ae">roboptim::GenericFunction&lt; T &gt;::operator()()</a>.</p>
 
 </div>
 </div>

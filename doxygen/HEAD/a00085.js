@@ -1,5 +1,8 @@
 var a00085 =
 [
-    [ "SolverWarning", "a00085.html#a89480c8b6750a2207e6db13b6cade235", null ],
-    [ "print", "a00085.html#a1b851aa758c3cccd4594ff817fb10190", null ]
+    [ "problem_t", "a00085.html#ad075bea9aed21b399b4684d5c2258da7", null ],
+    [ "solver_t", "a00085.html#af7982512a4de7bfdd2e12669ea5d3d7b", null ],
+    [ "SolverFactory", "a00085.html#aadc8315a15a321eb1dcb064292d05077", null ],
+    [ "~SolverFactory", "a00085.html#a0a558a3b33d63421310b818c0577393a", null ],
+    [ "operator()", "a00085.html#ab4f632f2624c1fda7c8379b8136e5483", null ]
 ];

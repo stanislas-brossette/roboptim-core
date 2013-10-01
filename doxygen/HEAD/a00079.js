@@ -1,13 +1,13 @@
 var a00079 =
 [
-    [ "parentType_t", "a00079.html#a6802dfd6761714f83c4dbbe5f9bcef19", null ],
-    [ "SelectionShPtr_t", "a00079.html#a5cf29c8b2e9a95cf3553d7f21bb1ee83", null ],
-    [ "Selection", "a00079.html#a0dddb1c4cdb30e96e2ca952a63d49831", null ],
-    [ "~Selection", "a00079.html#a2f5c18b892a2c6e4d6d1f30561334d4e", null ],
-    [ "impl_compute", "a00079.html#a36ebb4a5335d3265e7678344aaacfcb7", null ],
-    [ "impl_gradient", "a00079.html#ae8b19b2db91de830c6d7d5081fb7c6bf", null ],
-    [ "impl_jacobian", "a00079.html#ae1860cce95830c0ed620aa241e891a24", null ],
-    [ "origin", "a00079.html#a5e3e5098b2fe6dd32b773d06ba3de648", null ],
-    [ "origin", "a00079.html#a0cbd7cc3ecf575d338b16306ea1b4646", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00079.html#a224033bde371676be065a7c89fba3d77", null ]
+    [ "parentType_t", "a00079.html#a7953a20600361495460caa1f213e9011", null ],
+    [ "ScalarShPtr_t", "a00079.html#a20f63dc977977915cfc81b1743bd2416", null ],
+    [ "Scalar", "a00079.html#a45375aa30475b4928b32a46b8c71b4a8", null ],
+    [ "~Scalar", "a00079.html#a50fe6bb5f735657401bafce30044056c", null ],
+    [ "impl_compute", "a00079.html#af7da2d0ec317d96bbff695866db9cf20", null ],
+    [ "impl_gradient", "a00079.html#ad591b61ba39de5f5bbf7f7108926e978", null ],
+    [ "impl_jacobian", "a00079.html#a853cd301281c7c21036ee5c8de280d0b", null ],
+    [ "origin", "a00079.html#ad17cc3b06c7818946a6b94254ffcb1c1", null ],
+    [ "origin", "a00079.html#a4e8961237859adaa361aa9fec0d5057d", null ],
+    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00079.html#aefa2eb6460580af5ce6ecc78bf0319de", null ]
 ];

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>gnuplot-commands.hh File Reference</title>
+<title>gnuplot-commands.cc File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,64 +56,106 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Defines</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">gnuplot-commands.hh File Reference</div>  </div>
+<div class="title">gnuplot-commands.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00179.html">roboptim/core/sys.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00098.html">roboptim/core/debug.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00185.html">roboptim/core/util.hh</a>&gt;</code><br/>
-<code>#include &lt;string&gt;</code><br/>
-<code>#include &lt;iostream&gt;</code><br/>
+<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br/>
+<code>#include &quot;roboptim/core/config.hh&quot;</code><br/>
+<code>#include &lt;boost/format.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00122.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</code><br/>
 </div><table class="memberdecls">
-<tr><td colspan="2"><h2><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html">roboptim::visualization::gnuplot::Command</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> command.  <a href="a00026.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00189.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim::visualization</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html">roboptim::visualization</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Graphic visualization. </p>
 <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html">roboptim::visualization::gnuplot</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00198.html">roboptim::visualization::gnuplot</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p><a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> rendering. </p>
 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="define-members"></a>
+Defines</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#abdaa2512aec3201d566ccbfc73fafc46">GNUPLOT_UNARY_COMMAND</a>(NAME)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#a44cffa7dc6979331d7660d604e7c8f48">GNUPLOT_STR_COMMAND</a>(NAME, ARG)</td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga108c0cb6161fb8813817a7b7a1ac980d">roboptim::visualization::gnuplot::comment</a> (const char *)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> comment.  <a href="a00205.html#ga108c0cb6161fb8813817a7b7a1ac980d"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">Command&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00205.html#ga7a509faa4e3dd9a30373a2b320b98c23">roboptim::visualization::gnuplot::comment</a> (const T &amp;content)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> comment.  <a href="a00205.html#ga7a509faa4e3dd9a30373a2b320b98c23"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gad77630a233193748534b41d069d4e180">roboptim::visualization::gnuplot::set</a> (const char *var, const char *val=&quot;&quot;)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> set command.  <a href="a00205.html#gad77630a233193748534b41d069d4e180"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga2c2a188b2e89955eee09aa10b5426e43">roboptim::visualization::gnuplot::unset</a> (const char *var)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> unset command.  <a href="a00205.html#ga2c2a188b2e89955eee09aa10b5426e43"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gaf90f5364d8c3597b8909ba99083fc23f">roboptim::visualization::gnuplot::show</a> (const char *var)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> show command.  <a href="a00205.html#gaf90f5364d8c3597b8909ba99083fc23f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gad96d84d9e1a5bab7a33ed90bef8bc01d">roboptim::visualization::gnuplot::clear</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> clear command.  <a href="a00205.html#gad96d84d9e1a5bab7a33ed90bef8bc01d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga05e850b5c5dc912807d645863c01acd9">roboptim::visualization::gnuplot::pwd</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> pwdcommand.  <a href="a00205.html#ga05e850b5c5dc912807d645863c01acd9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga9ecd6983c2e9525527f1269b72b85291">roboptim::visualization::gnuplot::quit</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> quit command.  <a href="a00205.html#ga9ecd6983c2e9525527f1269b72b85291"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gaa265dffb4d80ad3841b7775136f9f9bb">roboptim::visualization::gnuplot::replot</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> replot command.  <a href="a00205.html#gaa265dffb4d80ad3841b7775136f9f9bb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gacc11e69c9499c334e4ec1a962c6e6536">roboptim::visualization::gnuplot::reread</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> reread command.  <a href="a00205.html#gacc11e69c9499c334e4ec1a962c6e6536"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga73987a2ddca2e5fc23ff8bbdf703842d">roboptim::visualization::gnuplot::reset</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> reset command.  <a href="a00205.html#ga73987a2ddca2e5fc23ff8bbdf703842d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ga195d042fd97469e044b37abc0faf1e0f">roboptim::visualization::gnuplot::cd</a> (const char *dir)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> cd command.  <a href="a00205.html#ga195d042fd97469e044b37abc0faf1e0f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00150.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#gabecfe2b1ab67fa65ea2fa8f9de592d0a">roboptim::visualization::gnuplot::help</a> (const char *topic=&quot;&quot;)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> help command.  <a href="a00205.html#gabecfe2b1ab67fa65ea2fa8f9de592d0a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00151.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#ga108c0cb6161fb8813817a7b7a1ac980d">roboptim::visualization::gnuplot::comment</a> (const char *)  throw (std::runtime_error)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> comment.  <a href="a00206.html#ga108c0cb6161fb8813817a7b7a1ac980d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00151.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#gad77630a233193748534b41d069d4e180">roboptim::visualization::gnuplot::set</a> (const char *var, const char *val=&quot;&quot;)  throw (std::runtime_error)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> set command.  <a href="a00206.html#gad77630a233193748534b41d069d4e180"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00151.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#ga2c2a188b2e89955eee09aa10b5426e43">roboptim::visualization::gnuplot::unset</a> (const char *var)  throw (std::runtime_error)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> unset command.  <a href="a00206.html#ga2c2a188b2e89955eee09aa10b5426e43"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00151.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#gaf90f5364d8c3597b8909ba99083fc23f">roboptim::visualization::gnuplot::show</a> (const char *var)  throw (std::runtime_error)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> show command.  <a href="a00206.html#gaf90f5364d8c3597b8909ba99083fc23f"></a><br/></td></tr>
 </table>
+<hr/><h2>Define Documentation</h2>
+<a class="anchor" id="a44cffa7dc6979331d7660d604e7c8f48"></a><!-- doxytag: member="gnuplot&#45;commands.cc::GNUPLOT_STR_COMMAND" ref="a44cffa7dc6979331d7660d604e7c8f48" args="(NAME, ARG)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00121.html#a44cffa7dc6979331d7660d604e7c8f48">GNUPLOT_STR_COMMAND</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ARG&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Value:</b><div class="fragment"><pre class="fragment">Command         \
+      NAME (<span class="keyword">const</span> <span class="keywordtype">char</span>* ARG) <span class="keywordflow">throw</span> ()   \
+      {           \
+  std::string command = #NAME;    \
+  if (*ARG != 0)        \
+    {         \
+      command += <span class="stringliteral">&quot; &#39;&quot;</span>;      \
+      command += ARG;     \
+      command += <span class="stringliteral">&quot;&#39;&quot;</span>;     \
+    }         \
+  return Command (command);   \
+      }
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="abdaa2512aec3201d566ccbfc73fafc46"></a><!-- doxytag: member="gnuplot&#45;commands.cc::GNUPLOT_UNARY_COMMAND" ref="abdaa2512aec3201d566ccbfc73fafc46" args="(NAME)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="a00121.html#abdaa2512aec3201d566ccbfc73fafc46">GNUPLOT_UNARY_COMMAND</a></td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Value:</b><div class="fragment"><pre class="fragment">Command         \
+      NAME () throw ()        \
+      {           \
+  return Command (#NAME);     \
+      }
+</pre></div>
+</div>
+</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -132,6 +174,6 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00121.html">gnuplot-commands.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00121.html">gnuplot-commands.cc</a>      </li>
 </body>
 </html>

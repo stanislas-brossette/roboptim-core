@@ -1,17 +1,6 @@
 var a00065 =
 [
-    [ "argument_t", "a00065.html#af4bb1d815e33a2fbb81165604d48e32a", null ],
-    [ "matrix_t", "a00065.html#ae1ae1137efff66af2fc84c967a2e64e5", null ],
-    [ "result_t", "a00065.html#a650dd3199ebc63021f83ab30b603d982", null ],
-    [ "size_type", "a00065.html#ac88a1cbae53587c432cb346982c9302d", null ],
-    [ "value_type", "a00065.html#ad6f5a983e3c1c4f657ef972d8a781a57", null ],
-    [ "vector_t", "a00065.html#a485059f799b3a571c5446677a8655a34", null ],
-    [ "ParametrizedFunction", "a00065.html#a0cb8331de8f0fdc4ad395446b191fc81", null ],
-    [ "~ParametrizedFunction", "a00065.html#af4e8e1ee202ade5a6ec8d66fd497fe29", null ],
-    [ "functionInputSize", "a00065.html#a067147c8d9a6cfe99f46820a41d08aeb", null ],
-    [ "functionOutputSize", "a00065.html#af15dfa5e7e9e13e7f5d4720091a7d28f", null ],
-    [ "impl_compute", "a00065.html#a491315022b13f12523b583b2699b965e", null ],
-    [ "inputSize", "a00065.html#aa11a87582936a2ce58f853f6ea4541d8", null ],
-    [ "operator()", "a00065.html#aa09793c665b51d543e7533ccb19d6864", null ],
-    [ "print", "a00065.html#a7769a5ffb197cd0009a27c6e12d40888", null ]
+    [ "parameterValues_t", "a00065.html#a20a7c0403832ff03174d093943f98f77", null ],
+    [ "description", "a00065.html#a8758825ae290c6722354c7e2b4a40453", null ],
+    [ "value", "a00065.html#a6a9253ce0d03f844c642a1a41dcd60b1", null ]
 ];

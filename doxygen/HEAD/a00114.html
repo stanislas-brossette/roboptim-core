@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>function.cc File Reference</title>
+<title>finite-difference-gradient.hxx File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -55,10 +55,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">function.cc File Reference</div>  </div>
+<div class="title">finite-difference-gradient.hxx File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;boost/type_traits/is_same.hpp&quot;</code><br/>
+<code>#include &lt;boost/mpl/same_as.hpp&gt;</code><br/>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html">roboptim</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
+<br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html">roboptim::detail</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim::finiteDifferenceGradientPolicies</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Contains finite difference gradients policies. </p>
+<br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00190.html#ae6e53e4f7183cc2816db6aa8ea7cab6e">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const BadGradient&lt; T &gt; &amp;f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle exception display.  <a href="#ae6e53e4f7183cc2816db6aa8ea7cab6e"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00190.html#a67f53906aa3085cb9d1bf44f5515349e">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const BadJacobian&lt; T &gt; &amp;f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle exception display.  <a href="#a67f53906aa3085cb9d1bf44f5515349e"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00202.html#ga7b974ed3d440aab33b573448ff332552">roboptim::checkGradient</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, typename GenericDifferentiableFunction&lt; T &gt;::size_type functionId, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a gradient is valid.  <a href="a00202.html#ga7b974ed3d440aab33b573448ff332552"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00202.html#gae0a448fba694779126c4406d23f02bf1">roboptim::checkGradientAndThrow</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, typename GenericDifferentiableFunction&lt; T &gt;::size_type functionId, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw (BadGradient&lt;T&gt;)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00202.html#gaa32250244db065fae2e23e779ae6cf12">roboptim::checkJacobian</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a Jacobian is valid.  <a href="a00202.html#gaa32250244db065fae2e23e779ae6cf12"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00202.html#ga516899da0b771c79abe8a23a5028d8ea">roboptim::checkJacobianAndThrow</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw (BadJacobian&lt;T&gt;)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00194.html#ad5051acf65733ac44ce83be80b7b54c2">roboptim::detail::compute_deriv</a> (const GenericFunction&lt; T &gt; &amp;adaptee, typename GenericFunction&lt; T &gt;::size_type j, double h, double &amp;result, double &amp;round, double &amp;trunc, const typename GenericFunction&lt; T &gt;::argument_t &amp;argument, typename GenericFunction&lt; T &gt;::size_type idFunction, typename GenericFunction&lt; T &gt;::argument_t &amp;xEps)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Algorithm from the Gnu Scientific Library.  <a href="#ad5051acf65733ac44ce83be80b7b54c2"></a><br/></td></tr>
+</table>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -77,6 +114,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00114.html">function.cc</a>      </li>
+      <li class="navelem"><a class="el" href="a00114.html">finite-difference-gradient.hxx</a>      </li>
 </body>
 </html>

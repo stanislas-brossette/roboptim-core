@@ -63,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pro-static-attribs">Static Protected Attributes</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::GenericSolver Class Reference<div class="ingroups"><a class="el" href="a00204.html">Optimization solvers</a></div></div>  </div>
+<div class="title">roboptim::GenericSolver Class Reference<div class="ingroups"><a class="el" href="a00205.html">Optimization solvers</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="roboptim::GenericSolver" -->
@@ -77,14 +77,14 @@ Inheritance diagram for roboptim::GenericSolver:</div>
  <div class="center">
   <img src="a00054.png" usemap="#roboptim::GenericSolver_map" alt=""/>
   <map id="roboptim::GenericSolver_map" name="roboptim::GenericSolver_map">
-<area href="a00082.html" title="Solver for a specific problem class." alt="roboptim::Solver&lt; F, C &gt;" shape="rect" coords="0,56,355,80"/>
-<area href="a00082.html" alt="roboptim::Solver&lt; Function, boost::mpl::vector&lt; Function &gt; &gt;" shape="rect" coords="365,56,720,80"/>
+<area href="a00083.html" title="Solver for a specific problem class." alt="roboptim::Solver&lt; F, C &gt;" shape="rect" coords="0,56,355,80"/>
+<area href="a00083.html" alt="roboptim::Solver&lt; Function, boost::mpl::vector&lt; Function &gt; &gt;" shape="rect" coords="365,56,720,80"/>
 <area href="a00036.html" title="Dummy solver which always fails." alt="roboptim::DummySolver" shape="rect" coords="182,112,537,136"/>
 <area href="a00037.html" title="Dummy solver which always fails, but returns the last state of the solver." alt="roboptim::DummySolverLastState" shape="rect" coords="547,112,902,136"/>
 </map>
  </div></div>
 
-<p><a href="a00239.html">List of all members.</a></p>
+<p><a href="a00240.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -100,10 +100,10 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the kind of solution which has been found.  <a href="a00054.html#a12c31c6bd2e018b05a71d51dd5b34846">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef boost::variant<br class="typebreak"/>
-&lt; <a class="el" href="a00060.html">NoSolution</a>, <a class="el" href="a00076.html">Result</a>, <br class="typebreak"/>
-<a class="el" href="a00077.html">ResultWithWarnings</a>, <br class="typebreak"/>
-<a class="el" href="a00083.html">SolverError</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#acd6988bec0b7bda9b8565232d32d1bae">result_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00076.html" title="Represents the solution of an optimization problem.">Result</a> type.  <a href="#acd6988bec0b7bda9b8565232d32d1bae"></a><br/></td></tr>
+&lt; <a class="el" href="a00061.html">NoSolution</a>, <a class="el" href="a00077.html">Result</a>, <br class="typebreak"/>
+<a class="el" href="a00078.html">ResultWithWarnings</a>, <br class="typebreak"/>
+<a class="el" href="a00084.html">SolverError</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#acd6988bec0b7bda9b8565232d32d1bae">result_t</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00077.html" title="Represents the solution of an optimization problem.">Result</a> type.  <a href="#acd6988bec0b7bda9b8565232d32d1bae"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00054.html#a16884b058070f8fb6759c6c194665cb7">reset</a> ()  throw ()</td></tr>
@@ -140,13 +140,13 @@ Static Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::variant&lt;<a class="el" href="a00060.html">NoSolution</a>, <a class="el" href="a00076.html">Result</a>, <a class="el" href="a00077.html">ResultWithWarnings</a>, <a class="el" href="a00083.html">SolverError</a>&gt; <a class="el" href="a00054.html#acd6988bec0b7bda9b8565232d32d1bae">roboptim::GenericSolver::result_t</a></td>
+          <td class="memname">typedef boost::variant&lt;<a class="el" href="a00061.html">NoSolution</a>, <a class="el" href="a00077.html">Result</a>, <a class="el" href="a00078.html">ResultWithWarnings</a>, <a class="el" href="a00084.html">SolverError</a>&gt; <a class="el" href="a00054.html#acd6988bec0b7bda9b8565232d32d1bae">roboptim::GenericSolver::result_t</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p><a class="el" href="a00076.html" title="Represents the solution of an optimization problem.">Result</a> type. </p>
+<p><a class="el" href="a00077.html" title="Represents the solution of an optimization problem.">Result</a> type. </p>
 <p>Uses a Boost.Variant to represent the different possible results:</p>
 <ul>
 <li>no solution (problem not yet solved),</li>
@@ -328,9 +328,9 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
 
-<p>Reimplemented in <a class="el" href="a00082.html#afc073c4023a0146bef3e67bbb1a2b4f9">roboptim::Solver&lt; F, C &gt;</a>, and <a class="el" href="a00082.html#afc073c4023a0146bef3e67bbb1a2b4f9">roboptim::Solver&lt; Function, boost::mpl::vector&lt; Function &gt; &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="a00083.html#afc073c4023a0146bef3e67bbb1a2b4f9">roboptim::Solver&lt; F, C &gt;</a>, and <a class="el" href="a00083.html#afc073c4023a0146bef3e67bbb1a2b4f9">roboptim::Solver&lt; Function, boost::mpl::vector&lt; Function &gt; &gt;</a>.</p>
 
-<p>Referenced by <a class="el" href="a00189.html#af9168236068ddff8b8df413c430212e8">roboptim::operator&lt;&lt;()</a>.</p>
+<p>Referenced by <a class="el" href="a00190.html#af9168236068ddff8b8df413c430212e8">roboptim::operator&lt;&lt;()</a>.</p>
 
 </div>
 </div>
@@ -392,7 +392,7 @@ template&lt;typename T &gt; </div>
 
 <p>Pointer to function logger (see log4cxx documentation). </p>
 
-<p>Reimplemented in <a class="el" href="a00082.html#a8963aaae43fc6df3f2faa38e94df8c47">roboptim::Solver&lt; F, C &gt;</a>, and <a class="el" href="a00082.html#a8963aaae43fc6df3f2faa38e94df8c47">roboptim::Solver&lt; Function, boost::mpl::vector&lt; Function &gt; &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="a00083.html#a8963aaae43fc6df3f2faa38e94df8c47">roboptim::Solver&lt; F, C &gt;</a>, and <a class="el" href="a00083.html#a8963aaae43fc6df3f2faa38e94df8c47">roboptim::Solver&lt; Function, boost::mpl::vector&lt; Function &gt; &gt;</a>.</p>
 
 <p>Referenced by <a class="el" href="a00054.html#a16884b058070f8fb6759c6c194665cb7">reset()</a>.</p>
 
@@ -433,7 +433,7 @@ template&lt;typename T &gt; </div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00189.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00190.html">roboptim</a>      </li>
       <li class="navelem"><a class="el" href="a00054.html">GenericSolver</a>      </li>
 </body>
 </html>

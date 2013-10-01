@@ -1,15 +1,17 @@
 var a00066 =
 [
-    [ "parentType_t", "a00066.html#ab4d12a8f0bcae135aff2dc0e8998801b", null ],
-    [ "PlusShPtr_t", "a00066.html#a4293f7f153edd79aec49ed9d8dd03122", null ],
-    [ "Plus", "a00066.html#a8ab9e9b7348f75e9447251693fc81a7e", null ],
-    [ "~Plus", "a00066.html#abedb0ecb21222e9aca4c7f103d04ea99", null ],
-    [ "impl_compute", "a00066.html#a35b6d4d5e345367b30c8a9f778b3b28d", null ],
-    [ "impl_gradient", "a00066.html#a26a72bb09a4c511e25d179e6d8aeda69", null ],
-    [ "impl_jacobian", "a00066.html#a80ea4628a766a37e0cff77a19bd8f1f8", null ],
-    [ "left", "a00066.html#a02962e5b5637c3a0a1f61bf6f188fb9e", null ],
-    [ "left", "a00066.html#af8a02db6bba1a1f20b8a32f10a809248", null ],
-    [ "right", "a00066.html#ade7a10db019cd559298cd1918ebda9ff", null ],
-    [ "right", "a00066.html#a93ea170baf1cb3bcd521edf776676dc1", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00066.html#a0135d05c16cd40f3794d4497f1d2ec4b", null ]
+    [ "argument_t", "a00066.html#af4bb1d815e33a2fbb81165604d48e32a", null ],
+    [ "matrix_t", "a00066.html#ae1ae1137efff66af2fc84c967a2e64e5", null ],
+    [ "result_t", "a00066.html#a650dd3199ebc63021f83ab30b603d982", null ],
+    [ "size_type", "a00066.html#ac88a1cbae53587c432cb346982c9302d", null ],
+    [ "value_type", "a00066.html#ad6f5a983e3c1c4f657ef972d8a781a57", null ],
+    [ "vector_t", "a00066.html#a485059f799b3a571c5446677a8655a34", null ],
+    [ "ParametrizedFunction", "a00066.html#a0cb8331de8f0fdc4ad395446b191fc81", null ],
+    [ "~ParametrizedFunction", "a00066.html#af4e8e1ee202ade5a6ec8d66fd497fe29", null ],
+    [ "functionInputSize", "a00066.html#a067147c8d9a6cfe99f46820a41d08aeb", null ],
+    [ "functionOutputSize", "a00066.html#af15dfa5e7e9e13e7f5d4720091a7d28f", null ],
+    [ "impl_compute", "a00066.html#a491315022b13f12523b583b2699b965e", null ],
+    [ "inputSize", "a00066.html#aa11a87582936a2ce58f853f6ea4541d8", null ],
+    [ "operator()", "a00066.html#aa09793c665b51d543e7533ccb19d6864", null ],
+    [ "print", "a00066.html#a7769a5ffb197cd0009a27c6e12d40888", null ]
 ];
