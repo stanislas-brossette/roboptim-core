@@ -1,6 +1,7 @@
 var searchData=
 [
   ['cachedfunction',['CachedFunction',['../a00024.html#adb046e810e569982bfa11d1feb434103',1,'roboptim::CachedFunction']]],
+  ['callbackcallid',['callbackCallId',['../a00064.html#a6e35f515b0affa5541a048c289458e12',1,'roboptim::OptimizationLogger']]],
   ['cd',['cd',['../a00206.html#ga195d042fd97469e044b37abc0faf1e0f',1,'roboptim::visualization::gnuplot']]],
   ['chain',['Chain',['../a00025.html#abc5883a2547b98bbe0d1b668527c7558',1,'roboptim::Chain::Chain()'],['../a00190.html#ac0b8c0fb2f17746d44b4a74b90da5520',1,'roboptim::chain()']]],
   ['checkgradient',['checkGradient',['../a00202.html#ga7b974ed3d440aab33b573448ff332552',1,'roboptim']]],

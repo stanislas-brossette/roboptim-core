@@ -21,7 +21,7 @@ var searchData=
   ['_7emap',['~Map',['../a00059.html#af65411ba263b5776211a5edb162a89aa',1,'roboptim::Map']]],
   ['_7eminus',['~Minus',['../a00060.html#a4eb1f38d5fb4f07cb695b431ff715f6c',1,'roboptim::Minus']]],
   ['_7entimesderivablefunction',['~NTimesDerivableFunction',['../a00063.html#aa53731c25ac3d5d1fc7a3ea8150aed11',1,'roboptim::NTimesDerivableFunction&lt; 2 &gt;::~NTimesDerivableFunction()'],['../a00062.html#abac49e2227ca9041fd9a70b429ea3fa1',1,'roboptim::NTimesDerivableFunction::~NTimesDerivableFunction()']]],
-  ['_7eoptimizationlogger',['~OptimizationLogger',['../a00064.html#a7a0d794cc294617474adc0a499d42040',1,'roboptim::OptimizationLogger']]],
+  ['_7eoptimizationlogger',['~OptimizationLogger',['../a00064.html#a698ce5c20a01d46933e5ff77af35603c',1,'roboptim::OptimizationLogger']]],
   ['_7eparametrizedfunction',['~ParametrizedFunction',['../a00066.html#af4e8e1ee202ade5a6ec8d66fd497fe29',1,'roboptim::ParametrizedFunction']]],
   ['_7eplus',['~Plus',['../a00067.html#abedb0ecb21222e9aca4c7f103d04ea99',1,'roboptim::Plus']]],
   ['_7eproblem',['~Problem',['../a00204.html#ga18c4d0e5a905e7154a5109aa03e47561',1,'roboptim::Problem&lt; F, boost::mpl::vector&lt;&gt; &gt;::~Problem()'],['../a00204.html#ga64c92ade5e55f88d523f44cb0fd28104',1,'roboptim::Problem::~Problem()']]],
