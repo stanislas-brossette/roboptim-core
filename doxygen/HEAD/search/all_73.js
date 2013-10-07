@@ -28,7 +28,7 @@ var searchData=
   ['solutions',['solutions',['../a00054.html#a12c31c6bd2e018b05a71d51dd5b34846',1,'roboptim::GenericSolver']]],
   ['solve',['solve',['../a00054.html#a4573db8138895e5dc5eee8880e02e928',1,'roboptim::GenericSolver::solve()'],['../a00037.html#a4f8573ba06d5a95443a90517a09f8ad6',1,'roboptim::DummySolverLastState::solve()'],['../a00036.html#a3d67feee267c21554172ba5153b6d10a',1,'roboptim::DummySolver::solve()']]],
   ['solver',['Solver',['../a00083.html',1,'roboptim']]],
-  ['solver',['Solver',['../a00083.html#aab9fcd2e4c0adb07666634ea8b3e8c6a',1,'roboptim::Solver::Solver(const problem_t &amp;problem)'],['../a00083.html#a51661ee2eb66d5d8db2a4641308c86b6',1,'roboptim::Solver::Solver(const Problem&lt; F_, C_ &gt; &amp;problem)']]],
+  ['solver',['solver',['../a00064.html#ab5cb7c10968f5d9d2b3c72afee5baabc',1,'roboptim::OptimizationLogger::solver() const '],['../a00064.html#ae37041681cdb6ac9a8e0d56bf406cc46',1,'roboptim::OptimizationLogger::solver()'],['../a00083.html#aab9fcd2e4c0adb07666634ea8b3e8c6a',1,'roboptim::Solver::Solver(const problem_t &amp;problem)'],['../a00083.html#a51661ee2eb66d5d8db2a4641308c86b6',1,'roboptim::Solver::Solver(const Problem&lt; F_, C_ &gt; &amp;problem)']]],
   ['solver_2derror_2ecc',['solver-error.cc',['../a00167.html',1,'']]],
   ['solver_2derror_2ehh',['solver-error.hh',['../a00168.html',1,'']]],
   ['solver_2dfactory_2ehh',['solver-factory.hh',['../a00169.html',1,'']]],

@@ -7,6 +7,10 @@ var a00064 =
     [ "vector_t", "a00064.html#a0f6518966c5ceaba887f2fabe153aa38", null ],
     [ "OptimizationLogger", "a00064.html#a41010672360a0d2b11c93adda33977ca", null ],
     [ "~OptimizationLogger", "a00064.html#a7a0d794cc294617474adc0a499d42040", null ],
+    [ "path", "a00064.html#a23a39e982311e70c468612692fdc41e3", null ],
+    [ "path", "a00064.html#ab7c85352fccb1865522d7d6242ada934", null ],
     [ "perIterationCallback", "a00064.html#adf28059ba21673c74153f6d0a794c804", null ],
-    [ "perIterationCallbackUnsafe", "a00064.html#ac177b9dea3121cfa8cd37b5239652d1b", null ]
+    [ "perIterationCallbackUnsafe", "a00064.html#a968e0f36450d4bdbee2573af5cbb07b5", null ],
+    [ "solver", "a00064.html#ab5cb7c10968f5d9d2b3c72afee5baabc", null ],
+    [ "solver", "a00064.html#ae37041681cdb6ac9a8e0d56bf406cc46", null ]
 ];
