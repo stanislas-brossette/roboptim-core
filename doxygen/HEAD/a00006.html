@@ -120,6 +120,15 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (numeric_linear_function, T, functionTypes_t)
   (*output) &lt;&lt; <span class="stringliteral">&quot;f(x) = &quot;</span> &lt;&lt; f (x) &lt;&lt; std::endl;
   (*output) &lt;&lt; <span class="stringliteral">&quot;J(x) = &quot;</span> &lt;&lt; f.<a name="a7"></a><a class="code" href="a00043.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> (x) &lt;&lt; std::endl;
 
+  <a class="code" href="a00051.html" title="Build a linear function from a vector and a matrix.">GenericNumericLinearFunction&lt;T&gt;</a> numericLinearFunction (a, b);
+  <a name="_a8"></a><a class="code" href="a00050.html" title="Define an abstract linear function.">GenericLinearFunction&lt;T&gt;</a>* linearFunction = &amp;numericLinearFunction;
+
+  <a class="code" href="a00051.html" title="Build a linear function from a vector and a matrix.">GenericNumericLinearFunction&lt;T&gt;</a> numericLinearFunctionRebuilt (*linearFunction);
+
+  BOOST_CHECK (<a name="a9"></a><a class="code" href="a00190.html#abf0a2c6465667b5f8cc0c9ab9c5d1fe3" title="Compare dense vectors (matrices) using both relative and absolute tolerances.">allclose</a> (numericLinearFunction.<a name="a10"></a><a class="code" href="a00051.html#a0bdfbba11cd50682046bbbf6cdf4a932">A</a> (),
+       numericLinearFunctionRebuilt.<a class="code" href="a00051.html#a0bdfbba11cd50682046bbbf6cdf4a932">A</a> ()));
+  BOOST_CHECK_EQUAL (numericLinearFunction.<a name="a11"></a><a class="code" href="a00051.html#a5f335d97438f278d3a12651bdf88748d">b</a> (), numericLinearFunctionRebuilt.<a class="code" href="a00051.html#a5f335d97438f278d3a12651bdf88748d">b</a> ());
+
   std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;
   <span class="comment">//BOOST_CHECK (output-&gt;match_pattern ());</span>
 }

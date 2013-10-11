@@ -89,6 +89,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#acf53d892384fd4691f6c4829e92772f5">ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00050.html">GenericLinearFunction</a>&lt; T &gt;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#a61e801b2acf4e5c5046218a19610c4ce">GenericNumericLinearFunction</a> (const <a class="el" href="a00045.html#a97054924c0f87acb1713be64782a6aab">matrix_t</a> &amp;<a class="el" href="a00051.html#a0bdfbba11cd50682046bbbf6cdf4a932">A</a>, const <a class="el" href="a00045.html#a76763e91e51e9cddf579d52091dce746">vector_t</a> &amp;<a class="el" href="a00051.html#a5f335d97438f278d3a12651bdf88748d">b</a>)  throw ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a linear function from a matrix and a vector.  <a href="#a61e801b2acf4e5c5046218a19610c4ce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#a99aa2758f730474ab9d527e400f882cb">GenericNumericLinearFunction</a> (const <a class="el" href="a00050.html">GenericLinearFunction</a>&lt; T &gt; &amp;)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a linear function from another one.  <a href="#a99aa2758f730474ab9d527e400f882cb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#a6a95597cdbbdd850a36aed9ba5e03e91">~GenericNumericLinearFunction</a> ()  throw ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00051.html#ae57fb039df18b98b7ab403b73c277632">print</a> (std::ostream &amp;) const   throw ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the function on the specified output stream.  <a href="#ae57fb039df18b98b7ab403b73c277632"></a><br/></td></tr>
@@ -154,6 +156,27 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a99aa2758f730474ab9d527e400f882cb"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::GenericNumericLinearFunction" ref="a99aa2758f730474ab9d527e400f882cb" args="(const GenericLinearFunction&lt; T &gt; &amp;)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00051.html">roboptim::GenericNumericLinearFunction</a>&lt; T &gt;::<a class="el" href="a00051.html">GenericNumericLinearFunction</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00050.html">GenericLinearFunction</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>function</em></td><td>)</td>
+          <td>  throw ()</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Build a linear function from another one. </p>
 
 </div>
 </div>
@@ -290,55 +313,6 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aeda9046fc6c7e56fcd48fa70bbf62fe7"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::impl_gradient" ref="aeda9046fc6c7e56fcd48fa70bbf62fe7" args="(gradient_t &amp;gradient, const argument_t &amp;, size_type idFunction) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00051.html">roboptim::GenericNumericLinearFunction</a>&lt; <a class="el" href="a00039.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00051.html#a0562c56998fdb5e21648a132bd84e0ab">impl_gradient</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00043.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
-          <td class="paramname"><em>functionId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Gradient evaluation. </p>
-<p>Compute the gradient, has to be implemented in concrete classes. The gradient is computed for a specific sub-function which id is passed through the functionId argument. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> instead. </dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gradient</td><td>gradient will be store in this argument </td></tr>
-    <tr><td class="paramname">argument</td><td>point where the gradient will be computed </td></tr>
-    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="a00043.html#a84657c4eb2f67ea3bbaf49462f54fb68">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a0562c56998fdb5e21648a132bd84e0ab"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::impl_gradient" ref="a0562c56998fdb5e21648a132bd84e0ab" args="(gradient_t &amp;, const argument_t &amp;, size_type=0) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -367,6 +341,55 @@ template&lt;typename T &gt; </div>
           <td></td>
           <td>)</td>
           <td></td><td> const  throw ()<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gradient evaluation. </p>
+<p>Compute the gradient, has to be implemented in concrete classes. The gradient is computed for a specific sub-function which id is passed through the functionId argument. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gradient</td><td>gradient will be store in this argument </td></tr>
+    <tr><td class="paramname">argument</td><td>point where the gradient will be computed </td></tr>
+    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="a00043.html#a84657c4eb2f67ea3bbaf49462f54fb68">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeda9046fc6c7e56fcd48fa70bbf62fe7"></a><!-- doxytag: member="roboptim::GenericNumericLinearFunction::impl_gradient" ref="aeda9046fc6c7e56fcd48fa70bbf62fe7" args="(gradient_t &amp;gradient, const argument_t &amp;, size_type idFunction) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00051.html">roboptim::GenericNumericLinearFunction</a>&lt; <a class="el" href="a00039.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00051.html#a0562c56998fdb5e21648a132bd84e0ab">impl_gradient</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00043.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>functionId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const throw()<code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>

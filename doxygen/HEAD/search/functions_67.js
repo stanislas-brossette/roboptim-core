@@ -6,7 +6,7 @@ var searchData=
   ['genericfunction',['GenericFunction',['../a00201.html#ga1d025a85d12b2eb8f85409a150cad994',1,'roboptim::GenericFunction']]],
   ['genericidentityfunction',['GenericIdentityFunction',['../a00049.html#ab54d82769bc4a7bf83aad7a6ca7b26d5',1,'roboptim::GenericIdentityFunction']]],
   ['genericlinearfunction',['GenericLinearFunction',['../a00050.html#a413894f3e510da5ec620231f30d4bb08',1,'roboptim::GenericLinearFunction']]],
-  ['genericnumericlinearfunction',['GenericNumericLinearFunction',['../a00051.html#a61e801b2acf4e5c5046218a19610c4ce',1,'roboptim::GenericNumericLinearFunction']]],
+  ['genericnumericlinearfunction',['GenericNumericLinearFunction',['../a00051.html#a61e801b2acf4e5c5046218a19610c4ce',1,'roboptim::GenericNumericLinearFunction::GenericNumericLinearFunction(const matrix_t &amp;A, const vector_t &amp;b)'],['../a00051.html#a99aa2758f730474ab9d527e400f882cb',1,'roboptim::GenericNumericLinearFunction::GenericNumericLinearFunction(const GenericLinearFunction&lt; T &gt; &amp;)']]],
   ['genericnumericquadraticfunction',['GenericNumericQuadraticFunction',['../a00052.html#a5574eb748dfbf5c83ba62ca1d0a7efca',1,'roboptim::GenericNumericQuadraticFunction']]],
   ['genericquadraticfunction',['GenericQuadraticFunction',['../a00053.html#a874e014f8499fd0a5d2c04d5bad36fcc',1,'roboptim::GenericQuadraticFunction']]],
   ['genericsolver',['GenericSolver',['../a00054.html#ac73eb90d375eebe2580be8ad275bbf39',1,'roboptim::GenericSolver::GenericSolver()'],['../a00054.html#a73789e83216bf0ef32a3f123088f04b4',1,'roboptim::GenericSolver::GenericSolver(const GenericSolver &amp;)']]],
