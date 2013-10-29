@@ -1,9 +1,17 @@
 var a00121 =
 [
-    [ "GNUPLOT_STR_COMMAND", "a00121.html#a44cffa7dc6979331d7660d604e7c8f48", null ],
-    [ "GNUPLOT_UNARY_COMMAND", "a00121.html#abdaa2512aec3201d566ccbfc73fafc46", null ],
-    [ "comment", "a00206.html#ga108c0cb6161fb8813817a7b7a1ac980d", null ],
-    [ "set", "a00206.html#gad77630a233193748534b41d069d4e180", null ],
-    [ "show", "a00206.html#gaf90f5364d8c3597b8909ba99083fc23f", null ],
-    [ "unset", "a00206.html#ga2c2a188b2e89955eee09aa10b5426e43", null ]
+    [ "ConstantFunction", "a00196.html#aae31207e6c555a8c607a7f444c1d437b", null ],
+    [ "DifferentiableFunction", "a00196.html#a1fe6728680de2e1a17e250717269fe22", null ],
+    [ "DifferentiableSparseFunction", "a00196.html#a7e31c0c139e1f6949efdda2c8925bf0a", null ],
+    [ "Function", "a00196.html#a1864afd8c0c95cea8029da9b52352736", null ],
+    [ "IdentityFunction", "a00196.html#a9a14f34c11e87aa249b2bd5a500f0ff9", null ],
+    [ "LinearFunction", "a00196.html#abbf3e635a932ae99934936a092aec72c", null ],
+    [ "LinearSparseFunction", "a00196.html#aa8f5a3e6e11dab0777930cd974dc9416", null ],
+    [ "NumericLinearFunction", "a00196.html#a2177dd2963638a1a068cb05dc64fac32", null ],
+    [ "NumericQuadraticFunction", "a00196.html#a4a940419845321db972ff15085448fe5", null ],
+    [ "QuadraticFunction", "a00196.html#ab03c6ad564de263af42983892cab684a", null ],
+    [ "QuadraticSparseFunction", "a00196.html#a8a37fb59bc67c514268e4ae99c80567d", null ],
+    [ "SparseFunction", "a00196.html#a0036230886e32e7043e29e0f14682637", null ],
+    [ "TwiceDifferentiableFunction", "a00196.html#a664a3377f606592dfc57f9525c9afa37", null ],
+    [ "TwiceDifferentiableSparseFunction", "a00196.html#a18d2ef51eb9bfce27cb92b82a684bf56", null ]
 ];

@@ -1,8 +1,19 @@
 var a00085 =
 [
-    [ "problem_t", "a00085.html#ad075bea9aed21b399b4684d5c2258da7", null ],
-    [ "solver_t", "a00085.html#af7982512a4de7bfdd2e12669ea5d3d7b", null ],
-    [ "SolverFactory", "a00085.html#aadc8315a15a321eb1dcb064292d05077", null ],
-    [ "~SolverFactory", "a00085.html#a0a558a3b33d63421310b818c0577393a", null ],
-    [ "operator()", "a00085.html#ab4f632f2624c1fda7c8379b8136e5483", null ]
+    [ "callback_t", "a00085.html#a1f7e4304c8d63be203efcb3002fa821f", null ],
+    [ "parameters_t", "a00085.html#aedb5c66ead4f0eb1b8851f58b7fd8aee", null ],
+    [ "problem_t", "a00085.html#a5b5c016b1da3aadc3d619023124b2197", null ],
+    [ "vector_t", "a00085.html#a42813adb1bed4804c8fadf94da6e624b", null ],
+    [ "Solver", "a00085.html#aab9fcd2e4c0adb07666634ea8b3e8c6a", null ],
+    [ "Solver", "a00085.html#a51661ee2eb66d5d8db2a4641308c86b6", null ],
+    [ "~Solver", "a00085.html#abb93279689228b6d0f2338ce75f056d9", null ],
+    [ "getParameter", "a00085.html#aec3ddc2f25b2cc6c5c9cd3225271918f", null ],
+    [ "parameters", "a00085.html#affafd02657313b0135eb8cd1d2144391", null ],
+    [ "parameters", "a00085.html#aef5cdc19547c9fc316ea0403d9529cf3", null ],
+    [ "print", "a00085.html#afc073c4023a0146bef3e67bbb1a2b4f9", null ],
+    [ "problem", "a00085.html#a7920ef2fd1c7068111df0496c4f742ce", null ],
+    [ "setIterationCallback", "a00085.html#aca06f8826cb1ffcad60a6d1f99938ab2", null ],
+    [ "logger", "a00085.html#a8963aaae43fc6df3f2faa38e94df8c47", null ],
+    [ "parameters_", "a00085.html#a700a223a138d95f57ba7e198c7fdbe3e", null ],
+    [ "problem_", "a00085.html#a62a6d4aad9eeeb13ee63f3bf0f9aac25", null ]
 ];

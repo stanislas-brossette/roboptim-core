@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>finite-difference-gradient.hxx File Reference</title>
+<title>dummy.cc File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -57,45 +57,114 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">finite-difference-gradient.hxx File Reference</div>  </div>
+<div class="title">dummy.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;boost/type_traits/is_same.hpp&quot;</code><br/>
-<code>#include &lt;boost/mpl/same_as.hpp&gt;</code><br/>
+<div class="textblock"><code>#include &quot;debug.hh&quot;</code><br/>
+<code>#include &lt;typeinfo&gt;</code><br/>
+<code>#include &quot;<a class="el" href="a00120.html">roboptim/core/function.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="a00156.html">roboptim/core/problem.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="a00115.html">roboptim/core/plugin/dummy.hh</a>&quot;</code><br/>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00194.html">roboptim::detail</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim::finiteDifferenceGradientPolicies</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Contains finite difference gradients policies. </p>
-<br/></td></tr>
+<tr><td colspan="2"><h2><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00037.html#a3857347af4ffe3a2da4f19c361e11bce">DummySolver::parent_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00114.html#a926347d1adaf0ea2a6a2a50bc50a209e">solver_t</a></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00190.html#ae6e53e4f7183cc2816db6aa8ea7cab6e">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const BadGradient&lt; T &gt; &amp;f)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle exception display.  <a href="#ae6e53e4f7183cc2816db6aa8ea7cab6e"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00190.html#a67f53906aa3085cb9d1bf44f5515349e">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const BadJacobian&lt; T &gt; &amp;f)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle exception display.  <a href="#a67f53906aa3085cb9d1bf44f5515349e"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00202.html#ga7b974ed3d440aab33b573448ff332552">roboptim::checkGradient</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, typename GenericDifferentiableFunction&lt; T &gt;::size_type functionId, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a gradient is valid.  <a href="a00202.html#ga7b974ed3d440aab33b573448ff332552"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00202.html#gae0a448fba694779126c4406d23f02bf1">roboptim::checkGradientAndThrow</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, typename GenericDifferentiableFunction&lt; T &gt;::size_type functionId, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw (BadGradient&lt;T&gt;)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00202.html#gaa32250244db065fae2e23e779ae6cf12">roboptim::checkJacobian</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a Jacobian is valid.  <a href="a00202.html#gaa32250244db065fae2e23e779ae6cf12"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00202.html#ga516899da0b771c79abe8a23a5028d8ea">roboptim::checkJacobianAndThrow</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw (BadJacobian&lt;T&gt;)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00194.html#ad5051acf65733ac44ce83be80b7b54c2">roboptim::detail::compute_deriv</a> (const GenericFunction&lt; T &gt; &amp;adaptee, typename GenericFunction&lt; T &gt;::size_type j, double h, double &amp;result, double &amp;round, double &amp;trunc, const typename GenericFunction&lt; T &gt;::argument_t &amp;argument, typename GenericFunction&lt; T &gt;::size_type idFunction, typename GenericFunction&lt; T &gt;::argument_t &amp;xEps)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Algorithm from the Gnu Scientific Library.  <a href="#ad5051acf65733ac44ce83be80b7b54c2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00155.html#a123c5e8741ec2f621543a4fc2edec484">ROBOPTIM_DLLEXPORT</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00114.html#a60635b065e290b461a1e7be6b54f9cbc">getSizeOfProblem</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00155.html#a123c5e8741ec2f621543a4fc2edec484">ROBOPTIM_DLLEXPORT</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00114.html#a25ff9384fbf0c8e416a686a67c7d1fdd">getTypeIdOfConstraintsList</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00155.html#a123c5e8741ec2f621543a4fc2edec484">ROBOPTIM_DLLEXPORT</a> <a class="el" href="a00112.html#a5aafe251d5465495fdbaff79da9e5a7d">solver_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00114.html#a0a575b89f014bf2e20cb9ab341d88393">create</a> (const DummySolver::problem_t &amp;pb)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00155.html#a123c5e8741ec2f621543a4fc2edec484">ROBOPTIM_DLLEXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00114.html#af992438f02837bfe836ba0a937747829">destroy</a> (<a class="el" href="a00112.html#a5aafe251d5465495fdbaff79da9e5a7d">solver_t</a> *p)</td></tr>
 </table>
+<hr/><h2>Typedef Documentation</h2>
+<a class="anchor" id="a926347d1adaf0ea2a6a2a50bc50a209e"></a><!-- doxytag: member="dummy.cc::solver_t" ref="a926347d1adaf0ea2a6a2a50bc50a209e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="a00037.html#a3857347af4ffe3a2da4f19c361e11bce">DummySolver::parent_t</a> <a class="el" href="a00112.html#a5aafe251d5465495fdbaff79da9e5a7d">solver_t</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a0a575b89f014bf2e20cb9ab341d88393"></a><!-- doxytag: member="dummy.cc::create" ref="a0a575b89f014bf2e20cb9ab341d88393" args="(const DummySolver::problem_t &amp;pb)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00155.html#a123c5e8741ec2f621543a4fc2edec484">ROBOPTIM_DLLEXPORT</a> <a class="el" href="a00112.html#a5aafe251d5465495fdbaff79da9e5a7d">solver_t</a> * <a class="el" href="a00114.html#a0a575b89f014bf2e20cb9ab341d88393">create</a> </td>
+          <td>(</td>
+          <td class="paramtype">const DummySolver::problem_t &amp;&#160;</td>
+          <td class="paramname"><em>pb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af992438f02837bfe836ba0a937747829"></a><!-- doxytag: member="dummy.cc::destroy" ref="af992438f02837bfe836ba0a937747829" args="(solver_t *p)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00155.html#a123c5e8741ec2f621543a4fc2edec484">ROBOPTIM_DLLEXPORT</a> void <a class="el" href="a00114.html#af992438f02837bfe836ba0a937747829">destroy</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00112.html#a5aafe251d5465495fdbaff79da9e5a7d">solver_t</a> *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a60635b065e290b461a1e7be6b54f9cbc"></a><!-- doxytag: member="dummy.cc::getSizeOfProblem" ref="a60635b065e290b461a1e7be6b54f9cbc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00155.html#a123c5e8741ec2f621543a4fc2edec484">ROBOPTIM_DLLEXPORT</a> std::size_t <a class="el" href="a00114.html#a60635b065e290b461a1e7be6b54f9cbc">getSizeOfProblem</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a25ff9384fbf0c8e416a686a67c7d1fdd"></a><!-- doxytag: member="dummy.cc::getTypeIdOfConstraintsList" ref="a25ff9384fbf0c8e416a686a67c7d1fdd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00155.html#a123c5e8741ec2f621543a4fc2edec484">ROBOPTIM_DLLEXPORT</a> const char* <a class="el" href="a00114.html#a25ff9384fbf0c8e416a686a67c7d1fdd">getTypeIdOfConstraintsList</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -114,6 +183,6 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00114.html">finite-difference-gradient.hxx</a>      </li>
+      <li class="navelem"><a class="el" href="a00114.html">dummy.cc</a>      </li>
 </body>
 </html>

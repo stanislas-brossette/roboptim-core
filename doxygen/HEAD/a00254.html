@@ -53,26 +53,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('a00077.html','');
+  initNavTree('a00065.html','');
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">roboptim::Result Member List</div>  </div>
+<div class="title">roboptim::OptimizationLogger&lt; T &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
-This is the complete list of members for <a class="el" href="a00077.html">roboptim::Result</a>, including all inherited members.<table>
-  <tr class="memlist"><td><a class="el" href="a00077.html#ac35af0a7460b2f266b74af35c8d89f3b">constraints</a></td><td><a class="el" href="a00077.html">roboptim::Result</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00077.html#af32478031f205ae7a8fd3676fc02f67d">inputSize</a></td><td><a class="el" href="a00077.html">roboptim::Result</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00077.html#a4a3c615497bd8c83d21a35430f9b204c">lambda</a></td><td><a class="el" href="a00077.html">roboptim::Result</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00077.html#a562f3e5a026d2b9c6a008be5bc6c2ec7">outputSize</a></td><td><a class="el" href="a00077.html">roboptim::Result</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00077.html#af065a63ebc7497011f49be220857b0f0">print</a>(std::ostream &amp;o) const </td><td><a class="el" href="a00077.html">roboptim::Result</a></td><td><code> [virtual]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00077.html#a7c6d866d4162421ebb28e0ba050907f3">Result</a>(const size_type inputSize, const size_type outputSize=1)</td><td><a class="el" href="a00077.html">roboptim::Result</a></td><td><code> [explicit]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00077.html#a85f59990dc11a8b383f5ac34f3a450df">size_type</a> typedef</td><td><a class="el" href="a00077.html">roboptim::Result</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00077.html#a3164fe63a285d7c4739f2606b8cf6b9e">value</a></td><td><a class="el" href="a00077.html">roboptim::Result</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00077.html#a0b58ed6d1d318d29ea875467441b782e">vector_t</a> typedef</td><td><a class="el" href="a00077.html">roboptim::Result</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00077.html#a31284faee67e87284026280767720008">x</a></td><td><a class="el" href="a00077.html">roboptim::Result</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00077.html#a888c809793214ded502bfa374dd0c811">~Result</a>()</td><td><a class="el" href="a00077.html">roboptim::Result</a></td><td><code> [virtual]</code></td></tr>
+This is the complete list of members for <a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a>, including all inherited members.<table>
+  <tr class="memlist"><td><a class="el" href="a00065.html#a6e35f515b0affa5541a048c289458e12">callbackCallId</a>() const </td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td><code> [inline, protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#a3bd03cca685deaf505aec7c792106633">jacobian_t</a> typedef</td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#a41010672360a0d2b11c93adda33977ca">OptimizationLogger</a>(solver_t &amp;solver, const boost::filesystem::path &amp;path)</td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td><code> [inline, explicit]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#a23a39e982311e70c468612692fdc41e3">path</a>() const </td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td><code> [inline, protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#ab7c85352fccb1865522d7d6242ada934">path</a>()</td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td><code> [inline, protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#adf28059ba21673c74153f6d0a794c804">perIterationCallback</a>(const typename solver_t::vector_t &amp;x, const typename solver_t::problem_t &amp;pb)</td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td><code> [inline, protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#a968e0f36450d4bdbee2573af5cbb07b5">perIterationCallbackUnsafe</a>(const typename solver_t::vector_t &amp;x, const typename solver_t::problem_t &amp;pb)</td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td><code> [inline, protected, virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#a0212b30a8be78730debbb9b9bab8526a">problem_t</a> typedef</td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#ab5cb7c10968f5d9d2b3c72afee5baabc">solver</a>() const </td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td><code> [inline, protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#ae37041681cdb6ac9a8e0d56bf406cc46">solver</a>()</td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td><code> [inline, protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#a4bf684ba2187335313cc8382b635a8a9">solver_t</a> typedef</td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#aa961d523ab2d00705723330fe52870cd">value_type</a> typedef</td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#a0f6518966c5ceaba887f2fabe153aa38">vector_t</a> typedef</td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00065.html#a698ce5c20a01d46933e5ff77af35603c">~OptimizationLogger</a>()</td><td><a class="el" href="a00065.html">roboptim::OptimizationLogger&lt; T &gt;</a></td><td><code> [inline, virtual]</code></td></tr>
 </table></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"

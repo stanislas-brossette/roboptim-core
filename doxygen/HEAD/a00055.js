@@ -1,14 +1,16 @@
 var a00055 =
 [
-    [ "hessian_t", "a00055.html#a88566ea169ba77a2c2b9caf939c12cd1", null ],
-    [ "hessianSize_t", "a00055.html#a8eb36050555e77e94717556bc0bf8d20", null ],
-    [ "GenericTwiceDifferentiableFunction", "a00055.html#af01b4e2ebb1119493337e12c105128c2", null ],
-    [ "hessian", "a00055.html#a7ab6bda5039008fb215ab24ecacd85a2", null ],
-    [ "hessian", "a00055.html#a62c40461536ac03d4c457f8681f8c2b3", null ],
-    [ "hessianSize", "a00055.html#ab88c89f971c0354c165165849b03c1f0", null ],
-    [ "impl_hessian", "a00055.html#ac5b5430ab527d7de393f876f4db314c2", null ],
-    [ "isValidHessian", "a00055.html#a1817e181cfbd18d6ffd6002c98763e6a", null ],
-    [ "print", "a00055.html#a78bf9018548e92c38803bbd0b39ef29a", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00055.html#ae1dfb2289bce927983df0ba0ecd3bf6f", null ],
-    [ "setZero", "a00055.html#a042286a811a4ec9b79c9d2c34f8e63c0", null ]
+    [ "result_t", "a00055.html#acd6988bec0b7bda9b8565232d32d1bae", null ],
+    [ "solutions", "a00055.html#a12c31c6bd2e018b05a71d51dd5b34846", null ],
+    [ "GenericSolver", "a00055.html#ac73eb90d375eebe2580be8ad275bbf39", null ],
+    [ "GenericSolver", "a00055.html#a73789e83216bf0ef32a3f123088f04b4", null ],
+    [ "~GenericSolver", "a00055.html#a86170d03b3066285f5c47bfc78819571", null ],
+    [ "getMinimum", "a00055.html#a3f01ea84c377efc66cd55bc38f8676ad", null ],
+    [ "minimum", "a00055.html#aef2460331a80efc404356e9b68269b8c", null ],
+    [ "minimumType", "a00055.html#a2426a7c827ce0c46c77ac29ad1d7f846", null ],
+    [ "print", "a00055.html#a06ac6c38696f931bc1333d974ef25d03", null ],
+    [ "reset", "a00055.html#a16884b058070f8fb6759c6c194665cb7", null ],
+    [ "solve", "a00055.html#a4573db8138895e5dc5eee8880e02e928", null ],
+    [ "logger", "a00055.html#a7fbfdfbf962a90aace9fd42e92e0a428", null ],
+    [ "result_", "a00055.html#ab36ece190971122f7111d7e92c4e66cf", null ]
 ];

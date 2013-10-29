@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::CachedFunction&lt; T &gt; Class Template Reference</title>
+<title>roboptim::Bind&lt; U &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -59,150 +59,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::CachedFunction&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="a00203.html">Function filters</a></div></div>  </div>
+<div class="title">roboptim::Bind&lt; U &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::CachedFunction" -->
-<p>Store previous function computation.  
+<!-- doxytag: class="roboptim::Bind" -->
+<p><a class="el" href="a00024.html" title="Bind some function input to a constant value.">Bind</a> some function input to a constant value.  
  <a href="a00024.html#details">More...</a></p>
 
-<p><code>#include &lt;roboptim/core/filter/cached-function.hh&gt;</code></p>
+<p><code>#include &lt;roboptim/core/filter/bind.hh&gt;</code></p>
 
-<p><a href="a00219.html">List of all members.</a></p>
+<p><a href="a00225.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef T::traits_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import traits type.  <a href="#a8b37b9a68e9cf259cca53c985c605f43"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00043.html">GenericDifferentiableFunction</a><br class="typebreak"/>
-&lt; <a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a> &gt;::<a class="el" href="a00024.html#a63487989b6e00fbe94ded9036d9b755a">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a63487989b6e00fbe94ded9036d9b755a">value_type</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import value type.  <a href="#a63487989b6e00fbe94ded9036d9b755a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00043.html">GenericDifferentiableFunction</a><br class="typebreak"/>
-&lt; <a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a> &gt;::<a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import size type.  <a href="#a06bf66dba709c21125908e67919ad772"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00043.html">GenericDifferentiableFunction</a><br class="typebreak"/>
-&lt; <a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a> &gt;::<a class="el" href="a00024.html#a98636324bc96fe1d559d230e2045fc7a">vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a98636324bc96fe1d559d230e2045fc7a">vector_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import vector type.  <a href="#a98636324bc96fe1d559d230e2045fc7a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00043.html">GenericDifferentiableFunction</a><br class="typebreak"/>
-&lt; <a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a> &gt;::<a class="el" href="a00024.html#af563d16310a5246186fd466e9b16d68e">result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#af563d16310a5246186fd466e9b16d68e">result_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import result type.  <a href="#af563d16310a5246186fd466e9b16d68e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00043.html">GenericDifferentiableFunction</a><br class="typebreak"/>
-&lt; <a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a> &gt;::<a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import argument type.  <a href="#a75550cc24920b0a17f96b540256045e2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00043.html">GenericDifferentiableFunction</a><br class="typebreak"/>
-&lt; <a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a> &gt;::<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import gradient type.  <a href="#ac62b42083a55feb98eb9589558c1494e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00055.html">GenericTwiceDifferentiableFunction</a><br class="typebreak"/>
-&lt; <a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a> &gt;::<a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import hessian type.  <a href="#a1f6e9b400d4f415a6c974c0f5e387aa8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00043.html">GenericDifferentiableFunction</a><br class="typebreak"/>
-&lt; <a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a> &gt;::<a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import jacobian type.  <a href="#a876f0f61160deb9b4e8cf6ff06fdc70b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00043.html">GenericDifferentiableFunction</a><br class="typebreak"/>
-&lt; <a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a> &gt;::<a class="el" href="a00024.html#ae55861fc7f33a2ef4869c5891d8dca36">interval_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#ae55861fc7f33a2ef4869c5891d8dca36">interval_t</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Import interval type.  <a href="#ae55861fc7f33a2ef4869c5891d8dca36"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a>, <br class="typebreak"/>
-<a class="el" href="a00024.html#a98636324bc96fe1d559d230e2045fc7a">vector_t</a>, <a class="el" href="a00058.html">detail::ltvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#afeb396721e0cc1ce0b1a48fc61f9f8a3">functionCache_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a>, <br class="typebreak"/>
-<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a>, <a class="el" href="a00058.html">detail::ltvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#afbe2df95b5e9636d6ba29eec07f30421">gradientCache_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a>, <br class="typebreak"/>
-<a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a>, <a class="el" href="a00058.html">detail::ltvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#ac4e2edf70575430f87a1f064421914ff">jacobianCache_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a>, <br class="typebreak"/>
-<a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a>, <a class="el" href="a00058.html">detail::ltvector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a4370436d6627e6b3c60abe31ae491a68">hessianCache_t</a></td></tr>
+<a class="el" href="a00017.html">detail::AutopromoteTrait</a>&lt; U &gt;<br class="typebreak"/>
+::T_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a58322098d06c8face6286742fc6869dd">parentType_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="a00024.html">Bind</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#ac12bd855013f0ef3d0bf867b47d799b5">BindShPtr_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::vector<br class="typebreak"/>
+&lt; boost::optional&lt; value_type &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#aa29cc46acf1eb84bda53d9da6ff4a632">boundValues_t</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#adb046e810e569982bfa11d1feb434103">CachedFunction</a> (boost::shared_ptr&lt; const T &gt; fct)  throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#af86f46f4f762e82d0f3d3e83a0997689">~CachedFunction</a> ()  throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a83046d99a6b20073ad2d06380d9d4fb3">reset</a> ()  throw ()</td></tr>
-<tr><td colspan="2"><h2><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#ae4c9eda2c71f16a341c46412767b0ea9">impl_compute</a> (<a class="el" href="a00024.html#af563d16310a5246186fd466e9b16d68e">result_t</a> &amp;result, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;argument) const   throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#ada9027ce39b7c7c4ed78cdf83873db3e">impl_gradient</a> (<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;gradient, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;argument, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a> functionId=0) const   throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a24dbfdd65f10b1d4f39da398f9f2f7ee">impl_jacobian</a> (<a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a> &amp;jacobian, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;arg) const   throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a8c5cb868f925589bbb2ab7a08b2850e6">impl_hessian</a> (<a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a> &amp;hessian, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;argument, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a> functionId=0) const   throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a098d07b75a4ff6c6f2132ea5c3e76f2f">impl_derivative</a> (<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;<a class="el" href="a00190.html#a2aca003d14f5cd52e55a6b4fd6fec025">derivative</a>, double argument, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a> order=1) const   throw ()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#a7638e6859ccdb45ca67cb0461442cfe3">impl_gradient</a> (<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#a2cc73afda76f2db2417969503dc55ee2">impl_gradient</a> (<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#a868718d1d88e40307c456e09de73b21e">impl_jacobian</a> (<a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a> &amp;, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#afc7544ec992416cb504fb953f44f86d9">impl_jacobian</a> (<a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a> &amp;, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#a8bf63f4575f2882ff2b80c4d153f8778">impl_hessian</a> (<a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a> &amp;, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#a6f3e250dccfa763b12567deee9d2a1d7">impl_hessian</a> (<a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a> &amp;, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#aca4e868e934cf19cd1db7a63c2e4cca7">impl_hessian</a> (<a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a> &amp;, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#a4ff5fdfba23d082ac3a6084667cdb5c9">impl_hessian</a> (<a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a> &amp;, const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#a3a63fd6fe70e297c313b10394e946b91">impl_derivative</a> (<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;, double, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#abf92c4deba5fefdafe4efa83ace4f9c7">impl_derivative</a> (<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;, double, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#ae3624f8a1cf47cc12d204adbfc5a08e8">impl_derivative</a> (<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;, double, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#a42041b9b474b4efe63fd00e8b8ef483a">impl_derivative</a> (<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;, double, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#ad0269898a89600eebc5d5700da96a5a9">impl_derivative</a> (<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;, double, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00024.html#a4f886470eafc4041bdbe5fb029ff2b7c">impl_derivative</a> (<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;, double, <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>) const  throw()</td></tr>
-<tr><td colspan="2"><h2><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; const T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a8fdf79d43cde306e324af0bfa5400e63">function_</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="a00024.html#afeb396721e0cc1ce0b1a48fc61f9f8a3">functionCache_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#ab17791de656c57f4d4d255fc0d692f9a">cache_</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="a00024.html#afbe2df95b5e9636d6ba29eec07f30421">gradientCache_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#acf4b58ce62bffd79a49d82bce77c880e">gradientCache_</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00024.html#ac4e2edf70575430f87a1f064421914ff">jacobianCache_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a16acd3875c6cfed5c70faa01e85d980d">jacobianCache_</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="a00024.html#a4370436d6627e6b3c60abe31ae491a68">hessianCache_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a40e2de21fc46d0fcd90b7c6d1eec6613">hessianCache_</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a1bc27f4a503409333ab465458ec747f0">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00024.html#a58322098d06c8face6286742fc6869dd">parentType_t</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#ad1718b5f15fa061eda50ee71e3c01846">Bind</a> (boost::shared_ptr&lt; U &gt; <a class="el" href="a00024.html#a29f1bcab4d91c3ecd75fdf00948f8198">origin</a>, const <a class="el" href="a00024.html#aa29cc46acf1eb84bda53d9da6ff4a632">boundValues_t</a> &amp;selector)  throw (std::runtime_error)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#adda8d726a09e9d776bc2f597b04e3d0b">~Bind</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a29f1bcab4d91c3ecd75fdf00948f8198">origin</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a69de4a8f82057c2f6d3089caf1fdb1fb">origin</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#ac760c846779e6830e4f200ed912e48b5">impl_compute</a> (result_t &amp;result, const argument_t &amp;x) const   throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#a84887e33a10c4dfae454f823594ce173">impl_gradient</a> (gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const   throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00024.html#aaeeeeea0d085f8f51314bb16e553644d">impl_jacobian</a> (jacobian_t &amp;jacobian, const argument_t &amp;arg) const   throw ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br/>
-class roboptim::CachedFunction&lt; T &gt;</h3>
+<div class="textblock"><h3>template&lt;typename U&gt;<br/>
+class roboptim::Bind&lt; U &gt;</h3>
 
-<p>Store previous function computation. </p>
-<p>When an expensive function is called several times at the same point (exactly!), the cached function prevents useless computation by caching the function result.</p>
-<p>This filter is experimental in this release. </p>
+<p><a class="el" href="a00024.html" title="Bind some function input to a constant value.">Bind</a> some function input to a constant value. </p>
 </div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a75550cc24920b0a17f96b540256045e2"></a><!-- doxytag: member="roboptim::CachedFunction::argument_t" ref="a75550cc24920b0a17f96b540256045e2" args="" -->
+<a class="anchor" id="ac12bd855013f0ef3d0bf867b47d799b5"></a><!-- doxytag: member="roboptim::Bind::BindShPtr_t" ref="ac12bd855013f0ef3d0bf867b47d799b5" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="a00043.html">GenericDifferentiableFunction</a>&lt;<a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a>&gt;:: <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Import argument type. </p>
-
-</div>
-</div>
-<a class="anchor" id="afeb396721e0cc1ce0b1a48fc61f9f8a3"></a><!-- doxytag: member="roboptim::CachedFunction::functionCache_t" ref="afeb396721e0cc1ce0b1a48fc61f9f8a3" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::map&lt;<a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a>, <a class="el" href="a00024.html#a98636324bc96fe1d559d230e2045fc7a">vector_t</a>, <a class="el" href="a00058.html">detail::ltvector</a>&gt; <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#afeb396721e0cc1ce0b1a48fc61f9f8a3">functionCache_t</a></td>
+          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="a00024.html">Bind</a>&gt; <a class="el" href="a00024.html">roboptim::Bind</a>&lt; U &gt;::<a class="el" href="a00024.html#ac12bd855013f0ef3d0bf867b47d799b5">BindShPtr_t</a></td>
         </tr>
       </table>
 </div>
@@ -210,31 +112,14 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac62b42083a55feb98eb9589558c1494e"></a><!-- doxytag: member="roboptim::CachedFunction::gradient_t" ref="ac62b42083a55feb98eb9589558c1494e" args="" -->
+<a class="anchor" id="aa29cc46acf1eb84bda53d9da6ff4a632"></a><!-- doxytag: member="roboptim::Bind::boundValues_t" ref="aa29cc46acf1eb84bda53d9da6ff4a632" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="a00043.html">GenericDifferentiableFunction</a>&lt;<a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a>&gt;:: <a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Import gradient type. </p>
-
-</div>
-</div>
-<a class="anchor" id="afbe2df95b5e9636d6ba29eec07f30421"></a><!-- doxytag: member="roboptim::CachedFunction::gradientCache_t" ref="afbe2df95b5e9636d6ba29eec07f30421" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::map&lt;<a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a>, <a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a>, <a class="el" href="a00058.html">detail::ltvector</a>&gt; <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#afbe2df95b5e9636d6ba29eec07f30421">gradientCache_t</a></td>
+          <td class="memname">typedef std::vector&lt;boost::optional&lt;value_type&gt; &gt; <a class="el" href="a00024.html">roboptim::Bind</a>&lt; U &gt;::<a class="el" href="a00024.html#aa29cc46acf1eb84bda53d9da6ff4a632">boundValues_t</a></td>
         </tr>
       </table>
 </div>
@@ -242,185 +127,44 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a1f6e9b400d4f415a6c974c0f5e387aa8"></a><!-- doxytag: member="roboptim::CachedFunction::hessian_t" ref="a1f6e9b400d4f415a6c974c0f5e387aa8" args="" -->
+<a class="anchor" id="a58322098d06c8face6286742fc6869dd"></a><!-- doxytag: member="roboptim::Bind::parentType_t" ref="a58322098d06c8face6286742fc6869dd" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="a00055.html">GenericTwiceDifferentiableFunction</a>&lt;<a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a>&gt;:: <a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a> <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a></td>
+          <td class="memname">typedef <a class="el" href="a00017.html">detail::AutopromoteTrait</a>&lt;U&gt;::T_type <a class="el" href="a00024.html">roboptim::Bind</a>&lt; U &gt;::<a class="el" href="a00024.html#a58322098d06c8face6286742fc6869dd">parentType_t</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Import hessian type. </p>
-
-</div>
-</div>
-<a class="anchor" id="a4370436d6627e6b3c60abe31ae491a68"></a><!-- doxytag: member="roboptim::CachedFunction::hessianCache_t" ref="a4370436d6627e6b3c60abe31ae491a68" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::map&lt;<a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a>, <a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a>, <a class="el" href="a00058.html">detail::ltvector</a>&gt; <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a4370436d6627e6b3c60abe31ae491a68">hessianCache_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae55861fc7f33a2ef4869c5891d8dca36"></a><!-- doxytag: member="roboptim::CachedFunction::interval_t" ref="ae55861fc7f33a2ef4869c5891d8dca36" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00043.html">GenericDifferentiableFunction</a>&lt;<a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a>&gt;:: <a class="el" href="a00024.html#ae55861fc7f33a2ef4869c5891d8dca36">interval_t</a> <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#ae55861fc7f33a2ef4869c5891d8dca36">interval_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Import interval type. </p>
-
-</div>
-</div>
-<a class="anchor" id="a876f0f61160deb9b4e8cf6ff06fdc70b"></a><!-- doxytag: member="roboptim::CachedFunction::jacobian_t" ref="a876f0f61160deb9b4e8cf6ff06fdc70b" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00043.html">GenericDifferentiableFunction</a>&lt;<a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a>&gt;:: <a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a> <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Import jacobian type. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac4e2edf70575430f87a1f064421914ff"></a><!-- doxytag: member="roboptim::CachedFunction::jacobianCache_t" ref="ac4e2edf70575430f87a1f064421914ff" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::map&lt;<a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a>, <a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a>, <a class="el" href="a00058.html">detail::ltvector</a>&gt; <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#ac4e2edf70575430f87a1f064421914ff">jacobianCache_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af563d16310a5246186fd466e9b16d68e"></a><!-- doxytag: member="roboptim::CachedFunction::result_t" ref="af563d16310a5246186fd466e9b16d68e" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00043.html">GenericDifferentiableFunction</a>&lt;<a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a>&gt;:: <a class="el" href="a00024.html#af563d16310a5246186fd466e9b16d68e">result_t</a> <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#af563d16310a5246186fd466e9b16d68e">result_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Import result type. </p>
-
-</div>
-</div>
-<a class="anchor" id="a06bf66dba709c21125908e67919ad772"></a><!-- doxytag: member="roboptim::CachedFunction::size_type" ref="a06bf66dba709c21125908e67919ad772" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00043.html">GenericDifferentiableFunction</a>&lt;<a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a>&gt;:: <a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a> <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Import size type. </p>
-
-</div>
-</div>
-<a class="anchor" id="a8b37b9a68e9cf259cca53c985c605f43"></a><!-- doxytag: member="roboptim::CachedFunction::traits_t" ref="a8b37b9a68e9cf259cca53c985c605f43" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef T::traits_t <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Import traits type. </p>
-
-</div>
-</div>
-<a class="anchor" id="a63487989b6e00fbe94ded9036d9b755a"></a><!-- doxytag: member="roboptim::CachedFunction::value_type" ref="a63487989b6e00fbe94ded9036d9b755a" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00043.html">GenericDifferentiableFunction</a>&lt;<a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a>&gt;:: <a class="el" href="a00024.html#a63487989b6e00fbe94ded9036d9b755a">value_type</a> <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a63487989b6e00fbe94ded9036d9b755a">value_type</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Import value type. </p>
-
-</div>
-</div>
-<a class="anchor" id="a98636324bc96fe1d559d230e2045fc7a"></a><!-- doxytag: member="roboptim::CachedFunction::vector_t" ref="a98636324bc96fe1d559d230e2045fc7a" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00043.html">GenericDifferentiableFunction</a>&lt;<a class="el" href="a00024.html#a8b37b9a68e9cf259cca53c985c605f43">traits_t</a>&gt;:: <a class="el" href="a00024.html#a98636324bc96fe1d559d230e2045fc7a">vector_t</a> <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a98636324bc96fe1d559d230e2045fc7a">vector_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Import vector type. </p>
 
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="adb046e810e569982bfa11d1feb434103"></a><!-- doxytag: member="roboptim::CachedFunction::CachedFunction" ref="adb046e810e569982bfa11d1feb434103" args="(boost::shared_ptr&lt; const T &gt; fct)" -->
+<a class="anchor" id="ad1718b5f15fa061eda50ee71e3c01846"></a><!-- doxytag: member="roboptim::Bind::Bind" ref="ad1718b5f15fa061eda50ee71e3c01846" args="(boost::shared_ptr&lt; U &gt; origin, const boundValues_t &amp;selector)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html">CachedFunction</a> </td>
+          <td class="memname"><a class="el" href="a00024.html">roboptim::Bind</a>&lt; U &gt;::<a class="el" href="a00024.html">Bind</a> </td>
           <td>(</td>
-          <td class="paramtype">boost::shared_ptr&lt; const T &gt;&#160;</td>
-          <td class="paramname"><em>fct</em></td><td>)</td>
-          <td>  throw ()<code> [explicit]</code></td>
+          <td class="paramtype">boost::shared_ptr&lt; U &gt;&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00024.html#aa29cc46acf1eb84bda53d9da6ff4a632">boundValues_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>selector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>  throw (std::runtime_error)<code> [explicit]</code></td>
         </tr>
       </table>
 </div>
@@ -428,14 +172,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="af86f46f4f762e82d0f3d3e83a0997689"></a><!-- doxytag: member="roboptim::CachedFunction::~CachedFunction" ref="af86f46f4f762e82d0f3d3e83a0997689" args="()" -->
+<a class="anchor" id="adda8d726a09e9d776bc2f597b04e3d0b"></a><!-- doxytag: member="roboptim::Bind::~Bind" ref="adda8d726a09e9d776bc2f597b04e3d0b" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::~<a class="el" href="a00024.html">CachedFunction</a> </td>
+          <td class="memname"><a class="el" href="a00024.html">roboptim::Bind</a>&lt; U &gt;::~<a class="el" href="a00024.html">Bind</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td>  throw ()</td>
@@ -447,28 +191,28 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ae4c9eda2c71f16a341c46412767b0ea9"></a><!-- doxytag: member="roboptim::CachedFunction::impl_compute" ref="ae4c9eda2c71f16a341c46412767b0ea9" args="(result_t &amp;result, const argument_t &amp;argument) const " -->
+<a class="anchor" id="ac760c846779e6830e4f200ed912e48b5"></a><!-- doxytag: member="roboptim::Bind::impl_compute" ref="ac760c846779e6830e4f200ed912e48b5" args="(result_t &amp;result, const argument_t &amp;x) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#ae4c9eda2c71f16a341c46412767b0ea9">impl_compute</a> </td>
+          <td class="memname">void <a class="el" href="a00024.html">roboptim::Bind</a>&lt; U &gt;::<a class="el" href="a00024.html#ac760c846779e6830e4f200ed912e48b5">impl_compute</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#af563d16310a5246186fd466e9b16d68e">result_t</a> &amp;&#160;</td>
+          <td class="paramtype">result_t &amp;&#160;</td>
           <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>&#160;</td>
+          <td class="paramtype">const argument_t &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
+          <td></td><td> const  throw ()</td>
         </tr>
       </table>
 </div>
@@ -476,351 +220,34 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a098d07b75a4ff6c6f2132ea5c3e76f2f"></a><!-- doxytag: member="roboptim::CachedFunction::impl_derivative" ref="a098d07b75a4ff6c6f2132ea5c3e76f2f" args="(gradient_t &amp;derivative, double argument, size_type order=1) const " -->
+<a class="anchor" id="a84887e33a10c4dfae454f823594ce173"></a><!-- doxytag: member="roboptim::Bind::impl_gradient" ref="a84887e33a10c4dfae454f823594ce173" args="(gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a098d07b75a4ff6c6f2132ea5c3e76f2f">impl_derivative</a> </td>
+          <td class="memname">void <a class="el" href="a00024.html">roboptim::Bind</a>&lt; U &gt;::<a class="el" href="a00024.html#a84887e33a10c4dfae454f823594ce173">impl_gradient</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>derivative</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname"><em>order</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>References <a class="el" href="a00190.html#a2aca003d14f5cd52e55a6b4fd6fec025">roboptim::derivative()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a3a63fd6fe70e297c313b10394e946b91"></a><!-- doxytag: member="roboptim::CachedFunction::impl_derivative" ref="a3a63fd6fe70e297c313b10394e946b91" args="(gradient_t &amp;, double, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a1864afd8c0c95cea8029da9b52352736">Function</a> &gt;::<a class="el" href="a00024.html#a098d07b75a4ff6c6f2132ea5c3e76f2f">impl_derivative</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="abf92c4deba5fefdafe4efa83ace4f9c7"></a><!-- doxytag: member="roboptim::CachedFunction::impl_derivative" ref="abf92c4deba5fefdafe4efa83ace4f9c7" args="(gradient_t &amp;, double, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a0036230886e32e7043e29e0f14682637">SparseFunction</a> &gt;::<a class="el" href="a00024.html#a098d07b75a4ff6c6f2132ea5c3e76f2f">impl_derivative</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae3624f8a1cf47cc12d204adbfc5a08e8"></a><!-- doxytag: member="roboptim::CachedFunction::impl_derivative" ref="ae3624f8a1cf47cc12d204adbfc5a08e8" args="(gradient_t &amp;, double, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a1fe6728680de2e1a17e250717269fe22">DifferentiableFunction</a> &gt;::<a class="el" href="a00024.html#a098d07b75a4ff6c6f2132ea5c3e76f2f">impl_derivative</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a42041b9b474b4efe63fd00e8b8ef483a"></a><!-- doxytag: member="roboptim::CachedFunction::impl_derivative" ref="a42041b9b474b4efe63fd00e8b8ef483a" args="(gradient_t &amp;, double, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a7e31c0c139e1f6949efdda2c8925bf0a">DifferentiableSparseFunction</a> &gt;::<a class="el" href="a00024.html#a098d07b75a4ff6c6f2132ea5c3e76f2f">impl_derivative</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ad0269898a89600eebc5d5700da96a5a9"></a><!-- doxytag: member="roboptim::CachedFunction::impl_derivative" ref="ad0269898a89600eebc5d5700da96a5a9" args="(gradient_t &amp;, double, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a664a3377f606592dfc57f9525c9afa37">TwiceDifferentiableFunction</a> &gt;::<a class="el" href="a00024.html#a098d07b75a4ff6c6f2132ea5c3e76f2f">impl_derivative</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a4f886470eafc4041bdbe5fb029ff2b7c"></a><!-- doxytag: member="roboptim::CachedFunction::impl_derivative" ref="a4f886470eafc4041bdbe5fb029ff2b7c" args="(gradient_t &amp;, double, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a18d2ef51eb9bfce27cb92b82a684bf56">TwiceDifferentiableSparseFunction</a> &gt;::<a class="el" href="a00024.html#a098d07b75a4ff6c6f2132ea5c3e76f2f">impl_derivative</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a7638e6859ccdb45ca67cb0461442cfe3"></a><!-- doxytag: member="roboptim::CachedFunction::impl_gradient" ref="a7638e6859ccdb45ca67cb0461442cfe3" args="(gradient_t &amp;, const argument_t &amp;, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a1864afd8c0c95cea8029da9b52352736">Function</a> &gt;::<a class="el" href="a00024.html#ada9027ce39b7c7c4ed78cdf83873db3e">impl_gradient</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a2cc73afda76f2db2417969503dc55ee2"></a><!-- doxytag: member="roboptim::CachedFunction::impl_gradient" ref="a2cc73afda76f2db2417969503dc55ee2" args="(gradient_t &amp;, const argument_t &amp;, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a0036230886e32e7043e29e0f14682637">SparseFunction</a> &gt;::<a class="el" href="a00024.html#ada9027ce39b7c7c4ed78cdf83873db3e">impl_gradient</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ada9027ce39b7c7c4ed78cdf83873db3e"></a><!-- doxytag: member="roboptim::CachedFunction::impl_gradient" ref="ada9027ce39b7c7c4ed78cdf83873db3e" args="(gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#ada9027ce39b7c7c4ed78cdf83873db3e">impl_gradient</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#ac62b42083a55feb98eb9589558c1494e">gradient_t</a> &amp;&#160;</td>
+          <td class="paramtype">gradient_t &amp;&#160;</td>
           <td class="paramname"><em>gradient</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
+          <td class="paramtype">const argument_t &amp;&#160;</td>
           <td class="paramname"><em>argument</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
+          <td class="paramtype">size_type&#160;</td>
           <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
+          <td></td><td> const  throw ()</td>
         </tr>
       </table>
 </div>
@@ -828,203 +255,28 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a8c5cb868f925589bbb2ab7a08b2850e6"></a><!-- doxytag: member="roboptim::CachedFunction::impl_hessian" ref="a8c5cb868f925589bbb2ab7a08b2850e6" args="(hessian_t &amp;hessian, const argument_t &amp;argument, size_type functionId=0) const " -->
+<a class="anchor" id="aaeeeeea0d085f8f51314bb16e553644d"></a><!-- doxytag: member="roboptim::Bind::impl_jacobian" ref="aaeeeeea0d085f8f51314bb16e553644d" args="(jacobian_t &amp;jacobian, const argument_t &amp;arg) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a8c5cb868f925589bbb2ab7a08b2850e6">impl_hessian</a> </td>
+          <td class="memname">void <a class="el" href="a00024.html">roboptim::Bind</a>&lt; U &gt;::<a class="el" href="a00024.html#aaeeeeea0d085f8f51314bb16e553644d">impl_jacobian</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>hessian</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a8bf63f4575f2882ff2b80c4d153f8778"></a><!-- doxytag: member="roboptim::CachedFunction::impl_hessian" ref="a8bf63f4575f2882ff2b80c4d153f8778" args="(hessian_t &amp;, const argument_t &amp;, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a1864afd8c0c95cea8029da9b52352736">Function</a> &gt;::<a class="el" href="a00024.html#a8c5cb868f925589bbb2ab7a08b2850e6">impl_hessian</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a6f3e250dccfa763b12567deee9d2a1d7"></a><!-- doxytag: member="roboptim::CachedFunction::impl_hessian" ref="a6f3e250dccfa763b12567deee9d2a1d7" args="(hessian_t &amp;, const argument_t &amp;, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a0036230886e32e7043e29e0f14682637">SparseFunction</a> &gt;::<a class="el" href="a00024.html#a8c5cb868f925589bbb2ab7a08b2850e6">impl_hessian</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aca4e868e934cf19cd1db7a63c2e4cca7"></a><!-- doxytag: member="roboptim::CachedFunction::impl_hessian" ref="aca4e868e934cf19cd1db7a63c2e4cca7" args="(hessian_t &amp;, const argument_t &amp;, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a1fe6728680de2e1a17e250717269fe22">DifferentiableFunction</a> &gt;::<a class="el" href="a00024.html#a8c5cb868f925589bbb2ab7a08b2850e6">impl_hessian</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a4ff5fdfba23d082ac3a6084667cdb5c9"></a><!-- doxytag: member="roboptim::CachedFunction::impl_hessian" ref="a4ff5fdfba23d082ac3a6084667cdb5c9" args="(hessian_t &amp;, const argument_t &amp;, size_type) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a7e31c0c139e1f6949efdda2c8925bf0a">DifferentiableSparseFunction</a> &gt;::<a class="el" href="a00024.html#a8c5cb868f925589bbb2ab7a08b2850e6">impl_hessian</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#a1f6e9b400d4f415a6c974c0f5e387aa8">hessian_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00024.html#a06bf66dba709c21125908e67919ad772">size_type</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a24dbfdd65f10b1d4f39da398f9f2f7ee"></a><!-- doxytag: member="roboptim::CachedFunction::impl_jacobian" ref="a24dbfdd65f10b1d4f39da398f9f2f7ee" args="(jacobian_t &amp;jacobian, const argument_t &amp;arg) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a24dbfdd65f10b1d4f39da398f9f2f7ee">impl_jacobian</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a> &amp;&#160;</td>
+          <td class="paramtype">jacobian_t &amp;&#160;</td>
           <td class="paramname"><em>jacobian</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
+          <td class="paramtype">const argument_t &amp;&#160;</td>
           <td class="paramname"><em>arg</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const  throw ()<code> [protected, virtual]</code></td>
+          <td></td><td> const  throw ()</td>
         </tr>
       </table>
 </div>
@@ -1032,75 +284,37 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a868718d1d88e40307c456e09de73b21e"></a><!-- doxytag: member="roboptim::CachedFunction::impl_jacobian" ref="a868718d1d88e40307c456e09de73b21e" args="(jacobian_t &amp;, const argument_t &amp;) const " -->
+<a class="anchor" id="a29f1bcab4d91c3ecd75fdf00948f8198"></a><!-- doxytag: member="roboptim::Bind::origin" ref="a29f1bcab4d91c3ecd75fdf00948f8198" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;&gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a1864afd8c0c95cea8029da9b52352736">Function</a> &gt;::<a class="el" href="a00024.html#a24dbfdd65f10b1d4f39da398f9f2f7ee">impl_jacobian</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="afc7544ec992416cb504fb953f44f86d9"></a><!-- doxytag: member="roboptim::CachedFunction::impl_jacobian" ref="afc7544ec992416cb504fb953f44f86d9" args="(jacobian_t &amp;, const argument_t &amp;) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; <a class="el" href="a00190.html#a0036230886e32e7043e29e0f14682637">SparseFunction</a> &gt;::<a class="el" href="a00024.html#a24dbfdd65f10b1d4f39da398f9f2f7ee">impl_jacobian</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00024.html#a876f0f61160deb9b4e8cf6ff06fdc70b">jacobian_t</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00024.html#a75550cc24920b0a17f96b540256045e2">argument_t</a> &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a83046d99a6b20073ad2d06380d9d4fb3"></a><!-- doxytag: member="roboptim::CachedFunction::reset" ref="a83046d99a6b20073ad2d06380d9d4fb3" args="()" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a83046d99a6b20073ad2d06380d9d4fb3">reset</a> </td>
+          <td class="memname">const boost::shared_ptr&lt;U&gt;&amp; <a class="el" href="a00024.html">roboptim::Bind</a>&lt; U &gt;::<a class="el" href="a00024.html#a29f1bcab4d91c3ecd75fdf00948f8198">origin</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>  throw ()</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="a00196.html#ac398776c05160b474382281f0501fa7b">roboptim::bind()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a69de4a8f82057c2f6d3089caf1fdb1fb"></a><!-- doxytag: member="roboptim::Bind::origin" ref="a69de4a8f82057c2f6d3089caf1fdb1fb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;U&gt;&amp; <a class="el" href="a00024.html">roboptim::Bind</a>&lt; U &gt;::<a class="el" href="a00024.html#a29f1bcab4d91c3ecd75fdf00948f8198">origin</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -1108,75 +322,18 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="ab17791de656c57f4d4d255fc0d692f9a"></a><!-- doxytag: member="roboptim::CachedFunction::cache_" ref="ab17791de656c57f4d4d255fc0d692f9a" args="" -->
+<a class="anchor" id="a1bc27f4a503409333ab465458ec747f0"></a><!-- doxytag: member="roboptim::Bind::ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="a1bc27f4a503409333ab465458ec747f0" args="(parentType_t)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="a00024.html#afeb396721e0cc1ce0b1a48fc61f9f8a3">functionCache_t</a>&gt; <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#ab17791de656c57f4d4d255fc0d692f9a">cache_</a><code> [mutable, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a8fdf79d43cde306e324af0bfa5400e63"></a><!-- doxytag: member="roboptim::CachedFunction::function_" ref="a8fdf79d43cde306e324af0bfa5400e63" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">boost::shared_ptr&lt;const T&gt; <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a8fdf79d43cde306e324af0bfa5400e63">function_</a><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="acf4b58ce62bffd79a49d82bce77c880e"></a><!-- doxytag: member="roboptim::CachedFunction::gradientCache_" ref="acf4b58ce62bffd79a49d82bce77c880e" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="a00024.html#afbe2df95b5e9636d6ba29eec07f30421">gradientCache_t</a>&gt; <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#acf4b58ce62bffd79a49d82bce77c880e">gradientCache_</a><code> [mutable, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a40e2de21fc46d0fcd90b7c6d1eec6613"></a><!-- doxytag: member="roboptim::CachedFunction::hessianCache_" ref="a40e2de21fc46d0fcd90b7c6d1eec6613" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="a00024.html#a4370436d6627e6b3c60abe31ae491a68">hessianCache_t</a>&gt; <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a40e2de21fc46d0fcd90b7c6d1eec6613">hessianCache_</a><code> [mutable, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a16acd3875c6cfed5c70faa01e85d980d"></a><!-- doxytag: member="roboptim::CachedFunction::jacobianCache_" ref="a16acd3875c6cfed5c70faa01e85d980d" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00024.html#ac4e2edf70575430f87a1f064421914ff">jacobianCache_t</a> <a class="el" href="a00024.html">roboptim::CachedFunction</a>&lt; T &gt;::<a class="el" href="a00024.html#a16acd3875c6cfed5c70faa01e85d980d">jacobianCache_</a><code> [mutable, protected]</code></td>
+          <td class="memname"><a class="el" href="a00024.html">roboptim::Bind</a>&lt; U &gt;::<a class="el" href="a00024.html#a1bc27f4a503409333ab465458ec747f0">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00024.html#a58322098d06c8face6286742fc6869dd">parentType_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div>
@@ -1202,7 +359,7 @@ template&lt;typename T&gt; </div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00190.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00024.html">CachedFunction</a>      </li>
+      <li class="navelem"><a class="el" href="a00196.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00024.html">Bind</a>      </li>
 </body>
 </html>

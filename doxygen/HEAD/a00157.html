@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>quadratic-function.hxx File Reference</title>
+<title>problem.hxx File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,19 +56,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">quadratic-function.hxx File Reference</div>  </div>
+<div class="title">problem.hxx File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="a00132.html">roboptim/core/indent.hh</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="a00186.html">roboptim/core/util.hh</a>&quot;</code><br/>
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br/>
+<code>#include &lt;stdexcept&gt;</code><br/>
+<code>#include &lt;boost/format.hpp&gt;</code><br/>
+<code>#include &lt;boost/type_traits/is_pointer.hpp&gt;</code><br/>
+<code>#include &lt;boost/type_traits/remove_pointer.hpp&gt;</code><br/>
+<code>#include &lt;boost/variant.hpp&gt;</code><br/>
+<code>#include &lt;boost/variant/get.hpp&gt;</code><br/>
+<code>#include &lt;boost/variant/apply_visitor.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00136.html">roboptim/core/indent.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00187.html">roboptim/core/terminal-color.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00192.html">roboptim/core/util.hh</a>&gt;</code><br/>
 </div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00071.html">roboptim::detail::printConstraint&lt; P &gt;</a></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00200.html">roboptim::detail</a></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00210.html#gaa95bff19e4c158ee52b1f0f6804100cf">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const Problem&lt; F, boost::mpl::vector&lt;&gt; &gt; &amp;pb)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle problem display.  <a href="a00210.html#gaa95bff19e4c158ee52b1f0f6804100cf"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00200.html#a974b01d3e6b19ebbfb1c45cc3cabd9ed">roboptim::detail::impl_print</a> (std::ostream &amp;o, const T *t)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00200.html#a92d03025b36c11fc83d49f550228996e">roboptim::detail::impl_print</a> (std::ostream &amp;o, const T &amp;t)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename F , typename CLIST &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00210.html#ga8672f3101648d74dae9f93f62263659e">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const Problem&lt; F, CLIST &gt; &amp;pb)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle problem display.  <a href="a00210.html#ga8672f3101648d74dae9f93f62263659e"></a><br/></td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -88,6 +115,6 @@ Namespaces</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00157.html">quadratic-function.hxx</a>      </li>
+      <li class="navelem"><a class="el" href="a00157.html">problem.hxx</a>      </li>
 </body>
 </html>

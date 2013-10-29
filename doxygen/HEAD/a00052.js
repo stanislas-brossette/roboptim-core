@@ -1,18 +1,16 @@
 var a00052 =
 [
-    [ "symmetric_t", "a00052.html#ae3cef009006ac250bc5b9e6b8b84a67e", null ],
-    [ "GenericNumericQuadraticFunction", "a00052.html#a5574eb748dfbf5c83ba62ca1d0a7efca", null ],
-    [ "~GenericNumericQuadraticFunction", "a00052.html#aab33e25029e4be085dfbcfb319562018", null ],
-    [ "A", "a00052.html#a19f6daac2abe45f77c4d5a1a90f4eeed", null ],
-    [ "A", "a00052.html#abb79a785cf676d0b29f8984a9614f6f5", null ],
-    [ "b", "a00052.html#ad90ef0e2c86b1e05cf43ea3de1ebe7b3", null ],
-    [ "b", "a00052.html#ad6ec24b08d452aa0d7545ddd05743fbb", null ],
-    [ "impl_compute", "a00052.html#ae51c922fcdc525a2b61ebb90130320b9", null ],
-    [ "impl_gradient", "a00052.html#ae4d09ed8f4e84cbc79fefe7ae1de9f76", null ],
-    [ "impl_gradient", "a00052.html#a6b6c677734224adcf98e350ff0cd2ac5", null ],
-    [ "impl_hessian", "a00052.html#a340331172ce7188996110d02a976d006", null ],
-    [ "impl_jacobian", "a00052.html#abeb79872fb2282380d6c5c1f0d56595e", null ],
-    [ "impl_jacobian", "a00052.html#afe73a6a5c36ff4d3ed693c6562aa4b15", null ],
-    [ "print", "a00052.html#ab43858fd0eb1c257664a80004111c8ab", null ],
-    [ "ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00052.html#a0b49bb971581022de5a63e74f85f95f1", null ]
+    [ "GenericNumericLinearFunction", "a00052.html#a61e801b2acf4e5c5046218a19610c4ce", null ],
+    [ "GenericNumericLinearFunction", "a00052.html#a99aa2758f730474ab9d527e400f882cb", null ],
+    [ "~GenericNumericLinearFunction", "a00052.html#a6a95597cdbbdd850a36aed9ba5e03e91", null ],
+    [ "A", "a00052.html#a0bdfbba11cd50682046bbbf6cdf4a932", null ],
+    [ "A", "a00052.html#a38bf72a5ee70689652d8b6b142e2e0c4", null ],
+    [ "b", "a00052.html#a5f335d97438f278d3a12651bdf88748d", null ],
+    [ "b", "a00052.html#a897938ac5cbf6700118e3e9c75ae2abc", null ],
+    [ "impl_compute", "a00052.html#ad080464edcfb155365710ed7e90bf3bb", null ],
+    [ "impl_gradient", "a00052.html#a0562c56998fdb5e21648a132bd84e0ab", null ],
+    [ "impl_gradient", "a00052.html#aeda9046fc6c7e56fcd48fa70bbf62fe7", null ],
+    [ "impl_jacobian", "a00052.html#a787347a6b4444a8173c14f6a301022d1", null ],
+    [ "print", "a00052.html#ae57fb039df18b98b7ab403b73c277632", null ],
+    [ "ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00052.html#acf53d892384fd4691f6c4829e92772f5", null ]
 ];

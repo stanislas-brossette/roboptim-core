@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::GenericIdentityFunction&lt; T &gt; Class Template Reference</title>
+<title>roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,102 +58,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pub-types">Public Types</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::GenericIdentityFunction&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="a00202.html">Mathematical functions</a></div></div>  </div>
+<div class="title">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt; Struct Template Reference<div class="ingroups"><a class="el" href="a00207.html">Mathematical abstract functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::GenericIdentityFunction" --><!-- doxytag: inherits="roboptim::GenericLinearFunction" -->
-<p>Identity function.  
+<!-- doxytag: class="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;" -->
+<p>Trait specializing <a class="el" href="a00046.html" title="Define an abstract mathematical function ( ).">GenericFunction</a> for Eigen sparse matrices.  
  <a href="a00049.html#details">More...</a></p>
 
-<p><code>#include &lt;roboptim/core/function/identity.hh&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for roboptim::GenericIdentityFunction&lt; T &gt;:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="a00049.png" usemap="#roboptim::GenericIdentityFunction&lt; T &gt;_map" alt=""/>
-  <map id="roboptim::GenericIdentityFunction&lt; T &gt;_map" name="roboptim::GenericIdentityFunction&lt; T &gt;_map">
-<area href="a00050.html" title="Define an abstract linear function." alt="roboptim::GenericLinearFunction&lt; T &gt;" shape="rect" coords="0,224,300,248"/>
-<area href="a00053.html" title="Define an abstract quadratic function." alt="roboptim::GenericQuadraticFunction&lt; T &gt;" shape="rect" coords="0,168,300,192"/>
-<area href="a00055.html" title="Define an abstract function which is derivable twice ( )." alt="roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;" shape="rect" coords="0,112,300,136"/>
-<area href="a00043.html" title="Define an abstract derivable function ( )." alt="roboptim::GenericDifferentiableFunction&lt; T &gt;" shape="rect" coords="0,56,300,80"/>
-<area href="a00045.html" title="Define an abstract mathematical function ( )." alt="roboptim::GenericFunction&lt; T &gt;" shape="rect" coords="0,0,300,24"/>
-</map>
- </div></div>
+<p><code>#include &lt;roboptim/core/function.hh&gt;</code></p>
 
-<p><a href="a00235.html">List of all members.</a></p>
+<p><a href="a00247.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a96bed4fb0ae0a69ca8c0ba546b161aaa">ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00050.html">GenericLinearFunction</a>&lt; T &gt;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#ab54d82769bc4a7bf83aad7a6ca7b26d5">GenericIdentityFunction</a> (const <a class="el" href="a00045.html#a76763e91e51e9cddf579d52091dce746">vector_t</a> &amp;offset)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an identity function.  <a href="#ab54d82769bc4a7bf83aad7a6ca7b26d5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#ae60050ae16bed7e7d13dcfbdcf15ca65">~GenericIdentityFunction</a> ()  throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#adc5eff6387532970e7b1e14daeb2d8af">print</a> (std::ostream &amp;o) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the function on the specified output stream.  <a href="#adc5eff6387532970e7b1e14daeb2d8af"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#ad188fa30f152f2a14c843cb27eb161e9">impl_compute</a> (<a class="el" href="a00045.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;result, const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;argument) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function evaluation.  <a href="#ad188fa30f152f2a14c843cb27eb161e9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#abcd9e760f668e00bfd5705db4b60ad1a">impl_jacobian</a> (<a class="el" href="a00043.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;<a class="el" href="a00043.html#a18879d9ec115089c02e685a020a11c4d">jacobian</a>, const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Jacobian evaluation.  <a href="#abcd9e760f668e00bfd5705db4b60ad1a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00202.html#ga41fe064db0d556f73918a7e6964edc91">impl_gradient</a> (<a class="el" href="a00043.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;<a class="el" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169">gradient</a>, const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;, <a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> idFunction) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient evaluation.  <a href="a00202.html#ga41fe064db0d556f73918a7e6964edc91"></a><br/></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00049.html#a493911a8aeee32e587b3d17b0f6eb090">impl_gradient</a> (<a class="el" href="a00043.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;<a class="el" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169">gradient</a>, const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;, <a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a> idFunction) const  throw()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient evaluation.  <a href="#a493911a8aeee32e587b3d17b0f6eb090"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef Eigen::SparseMatrix<br class="typebreak"/>
+&lt; double, Eigen::RowMajor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a6c134d447ffd0e219d15864cc94b216c">matrix_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef Eigen::Matrix&lt; double, <br class="typebreak"/>
+Eigen::Dynamic, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef matrix_t::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#ae382b9a557d9e2f5e54a54ef60acb10c">size_type</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef matrix_t::Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#af0e69c7fd4c248106029270aef16c58e">value_type</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00049.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a866ef9a391daf4e4b20bd2029a67be96">result_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00049.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a050f8ec0b678f9dfadd89368d21b3ec9">argument_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef Eigen::SparseVector<br class="typebreak"/>
+&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a980c849a750d10a91b3e577a9aea94d8">gradient_t</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="a00049.html#a6c134d447ffd0e219d15864cc94b216c">matrix_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html#a4045ada63d693b9b1475ac57b7698690">jacobian_t</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br/>
-class roboptim::GenericIdentityFunction&lt; T &gt;</h3>
+<div class="textblock"><h3>template&lt;&gt;<br/>
+struct roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</h3>
 
-<p>Identity function. </p>
-<p>Implement a linear function using the formula: </p>
-<p class="formulaDsp">
-<img class="formulaDsp" alt="\[f(x) = x + offset\]" src="form_16.png"/>
-</p>
-<p> where <img class="formulaInl" alt="$A$" src="form_17.png"/> and <img class="formulaInl" alt="$b$" src="form_18.png"/> are set when the class is instantiated. </p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab54d82769bc4a7bf83aad7a6ca7b26d5"></a><!-- doxytag: member="roboptim::GenericIdentityFunction::GenericIdentityFunction" ref="ab54d82769bc4a7bf83aad7a6ca7b26d5" args="(const vector_t &amp;offset)" -->
+<p>Trait specializing <a class="el" href="a00046.html" title="Define an abstract mathematical function ( ).">GenericFunction</a> for Eigen sparse matrices. </p>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="a050f8ec0b678f9dfadd89368d21b3ec9"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::argument_t" ref="a050f8ec0b678f9dfadd89368d21b3ec9" args="" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00049.html">roboptim::GenericIdentityFunction</a>&lt; T &gt;::<a class="el" href="a00049.html">GenericIdentityFunction</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a76763e91e51e9cddf579d52091dce746">vector_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>offset</em></td><td>)</td>
-          <td>  throw ()<code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Build an identity function. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">offset</td><td>identity function offset </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ae60050ae16bed7e7d13dcfbdcf15ca65"></a><!-- doxytag: member="roboptim::GenericIdentityFunction::~GenericIdentityFunction" ref="ae60050ae16bed7e7d13dcfbdcf15ca65" args="()" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00049.html">roboptim::GenericIdentityFunction</a>&lt; T &gt;::~<a class="el" href="a00049.html">GenericIdentityFunction</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>  throw ()<code> [inline]</code></td>
+          <td class="memname">typedef <a class="el" href="a00049.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a> <a class="el" href="a00047.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00040.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00049.html#a050f8ec0b678f9dfadd89368d21b3ec9">argument_t</a></td>
         </tr>
       </table>
 </div>
@@ -161,185 +104,90 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ad188fa30f152f2a14c843cb27eb161e9"></a><!-- doxytag: member="roboptim::GenericIdentityFunction::impl_compute" ref="ad188fa30f152f2a14c843cb27eb161e9" args="(result_t &amp;result, const argument_t &amp;argument) const " -->
+<a class="anchor" id="a980c849a750d10a91b3e577a9aea94d8"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::gradient_t" ref="a980c849a750d10a91b3e577a9aea94d8" args="" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00049.html">roboptim::GenericIdentityFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#ad188fa30f152f2a14c843cb27eb161e9">impl_compute</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00045.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>result</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()<code> [inline, protected, virtual]</code></td>
+          <td class="memname">typedef Eigen::SparseVector&lt;double&gt; <a class="el" href="a00047.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00040.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00049.html#a980c849a750d10a91b3e577a9aea94d8">gradient_t</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Function evaluation. </p>
-<p>Evaluate the function, has to be implemented in concrete classes. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00045.html#a58f0bde147e54bbeb8df944ef194f9ae" title="Evaluate the function at a specified point.">operator()(result_t&amp;, const argument_t&amp;) const </a>throw () instead. </dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">result</td><td>result will be stored in this vector </td></tr>
-    <tr><td class="paramname">argument</td><td>point at which the function will be evaluated </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="a00045.html#a19fb6005aabfae3862429de2c736ab6e">roboptim::GenericFunction&lt; T &gt;</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a493911a8aeee32e587b3d17b0f6eb090"></a><!-- doxytag: member="roboptim::GenericIdentityFunction::impl_gradient" ref="a493911a8aeee32e587b3d17b0f6eb090" args="(gradient_t &amp;gradient, const argument_t &amp;, size_type idFunction) const " -->
+<a class="anchor" id="a4045ada63d693b9b1475ac57b7698690"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::jacobian_t" ref="a4045ada63d693b9b1475ac57b7698690" args="" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00049.html">roboptim::GenericIdentityFunction</a>&lt; <a class="el" href="a00039.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00202.html#ga41fe064db0d556f73918a7e6964edc91">impl_gradient</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00043.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00045.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
-          <td class="paramname"><em>functionId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const throw()<code> [inline, protected, virtual]</code></td>
+          <td class="memname">typedef <a class="el" href="a00049.html#a6c134d447ffd0e219d15864cc94b216c">matrix_t</a> <a class="el" href="a00047.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00040.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00049.html#a4045ada63d693b9b1475ac57b7698690">jacobian_t</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Gradient evaluation. </p>
-<p>Compute the gradient, has to be implemented in concrete classes. The gradient is computed for a specific sub-function which id is passed through the functionId argument. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> instead. </dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gradient</td><td>gradient will be store in this argument </td></tr>
-    <tr><td class="paramname">argument</td><td>point where the gradient will be computed </td></tr>
-    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="a00043.html#a84657c4eb2f67ea3bbaf49462f54fb68">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="abcd9e760f668e00bfd5705db4b60ad1a"></a><!-- doxytag: member="roboptim::GenericIdentityFunction::impl_jacobian" ref="abcd9e760f668e00bfd5705db4b60ad1a" args="(jacobian_t &amp;jacobian, const argument_t &amp;) const " -->
+<a class="anchor" id="a6c134d447ffd0e219d15864cc94b216c"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::matrix_t" ref="a6c134d447ffd0e219d15864cc94b216c" args="" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00049.html">roboptim::GenericIdentityFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#abcd9e760f668e00bfd5705db4b60ad1a">impl_jacobian</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00043.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>jacobian</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00045.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>arg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()<code> [inline, protected, virtual]</code></td>
+          <td class="memname">typedef Eigen::SparseMatrix&lt;double, Eigen::RowMajor&gt; <a class="el" href="a00047.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00040.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00049.html#a6c134d447ffd0e219d15864cc94b216c">matrix_t</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Jacobian evaluation. </p>
-<p>Computes the jacobian, can be overridden by concrete classes. The default behavior is to compute the jacobian from the gradient. </p>
-<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00043.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> instead. </dd></dl>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">jacobian</td><td>jacobian will be store in this argument </td></tr>
-    <tr><td class="paramname">arg</td><td>point where the jacobian will be computed </td></tr>
-  </table>
-  </dd>
-</dl>
-<p>ROBOPTIM_DO_NOT_CHECK_ALLOCATION </p>
-
-<p>Reimplemented from <a class="el" href="a00043.html#a5aa21359d6844bc4c21280cbd1155d22">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="adc5eff6387532970e7b1e14daeb2d8af"></a><!-- doxytag: member="roboptim::GenericIdentityFunction::print" ref="adc5eff6387532970e7b1e14daeb2d8af" args="(std::ostream &amp;o) const " -->
+<a class="anchor" id="a866ef9a391daf4e4b20bd2029a67be96"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::result_t" ref="a866ef9a391daf4e4b20bd2029a67be96" args="" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::ostream&amp; <a class="el" href="a00049.html">roboptim::GenericIdentityFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#adc5eff6387532970e7b1e14daeb2d8af">print</a> </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>o</em></td><td>)</td>
-          <td> const  throw ()<code> [inline, virtual]</code></td>
+          <td class="memname">typedef <a class="el" href="a00049.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a> <a class="el" href="a00047.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00040.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00049.html#a866ef9a391daf4e4b20bd2029a67be96">result_t</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Display the function on the specified output stream. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
-
-<p>Reimplemented from <a class="el" href="a00050.html#a00e124bc18548130332a1f5ceacf70c5">roboptim::GenericLinearFunction&lt; T &gt;</a>.</p>
-
-<p>References <a class="el" href="a00190.html#a5a9d36182ac616874a038fd4217f0a9c">roboptim::decindent()</a>, <a class="el" href="a00190.html#a27b6e86639bb04ec042979cdaad0a851">roboptim::iendl()</a>, and <a class="el" href="a00190.html#a053552edbb5c42ac287c22175ea43e69">roboptim::incindent()</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a96bed4fb0ae0a69ca8c0ba546b161aaa"></a><!-- doxytag: member="roboptim::GenericIdentityFunction::ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="a96bed4fb0ae0a69ca8c0ba546b161aaa" args="(GenericLinearFunction&lt; T &gt;)" -->
+<a class="anchor" id="ae382b9a557d9e2f5e54a54ef60acb10c"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::size_type" ref="ae382b9a557d9e2f5e54a54ef60acb10c" args="" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00049.html">roboptim::GenericIdentityFunction</a>&lt; T &gt;::<a class="el" href="a00049.html#a96bed4fb0ae0a69ca8c0ba546b161aaa">ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00050.html">GenericLinearFunction</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">typedef matrix_t::Index <a class="el" href="a00047.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00040.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00049.html#ae382b9a557d9e2f5e54a54ef60acb10c">size_type</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af0e69c7fd4c248106029270aef16c58e"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::value_type" ref="af0e69c7fd4c248106029270aef16c58e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef matrix_t::Scalar <a class="el" href="a00047.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00040.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00049.html#af0e69c7fd4c248106029270aef16c58e">value_type</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a480d3e5b3b2c53451fb99b97e48846c5"></a><!-- doxytag: member="roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;::vector_t" ref="a480d3e5b3b2c53451fb99b97e48846c5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Eigen::Matrix&lt;double, Eigen::Dynamic, 1&gt; <a class="el" href="a00047.html">roboptim::GenericFunctionTraits</a>&lt; <a class="el" href="a00040.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00049.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a></td>
         </tr>
       </table>
 </div>
@@ -365,7 +213,7 @@ template&lt;typename T &gt; </div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00190.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00049.html">GenericIdentityFunction</a>      </li>
+      <li class="navelem"><a class="el" href="a00196.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00049.html">GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a>      </li>
 </body>
 </html>

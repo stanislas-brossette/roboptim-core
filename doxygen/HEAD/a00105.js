@@ -1,5 +1,5 @@
 var a00105 =
 [
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS", "a00105.html#acb0d62d89669ee019cf7dfc94b3e8189", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00105.html#afa0830bb1d13a88e3228fe29833b6164", null ]
+    [ "DerivableFunction", "a00196.html#a3b8400e3e4a5bc0372d283a4db8eb0de", null ],
+    [ "DerivableSparseFunction", "a00196.html#a275e26321d31ddd72098657cd80e7844", null ]
 ];

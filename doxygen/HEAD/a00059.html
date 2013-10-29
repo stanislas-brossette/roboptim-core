@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::Map&lt; U &gt; Class Template Reference</title>
+<title>roboptim::detail::ltvector Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,271 +58,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::Map&lt; U &gt; Class Template Reference</div>  </div>
+<div class="title">roboptim::detail::ltvector Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::Map" -->
-<p>Apply a function several times to an input vector.  
- <a href="a00059.html#details">More...</a></p>
+<!-- doxytag: class="roboptim::detail::ltvector" -->
+<p><code>#include &lt;roboptim/core/filter/cached-function.hh&gt;</code></p>
 
-<p><code>#include &lt;roboptim/core/filter/map.hh&gt;</code></p>
-
-<p><a href="a00223.html">List of all members.</a></p>
+<p><a href="a00279.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="a00017.html">detail::AutopromoteTrait</a>&lt; U &gt;<br class="typebreak"/>
-::T_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#aa472baf5213f2a8afc29b442073031eb">parentType_t</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="a00059.html">Map</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#a574f40013b83ac08459277e74dc8289e">MapShPtr_t</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#a934ae91992e7f17a02dbde5ec8e7de3c">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00059.html#aa472baf5213f2a8afc29b442073031eb">parentType_t</a>)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#a4c8f20cf07ee28545f24df00a427e7b9">Map</a> (boost::shared_ptr&lt; U &gt; <a class="el" href="a00059.html#a6084518aafb074773522d069b84418b3">origin</a>, size_type repeat)  throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#af65411ba263b5776211a5edb162a89aa">~Map</a> ()  throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#a6084518aafb074773522d069b84418b3">origin</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; U &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#a323b53ffd6ed09b1460ea1c112c1b340">origin</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#ac5105e01d83e5837753b3c99d0b6ed71">impl_compute</a> (result_t &amp;result, const argument_t &amp;x) const   throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#a8f63c844358c42b4cf223dcddc5caba6">impl_gradient</a> (gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const   throw ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#aaf3d90bb7f6484f288ee797366f8f6a1">impl_jacobian</a> (jacobian_t &amp;jacobian, const argument_t &amp;arg) const   throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00059.html#a857efbc237568a34dd7b53f9f09a49a2">operator()</a> (const <a class="el" href="a00046.html#a76763e91e51e9cddf579d52091dce746">Function::vector_t</a> &amp;v1, const <a class="el" href="a00046.html#a76763e91e51e9cddf579d52091dce746">Function::vector_t</a> &amp;v2) const </td></tr>
 </table>
-<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename U&gt;<br/>
-class roboptim::Map&lt; U &gt;</h3>
-
-<p>Apply a function several times to an input vector. </p>
-<p>Input: [x_0^0 x_1^0 ... x_N^0 ... x_0^M x_1^M ... x_N^M]</p>
-<p>Output: [f(x_0^0 x_1^0 ... x_N^0) ... f(x_0^M x_1^M ... x_N^M)] </p>
-</div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a574f40013b83ac08459277e74dc8289e"></a><!-- doxytag: member="roboptim::Map::MapShPtr_t" ref="a574f40013b83ac08459277e74dc8289e" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef boost::shared_ptr&lt;<a class="el" href="a00059.html">Map</a>&gt; <a class="el" href="a00059.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00059.html#a574f40013b83ac08459277e74dc8289e">MapShPtr_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa472baf5213f2a8afc29b442073031eb"></a><!-- doxytag: member="roboptim::Map::parentType_t" ref="aa472baf5213f2a8afc29b442073031eb" args="" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef <a class="el" href="a00017.html">detail::AutopromoteTrait</a>&lt;U&gt;::T_type <a class="el" href="a00059.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00059.html#aa472baf5213f2a8afc29b442073031eb">parentType_t</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a4c8f20cf07ee28545f24df00a427e7b9"></a><!-- doxytag: member="roboptim::Map::Map" ref="a4c8f20cf07ee28545f24df00a427e7b9" args="(boost::shared_ptr&lt; U &gt; origin, size_type repeat)" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00059.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00059.html">Map</a> </td>
-          <td>(</td>
-          <td class="paramtype">boost::shared_ptr&lt; U &gt;&#160;</td>
-          <td class="paramname"><em>origin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_type&#160;</td>
-          <td class="paramname"><em>repeat</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw ()<code> [explicit]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af65411ba263b5776211a5edb162a89aa"></a><!-- doxytag: member="roboptim::Map::~Map" ref="af65411ba263b5776211a5edb162a89aa" args="()" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00059.html">roboptim::Map</a>&lt; U &gt;::~<a class="el" href="a00059.html">Map</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac5105e01d83e5837753b3c99d0b6ed71"></a><!-- doxytag: member="roboptim::Map::impl_compute" ref="ac5105e01d83e5837753b3c99d0b6ed71" args="(result_t &amp;result, const argument_t &amp;x) const " -->
+<a class="anchor" id="a857efbc237568a34dd7b53f9f09a49a2"></a><!-- doxytag: member="roboptim::detail::ltvector::operator()" ref="a857efbc237568a34dd7b53f9f09a49a2" args="(const Function::vector_t &amp;v1, const Function::vector_t &amp;v2) const " -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="a00059.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00059.html#ac5105e01d83e5837753b3c99d0b6ed71">impl_compute</a> </td>
+          <td class="memname">bool roboptim::detail::ltvector::operator() </td>
           <td>(</td>
-          <td class="paramtype">result_t &amp;&#160;</td>
-          <td class="paramname"><em>result</em>, </td>
+          <td class="paramtype">const <a class="el" href="a00046.html#a76763e91e51e9cddf579d52091dce746">Function::vector_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const argument_t &amp;&#160;</td>
-          <td class="paramname"><em>x</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="a00046.html#a76763e91e51e9cddf579d52091dce746">Function::vector_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const  throw ()</td>
+          <td></td><td> const<code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="a8f63c844358c42b4cf223dcddc5caba6"></a><!-- doxytag: member="roboptim::Map::impl_gradient" ref="a8f63c844358c42b4cf223dcddc5caba6" args="(gradient_t &amp;gradient, const argument_t &amp;argument, size_type functionId=0) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00059.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00059.html#a8f63c844358c42b4cf223dcddc5caba6">impl_gradient</a> </td>
-          <td>(</td>
-          <td class="paramtype">gradient_t &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const argument_t &amp;&#160;</td>
-          <td class="paramname"><em>argument</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_type&#160;</td>
-          <td class="paramname"><em>functionId</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aaf3d90bb7f6484f288ee797366f8f6a1"></a><!-- doxytag: member="roboptim::Map::impl_jacobian" ref="aaf3d90bb7f6484f288ee797366f8f6a1" args="(jacobian_t &amp;jacobian, const argument_t &amp;arg) const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00059.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00059.html#aaf3d90bb7f6484f288ee797366f8f6a1">impl_jacobian</a> </td>
-          <td>(</td>
-          <td class="paramtype">jacobian_t &amp;&#160;</td>
-          <td class="paramname"><em>jacobian</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const argument_t &amp;&#160;</td>
-          <td class="paramname"><em>arg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a6084518aafb074773522d069b84418b3"></a><!-- doxytag: member="roboptim::Map::origin" ref="a6084518aafb074773522d069b84418b3" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const boost::shared_ptr&lt;U&gt;&amp; <a class="el" href="a00059.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00059.html#a6084518aafb074773522d069b84418b3">origin</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const<code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Referenced by <a class="el" href="a00190.html#a12201667276a7a25982f7ba037720734">roboptim::map()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a323b53ffd6ed09b1460ea1c112c1b340"></a><!-- doxytag: member="roboptim::Map::origin" ref="a323b53ffd6ed09b1460ea1c112c1b340" args="()" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">boost::shared_ptr&lt;U&gt;&amp; <a class="el" href="a00059.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00059.html#a6084518aafb074773522d069b84418b3">origin</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a934ae91992e7f17a02dbde5ec8e7de3c"></a><!-- doxytag: member="roboptim::Map::ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="a934ae91992e7f17a02dbde5ec8e7de3c" args="(parentType_t)" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00059.html">roboptim::Map</a>&lt; U &gt;::<a class="el" href="a00059.html#a934ae91992e7f17a02dbde5ec8e7de3c">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00059.html#aa472baf5213f2a8afc29b442073031eb">parentType_t</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>References <a class="el" href="a00046.html#a8166423941ffb4b4f07f5321fe941fb4">roboptim::GenericFunction&lt; T &gt;::epsilon()</a>.</p>
 
 </div>
 </div>
@@ -344,7 +120,8 @@ template&lt;typename U &gt; </div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00190.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00059.html">Map</a>      </li>
+      <li class="navelem"><a class="el" href="a00196.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00200.html">detail</a>      </li>
+      <li class="navelem"><a class="el" href="a00059.html">ltvector</a>      </li>
 </body>
 </html>

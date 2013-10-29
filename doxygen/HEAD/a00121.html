@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>gnuplot-commands.cc File Reference</title>
+<title>fwd.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,106 +56,75 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Defines</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">gnuplot-commands.cc File Reference</div>  </div>
+<div class="title">fwd.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br/>
-<code>#include &quot;roboptim/core/config.hh&quot;</code><br/>
-<code>#include &lt;boost/format.hpp&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00122.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</code><br/>
-</div><table class="memberdecls">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00062.html">roboptim::NoSolution</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag a result if no solution has been found.  <a href="a00062.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00039.html">roboptim::EigenMatrixDense</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag type for functions using Eigen dense matrices.  <a href="a00039.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00040.html">roboptim::EigenMatrixSparse</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag type for functions using Eigen sparse matrices.  <a href="a00040.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00197.html">roboptim::visualization</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Graphic visualization. </p>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00202.html">roboptim::finiteDifferenceGradientPolicies</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Contains finite difference gradients policies. </p>
 <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00198.html">roboptim::visualization::gnuplot</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p><a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> rendering. </p>
-<br/></td></tr>
-<tr><td colspan="2"><h2><a name="define-members"></a>
-Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#abdaa2512aec3201d566ccbfc73fafc46">GNUPLOT_UNARY_COMMAND</a>(NAME)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00121.html#a44cffa7dc6979331d7660d604e7c8f48">GNUPLOT_STR_COMMAND</a>(NAME, ARG)</td></tr>
-<tr><td colspan="2"><h2><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00151.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#ga108c0cb6161fb8813817a7b7a1ac980d">roboptim::visualization::gnuplot::comment</a> (const char *)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> comment.  <a href="a00206.html#ga108c0cb6161fb8813817a7b7a1ac980d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00151.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#gad77630a233193748534b41d069d4e180">roboptim::visualization::gnuplot::set</a> (const char *var, const char *val=&quot;&quot;)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> set command.  <a href="a00206.html#gad77630a233193748534b41d069d4e180"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00151.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#ga2c2a188b2e89955eee09aa10b5426e43">roboptim::visualization::gnuplot::unset</a> (const char *var)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> unset command.  <a href="a00206.html#ga2c2a188b2e89955eee09aa10b5426e43"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00151.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html#gaf90f5364d8c3597b8909ba99083fc23f">roboptim::visualization::gnuplot::show</a> (const char *var)  throw (std::runtime_error)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="a00056.html" title="Gnuplot script.">Gnuplot</a> show command.  <a href="a00206.html#gaf90f5364d8c3597b8909ba99083fc23f"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef GenericFunction<br class="typebreak"/>
+&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#a1864afd8c0c95cea8029da9b52352736">roboptim::Function</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dense function.  <a href="#a1864afd8c0c95cea8029da9b52352736"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef GenericFunction<br class="typebreak"/>
+&lt; EigenMatrixSparse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#a0036230886e32e7043e29e0f14682637">roboptim::SparseFunction</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse function.  <a href="#a0036230886e32e7043e29e0f14682637"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+GenericDifferentiableFunction<br class="typebreak"/>
+&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#a1fe6728680de2e1a17e250717269fe22">roboptim::DifferentiableFunction</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dense differentiable function.  <a href="#a1fe6728680de2e1a17e250717269fe22"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+GenericDifferentiableFunction<br class="typebreak"/>
+&lt; EigenMatrixSparse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#a7e31c0c139e1f6949efdda2c8925bf0a">roboptim::DifferentiableSparseFunction</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse differentiable function.  <a href="#a7e31c0c139e1f6949efdda2c8925bf0a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+GenericNumericLinearFunction<br class="typebreak"/>
+&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#a2177dd2963638a1a068cb05dc64fac32">roboptim::NumericLinearFunction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+GenericNumericQuadraticFunction<br class="typebreak"/>
+&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#a4a940419845321db972ff15085448fe5">roboptim::NumericQuadraticFunction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+GenericConstantFunction<br class="typebreak"/>
+&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#aae31207e6c555a8c607a7f444c1d437b">roboptim::ConstantFunction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+GenericIdentityFunction<br class="typebreak"/>
+&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#a9a14f34c11e87aa249b2bd5a500f0ff9">roboptim::IdentityFunction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+GenericTwiceDifferentiableFunction<br class="typebreak"/>
+&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#a664a3377f606592dfc57f9525c9afa37">roboptim::TwiceDifferentiableFunction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+GenericTwiceDifferentiableFunction<br class="typebreak"/>
+&lt; EigenMatrixSparse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#a18d2ef51eb9bfce27cb92b82a684bf56">roboptim::TwiceDifferentiableSparseFunction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef GenericLinearFunction<br class="typebreak"/>
+&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#abbf3e635a932ae99934936a092aec72c">roboptim::LinearFunction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef GenericLinearFunction<br class="typebreak"/>
+&lt; EigenMatrixSparse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#aa8f5a3e6e11dab0777930cd974dc9416">roboptim::LinearSparseFunction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+GenericQuadraticFunction<br class="typebreak"/>
+&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#ab03c6ad564de263af42983892cab684a">roboptim::QuadraticFunction</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+GenericQuadraticFunction<br class="typebreak"/>
+&lt; EigenMatrixSparse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#a8a37fb59bc67c514268e4ae99c80567d">roboptim::QuadraticSparseFunction</a></td></tr>
 </table>
-<hr/><h2>Define Documentation</h2>
-<a class="anchor" id="a44cffa7dc6979331d7660d604e7c8f48"></a><!-- doxytag: member="gnuplot&#45;commands.cc::GNUPLOT_STR_COMMAND" ref="a44cffa7dc6979331d7660d604e7c8f48" args="(NAME, ARG)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define <a class="el" href="a00121.html#a44cffa7dc6979331d7660d604e7c8f48">GNUPLOT_STR_COMMAND</a></td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">NAME, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">ARG&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<b>Value:</b><div class="fragment"><pre class="fragment">Command         \
-      NAME (<span class="keyword">const</span> <span class="keywordtype">char</span>* ARG) <span class="keywordflow">throw</span> ()   \
-      {           \
-  std::string command = #NAME;    \
-  if (*ARG != 0)        \
-    {         \
-      command += <span class="stringliteral">&quot; &#39;&quot;</span>;      \
-      command += ARG;     \
-      command += <span class="stringliteral">&quot;&#39;&quot;</span>;     \
-    }         \
-  return Command (command);   \
-      }
-</pre></div>
-</div>
-</div>
-<a class="anchor" id="abdaa2512aec3201d566ccbfc73fafc46"></a><!-- doxytag: member="gnuplot&#45;commands.cc::GNUPLOT_UNARY_COMMAND" ref="abdaa2512aec3201d566ccbfc73fafc46" args="(NAME)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define <a class="el" href="a00121.html#abdaa2512aec3201d566ccbfc73fafc46">GNUPLOT_UNARY_COMMAND</a></td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">NAME</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<b>Value:</b><div class="fragment"><pre class="fragment">Command         \
-      NAME () throw ()        \
-      {           \
-  return Command (#NAME);     \
-      }
-</pre></div>
-</div>
-</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -174,6 +143,6 @@ Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00121.html">gnuplot-commands.cc</a>      </li>
+      <li class="navelem"><a class="el" href="a00121.html">fwd.hh</a>      </li>
 </body>
 </html>

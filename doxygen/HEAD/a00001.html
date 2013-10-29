@@ -75,13 +75,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <span class="preprocessor">#include &lt;iostream&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00133.html">roboptim/core/io.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00113.html">roboptim/core/finite-difference-gradient.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00132.html">roboptim/core/indent.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00137.html">roboptim/core/io.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00117.html">roboptim/core/finite-difference-gradient.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00136.html">roboptim/core/indent.hh</a>&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00129.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00122.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00125.html">roboptim/core/visualization/gnuplot-function.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00133.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00126.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00129.html">roboptim/core/visualization/gnuplot-function.hh</a>&gt;</span>
 
 <span class="keyword">using namespace </span>roboptim;
 <span class="keyword">using namespace </span>roboptim::visualization;
@@ -89,12 +89,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <span class="comment">// Define a function with a correct gradient.</span>
 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
-<span class="keyword">struct </span>FGood : <span class="keyword">public</span> <a name="_a0"></a><a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt;
+<span class="keyword">struct </span>FGood : <span class="keyword">public</span> <a name="_a0"></a><a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt;
 {
-  <a name="a1"></a><a class="code" href="a00105.html#afa0830bb1d13a88e3228fe29833b6164">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>
-  (<a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>);
+  <a name="a1"></a><a class="code" href="a00109.html#afa0830bb1d13a88e3228fe29833b6164">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>
+  (<a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>);
 
-  FGood () : <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a> (1, 1, <span class="stringliteral">&quot;x * x&quot;</span>)
+  FGood () : <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a> (1, 1, <span class="stringliteral">&quot;x * x&quot;</span>)
   {}
 
   <span class="keywordtype">void</span> impl_compute (result_t&amp; result,
@@ -127,12 +127,12 @@ FGood&lt;T&gt;::impl_gradient (gradient_t&amp; gradient,
 
 <span class="comment">// Define a function with a bad gradient.</span>
 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
-<span class="keyword">struct </span>FBad : <span class="keyword">public</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt;
+<span class="keyword">struct </span>FBad : <span class="keyword">public</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt;
 {
-  <a class="code" href="a00105.html#afa0830bb1d13a88e3228fe29833b6164">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>
-  (<a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>);
+  <a class="code" href="a00109.html#afa0830bb1d13a88e3228fe29833b6164">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>
+  (<a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>);
 
-  FBad () : <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt; (1, 1, <span class="stringliteral">&quot;x * x&quot;</span>)
+  FBad () : <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt; (1, 1, <span class="stringliteral">&quot;x * x&quot;</span>)
   {}
 
   <span class="keywordtype">void</span> impl_compute (result_t&amp; result,
@@ -147,7 +147,7 @@ FGood&lt;T&gt;::impl_gradient (gradient_t&amp; gradient,
 
 template &lt;&gt;
 <span class="keywordtype">void</span>
-FBad&lt;<a name="_a2"></a><a class="code" href="a00039.html" title="Tag type for functions using Eigen sparse matrices.">EigenMatrixSparse</a>&gt;::impl_gradient
+FBad&lt;<a name="_a2"></a><a class="code" href="a00040.html" title="Tag type for functions using Eigen sparse matrices.">EigenMatrixSparse</a>&gt;::impl_gradient
 (gradient_t&amp; gradient, const argument_t&amp; argument, size_type) const throw ()
 {
   gradient.insert (0) = 5 * argument[0] + 42;
@@ -164,12 +164,12 @@ FBad&lt;T&gt;::impl_gradient (gradient_t&amp; gradient,
 
 <span class="comment">// Define a polynomial function.</span>
 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
-<span class="keyword">struct </span>Polynomial : <span class="keyword">public</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt;
+<span class="keyword">struct </span>Polynomial : <span class="keyword">public</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt;
 {
-  <a class="code" href="a00105.html#afa0830bb1d13a88e3228fe29833b6164">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>
-  (<a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>);
+  <a class="code" href="a00109.html#afa0830bb1d13a88e3228fe29833b6164">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>
+  (<a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>);
 
-  Polynomial () : <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt; (1, 1)
+  Polynomial () : <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt; (1, 1)
   {}
 
   <span class="keywordtype">void</span> impl_compute (result_t&amp; result,
@@ -184,7 +184,7 @@ FBad&lt;T&gt;::impl_gradient (gradient_t&amp; gradient,
 
 template &lt;&gt;
 <span class="keywordtype">void</span>
-Polynomial&lt;<a class="code" href="a00039.html" title="Tag type for functions using Eigen sparse matrices.">EigenMatrixSparse</a>&gt;::impl_gradient
+Polynomial&lt;<a class="code" href="a00040.html" title="Tag type for functions using Eigen sparse matrices.">EigenMatrixSparse</a>&gt;::impl_gradient
 (gradient_t&amp; gradient, const argument_t&amp; argument, size_type) const throw ()
 {
   gradient.insert (0) = -42 * argument[0] + 33;
@@ -202,12 +202,12 @@ Polynomial&lt;T&gt;::impl_gradient (gradient_t&amp; gradient,
 
 <span class="comment">// Define a function that draws a circle.</span>
 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
-<span class="keyword">struct </span>CircleXY : <span class="keyword">public</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt;
+<span class="keyword">struct </span>CircleXY : <span class="keyword">public</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt;
 {
-  <a class="code" href="a00105.html#afa0830bb1d13a88e3228fe29833b6164">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>
-  (<a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>);
+  <a class="code" href="a00109.html#afa0830bb1d13a88e3228fe29833b6164">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>
+  (<a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>);
 
-  CircleXY () : <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt; (1, 2)
+  CircleXY () : <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt; (1, 2)
   {}
 
   <span class="keywordtype">void</span> impl_compute (result_t&amp; result,
@@ -267,12 +267,12 @@ CircleXY&lt;T&gt;::impl_gradient (gradient_t&amp; gradient,
 
 <span class="comment">// Define ``f(x,y) = x * y&#39;&#39; function.</span>
 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
-<span class="keyword">struct </span>Times : <span class="keyword">public</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt;
+<span class="keyword">struct </span>Times : <span class="keyword">public</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt;
 {
-  <a class="code" href="a00105.html#afa0830bb1d13a88e3228fe29833b6164">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>
-  (<a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>);
+  <a class="code" href="a00109.html#afa0830bb1d13a88e3228fe29833b6164">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>
+  (<a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>);
 
-  Times () : <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt; (2, 1)
+  Times () : <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction</a>&lt;T&gt; (2, 1)
   {}
 
   <span class="keywordtype">void</span> impl_compute (result_t&amp; result,
@@ -288,7 +288,7 @@ CircleXY&lt;T&gt;::impl_gradient (gradient_t&amp; gradient,
 
 template &lt;&gt;
 <span class="keywordtype">void</span>
-Times&lt;<a class="code" href="a00039.html" title="Tag type for functions using Eigen sparse matrices.">EigenMatrixSparse</a>&gt;::impl_gradient (gradient_t&amp; gradient,
+Times&lt;<a class="code" href="a00040.html" title="Tag type for functions using Eigen sparse matrices.">EigenMatrixSparse</a>&gt;::impl_gradient (gradient_t&amp; gradient,
            const argument_t&amp; argument,
            size_type) const throw ()
 {
@@ -310,23 +310,23 @@ Times&lt;T&gt;::impl_gradient (gradient_t&amp; gradient,
 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
 <span class="keywordtype">void</span> displayGradient
 (boost::shared_ptr&lt;boost::test_tools::output_test_stream&gt; output,
- <span class="keyword">const</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>&amp;,
- <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;::vector_t</a>&amp;,
- <span class="keyword">typename</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;::size_type</a> i = 0);
+ <span class="keyword">const</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>&amp;,
+ <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;::vector_t</a>&amp;,
+ <span class="keyword">typename</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;::size_type</a> i = 0);
 
 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
 <span class="keywordtype">void</span>
 displayGradient
 (boost::shared_ptr&lt;boost::test_tools::output_test_stream&gt; output,
- <span class="keyword">const</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>&amp; <span class="keyword">function</span>,
- <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;::vector_t</a>&amp; x,
- <span class="keyword">typename</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;::size_type</a> i)
+ <span class="keyword">const</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;</a>&amp; <span class="keyword">function</span>,
+ <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;::vector_t</a>&amp; x,
+ <span class="keyword">typename</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;T&gt;::size_type</a> i)
 {
-  <a name="_a3"></a><a class="code" href="a00044.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;T&gt;</a> fdfunction (<span class="keyword">function</span>);
-  <span class="keyword">typename</span> <a class="code" href="a00044.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;T&gt;::gradient_t</a> grad =
-    <span class="keyword">function</span>.<a name="a4"></a><a class="code" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x, i);
-  <span class="keyword">typename</span> <a class="code" href="a00044.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;T&gt;::gradient_t</a> fdgrad =
-    fdfunction.<a class="code" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x, i);
+  <a name="_a3"></a><a class="code" href="a00045.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;T&gt;</a> fdfunction (<span class="keyword">function</span>);
+  <span class="keyword">typename</span> <a class="code" href="a00045.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;T&gt;::gradient_t</a> grad =
+    <span class="keyword">function</span>.<a name="a4"></a><a class="code" href="a00044.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x, i);
+  <span class="keyword">typename</span> <a class="code" href="a00045.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;T&gt;::gradient_t</a> fdgrad =
+    fdfunction.<a class="code" href="a00044.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x, i);
 
   (*output) &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> &lt;&lt; grad &lt;&lt; std::endl
       &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> &lt;&lt; fdgrad &lt;&lt; std::endl;
@@ -336,27 +336,27 @@ displayGradient
 <span class="keywordtype">void</span>
 displayGradient&lt;roboptim::EigenMatrixSparse&gt;
 (boost::shared_ptr&lt;boost::test_tools::output_test_stream&gt; output,
- <span class="keyword">const</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;roboptim::EigenMatrixSparse&gt;</a>&amp; <span class="keyword">function</span>,
- <span class="keyword">const</span> <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;roboptim::EigenMatrixSparse&gt;</a>::
+ <span class="keyword">const</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;roboptim::EigenMatrixSparse&gt;</a>&amp; <span class="keyword">function</span>,
+ <span class="keyword">const</span> <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;roboptim::EigenMatrixSparse&gt;</a>::
  vector_t&amp; x,
- <a class="code" href="a00043.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;roboptim::EigenMatrixSparse&gt;</a>::
+ <a class="code" href="a00044.html" title="Define an abstract derivable function ( ).">GenericDifferentiableFunction&lt;roboptim::EigenMatrixSparse&gt;</a>::
  size_type i)
 {
-  <a class="code" href="a00044.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;roboptim::EigenMatrixSparse&gt;</a>
+  <a class="code" href="a00045.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;roboptim::EigenMatrixSparse&gt;</a>
     fdfunction (<span class="keyword">function</span>);
-  <a class="code" href="a00044.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;roboptim::EigenMatrixSparse&gt;</a>::
-    gradient_t grad = <span class="keyword">function</span>.<a name="a5"></a><a class="code" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x, i);
-  <a class="code" href="a00044.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;roboptim::EigenMatrixSparse&gt;</a>::
-    gradient_t fdgrad = fdfunction.<a class="code" href="a00043.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x, i);
+  <a class="code" href="a00045.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;roboptim::EigenMatrixSparse&gt;</a>::
+    gradient_t grad = <span class="keyword">function</span>.<a name="a5"></a><a class="code" href="a00044.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x, i);
+  <a class="code" href="a00045.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient&lt;roboptim::EigenMatrixSparse&gt;</a>::
+    gradient_t fdgrad = fdfunction.<a class="code" href="a00044.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> (x, i);
 
-  (*output) &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> &lt;&lt; <a name="a6"></a><a class="code" href="a00190.html#a01aa8def0fdb53b33781f867b4c31d8a" title="Convert a sparse matrix into a dense matrix.">sparse_to_dense</a>(grad) &lt;&lt; std::endl
-      &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> &lt;&lt; <a class="code" href="a00190.html#a01aa8def0fdb53b33781f867b4c31d8a" title="Convert a sparse matrix into a dense matrix.">sparse_to_dense</a>(fdgrad) &lt;&lt; std::endl;
+  (*output) &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> &lt;&lt; <a name="a6"></a><a class="code" href="a00196.html#a01aa8def0fdb53b33781f867b4c31d8a" title="Convert a sparse matrix into a dense matrix.">sparse_to_dense</a>(grad) &lt;&lt; std::endl
+      &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> &lt;&lt; <a class="code" href="a00196.html#a01aa8def0fdb53b33781f867b4c31d8a" title="Convert a sparse matrix into a dense matrix.">sparse_to_dense</a>(fdgrad) &lt;&lt; std::endl;
 }
 
 BOOST_FIXTURE_TEST_SUITE (core, TestSuiteConfiguration)
 
-typedef boost::mpl::list&lt; ::roboptim::<a name="_a7"></a><a class="code" href="a00038.html" title="Tag type for functions using Eigen dense matrices.">EigenMatrixDense</a>,
-        ::roboptim::<a class="code" href="a00039.html" title="Tag type for functions using Eigen sparse matrices.">EigenMatrixSparse</a>&gt; functionTypes_t;
+typedef boost::mpl::list&lt; ::roboptim::<a name="_a7"></a><a class="code" href="a00039.html" title="Tag type for functions using Eigen dense matrices.">EigenMatrixDense</a>,
+        ::roboptim::<a class="code" href="a00040.html" title="Tag type for functions using Eigen sparse matrices.">EigenMatrixSparse</a>&gt; functionTypes_t;
 
 BOOST_AUTO_TEST_CASE_TEMPLATE (finite_difference_gradient, T, functionTypes_t)
 {
@@ -384,18 +384,18 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (finite_difference_gradient, T, functionTypes_t)
       displayGradient (output, sq, x);
       displayGradient (output, sq, x, 1);
 
-      BOOST_CHECK (<a name="a8"></a><a class="code" href="a00202.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (fg, 0, x));
-      BOOST_CHECK (! <a class="code" href="a00202.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (fb, 0, x));
-      BOOST_CHECK_THROW (<a name="a9"></a><a class="code" href="a00202.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (fb, 0, x),
+      BOOST_CHECK (<a name="a8"></a><a class="code" href="a00208.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (fg, 0, x));
+      BOOST_CHECK (! <a class="code" href="a00208.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (fb, 0, x));
+      BOOST_CHECK_THROW (<a name="a9"></a><a class="code" href="a00208.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (fb, 0, x),
        ::<a name="_a10"></a><a class="code" href="a00022.html" title="Exception thrown when a gradient check fails.">roboptim::BadGradient&lt;T&gt;</a>);
-      BOOST_CHECK_THROW (<a name="a11"></a><a class="code" href="a00202.html#ga516899da0b771c79abe8a23a5028d8ea">checkJacobianAndThrow</a> (fb, x),
+      BOOST_CHECK_THROW (<a name="a11"></a><a class="code" href="a00208.html#ga516899da0b771c79abe8a23a5028d8ea">checkJacobianAndThrow</a> (fb, x),
        ::<a name="_a12"></a><a class="code" href="a00023.html" title="Exception thrown when a Jacobian check fails.">roboptim::BadJacobian&lt;T&gt;</a>);
 
 
-      BOOST_CHECK (<a class="code" href="a00202.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (sq, 0, x));
-      BOOST_CHECK (<a class="code" href="a00202.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (sq, 1, x));
-      <a class="code" href="a00202.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (sq, 0, x);
-      <a class="code" href="a00202.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (sq, 1, x);
+      BOOST_CHECK (<a class="code" href="a00208.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (sq, 0, x));
+      BOOST_CHECK (<a class="code" href="a00208.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (sq, 1, x));
+      <a class="code" href="a00208.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (sq, 0, x);
+      <a class="code" href="a00208.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (sq, 1, x);
     }
 
   x.resize (2);
@@ -404,32 +404,32 @@ BOOST_AUTO_TEST_CASE_TEMPLATE (finite_difference_gradient, T, functionTypes_t)
       {
   (*output) &lt;&lt; <span class="stringliteral">&quot;# Times at x = &quot;</span> &lt;&lt; x &lt;&lt; std::endl;
   displayGradient (output, times, x);
-  BOOST_CHECK (<a class="code" href="a00202.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (times, 0, x));
-  <a class="code" href="a00202.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (times, 0, x);
+  BOOST_CHECK (<a class="code" href="a00208.html#ga7b974ed3d440aab33b573448ff332552" title="Check if a gradient is valid.">checkGradient</a> (times, 0, x));
+  <a class="code" href="a00208.html#gae0a448fba694779126c4406d23f02bf1">checkGradientAndThrow</a> (times, 0, x);
       }
 
-  <a name="_a13"></a><a class="code" href="a00056.html" title="Gnuplot script.">Gnuplot</a> gnuplot = Gnuplot::make_interactive_gnuplot (<span class="keyword">false</span>);
+  <a name="_a13"></a><a class="code" href="a00057.html" title="Gnuplot script.">Gnuplot</a> gnuplot = Gnuplot::make_interactive_gnuplot (<span class="keyword">false</span>);
 
-  <a class="code" href="a00044.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient</a>&lt;
+  <a class="code" href="a00045.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient</a>&lt;
     T,
-    <a name="_a14"></a><a class="code" href="a00081.html" title="Fast finite difference gradient computation.">finiteDifferenceGradientPolicies::Simple&lt;T&gt;</a> &gt; fg_fd (fg, 10.);
+    <a name="_a14"></a><a class="code" href="a00083.html" title="Fast finite difference gradient computation.">finiteDifferenceGradientPolicies::Simple&lt;T&gt;</a> &gt; fg_fd (fg, 10.);
 
   Polynomial&lt;T&gt; p;
-  <a class="code" href="a00044.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient</a>&lt;
+  <a class="code" href="a00045.html" title="Compute automatically a gradient with finite differences.">GenericFiniteDifferenceGradient</a>&lt;
     T,
-    <a class="code" href="a00081.html" title="Fast finite difference gradient computation.">finiteDifferenceGradientPolicies::Simple&lt;T&gt;</a> &gt;
+    <a class="code" href="a00083.html" title="Fast finite difference gradient computation.">finiteDifferenceGradientPolicies::Simple&lt;T&gt;</a> &gt;
     p_fd (p, 10.);
 
-  <a class="code" href="a00045.html#aa2795383d22b64891a89acb15c9f0773" title="Types representing a discrete interval.">Function::discreteInterval_t</a> interval (-100., 100., 1.);
+  <a class="code" href="a00046.html#aa2795383d22b64891a89acb15c9f0773" title="Types representing a discrete interval.">Function::discreteInterval_t</a> interval (-100., 100., 1.);
 
   (*output)
     &lt;&lt; (gnuplot
   &lt;&lt; <span class="keyword">set</span> (<span class="stringliteral">&quot;multiplot layout 2,2&quot;</span>)
-  &lt;&lt; <a name="a15"></a><a class="code" href="a00206.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (fg, interval)
-  &lt;&lt; <a class="code" href="a00206.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (fg_fd, interval)
-  &lt;&lt; <a class="code" href="a00206.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (p, interval)
-  &lt;&lt; <a class="code" href="a00206.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (p_fd, interval)
-  &lt;&lt; <a name="a16"></a><a class="code" href="a00206.html#ga2c2a188b2e89955eee09aa10b5426e43" title="Make a Gnuplot unset command.">unset</a> (<span class="stringliteral">&quot;multiplot&quot;</span>)
+  &lt;&lt; <a name="a15"></a><a class="code" href="a00212.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (fg, interval)
+  &lt;&lt; <a class="code" href="a00212.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (fg_fd, interval)
+  &lt;&lt; <a class="code" href="a00212.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (p, interval)
+  &lt;&lt; <a class="code" href="a00212.html#ga7a1939a1db1b12c576e85859b728458c" title="Plot a 1D function with Gnuplot.">plot</a> (p_fd, interval)
+  &lt;&lt; <a name="a16"></a><a class="code" href="a00212.html#ga2c2a188b2e89955eee09aa10b5426e43" title="Make a Gnuplot unset command.">unset</a> (<span class="stringliteral">&quot;multiplot&quot;</span>)
   );
 
   std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;

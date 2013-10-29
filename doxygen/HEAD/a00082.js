@@ -1,14 +1,13 @@
 var a00082 =
 [
-    [ "Sin", "a00082.html#a4732d5e0a1e37379c5b0275effe7e67c", null ],
-    [ "~Sin", "a00082.html#ac23f4e74782bcb9aaa1b5b2453d67d7d", null ],
-    [ "impl_compute", "a00082.html#a37036c7570981bf0d0d1afd2e497f25e", null ],
-    [ "impl_gradient", "a00202.html#ga2b2d78ac5e5bbc6df4e0d8baa39da573", null ],
-    [ "impl_gradient", "a00082.html#a717b2705b8a7e1bd2a1817716e155b0e", null ],
-    [ "impl_hessian", "a00202.html#gac58e0e8ecf213c0790fc16479a3d0f47", null ],
-    [ "impl_hessian", "a00082.html#a27af1aaacf2ae1b3715389e0431df133", null ],
-    [ "impl_jacobian", "a00202.html#gacf45616e70d38ed31895ff1b4cdc0830", null ],
-    [ "impl_jacobian", "a00082.html#ab634d8addd26593a33ad3eba0f2a686f", null ],
-    [ "print", "a00082.html#ad1127d5c57e79dd7c1a4dc20398e1086", null ],
-    [ "ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00082.html#a0859e9a410b3c1bf41fd7f2cf8636f5a", null ]
+    [ "parentType_t", "a00082.html#a10ceafe26463a6befaf1a83bae6f2ba3", null ],
+    [ "SelectionByIdShPtr_t", "a00082.html#a2f296e76debe6a7e703f0a769f5f9129", null ],
+    [ "SelectionById", "a00082.html#afed4a5f3312bb43c36cd89e1b24da60e", null ],
+    [ "~SelectionById", "a00082.html#a647ad16eec9c7afb716a748c42c1fd1f", null ],
+    [ "impl_compute", "a00082.html#a1cca0cd96fea488847ebfbb72654d847", null ],
+    [ "impl_gradient", "a00082.html#a3b0117c02c3ddd6d20852926666dd11e", null ],
+    [ "impl_jacobian", "a00082.html#a2d27d08c7623c09c3e33777bfcd66570", null ],
+    [ "origin", "a00082.html#a96d0c5400637449ba56f14e7c25ec69d", null ],
+    [ "origin", "a00082.html#a3fe469f5a1b03ea25527636b326d85ab", null ],
+    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00082.html#a4238e53c744c850cde075fda814a2f26", null ]
 ];

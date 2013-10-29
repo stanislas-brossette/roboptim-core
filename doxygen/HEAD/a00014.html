@@ -65,11 +65,11 @@ Solvers hierarchy defines solvers that are working on a class of optimizations p
 <h2><a class="anchor" id="fct"></a>
 The function hierarchy</h2>
 <p>The function hierarchy is an abstract hierarchy which defines <b>meta-function</b> in the sense that the user has to derive from these classes to define its <b>real</b> function.</p>
-<div class="fragment"><pre class="fragment">   <span class="keyword">struct </span>MyLinearFunction : <span class="keyword">public</span> <a class="code" href="a00190.html#abbf3e635a932ae99934936a092aec72c">LinearFunction</a> {
+<div class="fragment"><pre class="fragment">   <span class="keyword">struct </span>MyLinearFunction : <span class="keyword">public</span> <a class="code" href="a00196.html#abbf3e635a932ae99934936a092aec72c">LinearFunction</a> {
    <span class="comment">//FIXME: some code is missing</span>
    };
 
-   <span class="keyword">struct </span>MyDerivableFunction : <span class="keyword">public</span> <a class="code" href="a00190.html#a3b8400e3e4a5bc0372d283a4db8eb0de" title="Legacy name of TwiceDifferentiableFunction.">DerivableFunction</a> {
+   <span class="keyword">struct </span>MyDerivableFunction : <span class="keyword">public</span> <a class="code" href="a00196.html#a3b8400e3e4a5bc0372d283a4db8eb0de" title="Legacy name of TwiceDifferentiableFunction.">DerivableFunction</a> {
    <span class="comment">//FIXME: some code is missing</span>
    };
    <span class="comment">// etc...</span>

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::SolverError Class Reference</title>
+<title>roboptim::Sin&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,208 +58,311 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::SolverError Class Reference<div class="ingroups"><a class="el" href="a00204.html">Optimization problems</a></div></div>  </div>
+<div class="title">roboptim::Sin&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="a00208.html">Mathematical functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::SolverError" --><!-- doxytag: inherits="std::runtime_error" -->
-<p>Base exception class for solving errors.  
+<!-- doxytag: class="roboptim::Sin" --><!-- doxytag: inherits="roboptim::GenericTwiceDifferentiableFunction" -->
+<p><a class="el" href="a00084.html" title="Sin function.">Sin</a> function.  
  <a href="a00084.html#details">More...</a></p>
 
-<p><code>#include &lt;roboptim/core/solver-error.hh&gt;</code></p>
+<p><code>#include &lt;roboptim/core/function/sin.hh&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for roboptim::SolverError:</div>
+Inheritance diagram for roboptim::Sin&lt; T &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="a00084.png" usemap="#roboptim::SolverError_map" alt=""/>
-  <map id="roboptim::SolverError_map" name="roboptim::SolverError_map">
-<area href="a00086.html" title="Exception used for non-critical errors during optimization." alt="roboptim::SolverWarning" shape="rect" coords="0,56,150,80"/>
+  <img src="a00084.png" usemap="#roboptim::Sin&lt; T &gt;_map" alt=""/>
+  <map id="roboptim::Sin&lt; T &gt;_map" name="roboptim::Sin&lt; T &gt;_map">
+<area href="a00056.html" title="Define an abstract function which is derivable twice ( )." alt="roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;" shape="rect" coords="0,112,300,136"/>
+<area href="a00044.html" title="Define an abstract derivable function ( )." alt="roboptim::GenericDifferentiableFunction&lt; T &gt;" shape="rect" coords="0,56,300,80"/>
+<area href="a00046.html" title="Define an abstract mathematical function ( )." alt="roboptim::GenericFunction&lt; T &gt;" shape="rect" coords="0,0,300,24"/>
 </map>
  </div></div>
 
-<p><a href="a00255.html">List of all members.</a></p>
+<p><a href="a00244.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#aa8893a6fd45b24fcd4f9a21dc33a5516">SolverError</a> (const std::string &amp;arg)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate an error from an error message.  <a href="#aa8893a6fd45b24fcd4f9a21dc33a5516"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#ac8b42969cdfac13559a460c4ae38b7a0">SolverError</a> (const std::string &amp;arg, const <a class="el" href="a00077.html">Result</a> &amp;res)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate an error from an error message.  <a href="#ac8b42969cdfac13559a460c4ae38b7a0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#ab95d88488f2c6a8563cd2242e41c0b01">SolverError</a> (const <a class="el" href="a00084.html">SolverError</a> &amp;error)  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#ab95d88488f2c6a8563cd2242e41c0b01"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#a1a06e6de7a8827debf85b100948a25e8">~SolverError</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Trivial destructor.  <a href="#a1a06e6de7a8827debf85b100948a25e8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#a8bffd424a6556c49b69aa8cefc0f9b64">print</a> (std::ostream &amp;) const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the error on the specified output stream.  <a href="#a8bffd424a6556c49b69aa8cefc0f9b64"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const boost::optional&lt; <a class="el" href="a00077.html">Result</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#a902e79a13337accd1abe8a9acd0bbacd">lastState</a> () const   throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the (optional) last state of the solver.  <a href="#a902e79a13337accd1abe8a9acd0bbacd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">boost::optional&lt; <a class="el" href="a00077.html">Result</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#a242b7cb46fe4e752f4e2077c2879c1a5">lastState</a> ()  throw ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the (optional) last state of the solver.  <a href="#a242b7cb46fe4e752f4e2077c2879c1a5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#a0859e9a410b3c1bf41fd7f2cf8636f5a">ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> (<a class="el" href="a00056.html">GenericTwiceDifferentiableFunction</a>&lt; T &gt;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#a4732d5e0a1e37379c5b0275effe7e67c">Sin</a> ()  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Build an constant function.  <a href="#a4732d5e0a1e37379c5b0275effe7e67c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#ac23f4e74782bcb9aaa1b5b2453d67d7d">~Sin</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#ad1127d5c57e79dd7c1a4dc20398e1086">print</a> (std::ostream &amp;o) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the function on the specified output stream.  <a href="#ad1127d5c57e79dd7c1a4dc20398e1086"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00084.html#a37036c7570981bf0d0d1afd2e497f25e">impl_compute</a> (<a class="el" href="a00046.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;result, const <a class="el" href="a00046.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;x) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Function evaluation.  <a href="#a37036c7570981bf0d0d1afd2e497f25e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00208.html#ga2b2d78ac5e5bbc6df4e0d8baa39da573">impl_gradient</a> (<a class="el" href="a00044.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;<a class="el" href="a00044.html#a0d0772c3e1ea6ff70c2909ceaf776169">gradient</a>, const <a class="el" href="a00046.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;x, <a class="el" href="a00046.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient evaluation.  <a href="a00208.html#ga2b2d78ac5e5bbc6df4e0d8baa39da573"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00208.html#gacf45616e70d38ed31895ff1b4cdc0830">impl_jacobian</a> (<a class="el" href="a00044.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;<a class="el" href="a00044.html#a18879d9ec115089c02e685a020a11c4d">jacobian</a>, const <a class="el" href="a00046.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;x) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Jacobian evaluation.  <a href="a00208.html#gacf45616e70d38ed31895ff1b4cdc0830"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00208.html#gac58e0e8ecf213c0790fc16479a3d0f47">impl_hessian</a> (<a class="el" href="a00056.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;<a class="el" href="a00056.html#a7ab6bda5039008fb215ab24ecacd85a2">hessian</a>, const <a class="el" href="a00046.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;x, <a class="el" href="a00046.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>) const   throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Hessian evaluation.  <a href="a00208.html#gac58e0e8ecf213c0790fc16479a3d0f47"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00084.html#a717b2705b8a7e1bd2a1817716e155b0e">impl_gradient</a> (<a class="el" href="a00044.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;<a class="el" href="a00044.html#a0d0772c3e1ea6ff70c2909ceaf776169">gradient</a>, const <a class="el" href="a00046.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;x, <a class="el" href="a00046.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>) const  throw()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient evaluation.  <a href="#a717b2705b8a7e1bd2a1817716e155b0e"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00084.html#ab634d8addd26593a33ad3eba0f2a686f">impl_jacobian</a> (<a class="el" href="a00044.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;<a class="el" href="a00044.html#a18879d9ec115089c02e685a020a11c4d">jacobian</a>, const <a class="el" href="a00046.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;x) const  throw()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Jacobian evaluation.  <a href="#ab634d8addd26593a33ad3eba0f2a686f"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00084.html#a27af1aaacf2ae1b3715389e0431df133">impl_hessian</a> (<a class="el" href="a00056.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;<a class="el" href="a00056.html#a7ab6bda5039008fb215ab24ecacd85a2">hessian</a>, const <a class="el" href="a00046.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;x, <a class="el" href="a00046.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>) const  throw()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Hessian evaluation.  <a href="#a27af1aaacf2ae1b3715389e0431df133"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Base exception class for solving errors. </p>
-<p>All other exceptions classes concerning the optimization process should inherits this class. </p>
+<div class="textblock"><h3>template&lt;typename T&gt;<br/>
+class roboptim::Sin&lt; T &gt;</h3>
+
+<p><a class="el" href="a00084.html" title="Sin function.">Sin</a> function. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa8893a6fd45b24fcd4f9a21dc33a5516"></a><!-- doxytag: member="roboptim::SolverError::SolverError" ref="aa8893a6fd45b24fcd4f9a21dc33a5516" args="(const std::string &amp;arg)" -->
+<a class="anchor" id="a4732d5e0a1e37379c5b0275effe7e67c"></a><!-- doxytag: member="roboptim::Sin::Sin" ref="a4732d5e0a1e37379c5b0275effe7e67c" args="()" -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00084.html#aa8893a6fd45b24fcd4f9a21dc33a5516">roboptim::SolverError::SolverError</a> </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>arg</em></td><td>)</td>
-          <td>  throw ()<code> [explicit]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Instantiate an error from an error message. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">arg</td><td>error message. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ac8b42969cdfac13559a460c4ae38b7a0"></a><!-- doxytag: member="roboptim::SolverError::SolverError" ref="ac8b42969cdfac13559a460c4ae38b7a0" args="(const std::string &amp;arg, const Result &amp;res)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00084.html#aa8893a6fd45b24fcd4f9a21dc33a5516">roboptim::SolverError::SolverError</a> </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>arg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00077.html">Result</a> &amp;&#160;</td>
-          <td class="paramname"><em>res</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Instantiate an error from an error message. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">arg</td><td>error message. </td></tr>
-    <tr><td class="paramname">res</td><td>last state of the solver. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ab95d88488f2c6a8563cd2242e41c0b01"></a><!-- doxytag: member="roboptim::SolverError::SolverError" ref="ab95d88488f2c6a8563cd2242e41c0b01" args="(const SolverError &amp;error)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00084.html#aa8893a6fd45b24fcd4f9a21dc33a5516">roboptim::SolverError::SolverError</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00084.html">SolverError</a> &amp;&#160;</td>
-          <td class="paramname"><em>error</em></td><td>)</td>
-          <td>  throw ()</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Copy constructor. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">error</td><td>other error to copy. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a1a06e6de7a8827debf85b100948a25e8"></a><!-- doxytag: member="roboptim::SolverError::~SolverError" ref="a1a06e6de7a8827debf85b100948a25e8" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00084.html#a1a06e6de7a8827debf85b100948a25e8">roboptim::SolverError::~SolverError</a> </td>
+          <td class="memname"><a class="el" href="a00084.html">roboptim::Sin</a>&lt; T &gt;::<a class="el" href="a00084.html">Sin</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>  throw ()</td>
+          <td>  throw ()<code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Trivial destructor. </p>
+<p>Build an constant function. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>constant function offset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac23f4e74782bcb9aaa1b5b2453d67d7d"></a><!-- doxytag: member="roboptim::Sin::~Sin" ref="ac23f4e74782bcb9aaa1b5b2453d67d7d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00084.html">roboptim::Sin</a>&lt; T &gt;::~<a class="el" href="a00084.html">Sin</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>  throw ()<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a902e79a13337accd1abe8a9acd0bbacd"></a><!-- doxytag: member="roboptim::SolverError::lastState" ref="a902e79a13337accd1abe8a9acd0bbacd" args="() const " -->
+<a class="anchor" id="a37036c7570981bf0d0d1afd2e497f25e"></a><!-- doxytag: member="roboptim::Sin::impl_compute" ref="a37036c7570981bf0d0d1afd2e497f25e" args="(result_t &amp;result, const argument_t &amp;x) const " -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const boost::optional&lt; <a class="el" href="a00077.html">Result</a> &gt; &amp; <a class="el" href="a00084.html#a902e79a13337accd1abe8a9acd0bbacd">roboptim::SolverError::lastState</a> </td>
+          <td class="memname">void <a class="el" href="a00084.html">roboptim::Sin</a>&lt; T &gt;::<a class="el" href="a00084.html#a37036c7570981bf0d0d1afd2e497f25e">impl_compute</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const  throw ()</td>
+          <td class="paramtype"><a class="el" href="a00046.html#a8aadedc04f66002d09c7a5ab3c8752e6">result_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00046.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const  throw ()<code> [inline, protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Retrieve the (optional) last state of the solver. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>last state of the solver. </dd></dl>
+<p>Function evaluation. </p>
+<p>Evaluate the function, has to be implemented in concrete classes. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00046.html#a58f0bde147e54bbeb8df944ef194f9ae" title="Evaluate the function at a specified point.">operator()(result_t&amp;, const argument_t&amp;) const </a>throw () instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>result will be stored in this vector </td></tr>
+    <tr><td class="paramname">argument</td><td>point at which the function will be evaluated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="a00046.html#a19fb6005aabfae3862429de2c736ab6e">roboptim::GenericFunction&lt; T &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a242b7cb46fe4e752f4e2077c2879c1a5"></a><!-- doxytag: member="roboptim::SolverError::lastState" ref="a242b7cb46fe4e752f4e2077c2879c1a5" args="()" -->
+<a class="anchor" id="a717b2705b8a7e1bd2a1817716e155b0e"></a><!-- doxytag: member="roboptim::Sin::impl_gradient" ref="a717b2705b8a7e1bd2a1817716e155b0e" args="(gradient_t &amp;gradient, const argument_t &amp;x, size_type) const " -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">boost::optional&lt; <a class="el" href="a00077.html">Result</a> &gt; &amp; <a class="el" href="a00084.html#a902e79a13337accd1abe8a9acd0bbacd">roboptim::SolverError::lastState</a> </td>
+          <td class="memname">void <a class="el" href="a00084.html">roboptim::Sin</a>&lt; <a class="el" href="a00040.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00208.html#ga2b2d78ac5e5bbc6df4e0d8baa39da573">impl_gradient</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td>  throw ()</td>
+          <td class="paramtype"><a class="el" href="a00044.html#a2e38d8c20eaa91296f62cfb804add7a1">gradient_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00046.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00046.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>functionId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const throw()<code> [inline, protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Retrieve the (optional) last state of the solver. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>last state of the solver. </dd></dl>
+<p>Gradient evaluation. </p>
+<p>Compute the gradient, has to be implemented in concrete classes. The gradient is computed for a specific sub-function which id is passed through the functionId argument. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00044.html#a0d0772c3e1ea6ff70c2909ceaf776169" title="Computes the gradient.">gradient</a> instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gradient</td><td>gradient will be store in this argument </td></tr>
+    <tr><td class="paramname">argument</td><td>point where the gradient will be computed </td></tr>
+    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="a00044.html#a84657c4eb2f67ea3bbaf49462f54fb68">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8bffd424a6556c49b69aa8cefc0f9b64"></a><!-- doxytag: member="roboptim::SolverError::print" ref="a8bffd424a6556c49b69aa8cefc0f9b64" args="(std::ostream &amp;) const " -->
+<a class="anchor" id="a27af1aaacf2ae1b3715389e0431df133"></a><!-- doxytag: member="roboptim::Sin::impl_hessian" ref="a27af1aaacf2ae1b3715389e0431df133" args="(hessian_t &amp;hessian, const argument_t &amp;x, size_type) const " -->
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream &amp; <a class="el" href="a00084.html#a8bffd424a6556c49b69aa8cefc0f9b64">roboptim::SolverError::print</a> </td>
+          <td class="memname">void <a class="el" href="a00084.html">roboptim::Sin</a>&lt; <a class="el" href="a00040.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00208.html#gac58e0e8ecf213c0790fc16479a3d0f47">impl_hessian</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00056.html#a88566ea169ba77a2c2b9caf939c12cd1">hessian_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>hessian</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00046.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>argument</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00046.html#ad3d5888dc78d2ca132d807abfd8e94f2">size_type</a>&#160;</td>
+          <td class="paramname"><em>functionId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const throw()<code> [inline, protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Hessian evaluation. </p>
+<p>Compute the hessian, has to be implemented in concrete classes. The hessian is computed for a specific sub-function which id is passed through the functionId argument. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00056.html#a7ab6bda5039008fb215ab24ecacd85a2" title="Compute the hessian at a given point.">hessian</a> instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hessian</td><td>hessian will be stored here </td></tr>
+    <tr><td class="paramname">argument</td><td>point where the hessian will be computed </td></tr>
+    <tr><td class="paramname">functionId</td><td>evaluated function id in the split representation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="a00056.html#ac5b5430ab527d7de393f876f4db314c2">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab634d8addd26593a33ad3eba0f2a686f"></a><!-- doxytag: member="roboptim::Sin::impl_jacobian" ref="ab634d8addd26593a33ad3eba0f2a686f" args="(jacobian_t &amp;jacobian, const argument_t &amp;x) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="a00084.html">roboptim::Sin</a>&lt; <a class="el" href="a00040.html">EigenMatrixSparse</a> &gt;::<a class="el" href="a00208.html#gacf45616e70d38ed31895ff1b4cdc0830">impl_jacobian</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00044.html#a87eb6981a9e7e658bb45ced35914d938">jacobian_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>jacobian</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00046.html#a8de5689756f172c3e68d26ce213a812d">argument_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const throw()<code> [inline, protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Jacobian evaluation. </p>
+<p>Computes the jacobian, can be overridden by concrete classes. The default behavior is to compute the jacobian from the gradient. </p>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>Do not call this function directly, call <a class="el" href="a00044.html#a18879d9ec115089c02e685a020a11c4d" title="Computes the jacobian.">jacobian</a> instead. </dd></dl>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jacobian</td><td>jacobian will be store in this argument </td></tr>
+    <tr><td class="paramname">arg</td><td>point where the jacobian will be computed </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ROBOPTIM_DO_NOT_CHECK_ALLOCATION </p>
+
+<p>Reimplemented from <a class="el" href="a00044.html#a5aa21359d6844bc4c21280cbd1155d22">roboptim::GenericDifferentiableFunction&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad1127d5c57e79dd7c1a4dc20398e1086"></a><!-- doxytag: member="roboptim::Sin::print" ref="ad1127d5c57e79dd7c1a4dc20398e1086" args="(std::ostream &amp;o) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::ostream&amp; <a class="el" href="a00084.html">roboptim::Sin</a>&lt; T &gt;::<a class="el" href="a00084.html#ad1127d5c57e79dd7c1a4dc20398e1086">print</a> </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>o</em></td><td>)</td>
-          <td> const  throw ()<code> [virtual]</code></td>
+          <td> const  throw ()<code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Display the error on the specified output stream. </p>
+<p>Display the function on the specified output stream. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">o</td><td>output stream used for display </td></tr>
@@ -268,11 +371,26 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>output stream </dd></dl>
 
-<p>Reimplemented in <a class="el" href="a00086.html#a1b851aa758c3cccd4594ff817fb10190">roboptim::SolverWarning</a>.</p>
+<p>Reimplemented from <a class="el" href="a00056.html#a78bf9018548e92c38803bbd0b39ef29a">roboptim::GenericTwiceDifferentiableFunction&lt; T &gt;</a>.</p>
 
-<p>References <a class="el" href="a00195.html#a9fe9bfad8dc3d4d18468fa71a1e924d2">roboptim::fg::fail()</a>, and <a class="el" href="a00195.html#ac20a553dc2fb3400a4e1a2a639c3ab34">roboptim::fg::reset()</a>.</p>
-
-<p>Referenced by <a class="el" href="a00190.html#ae6c649aa8d935cb8c8fbe8307cfa2b1f">roboptim::operator&lt;&lt;()</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a0859e9a410b3c1bf41fd7f2cf8636f5a"></a><!-- doxytag: member="roboptim::Sin::ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_" ref="a0859e9a410b3c1bf41fd7f2cf8636f5a" args="(GenericTwiceDifferentiableFunction&lt; T &gt;)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00084.html">roboptim::Sin</a>&lt; T &gt;::<a class="el" href="a00084.html#a0859e9a410b3c1bf41fd7f2cf8636f5a">ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00056.html">GenericTwiceDifferentiableFunction</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -294,7 +412,7 @@ Public Member Functions</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00190.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00084.html">SolverError</a>      </li>
+      <li class="navelem"><a class="el" href="a00196.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00084.html">Sin</a>      </li>
 </body>
 </html>

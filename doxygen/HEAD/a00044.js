@@ -1,12 +1,20 @@
 var a00044 =
 [
-    [ "GenericFiniteDifferenceGradient", "a00044.html#ade644f357e04020a3fb84207994f745b", null ],
-    [ "~GenericFiniteDifferenceGradient", "a00044.html#a52f35b313494e42eba9b96264ac4ab2f", null ],
-    [ "impl_compute", "a00044.html#a231a563eba65eb75c9695ccc337860c5", null ],
-    [ "impl_gradient", "a00044.html#ac9607a594f0a17201fe7149c28185a1c", null ],
-    [ "impl_jacobian", "a00044.html#a27f62e793466865b54308cbf177ba9f0", null ],
-    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00044.html#a583e5aeb130b6c46b7d12fe0f65c717f", null ],
-    [ "adaptee_", "a00044.html#aad6048bf897c560c6a0e03ce355413d1", null ],
-    [ "epsilon_", "a00044.html#a351983c229ac4c9cd42cdeb7ad0aebda", null ],
-    [ "xEps_", "a00044.html#a5c3139b3bfa459c225a2e77058259cb1", null ]
+    [ "gradient_t", "a00044.html#a2e38d8c20eaa91296f62cfb804add7a1", null ],
+    [ "jacobian_t", "a00044.html#a87eb6981a9e7e658bb45ced35914d938", null ],
+    [ "jacobianSize_t", "a00044.html#aac13c21f0df1f14ce16286fd81a6643a", null ],
+    [ "GenericDifferentiableFunction", "a00044.html#a5fa47fea06495251f413721483a35dba", null ],
+    [ "gradient", "a00044.html#a0d0772c3e1ea6ff70c2909ceaf776169", null ],
+    [ "gradient", "a00044.html#aec24fff2d16284b2832bd2d2998c47fe", null ],
+    [ "gradientSize", "a00044.html#a8c3700cd209f38a0079b739a83edbb4a", null ],
+    [ "impl_gradient", "a00044.html#a84657c4eb2f67ea3bbaf49462f54fb68", null ],
+    [ "impl_jacobian", "a00044.html#a7713c28b050c46bbe2e5014b2501cd9d", null ],
+    [ "impl_jacobian", "a00044.html#a5aa21359d6844bc4c21280cbd1155d22", null ],
+    [ "isValidGradient", "a00044.html#ae5948a084546062dd8e264d6a8ef3cae", null ],
+    [ "isValidJacobian", "a00044.html#aa33841fd8210041773548be30948027a", null ],
+    [ "jacobian", "a00044.html#a18879d9ec115089c02e685a020a11c4d", null ],
+    [ "jacobian", "a00044.html#a56c93142eb8adc0337192dcae2602dbf", null ],
+    [ "jacobianSize", "a00044.html#a9202ded2cd1138fea87965b792b68057", null ],
+    [ "print", "a00044.html#a9c50e545609bd7ace4f2dad69029fac3", null ],
+    [ "ROBOPTIM_FUNCTION_FWD_TYPEDEFS_", "a00044.html#a8e6535968c7ef22e7930b638c5c8a344", null ]
 ];

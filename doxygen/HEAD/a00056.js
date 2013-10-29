@@ -1,10 +1,14 @@
 var a00056 =
 [
-    [ "~Gnuplot", "a00056.html#ab2620f9d29a97757d0acbfe68e6a2c79", null ],
-    [ "Gnuplot", "a00056.html#ab134923cbb8cc53b251664f4b5c6b73c", null ],
-    [ "make_gnuplot", "a00056.html#a55c76cc46b5c54b1bc0d4684128403ff", null ],
-    [ "make_interactive_gnuplot", "a00056.html#a14e55569e7e70d12d7cd1d83117576a1", null ],
-    [ "operator<<", "a00056.html#af7addb186708c556e603c3fd8e7768a6", null ],
-    [ "print", "a00056.html#ad4b42f563ebbdb501d397a42a4420525", null ],
-    [ "push_command", "a00056.html#aaa242efdd1e20124d0698793b4fd4bdd", null ]
+    [ "hessian_t", "a00056.html#a88566ea169ba77a2c2b9caf939c12cd1", null ],
+    [ "hessianSize_t", "a00056.html#a8eb36050555e77e94717556bc0bf8d20", null ],
+    [ "GenericTwiceDifferentiableFunction", "a00056.html#af01b4e2ebb1119493337e12c105128c2", null ],
+    [ "hessian", "a00056.html#a7ab6bda5039008fb215ab24ecacd85a2", null ],
+    [ "hessian", "a00056.html#a62c40461536ac03d4c457f8681f8c2b3", null ],
+    [ "hessianSize", "a00056.html#ab88c89f971c0354c165165849b03c1f0", null ],
+    [ "impl_hessian", "a00056.html#ac5b5430ab527d7de393f876f4db314c2", null ],
+    [ "isValidHessian", "a00056.html#a1817e181cfbd18d6ffd6002c98763e6a", null ],
+    [ "print", "a00056.html#a78bf9018548e92c38803bbd0b39ef29a", null ],
+    [ "ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00056.html#ae1dfb2289bce927983df0ba0ecd3bf6f", null ],
+    [ "setZero", "a00056.html#a042286a811a4ec9b79c9d2c34f8e63c0", null ]
 ];

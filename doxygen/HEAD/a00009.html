@@ -75,9 +75,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <span class="preprocessor">#include &lt;iostream&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00133.html">roboptim/core/io.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00161.html">roboptim/core/result.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00159.html">roboptim/core/result-with-warnings.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00137.html">roboptim/core/io.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00165.html">roboptim/core/result.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00163.html">roboptim/core/result-with-warnings.hh</a>&gt;</span>
 
 <span class="keyword">using namespace </span>roboptim;
 
@@ -89,14 +89,14 @@ BOOST_AUTO_TEST_CASE (result)
     output = retrievePattern (<span class="stringliteral">&quot;result&quot;</span>);
 
   <span class="comment">// Instantiate some results.</span>
-  <a name="_a0"></a><a class="code" href="a00077.html" title="Represents the solution of an optimization problem.">Result</a> result (3, 8);
+  <a name="_a0"></a><a class="code" href="a00078.html" title="Represents the solution of an optimization problem.">Result</a> result (3, 8);
 
-  assert (result.<a name="a1"></a><a class="code" href="a00077.html#a31284faee67e87284026280767720008" title="Point found by the solver.">x</a>.size () == 3);
-  assert (result.<a name="a2"></a><a class="code" href="a00077.html#a3164fe63a285d7c4739f2606b8cf6b9e" title="Function value at the solver found point.">value</a>.size () == 8);
-  assert (result.<a name="a3"></a><a class="code" href="a00077.html#a4a3c615497bd8c83d21a35430f9b204c" title="Lagrange multipliers.">lambda</a>.size () == 0);
+  assert (result.<a name="a1"></a><a class="code" href="a00078.html#a31284faee67e87284026280767720008" title="Point found by the solver.">x</a>.size () == 3);
+  assert (result.<a name="a2"></a><a class="code" href="a00078.html#a3164fe63a285d7c4739f2606b8cf6b9e" title="Function value at the solver found point.">value</a>.size () == 8);
+  assert (result.<a name="a3"></a><a class="code" href="a00078.html#a4a3c615497bd8c83d21a35430f9b204c" title="Lagrange multipliers.">lambda</a>.size () == 0);
 
-  <a class="code" href="a00077.html" title="Represents the solution of an optimization problem.">Result</a> result2 (result);
-  <a class="code" href="a00077.html" title="Represents the solution of an optimization problem.">Result</a> result3 = result;
+  <a class="code" href="a00078.html" title="Represents the solution of an optimization problem.">Result</a> result2 (result);
+  <a class="code" href="a00078.html" title="Represents the solution of an optimization problem.">Result</a> result3 = result;
 
   (*output) &lt;&lt; result &lt;&lt; std::endl;
 

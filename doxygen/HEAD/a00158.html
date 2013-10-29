@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>result-with-warnings.cc File Reference</title>
+<title>product.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,25 +56,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">result-with-warnings.cc File Reference</div>  </div>
+<div class="title">product.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;debug.hh&quot;</code><br/>
-<code>#include &lt;iostream&gt;</code><br/>
+<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br/>
 <code>#include &lt;vector&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00116.html">roboptim/core/function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00132.html">roboptim/core/indent.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00159.html">roboptim/core/result-with-warnings.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00172.html">roboptim/core/solver-warning.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00186.html">roboptim/core/util.hh</a>&gt;</code><br/>
+<code>#include &lt;boost/shared_ptr.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00091.html">roboptim/core/detail/autopromote.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00109.html">roboptim/core/differentiable-function.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00159.html">roboptim/core/filter/product.hxx</a>&gt;</code><br/>
 </div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00074.html">roboptim::Product&lt; U, V &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00074.html" title="Product of two RobOptim functions.">Product</a> of two RobOptim functions.  <a href="a00074.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename U , typename V &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Product&lt; U, <br class="typebreak"/>
+V &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00196.html#a673c3306f8238e795813509847ee31f8">roboptim::product</a> (boost::shared_ptr&lt; U &gt; left, boost::shared_ptr&lt; V &gt; right)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename U , typename V &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; Product&lt; U, <br class="typebreak"/>
+V &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00196.html#af11c3c491b73e8b7a6587174cb964dc0">roboptim::operator*</a> (boost::shared_ptr&lt; U &gt; left, boost::shared_ptr&lt; V &gt; right)</td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -94,6 +106,6 @@ Namespaces</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00158.html">result-with-warnings.cc</a>      </li>
+      <li class="navelem"><a class="el" href="a00158.html">product.hh</a>      </li>
 </body>
 </html>

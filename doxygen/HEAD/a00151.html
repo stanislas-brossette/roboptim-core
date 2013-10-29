@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>portability.hh File Reference</title>
+<title>parametrized-function.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,86 +56,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#define-members">Defines</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">portability.hh File Reference</div>  </div>
+<div class="title">parametrized-function.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr><td colspan="2"><h2><a name="define-members"></a>
-Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#af1b366e891fac3c4c41f87b7cb59dd04">ROBOPTIM_DLLIMPORT</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a123c5e8741ec2f621543a4fc2edec484">ROBOPTIM_DLLEXPORT</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#af66cca1f5c11411e4d48d04b570435c2">ROBOPTIM_DLLLOCAL</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a>&#160;&#160;&#160;<a class="el" href="a00151.html#af1b366e891fac3c4c41f87b7cb59dd04">ROBOPTIM_DLLIMPORT</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00151.html#af63b6ee0d5db634e4a126a64c9fe781a">ROBOPTIM_LOCAL</a>&#160;&#160;&#160;<a class="el" href="a00151.html#af66cca1f5c11411e4d48d04b570435c2">ROBOPTIM_DLLLOCAL</a></td></tr>
+<div class="textblock"><code>#include &lt;<a class="el" href="a00186.html">roboptim/core/sys.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00103.html">roboptim/core/debug.hh</a>&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;limits&gt;</code><br/>
+<code>#include &lt;utility&gt;</code><br/>
+<code>#include &lt;boost/static_assert.hpp&gt;</code><br/>
+<code>#include &lt;boost/type_traits/is_base_of.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00121.html">roboptim/core/fwd.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00152.html">roboptim/core/parametrized-function.hxx</a>&gt;</code><br/>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00067.html">roboptim::ParametrizedFunction&lt; F &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Define an abstract parametrized mathematical function ( <img class="formulaInl" alt="$C^0$" src="form_19.png"/>).  <a href="a00067.html#details">More...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
+<br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00196.html#a83e69e40fcb448a0b888c260ca514b7f">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const ParametrizedFunction&lt; F &gt; &amp;f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle function display.  <a href="#a83e69e40fcb448a0b888c260ca514b7f"></a><br/></td></tr>
 </table>
-<hr/><h2>Define Documentation</h2>
-<a class="anchor" id="a4ef4ec4762b429080f60bc09c9a9079e"></a><!-- doxytag: member="portability.hh::ROBOPTIM_DLLAPI" ref="a4ef4ec4762b429080f60bc09c9a9079e" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define <a class="el" href="a00151.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a>&#160;&#160;&#160;<a class="el" href="a00151.html#af1b366e891fac3c4c41f87b7cb59dd04">ROBOPTIM_DLLIMPORT</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a123c5e8741ec2f621543a4fc2edec484"></a><!-- doxytag: member="portability.hh::ROBOPTIM_DLLEXPORT" ref="a123c5e8741ec2f621543a4fc2edec484" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define <a class="el" href="a00151.html#a123c5e8741ec2f621543a4fc2edec484">ROBOPTIM_DLLEXPORT</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af1b366e891fac3c4c41f87b7cb59dd04"></a><!-- doxytag: member="portability.hh::ROBOPTIM_DLLIMPORT" ref="af1b366e891fac3c4c41f87b7cb59dd04" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define <a class="el" href="a00151.html#af1b366e891fac3c4c41f87b7cb59dd04">ROBOPTIM_DLLIMPORT</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af66cca1f5c11411e4d48d04b570435c2"></a><!-- doxytag: member="portability.hh::ROBOPTIM_DLLLOCAL" ref="af66cca1f5c11411e4d48d04b570435c2" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define <a class="el" href="a00151.html#af66cca1f5c11411e4d48d04b570435c2">ROBOPTIM_DLLLOCAL</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="af63b6ee0d5db634e4a126a64c9fe781a"></a><!-- doxytag: member="portability.hh::ROBOPTIM_LOCAL" ref="af63b6ee0d5db634e4a126a64c9fe781a" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define <a class="el" href="a00151.html#af63b6ee0d5db634e4a126a64c9fe781a">ROBOPTIM_LOCAL</a>&#160;&#160;&#160;<a class="el" href="a00151.html#af66cca1f5c11411e4d48d04b570435c2">ROBOPTIM_DLLLOCAL</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -154,6 +106,6 @@ Defines</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00151.html">portability.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00151.html">parametrized-function.hh</a>      </li>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>identity.hh File Reference</title>
+<title>gnuplot-matrix.cc File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -56,24 +56,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">identity.hh File Reference</div>  </div>
+<div class="title">gnuplot-matrix.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="a00183.html">roboptim/core/twice-differentiable-function.hh</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="a00134.html">roboptim/core/linear-function.hh</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="a00133.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00126.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00131.html">roboptim/core/visualization/gnuplot-matrix.hh</a>&gt;</code><br/>
+<code>#include &lt;boost/format.hpp&gt;</code><br/>
+<code>#include &lt;boost/lexical_cast.hpp&gt;</code><br/>
 </div><table class="memberdecls">
-<tr><td colspan="2"><h2><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00049.html">roboptim::GenericIdentityFunction&lt; T &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity function.  <a href="a00049.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00203.html">roboptim::visualization</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Graphic visualization. </p>
+<br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html">roboptim::visualization::gnuplot</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p><a class="el" href="a00057.html" title="Gnuplot script.">Gnuplot</a> rendering. </p>
+<br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html">roboptim::visualization::gnuplot::detail</a></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00205.html#a2d8c719cadd72df2ba3bb999d4e2cda1">roboptim::visualization::gnuplot::detail::set_matrix_header</a> (std::string &amp;str, const typename GenericFunctionTraits&lt; T &gt;::matrix_t &amp;mat)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#adb2224ca300cd683bf5229fd2cee7d01">roboptim::visualization::gnuplot::detail::dense_matrix_to_gnuplot</a> (const GenericFunctionTraits&lt; EigenMatrixDense &gt;::matrix_t &amp;mat)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#a1303f8764337206a0b83e3bd5508bc46">roboptim::visualization::gnuplot::detail::sparse_matrix_to_gnuplot</a> (const GenericFunctionTraits&lt; EigenMatrixSparse &gt;::matrix_t &amp;mat)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00155.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00212.html#ga40c69971a140078c622852953fb092b3">roboptim::visualization::gnuplot::plot_mat</a> (const GenericFunctionTraits&lt; EigenMatrixDense &gt;::matrix_t &amp;mat)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Plot the structure of a matrix with <a class="el" href="a00057.html" title="Gnuplot script.">Gnuplot</a>.  <a href="a00212.html#ga40c69971a140078c622852953fb092b3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00155.html#a4ef4ec4762b429080f60bc09c9a9079e">ROBOPTIM_DLLAPI</a> Command&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00212.html#ga156782554154a4064795107504821778">roboptim::visualization::gnuplot::plot_mat</a> (const GenericFunctionTraits&lt; EigenMatrixSparse &gt;::matrix_t &amp;mat)</td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -93,6 +108,6 @@ Namespaces</h2></td></tr>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00130.html">identity.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00130.html">gnuplot-matrix.cc</a>      </li>
 </body>
 </html>

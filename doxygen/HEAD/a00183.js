@@ -1,5 +1,4 @@
 var a00183 =
 [
-    [ "ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS", "a00183.html#a2def6adcd8c6b13fe8be72ba4a6b41bf", null ],
-    [ "ROBOPTIM_TWICE_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_", "a00183.html#a4e569ff9277e3bd7fc49eadf52fcc2f3", null ]
+    [ "addNonScalarConstraint", "a00209.html#ga8fdc2e0627fa0b18b05c1ae5f85dd477", null ]
 ];

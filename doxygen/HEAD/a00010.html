@@ -75,10 +75,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <span class="preprocessor">#include &lt;iostream&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00133.html">roboptim/core/io.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00137.html">roboptim/core/io.hh</a>&gt;</span>
 
-<span class="preprocessor">#include &lt;<a class="code" href="a00129.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</span>
-<span class="preprocessor">#include &lt;<a class="code" href="a00122.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00133.html">roboptim/core/visualization/gnuplot.hh</a>&gt;</span>
+<span class="preprocessor">#include &lt;<a class="code" href="a00126.html">roboptim/core/visualization/gnuplot-commands.hh</a>&gt;</span>
 
 <span class="keyword">using namespace </span>roboptim;
 <span class="keyword">using namespace </span>roboptim::visualization;
@@ -91,15 +91,15 @@ BOOST_AUTO_TEST_CASE (visualization_gnuplot_simple)
     output = retrievePattern (<span class="stringliteral">&quot;visualization-gnuplot-simple&quot;</span>);
 
   <span class="keyword">using namespace </span>roboptim::visualization::gnuplot;
-  <a name="_a0"></a><a class="code" href="a00056.html" title="Gnuplot script.">Gnuplot</a> gnuplot = Gnuplot::make_gnuplot ();
+  <a name="_a0"></a><a class="code" href="a00057.html" title="Gnuplot script.">Gnuplot</a> gnuplot = Gnuplot::make_gnuplot ();
 
   <span class="comment">// Display nothing, generate just some valid Gnuplot commands.</span>
   (*output)
     &lt;&lt; (gnuplot
   &lt;&lt; <span class="keyword">set</span> (<span class="stringliteral">&quot;term&quot;</span>, <span class="stringliteral">&quot;x11 enhanced persist&quot;</span>)
-  &lt;&lt; <a name="a1"></a><a class="code" href="a00206.html#ga108c0cb6161fb8813817a7b7a1ac980d" title="Make a Gnuplot comment.">comment</a> (<span class="stringliteral">&quot;Hello, world!&quot;</span>)
-  &lt;&lt; <a name="a2"></a><a class="code" href="a00206.html#ga195d042fd97469e044b37abc0faf1e0f" title="Make a Gnuplot cd command.">cd</a> (<span class="stringliteral">&quot;/tmp&quot;</span>)
-  &lt;&lt; <a name="a3"></a><a class="code" href="a00195.html#ac20a553dc2fb3400a4e1a2a639c3ab34">reset</a>
+  &lt;&lt; <a name="a1"></a><a class="code" href="a00212.html#ga108c0cb6161fb8813817a7b7a1ac980d" title="Make a Gnuplot comment.">comment</a> (<span class="stringliteral">&quot;Hello, world!&quot;</span>)
+  &lt;&lt; <a name="a2"></a><a class="code" href="a00212.html#ga195d042fd97469e044b37abc0faf1e0f" title="Make a Gnuplot cd command.">cd</a> (<span class="stringliteral">&quot;/tmp&quot;</span>)
+  &lt;&lt; <a name="a3"></a><a class="code" href="a00201.html#ac20a553dc2fb3400a4e1a2a639c3ab34">reset</a>
   );
 
   std::cout &lt;&lt; output-&gt;str () &lt;&lt; std::endl;

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>roboptim::detail::printConstraint&lt; P &gt; Struct Template Reference</title>
+<title>roboptim::detail::PrecisionTrait&lt; T &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,82 +58,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-types">Public Types</a>  </div>
   <div class="headertitle">
-<div class="title">roboptim::detail::printConstraint&lt; P &gt; Struct Template Reference</div>  </div>
+<div class="title">roboptim::detail::PrecisionTrait&lt; T &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="roboptim::detail::printConstraint" -->
-<p><code>#include &lt;roboptim/core/problem.hxx&gt;</code></p>
+<!-- doxytag: class="roboptim::detail::PrecisionTrait" -->
+<p><code>#include &lt;roboptim/core/detail/autopromote.hh&gt;</code></p>
 
-<p><a href="a00276.html">List of all members.</a></p>
+<p><a href="a00270.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html#a35564e35bcf0ad780f30fa11d401513c">printConstraint</a> (std::ostream &amp;o, const P &amp;problem, std::size_t i)</td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00070.html#abfdcb4e8f58d49dd2e48869dfdf58348">operator()</a> (const U &amp;constraint)</td></tr>
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br/>
+&#160;&#160;<a class="el" href="a00070.html#ab417ff615de14b49dd3b4785c868b5dea4ccdca47cf406064482465b2bd3404b8">precisionRank</a> =  0, 
+<br/>
+&#160;&#160;<a class="el" href="a00070.html#ab417ff615de14b49dd3b4785c868b5dea9660cd681308d153488bac4462b842fb">knowPrecisionRank</a> =  0
+<br/>
+ }</td></tr>
 </table>
-<h3>template&lt;typename P&gt;<br/>
- struct roboptim::detail::printConstraint&lt; P &gt;</h3>
+<h3>template&lt;class T&gt;<br/>
+ struct roboptim::detail::PrecisionTrait&lt; T &gt;</h3>
 
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a35564e35bcf0ad780f30fa11d401513c"></a><!-- doxytag: member="roboptim::detail::printConstraint::printConstraint" ref="a35564e35bcf0ad780f30fa11d401513c" args="(std::ostream &amp;o, const P &amp;problem, std::size_t i)" -->
+<hr/><h2>Member Enumeration Documentation</h2>
+<a class="anchor" id="ab417ff615de14b49dd3b4785c868b5de"></a><!-- doxytag: member="roboptim::detail::PrecisionTrait::@0" ref="ab417ff615de14b49dd3b4785c868b5de" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename P&gt; </div>
+template&lt;class T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00070.html">roboptim::detail::printConstraint</a>&lt; P &gt;::<a class="el" href="a00070.html">printConstraint</a> </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>o</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const P &amp;&#160;</td>
-          <td class="paramname"><em>problem</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>i</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [inline]</code></td>
+          <td class="memname">anonymous enum</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-
-</div>
-</div>
-<hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="abfdcb4e8f58d49dd2e48869dfdf58348"></a><!-- doxytag: member="roboptim::detail::printConstraint::operator()" ref="abfdcb4e8f58d49dd2e48869dfdf58348" args="(const U &amp;constraint)" -->
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename P&gt; </div>
-<div class="memtemplate">
-template&lt;typename U &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="a00070.html">roboptim::detail::printConstraint</a>&lt; P &gt;::operator() </td>
-          <td>(</td>
-          <td class="paramtype">const U &amp;&#160;</td>
-          <td class="paramname"><em>constraint</em></td><td>)</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>References <a class="el" href="a00190.html#a5a9d36182ac616874a038fd4217f0a9c">roboptim::decindent()</a>, <a class="el" href="a00195.html#a9fe9bfad8dc3d4d18468fa71a1e924d2">roboptim::fg::fail()</a>, <a class="el" href="a00190.html#a27b6e86639bb04ec042979cdaad0a851">roboptim::iendl()</a>, <a class="el" href="a00190.html#a053552edbb5c42ac287c22175ea43e69">roboptim::incindent()</a>, <a class="el" href="a00195.html#ab9da0ad7b96b5a1222f64f6fbe4d5f83">roboptim::fg::ok()</a>, and <a class="el" href="a00195.html#ac20a553dc2fb3400a4e1a2a639c3ab34">roboptim::fg::reset()</a>.</p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="ab417ff615de14b49dd3b4785c868b5dea4ccdca47cf406064482465b2bd3404b8"></a><!-- doxytag: member="precisionRank" ref="ab417ff615de14b49dd3b4785c868b5dea4ccdca47cf406064482465b2bd3404b8" args="" -->precisionRank</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ab417ff615de14b49dd3b4785c868b5dea9660cd681308d153488bac4462b842fb"></a><!-- doxytag: member="knowPrecisionRank" ref="ab417ff615de14b49dd3b4785c868b5dea9660cd681308d153488bac4462b842fb" args="" -->knowPrecisionRank</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
 
 </div>
 </div>
@@ -155,8 +122,8 @@ template&lt;typename U &gt; </div>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00190.html">roboptim</a>      </li>
-      <li class="navelem"><a class="el" href="a00194.html">detail</a>      </li>
-      <li class="navelem"><a class="el" href="a00070.html">printConstraint</a>      </li>
+      <li class="navelem"><a class="el" href="a00196.html">roboptim</a>      </li>
+      <li class="navelem"><a class="el" href="a00200.html">detail</a>      </li>
+      <li class="navelem"><a class="el" href="a00070.html">PrecisionTrait</a>      </li>
 </body>
 </html>

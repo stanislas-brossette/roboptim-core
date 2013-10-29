@@ -53,23 +53,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('a00048.html','');
+  initNavTree('a00023.html','');
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt; Member List</div>  </div>
+<div class="title">roboptim::BadJacobian&lt; T &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
-This is the complete list of members for <a class="el" href="a00048.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a>, including all inherited members.<table>
-  <tr class="memlist"><td><a class="el" href="a00048.html#a050f8ec0b678f9dfadd89368d21b3ec9">argument_t</a> typedef</td><td><a class="el" href="a00048.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00048.html#a980c849a750d10a91b3e577a9aea94d8">gradient_t</a> typedef</td><td><a class="el" href="a00048.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00048.html#a4045ada63d693b9b1475ac57b7698690">jacobian_t</a> typedef</td><td><a class="el" href="a00048.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00048.html#a6c134d447ffd0e219d15864cc94b216c">matrix_t</a> typedef</td><td><a class="el" href="a00048.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00048.html#a866ef9a391daf4e4b20bd2029a67be96">result_t</a> typedef</td><td><a class="el" href="a00048.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00048.html#ae382b9a557d9e2f5e54a54ef60acb10c">size_type</a> typedef</td><td><a class="el" href="a00048.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00048.html#af0e69c7fd4c248106029270aef16c58e">value_type</a> typedef</td><td><a class="el" href="a00048.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00048.html#a480d3e5b3b2c53451fb99b97e48846c5">vector_t</a> typedef</td><td><a class="el" href="a00048.html">roboptim::GenericFunctionTraits&lt; EigenMatrixSparse &gt;</a></td><td></td></tr>
+This is the complete list of members for <a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a>, including all inherited members.<table>
+  <tr class="memlist"><td><a class="el" href="a00023.html#ae0a97e300f4cae9e05c948dc7c165cb4">analyticalJacobian_</a></td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00023.html#a27359c085d10c9b200b09480861abe60">BadJacobian</a>(const vector_t &amp;x, const jacobian_t &amp;analyticalJacobian, const jacobian_t &amp;finiteDifferenceJacobian, const value_type &amp;threshold)</td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00023.html#a0c446cdfeeaf7cb69dd80b7f73250ff8">BadJacobian</a>(const vector_t &amp;x, const jacobian_t &amp;analyticalJacobian, const jacobian_t &amp;finiteDifferenceJacobian, const value_type &amp;threshold)</td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00023.html#a971f9df17b198609ff11b66bf7efa7c1">finiteDifferenceJacobian_</a></td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00023.html#a800b0d3dd5fb7425c2f4f26584bf895e">maxDelta_</a></td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00023.html#ab188c9d017ce58c5c0a71ad23915d0dd">maxDeltaCol_</a></td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00023.html#a1996b8a1bee1f4d42475ec1967d32423">maxDeltaRow_</a></td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00023.html#a0aa8811534e91780a653700d33e866e0">print</a>(std::ostream &amp;o) const </td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00023.html#a1a6b0d428a0f18e912d58a365f30cc65">ROBOPTIM_DIFFERENTIABLE_FUNCTION_FWD_TYPEDEFS_</a>(GenericDifferentiableFunction&lt; T &gt;)</td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00023.html#a36048fa3a4c974b60aeabb6eb38c5f95">threshold_</a></td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00023.html#ae11afa252b4e25f252ada67120017988">x_</a></td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00023.html#a426326464926492fb64c0afd2aeac521">~BadJacobian</a>()</td><td><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td><td><code> [virtual]</code></td></tr>
 </table></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"

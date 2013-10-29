@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>fwd.hh File Reference</title>
+<title>finite-difference-gradient.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -58,72 +58,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">fwd.hh File Reference</div>  </div>
+<div class="title">finite-difference-gradient.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+<div class="textblock"><code>#include &lt;stdexcept&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00121.html">roboptim/core/fwd.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00109.html">roboptim/core/differentiable-function.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00155.html">roboptim/core/portability.hh</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="a00118.html">roboptim/core/finite-difference-gradient.hxx</a>&gt;</code><br/>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html">roboptim::NoSolution</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag a result if no solution has been found.  <a href="a00061.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html">roboptim::EigenMatrixDense</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag type for functions using Eigen dense matrices.  <a href="a00038.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00039.html">roboptim::EigenMatrixSparse</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag type for functions using Eigen sparse matrices.  <a href="a00039.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html">roboptim::BadGradient&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception thrown when a gradient check fails.  <a href="a00022.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html">roboptim::BadJacobian&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception thrown when a Jacobian check fails.  <a href="a00023.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00069.html">roboptim::finiteDifferenceGradientPolicies::Policy&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for the finite difference gradient policies.  <a href="a00069.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00083.html">roboptim::finiteDifferenceGradientPolicies::Simple&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast finite difference gradient computation.  <a href="a00083.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00042.html">roboptim::finiteDifferenceGradientPolicies::FivePointsRule&lt; T &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Precise finite difference gradient computation.  <a href="a00042.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00045.html">roboptim::GenericFiniteDifferenceGradient&lt; T, FdgPolicy &gt;</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute automatically a gradient with finite differences.  <a href="a00045.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html">roboptim</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Meta-functions, functions and solvers related classes. </p>
 <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html">roboptim::finiteDifferenceGradientPolicies</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00202.html">roboptim::finiteDifferenceGradientPolicies</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Contains finite difference gradients policies. </p>
 <br/></td></tr>
-<tr><td colspan="2"><h2><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef GenericFunction<br class="typebreak"/>
-&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#a1864afd8c0c95cea8029da9b52352736">roboptim::Function</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dense function.  <a href="#a1864afd8c0c95cea8029da9b52352736"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef GenericFunction<br class="typebreak"/>
-&lt; EigenMatrixSparse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#a0036230886e32e7043e29e0f14682637">roboptim::SparseFunction</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse function.  <a href="#a0036230886e32e7043e29e0f14682637"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-GenericDifferentiableFunction<br class="typebreak"/>
-&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#a1fe6728680de2e1a17e250717269fe22">roboptim::DifferentiableFunction</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dense differentiable function.  <a href="#a1fe6728680de2e1a17e250717269fe22"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-GenericDifferentiableFunction<br class="typebreak"/>
-&lt; EigenMatrixSparse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#a7e31c0c139e1f6949efdda2c8925bf0a">roboptim::DifferentiableSparseFunction</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sparse differentiable function.  <a href="#a7e31c0c139e1f6949efdda2c8925bf0a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-GenericNumericLinearFunction<br class="typebreak"/>
-&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#a2177dd2963638a1a068cb05dc64fac32">roboptim::NumericLinearFunction</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-GenericNumericQuadraticFunction<br class="typebreak"/>
-&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#a4a940419845321db972ff15085448fe5">roboptim::NumericQuadraticFunction</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-GenericConstantFunction<br class="typebreak"/>
-&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#aae31207e6c555a8c607a7f444c1d437b">roboptim::ConstantFunction</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-GenericIdentityFunction<br class="typebreak"/>
-&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#a9a14f34c11e87aa249b2bd5a500f0ff9">roboptim::IdentityFunction</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-GenericTwiceDifferentiableFunction<br class="typebreak"/>
-&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#a664a3377f606592dfc57f9525c9afa37">roboptim::TwiceDifferentiableFunction</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-GenericTwiceDifferentiableFunction<br class="typebreak"/>
-&lt; EigenMatrixSparse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#a18d2ef51eb9bfce27cb92b82a684bf56">roboptim::TwiceDifferentiableSparseFunction</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef GenericLinearFunction<br class="typebreak"/>
-&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#abbf3e635a932ae99934936a092aec72c">roboptim::LinearFunction</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef GenericLinearFunction<br class="typebreak"/>
-&lt; EigenMatrixSparse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#aa8f5a3e6e11dab0777930cd974dc9416">roboptim::LinearSparseFunction</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-GenericQuadraticFunction<br class="typebreak"/>
-&lt; EigenMatrixDense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#ab03c6ad564de263af42983892cab684a">roboptim::QuadraticFunction</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-GenericQuadraticFunction<br class="typebreak"/>
-&lt; EigenMatrixSparse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00190.html#a8a37fb59bc67c514268e4ae99c80567d">roboptim::QuadraticSparseFunction</a></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00196.html#ae6e53e4f7183cc2816db6aa8ea7cab6e">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const BadGradient&lt; T &gt; &amp;f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle exception display.  <a href="#ae6e53e4f7183cc2816db6aa8ea7cab6e"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00196.html#a67f53906aa3085cb9d1bf44f5515349e">roboptim::operator&lt;&lt;</a> (std::ostream &amp;o, const BadJacobian&lt; T &gt; &amp;f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override operator&lt;&lt; to handle exception display.  <a href="#a67f53906aa3085cb9d1bf44f5515349e"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00208.html#ga7b974ed3d440aab33b573448ff332552">roboptim::checkGradient</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, typename GenericDifferentiableFunction&lt; T &gt;::size_type functionId, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a gradient is valid.  <a href="a00208.html#ga7b974ed3d440aab33b573448ff332552"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00208.html#gae0a448fba694779126c4406d23f02bf1">roboptim::checkGradientAndThrow</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, typename GenericDifferentiableFunction&lt; T &gt;::size_type functionId, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw (BadGradient&lt;T&gt;)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00208.html#gaa32250244db065fae2e23e779ae6cf12">roboptim::checkJacobian</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a Jacobian is valid.  <a href="a00208.html#gaa32250244db065fae2e23e779ae6cf12"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00208.html#ga516899da0b771c79abe8a23a5028d8ea">roboptim::checkJacobianAndThrow</a> (const GenericDifferentiableFunction&lt; T &gt; &amp;function, const typename GenericDifferentiableFunction&lt; T &gt;::vector_t &amp;x, typename GenericDifferentiableFunction&lt; T &gt;::value_type threshold=finiteDifferenceThreshold)  throw (BadJacobian&lt;T&gt;)</td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#aabca7f7ba16e95c606d1bc22b0de8d6b">roboptim::finiteDifferenceThreshold</a> = 1e-4</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default threshold for checkGradient.  <a href="#aabca7f7ba16e95c606d1bc22b0de8d6b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00196.html#a2b8aa11a97dbc8229249db7357581d83">roboptim::finiteDifferenceEpsilon</a> = 1e-8</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default epsilon for finite difference class.  <a href="#a2b8aa11a97dbc8229249db7357581d83"></a><br/></td></tr>
 </table>
 </div><!-- contents -->
 </div>
@@ -143,6 +135,6 @@ GenericQuadraticFunction<br class="typebreak"/>
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="a00117.html">fwd.hh</a>      </li>
+      <li class="navelem"><a class="el" href="a00117.html">finite-difference-gradient.hh</a>      </li>
 </body>
 </html>
