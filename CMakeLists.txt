@@ -16,6 +16,7 @@
 # Requires at least CMake 2.8 to configure the package.
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
+SET(CXX_DISABLE_WERROR TRUE)
 INCLUDE(cmake/base.cmake)
 INCLUDE(cmake/boost.cmake)
 INCLUDE(cmake/lapack.cmake)
@@ -136,10 +137,11 @@ IF (NOT LTDL_H_FOUND)
     "Failed to find ltdl.h, check that Libtool ltdl is installed.")
 ENDIF()
 #FIXME: check that libltdl.so is available instead of adding it blindly.
+PKG_CONFIG_APPEND_CFLAGS("-DROBOPTIM_DO_NOT_CHECK_ALLOCATION")
 PKG_CONFIG_APPEND_LIBS(ltdl)
 
 HEADER_INSTALL("${HEADERS}")
-
+add_definitions(-DROBOPTIM_DO_NOT_CHECK_ALLOCATION)
 ADD_SUBDIRECTORY(src)
 ADD_SUBDIRECTORY(tests)
 
